@@ -1,0 +1,23 @@
+.property-list {
+  display: block;
+}
+
+.property-list__item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: var(--text-sm);
+}
+
+.property-list__item__value {
+  font-size: var(--text-xs);
+  flex: 1 50%;
+  text-align: right;
+}
+
+.property-list__item__type,
+.property-list__item__name {
+  font-size: var(--text-xs);
+  flex: 1 50%;
+  text-align: left;
+}

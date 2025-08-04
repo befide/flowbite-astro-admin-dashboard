@@ -1,0 +1,103 @@
+---
+title: Doctoral Theses
+sectionNumber: "B.06"
+---
+
+The **dissertation** schema describes doctoral dissertations leading to doctoral degrees in the field of accelerator research at German universities.
+
+The schema is based on the Citation Style Language (CSL) metadata model.
+It is based on the schema used for the 2019 relaunch of KfB's website beschleunigerphysyik.de, with some important enhancments.
+
+## Fields
+
+### Structural fields
+
+- **id**<br/>
+  Unique identifier for the item, equal to a citation key of the
+
+### CSL Fields
+
+- **title** (mandatory string)<br/>
+  string representing the tittle of the thesis
+- **abstract** (mandatory string)<br/>
+  string representing the abstract of the thesis
+- **type** (mandatory string)<br/>
+  Only possible value: `thesis`
+- **genre** (mandatory string)<br/>
+  Type/level of thesis plus the degree the thesis led to. Possible values: `Doctoral thesis (Dr. rer. nat.)` and `Doctoral thesis (Dr.-Ing.)`
+- **language** (mandatory string)<br/>
+  string indicating the language the thesis is written as two letter ISO 639‑1 code. Possible values: `de` and `en`
+- **publisher** (mandatory string)<br/>
+  Name of the university the doctoral degree had been awarded at.
+- **URL** (mandatory string)<br/>
+  URL directing to the university's metadata record. If a doi or urn handle to this location exists, this handle is to be used.
+- **ISBN** (optional string)<br/>
+  (optional) International Standard Book Number
+- **keyword** (mandatory string)<br/>
+  keywords joined be semicolons
+
+### Non-CSL Fields
+
+- **fulltextLink** (optional URL)<br/>
+  (optional) URL of a PDF version of the thesis
+
+### Derived fields
+
+- **tags** (mandatory list of strings)<br/>
+  list of strings derived from splitting the keyword field by the delimiter ";"
+- **URN**<br/>
+  _Uniform Resource Name_
+
+- **degree**
+  - **level (constant mandatory string)**<br/>
+    string value indicating the degree level the thesis led to (derived from field genre). Only possible value: `doctoral degree` (can be extended later to include master's and bachelor's theses)
+  - **title** (mandatory string)<br/>
+    string value indicating the title of the degree level the thesis led to (derived from field `genre`). Possible values: `dr.rer.nat.` and `dr.-ing.`
+  - **granted-by**<br />
+    id of `organizations` entry (of type `University`) that awarded the degree
+
+- **genderOfAuthor**<br/>
+  field indicating the gender of the thesis' author derived from tags by the mapping `#genderOfAuthor/:male` => `male`, `#genderOfAuthor/:female` => `female`, `#genderOfAuthor/:nonbinary` => `nonbinary`
+- **employsMethod[]**<br />
+  list of ids of `taxonomy` items of type `AcceleratorResearchMethod`
+- **isAboutFacility[]**<br />
+  list of `facilities` ids
+- **isAboutTopic[]**<br />
+  list of ids of `taxonomy` items of type `AcceleratorResearchTopic`
+- **hasAffiliation[]**<br />
+  list of `organizations` ids
+
+## Why not BibTex or BibLatex?
+
+### BibTex
+
+> @phdthesis. A PhD thesis. Required fields: author, title, school, year. Optional fields: type, address, month, note.
+
+```bibtex
+@phdthesis{mythesis,
+  title        = {An Analysis of Example},
+  author       = {John Smith},
+  year         = 2022,
+  month        = {June},
+  address      = {Example City, CA},
+  note         = {Available at \url{<https://example.com/thesis.pdf}}>,
+  school       = {University of Example},
+  type         = {PhD thesis}
+}
+```
+
+### BibLaTex
+
+BibLaTex offers the entry types "thesis" as well as the subtype "phdthesis".
+
+According to the _The biblatex Package_, the @thesis entry type is defined as:
+
+> A thesis written for an educational institution to satisfy the requirements for a degree. Use the `type` field to specify the type of thesis.
+>
+> Required fields: `author`, `title`, `type`, `institution`, `year/date`
+>
+> Optional fields: `subtitle`, `titleaddon`, `language`, `note`, `location`, `month`, `isbn`, `eid`, `chapter`, `pages`, `pagetotal`, `addendum`, `pubstate`, `doi`, `eprint`, `eprintclass`, `eprinttype`, `url`, `urldate`
+
+In addition to that, there is an entry type `@phdthesis`, defined as:
+
+> Similar to @thesis except that the `type` field is optional and defaults to the localised term ‘PhD thesis’. You may still use the `type` field to override that.

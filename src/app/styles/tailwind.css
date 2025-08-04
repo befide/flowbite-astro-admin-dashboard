@@ -1,0 +1,19 @@
+/* @import "tailwindcss"; */
+@import "./baseline.css";
+
+@theme {
+  --font-sans:
+    "Barlow Semi Condensed", ui-monospace, sfmono-regular, menlo, monaco,
+    consolas, "Liberation Mono", "Courier New", monospace;
+  --font-serif: ui-serif, georgia, cambria, "Times New Roman", times, serif;
+  --font-mono:
+    ui-monospace, sfmono-regular, menlo, monaco, consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --text-xl: 24px;
+  --text-lg: 18px;
+  --text-base: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  --line-height: 20px;
+  --spacing: 1rem;
+}

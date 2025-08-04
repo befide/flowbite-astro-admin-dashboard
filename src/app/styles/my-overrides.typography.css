@@ -1,0 +1,136 @@
+@layer my-reset, starlight, obsidian, my-overrides;
+
+@layer my-overrides {
+  .site-title,
+  .site-title span {
+    font-size: var(--text-xl);
+    color: var(--color-kfb-blue);
+    text-transform: uppercase;
+    white-space: normal;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  p:not(:where(.not-content *)),
+  ul:not(:where(.not-content *)),
+  ol:not(:where(.not-content *)) {
+    font-size: var(--sl-text-body);
+    max-width: 90ch;
+  }
+
+  .md p {
+    @apply baseline-1/0;
+  }
+  .sl-markdown-content {
+    line-height: 1rem !important;
+  }
+  .sl-markdown-content section {
+    margin-bottom: 1rem;
+  }
+  .sl-markdown-content ul {
+    margin: 0;
+    padding: 0;
+  }
+  .sl-markdown-content ul li {
+    padding: 0;
+    margin: 0 0 0 0.75rem;
+    @apply baseline-1/0;
+  }
+  .sl-markdown-content ol {
+    list-style: decimal-leading-zero;
+    margin-left: 0.25rem;
+    page-break-inside: avoid;
+    @apply baseline-1/1;
+  }
+
+  .md a {
+    text-decoration-thickness: 1px;
+    text-decoration-line: underline;
+    text-decoration-color: gray;
+    text-decoration-style: dashed;
+  }
+
+  h1 {
+    font-size: var(--text-xl);
+    font-weight: bold;
+    text-transform: uppercase;
+    @apply baseline-1/1;
+  }
+  .md h2 {
+    font-size: var(--sl-text-lg);
+
+    font-weight: bold;
+    text-transform: uppercase;
+    @apply baseline-1/0;
+  }
+
+  /* 
+.sl-markdown-content
+  :not(a, strong, em, del, span, input, code, br)
+  + :not(a, strong, em, del, span, input, code, br, :where(.not-content *)) {
+  margin-top: 0;
+} */
+  /*  */
+
+  section {
+    margin-top: 1rem !important;
+  }
+  .md hr {
+    @apply baseline-2/1;
+
+    /* margin-top: 1rem; */
+  }
+
+  .md h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: var(--text-base);
+    @apply baseline-1/1;
+  }
+
+  .md h4 {
+    font-weight: var(--font-weight--bold);
+    font-size: var(--text-base);
+    @apply baseline-1/0;
+  }
+
+  .md h5 {
+    @apply baseline-1/0;
+  }
+
+  .md h6 {
+    @apply baseline-2/0;
+  }
+
+  .md dt {
+    font-weight: var(--font-weight--bold);
+    font-size: var(--text-base);
+  }
+
+  .no-break {
+    white-space: nowrap;
+  }
+
+  code {
+    font-size: var(--text-xs);
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    max-height: 0.8rem;
+
+    border-radius: 0.25rem;
+  }
+
+  /*.sl-markdown-content code:not(:where(.not-content *)) {*/
+  /*  font-size: var(--text-xs);*/
+  /*  padding: 0;*/
+  /*  margin: 0;*/
+  /*  display: inline-block;*/
+  /*  max-height: 0.8rem;*/
+  /*}*/
+  /*.sl-markdown-content*/
+  /*  :not(a, strong, em, del, span, input, code, br)*/
+  /*  + :not(a, strong, em, del, span, input, code, br, :where(.not-content *)) {*/
+  /*  margin-top: 0;*/
+  /*}*/
+}

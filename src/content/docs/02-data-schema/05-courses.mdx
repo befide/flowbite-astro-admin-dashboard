@@ -1,0 +1,41 @@
+---
+title: Courses
+sectionNumber: "B.05"
+---
+
+The **courses** schema describes all facilities provided or used by the community.
+
+Facilities can be nested: each unit may have (at most) one parent.
+
+## Fields
+
+### Structural fields
+
+- **id**<br/>
+  a unique identifier for the course
+
+---
+
+### Common Fields
+
+- **instanceOf\_\_taxonomyId**<br/>
+  Taxonomy references describing the unit type. Possible values include: `committee`, `committee/erum-committee`, `consortium`, `department`, `funding-organization`, `research-institution`, `subdepartment`, `university`, `working-group`
+- **label.fullName**<br/>
+  Official, localized name of the unit (e.g., `Deutsches Elektronen-Synchrotron DESY`).
+- **label.short**<br/>
+  Preferred, localized short label for the unit (e.g., `DESY`).
+- **tagLine**<br/>
+  Concise, localized one-liner about the unit.
+- **description**<br/>
+  Localized description of the unit.
+- **location**<br/>
+  Object describing the unit's location: - **country.code**: Country code of the unit’s location. - **lat**: Latitude (for geographical visualization). - **lng**: Longitude (for geographical visualization). - **city**: City of the unit's location
+- **head**<br/>
+  \*(Details about the head of the unit; structure
+
+### Parameters
+
+### References
+
+- **links.homepage** (optional) <br/>
+  Localized homepage URL of the unit.

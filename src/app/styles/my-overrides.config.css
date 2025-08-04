@@ -1,0 +1,79 @@
+@layer my-reset, starlight, obsidian, my-overrides;
+
+@layer my-overrides {
+  :root {
+    --sl-line-height: 28px;
+    --sl-line-height-headings: 1rem;
+
+    --table-cell--padding: 0.25rem;
+
+    --font-weight--bold: 600;
+
+    --sl-text-2xs: calc((11 / 28) * 1rem);
+    /* 12 */
+    --sl-text-xs: calc(13 / 28 * 1rem);
+    /* 13 */
+    --sl-text-sm: calc(14 / 28 * 1rem);
+    /* 14 */
+    --sl-text-base: calc(16 / 28 * 1rem);
+    /* 16 */
+    --sl-text-lg: calc(18 / 28 * 1rem);
+    /* 18 */
+    --sl-text-xl: calc(20 / 28 * 1rem);
+    /* 20 */
+    --sl-text-2xl: calc(24 / 28 * 1rem);
+
+    --sl-content-inline-start: 1rem;
+    --text-2xs: var(--sl-text-2xs);
+    --text-xs: var(--sl-text-xs);
+    --text-sm: var(--sl-text-sm);
+    --text-base: var(--sl-text-base);
+    --text-lg: var(--sl-text-lg);
+    --text-xl: var(--sl-text-xl);
+    --text-2xl: var(--sl-text-2xl);
+
+    --sl-nav-height: 1rem;
+    --sl-nav-pad-x: 1rem;
+    --sl-nav-pad-y: 0.75rem;
+    --sl-mobile-toc-height: 3rem;
+    --sl-sidebar-width: 8rem;
+    --sl-sidebar-pad-x: 0.5rem;
+    --sl-content-width: 100%;
+
+    --sl-content-pad-x: 1rem;
+    --content-pad-x: 1rem;
+    --sl-menu-button-size: 0.5rem;
+    --sl-nav-gap: var(--sl-content-pad-x);
+    /* Offset required to show outline inside an element instead of round the outside */
+    --sl-outline-offset-inside: -0.1875rem;
+
+    --sl-icon-size: 0.5rem;
+
+    --sl-sidebar-item-padding-inline: 0.25rem;
+
+    --sl-text-body: var(--sl-text-base);
+    --sl-text-body-sm: var(--sl-text-sm);
+    --sl-text-code: var(--sl-text-2xs);
+    --sl-text-code-sm: var(--sl-text-xs);
+    --sl-text-h1: var(--sl-text-xl);
+    --sl-text-h2: var(--sl-text-lg);
+    --sl-text-h3: var(--sl-text-base);
+    --sl-text-h4: var(--sl-text-base);
+
+    --color-kfb-red: #c53228;
+    --color-kfb-green: #009900;
+    --color-kfb-blue: #2174a8;
+    --color-kfb-yellow: #edc500;
+    --color-kfb-gray: #757575;
+    --sl-font-system-mono: monospace;
+    --sl-font: "Barlow Semi Condensed", serif;
+
+    --sl-color-text-accent: var(--color-kfb-blue);
+
+    --sl-color-hairline-light: hsl(224, 20%, 80%);
+  }
+
+  html {
+    font-size: 28px;
+  }
+}

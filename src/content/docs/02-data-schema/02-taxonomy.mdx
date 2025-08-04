@@ -1,0 +1,25 @@
+---
+title: Taxonomy
+sectionNumber: "B.02"
+---
+
+The taxonomy schema is used to describe all terms used with respect to the project _Beschleunigerforschung 2035_. Items are nestable, i. e. each item can have at most one parent.
+
+## Fields
+
+### Structural fields
+
+- **id**: Identifier unique with the set of taxonomy items
+- **parent\_\_id**: (optional) identifier of the parent of the current object
+
+### Data fields
+
+- **term**: (preferred) label of the item in a localized format
+- **definition**: concise definition of the item in a localized format
+- **synonyms**: list of synonyms for the item in a localized format
+- **abbreviations**: list of abbreviations for the item in a localized format
+
+### References
+
+- **taxonomyURI**: URI of the taxonomy the item belongs to. Allowed values `befidesh` (acronym for _Beschleunigerforschung in Deutschland Subject Headings_) or `generic`: used for non-domain-specific items
+- **iris**: list of Internationalized Resource Identifiers linking this item with items defined elsewehere

@@ -1,0 +1,39 @@
+@utility baseline-* {
+  --cap-height: 0.7;
+  /* Calculate shift based on --value(integer) */
+  --baseline-shift: calc(
+    calc(calc(--value(integer) * 1rem) - var(--cap-height)) / 2
+  );
+
+  /* Default push of 1 if modifier not provided */
+  --baseline-push: calc(1rem - var(--baseline-shift));
+
+  /* Override with --modifier(integer) if provided */
+  --baseline-push: calc(
+    calc(--modifier(integer) * var(--sl-line-height)) - var(--baseline-shift)
+  );
+
+  /* ...and apply */
+  line-height: calc(--value(integer) * var(--sl-line-height));
+  padding-top: var(--baseline-shift);
+  margin-bottom: var(--baseline-push);
+}
+
+@utility baseline-debug-stripe {
+  background: repeating-linear-gradient(
+    0,
+    #68d391,
+    #68d391 1rem,
+    #c6f6d5 1rem,
+    #c6f6d5 2rem
+  );
+}
+@utility baseline-debug-line {
+  background: linear-gradient(
+    rgba(255, 0, 0, 0.15),
+    rgba(255, 0, 0, 0.15) 1px,
+    transparent 1px
+  );
+  background-size: 1px 1rem;
+  background-position-y: -0.25rem;
+}
