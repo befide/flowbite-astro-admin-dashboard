@@ -4,7 +4,7 @@ name: Flowbite Admin Dashboard — Continuous Integration
 
 on:
   push:
-    branches: ['next']
+    branches: ["next"]
 
   workflow_dispatch:
 
@@ -61,4 +61,4 @@ jobs:
         run: NODE_ENV=production pnpm install
 
       - name: Build demo website (dist)
-        run: 'NODE_ENV=production pnpm run build'
+        run: "NODE_ENV=production pnpm run build"

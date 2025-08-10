@@ -22,7 +22,7 @@
     @apply baseline-1/0;
   }
   .sl-markdown-content {
-    line-height: 1rem !important;
+    line-height: 1rem;
   }
   .sl-markdown-content section {
     margin-bottom: 1rem;
@@ -73,7 +73,7 @@
   /*  */
 
   section {
-    margin-top: 1rem !important;
+    margin-top: 1rem;
   }
   .md hr {
     @apply baseline-2/1;

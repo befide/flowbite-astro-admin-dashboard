@@ -4,7 +4,7 @@ name: Flowbite Admin Dashboard — Deploy to Demo to GitHub Pages
 
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
 
   workflow_dispatch:
 
@@ -67,7 +67,7 @@ jobs:
         run: NODE_ENV=production pnpm install
 
       - name: Build demo website (dist)
-        run: 'NODE_ENV=production pnpm run build'
+        run: "NODE_ENV=production pnpm run build"
 
       # ————————————————————————————————————————————————————————————————————————
 

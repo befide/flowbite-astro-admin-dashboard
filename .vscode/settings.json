@@ -1,41 +1,47 @@
-// Extracted from https://github.com/JulianCataldo/web-garden/blob/develop/.vscode/settings.json
-
 {
-	/* —————————————————————————————— Typescript —————————————————————————————— */
-	"typescript.inlayHints.parameterNames.enabled": "all",
-
-	/* —————————————————————————————— Tailwind ———————————————————————————————— */
-	"tailwindCSS.includeLanguages": {
-		/* 
-		   Astro Language Server can handle Tailwind extension communication,
-			 see https://docs.astro.build/en/guides/integrations-guide/tailwind/#configuring-the-integration
-			 But if you had troubles like me, you can force the association here.
-		*/
-		/* Adds class inlay hints inside `.astro` templates (acts as HTML) */
-		"astro": "html",
-		/* Useful for adding IntelliSense to Markdown, too */
-		"md": "html"
-	},
-
-	"tailwindCSS.classAttributes": ["class", "class:list"],
-
-	/* —————————————————————————————— ESLint —————————————————————————————————— */
-	"eslint.validate": [
-		"astro" /* Using `astro-eslint-parser` + `eslint-plugin-astro` */,
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact"
-	],
-
-	/* —————————————————————————————— Prettier ———————————————————————————————— */
-	/* Add support for `prettier-plugin-astro` */
-	"prettier.documentSelectors": ["**/*.astro"],
-	"[astro]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-
-	/* —————————————————————————————— Misc. ———————————————————————————————— */
-
-	"markdown.extension.toc.levels": "2..6"
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "deno.enablePaths": [
+    "supabase/functions"
+  ],
+  "deno.lint": true,
+  "deno.unstable": [
+    "bare-node-builtins",
+    "byonm",
+    "sloppy-imports",
+    "unsafe-proto",
+    "webgpu",
+    "broadcast-channel",
+    "worker-options",
+    "cron",
+    "kv",
+    "ffi",
+    "fs",
+    "http",
+    "net"
+  ],
+  "eslint.validate": [
+    "astro",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "markdown.extension.toc.levels": "2..6",
+  "prettier.documentSelectors": [
+    "**/*.astro"
+  ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "class:list"
+  ],
+  "tailwindCSS.includeLanguages": {
+    "astro": "html",
+    "md": "html"
+  },
+  "typescript.inlayHints.parameterNames.enabled": "all"
 }
