@@ -1,0 +1,72 @@
+---
+export type ResearchAgenda = ResearchAgendaItem[];
+
+export interface ResearchAgendaItem {
+  id: string;
+  path: string;
+  name: string;
+  group?: string;
+  label: string;
+  description?: string;
+  'links:agenda-topics'?: string[];
+  'links:agenda-facilities'?: string[];
+  usedInResearchAgenda: boolean;
+  links: string[];
+  'links:agenda-objectives'?: string[];
+  collection?: string;
+  nameIsAcronymFor?: string;
+  userGroup?: string;
+  facilityName?: string;
+  lifeCycleStage?: string;
+  isInGermany?: boolean;
+  additionalUserGroups?: string[];
+  facilityVersion?: string;
+  isBmbfFis?: boolean;
+}
+
+import { Image } from 'astro:assets';
+import _data from './research-agenda.json';
+
+let data: ResearchAgenda = _data;
+
+export interface Props {
+  filter: string;
+}
+
+let { filter } = Astro.props;
+---
+
+<figure class="user-group">
+  <Image
+    src={import(`./svg/${filter}.svg`)}
+    alt="..."
+    width="140"
+    height="140"
+  />
+  <figcaption>
+    <slot />
+  </figcaption>
+</figure>
+
+<style lang="stylus">
+figure.user-group
+  display flex
+  flex-direction row-reverse
+  
+  
+  img
+    flex  1 1 calc(5 * var(--baseline-height))
+
+    
+    // height calc(20 * var(--baseline-height))
+    // position absolute
+    // left calc(-6 * var(--baseline-height))
+    // top calc(-.5 * var(--baseline-height))
+    // z-index -1
+
+  figcaption
+    flex  1 0 calc(5 * var(--baseline-height))
+    // margin-left calc(12 * var(--baseline-height))
+    // height calc(16 * var(--baseline-height))
+    
+</style>

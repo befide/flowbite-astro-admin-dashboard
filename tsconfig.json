@@ -1,36 +1,26 @@
 {
-	"extends": "astro/tsconfigs/strictest",
-	"compilerOptions": {
-		"strictNullChecks": true,
-		"baseUrl": "./",
-		"paths": {
-			"@/*": [
-				"./src/*"
-			],
-			"@components/*": [
-				"./src/astro/components/*"
-			],
-			"@styles/*": [
-				"./src/astro/styles/*"
-			],
-			"@utils/*": [
-				"./src/astro/domain/*"
-			],
-			"@nanostore/*": [
-				"./src/astro/nanostore/*"
-			],
-			"@layouts/*": [
-				"./src/astro/layouts/*"
-			],
-			"@domain/*": [
-				"./src/astro/domain/*"
-			],
-			"@content/*": [
-				"./src/content/*"
-			],
-			"@assets/*": [
-				"./src/content/assets/*"
-			],
-		}
-	}
+  "extends": "astro/tsconfigs/base",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
+    "strictNullChecks": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/astro/components/*"],
+      "@styles/*": ["./src/app/styles/*"],
+      "@utils/*": ["./src/astro/domain/*"],
+
+      "@layouts/*": ["./src/astro/layouts/*"],
+      "@domain/*": ["./src/astro/domain/*"],
+      "@content/*": ["./src/content/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@astro/*": ["./src/astro/*"]
+    }
+  }
 }

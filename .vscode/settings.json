@@ -5,9 +5,7 @@
   "[typescript]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
-  "deno.enablePaths": [
-    "supabase/functions"
-  ],
+  "deno.enablePaths": ["supabase/functions"],
   "deno.lint": true,
   "deno.unstable": [
     "bare-node-builtins",
@@ -32,13 +30,8 @@
     "typescriptreact"
   ],
   "markdown.extension.toc.levels": "2..6",
-  "prettier.documentSelectors": [
-    "**/*.astro"
-  ],
-  "tailwindCSS.classAttributes": [
-    "class",
-    "class:list"
-  ],
+  "prettier.documentSelectors": ["**/*.astro"],
+  "tailwindCSS.classAttributes": ["class", "class:list"],
   "tailwindCSS.includeLanguages": {
     "astro": "html",
     "md": "html"

@@ -1,0 +1,33 @@
+---
+import { createResearchAgenda } from './research-agenda'
+
+export interface Props {
+  filter: string
+}
+let { filter = 'agenda/facilities' } = Astro.props
+
+const svg = createResearchAgenda(filter)
+---
+
+<figure class="research-agenda">
+  <object data={'/svg/research-agenda/' + filter + '.svg'} type="image/svg+xml"
+  ></object>
+  <figcaption>
+    <slot />
+  </figcaption>
+</figure>
+
+<style is:global>
+  figure.research-agenda {
+    flex-direction: column;
+    width: 100%;
+  }
+  .research-agenda object {
+    width: 100%;
+    height: 100%;
+  }
+
+  figcaption {
+    flex: 1 0 5rem;
+  }
+</style>

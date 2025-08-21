@@ -1,0 +1,260 @@
+[
+  {
+    "year": 1975,
+    "count": 13,
+    "count__xcd": 13,
+    "count__acceleratorBasedXcd": 9
+  },
+  {
+    "year": 1976,
+    "count": 36,
+    "count__xcd": 36,
+    "count__acceleratorBasedXcd": 25
+  },
+  {
+    "year": 1977,
+    "count": 42,
+    "count__xcd": 42,
+    "count__acceleratorBasedXcd": 29
+  },
+  {
+    "year": 1978,
+    "count": 53,
+    "count__xcd": 53,
+    "count__acceleratorBasedXcd": 37
+  },
+  {
+    "year": 1979,
+    "count": 69,
+    "count__xcd": 60,
+    "count__acceleratorBasedXcd": 42
+  },
+  {
+    "year": 1980,
+    "count": 85,
+    "count__xcd": 76,
+    "count__acceleratorBasedXcd": 53
+  },
+  {
+    "year": 1981,
+    "count": 117,
+    "count__xcd": 108,
+    "count__acceleratorBasedXcd": 76
+  },
+  {
+    "year": 1982,
+    "count": 153,
+    "count__xcd": 144,
+    "count__acceleratorBasedXcd": 101
+  },
+  {
+    "year": 1983,
+    "count": 175,
+    "count__xcd": 165,
+    "count__acceleratorBasedXcd": 116
+  },
+  {
+    "year": 1984,
+    "count": 195,
+    "count__xcd": 184,
+    "count__acceleratorBasedXcd": 129
+  },
+  {
+    "year": 1985,
+    "count": 213,
+    "count__xcd": 201,
+    "count__acceleratorBasedXcd": 141
+  },
+  {
+    "year": 1986,
+    "count": 238,
+    "count__xcd": 226,
+    "count__acceleratorBasedXcd": 158
+  },
+  {
+    "year": 1987,
+    "count": 291,
+    "count__xcd": 278,
+    "count__acceleratorBasedXcd": 195
+  },
+  {
+    "year": 1988,
+    "count": 365,
+    "count__xcd": 348,
+    "count__acceleratorBasedXcd": 244
+  },
+  {
+    "year": 1989,
+    "count": 507,
+    "count__xcd": 483,
+    "count__acceleratorBasedXcd": 338
+  },
+  {
+    "year": 1990,
+    "count": 694,
+    "count__xcd": 645,
+    "count__acceleratorBasedXcd": 452
+  },
+  {
+    "year": 1991,
+    "count": 886,
+    "count__xcd": 826,
+    "count__acceleratorBasedXcd": 578
+  },
+  {
+    "year": 1992,
+    "count": 1582,
+    "count__xcd": 1448,
+    "count__acceleratorBasedXcd": 1014
+  },
+  {
+    "year": 1993,
+    "count": 2871,
+    "count__xcd": 2505,
+    "count__acceleratorBasedXcd": 1754
+  },
+  {
+    "year": 1994,
+    "count": 3812,
+    "count__xcd": 3253,
+    "count__acceleratorBasedXcd": 2277
+  },
+  {
+    "year": 1995,
+    "count": 4985,
+    "count__xcd": 4233,
+    "count__acceleratorBasedXcd": 2963
+  },
+  {
+    "year": 1996,
+    "count": 6550,
+    "count__xcd": 5467,
+    "count__acceleratorBasedXcd": 3827
+  },
+  {
+    "year": 1997,
+    "count": 8607,
+    "count__xcd": 7190,
+    "count__acceleratorBasedXcd": 5033
+  },
+  {
+    "year": 1998,
+    "count": 10963,
+    "count__xcd": 9150,
+    "count__acceleratorBasedXcd": 6405
+  },
+  {
+    "year": 1999,
+    "count": 13590,
+    "count__xcd": 11384,
+    "count__acceleratorBasedXcd": 7969
+  },
+  {
+    "year": 2000,
+    "count": 16404,
+    "count__xcd": 13762,
+    "count__acceleratorBasedXcd": 9633
+  },
+  {
+    "year": 2001,
+    "count": 19398,
+    "count__xcd": 16287,
+    "count__acceleratorBasedXcd": 11401
+  },
+  {
+    "year": 2002,
+    "count": 23545,
+    "count__xcd": 19873,
+    "count__acceleratorBasedXcd": 13911
+  },
+  {
+    "year": 2003,
+    "count": 28694,
+    "count__xcd": 24267,
+    "count__acceleratorBasedXcd": 16987
+  },
+  {
+    "year": 2004,
+    "count": 34028,
+    "count__xcd": 28693,
+    "count__acceleratorBasedXcd": 20085
+  },
+  {
+    "year": 2005,
+    "count": 40437,
+    "count__xcd": 34202,
+    "count__acceleratorBasedXcd": 23941
+  },
+  {
+    "year": 2006,
+    "count": 47572,
+    "count__xcd": 40341,
+    "count__acceleratorBasedXcd": 28239
+  },
+  {
+    "year": 2007,
+    "count": 54478,
+    "count__xcd": 46541,
+    "count__acceleratorBasedXcd": 32579
+  },
+  {
+    "year": 2008,
+    "count": 61770,
+    "count__xcd": 53205,
+    "count__acceleratorBasedXcd": 37244
+  },
+  {
+    "year": 2009,
+    "count": 69521,
+    "count__xcd": 60367,
+    "count__acceleratorBasedXcd": 42257
+  },
+  {
+    "year": 2010,
+    "count": 77457,
+    "count__xcd": 67716,
+    "count__acceleratorBasedXcd": 47401
+  },
+  {
+    "year": 2011,
+    "count": 86222,
+    "count__xcd": 75870,
+    "count__acceleratorBasedXcd": 53109
+  },
+  {
+    "year": 2012,
+    "count": 95573,
+    "count__xcd": 84587,
+    "count__acceleratorBasedXcd": 59211
+  },
+  {
+    "year": 2013,
+    "count": 105150,
+    "count__xcd": 93409,
+    "count__acceleratorBasedXcd": 65386
+  },
+  {
+    "year": 2014,
+    "count": 114420,
+    "count__xcd": 102008,
+    "count__acceleratorBasedXcd": 71406
+  },
+  {
+    "year": 2015,
+    "count": 125256,
+    "count__xcd": 111962,
+    "count__acceleratorBasedXcd": 78373
+  },
+  {
+    "year": 2016,
+    "count": 136360,
+    "count__xcd": 122069,
+    "count__acceleratorBasedXcd": 85448
+  },
+  {
+    "year": 2017,
+    "count": 147607,
+    "count__xcd": 131996,
+    "count__acceleratorBasedXcd": 92397
+  }
+]

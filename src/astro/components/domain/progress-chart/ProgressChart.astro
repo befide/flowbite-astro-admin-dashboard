@@ -1,0 +1,344 @@
+---
+import { JSDOM } from "jsdom"
+import { axisBottom, axisLeft, axisRight } from "d3"
+
+import { format, formatLocale } from "d3"
+import { scaleLinear, scaleLog } from "d3"
+import { select } from "d3"
+
+import { curveCardinal, line } from "d3"
+
+import chartMetas from "./ProgressChart.config"
+
+
+export interface ProgressChart {
+  baselineHeight?: number
+  widthInGridUnits?: number
+  heightInGridUnits?: number
+  dimension?: string
+}
+
+export type Data = Datum[]
+
+export interface Datum {
+  year: number
+  value: number
+  value_sum?: number
+}
+
+function gridUnits2BaselineCount(gridUnits: number) {
+  return gridUnits * 3 + gridUnits - 1
+}
+
+const {
+  baselineHeight = 24,
+  widthInGridUnits = 4,
+  heightInGridUnits = 2,
+  dimension = "nuclideDiscoveriesPerYear",
+} = Astro.props
+
+const chartMeta = chartMetas[dimension]
+
+if (!chartMeta) throw new Error("undefined dimension: " + dimension)
+
+const locale = formatLocale({
+  decimal: ",",
+  thousands: ".",
+  grouping: [3],
+  currency: ["", "\u00A0€"],
+  minus: "\u2212",
+  percent: "\u202F%",
+})
+
+const height = gridUnits2BaselineCount(heightInGridUnits + 0) * baselineHeight
+
+const width = gridUnits2BaselineCount(widthInGridUnits + 0) * baselineHeight
+
+const t0 = 1935
+const t1 = 2035
+
+const x = scaleLinear().domain([t0, t1]).range([0, width])
+
+const y =
+  chartMeta.scale === "linear"
+    ? scaleLinear()
+        .domain(chartMeta.yDomain)
+        .range([height - 1 * baselineHeight, baselineHeight * 1])
+    : scaleLog()
+        .domain([10 ** chartMeta.y0, 10 ** (chartMeta.y0 + chartMeta.yFactor)])
+        .range([height - 1 * baselineHeight, baselineHeight * 1])
+
+function logFormat(d: number) {
+  const x = Math.log(d) / Math.log(10) + 1e-6
+  return Math.abs(x - Math.floor(x)) < 0.1
+    ? ((chartMeta && chartMeta.numberFormat) || locale.format(",.0f"))(d)
+    : ""
+}
+function cumulativeByYear(input: any): Data {
+  let runningCount = 0
+  return input.map(({ year, value }) => {
+    runningCount += +value
+    // Return a new datum for this date with the cumulative tally instead of that day's count.
+    return {
+      year,
+      value: +value,
+      value_sum: runningCount,
+    }
+  })
+}
+
+const data = cumulativeByYear(chartMeta.data)
+
+const xAxis = (g: any) =>
+  g
+    .attr("transform", `translate(0,${height - baselineHeight})`)
+    .call(
+      axisBottom(x)
+        .tickValues([1925, 1925, 1950, 1975, 2000, 2025])
+        .tickSize(0)
+        .tickFormat(format(".0f"))
+    )
+    .call((g: any) => g.selectAll(".domain").remove())
+
+const yAxis =
+  chartMeta.scale === "linear"
+    ? (g: any) => {
+        g.attr("transform", `translate(${width},0)`)
+          .call(
+            axisLeft(y)
+              .tickSize(width)
+              .ticks(5)
+              .tickFormat(
+                (chartMeta && chartMeta.numberFormat) || format(",.0f")
+              )
+          )
+          .call((g: any) => g.selectAll(".domain").remove())
+          .call((g: any) => {
+            g.selectAll(".tick text").attr("x", 0).attr("dy", 0)
+          })
+
+        g.selectAll(".tick:last-child text").text("")
+        // g.selectAll('.tick:nth-last-child(2) text').text('');
+      }
+    : (g: any) =>
+        g
+          // .attr("transform", `translate(0,0)`)
+          .call(axisRight(y).tickSize(width).tickFormat(logFormat))
+          .call((g: any) => g.selectAll(".domain").remove())
+          .call((g: any) => {
+            g.selectAll(".tick text").attr("x", 0).attr("dy", 0)
+
+            // g.selectAll('.tick text').each(function (e, i) {
+            //   const textElement = select(this.parentNode).select('text')
+
+            //   const text = textElement.text()
+            // })
+
+            if (chartMeta.yFactor >= 10) {
+              g.selectAll(".tick:last-child text").text("")
+              g.selectAll(".tick:nth-last-child(2) text").text("")
+              g.selectAll(".tick:nth-last-child(3) text").text("")
+            }
+          })
+
+// // const curve = line()
+// //   .x((d) => x(d[0]))
+// //   .y((d) => y(d[1]))
+// //   .curve(chartMeta.curveGenerator || curveCardinal.tension(1))(
+// //   data.map(({ year, value }) => [year, value])
+// );
+
+const { document } = new JSDOM().window
+const svg = select(document.body).append("svg")
+
+svg
+  .attr("xmlns", "http://www.w3.org/2000/svg")
+  .attr("width", width)
+  .attr("height", height)
+  .attr("viewBox", [0, 0, width, height].join(" "))
+
+svg
+  .append("style")
+  .text(
+    "@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');"
+  )
+
+const title = svg
+  .append("g")
+  .attr("class", "title")
+  .attr("text-anchor", "start")
+  .attr("transform", `translate(0,${1 * baselineHeight})`)
+  .append("text")
+
+title
+  .append("tspan")
+  .attr("class", "quantity-name-qualifier")
+  .text(chartMeta.quantityNameQualifier)
+title
+  .append("tspan")
+  .attr("class", "quantity-name")
+  .text(chartMeta.quantityName)
+
+svg
+  .append("g")
+  .attr("class", "unit")
+  .attr("text-anchor", "start")
+  .attr("transform", `translate(0,${2 * baselineHeight})`)
+  .append("text")
+  .attr("class", "quantity-name")
+  .text(chartMeta.unit)
+svg
+  .append("g")
+  .attr("class", "curve")
+  .append("path")
+  // .attr("stroke-width", (_, i) => 4 * i)
+  // .attr("stroke-opacity", (_, i) => 1 - i / 4)
+  .attr(
+    "d",
+    line()
+      .x((d) => x(d[0]))
+      .y((d) => y(d[1]))
+      .curve(chartMeta.curveGenerator || curveCardinal.tension(1))(
+      data.map(({ year, value, value_sum }) =>
+        chartMeta.cumulate ? [year, value_sum] : [year, value]
+      )
+    )
+  )
+svg.append("g").attr("class", "x-axis").call(xAxis)
+svg.append("g").attr("class", "y-axis").call(yAxis)
+
+const dataPoints = svg.append("g").attr("class", "data-points")
+
+!chartMeta.cumulate &&
+  dataPoints
+    .selectAll(".data-point")
+    .data(data)
+    .join("circle")
+    .classed("data-point", true)
+    .attr("cx", (d) => x(d.year))
+    .attr("cy", (d) => y(d.value))
+    .attr("r", 3)
+
+chartMeta.cumulate &&
+  dataPoints
+    .selectAll(".data-point-rect")
+    .data(data)
+    .join("rect")
+    .classed("data-point-rect", true)
+    .attr("x", ({ year }) => x(year) - 0.5)
+    .attr("y", ({ value }) => y(value))
+    .attr("height", ({ value }) => -y(value) + y(0))
+    .attr("width", 3)
+---
+
+<figure>
+  <Fragment set:html={document.body.innerHTML} />
+
+  <figcaption class="md">
+    <slot />
+  </figcaption>
+</figure>
+
+<style>
+
+figure {
+  display: flex;
+
+  width: 100%;
+
+  margin-top: 1rem;
+
+  padding: 2rem;
+
+  position: relative;
+  overflow: visible;
+
+  font-family: "Barlow Condensed";
+
+  flex-direction: row;
+  gap: 2rem;
+	z-index: 10;
+}
+
+svg {
+  flex: 1;
+	z-index: 190;
+	position: relative;
+}
+
+figcaption {
+  flex: 1;
+	z-index: 10;
+	position: relative;
+}
+
+figure:before {
+  background-color: #bbbbbb;
+	opacity: .1;
+
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  bottom: -0.25rem;
+  left: -0.25rem;
+
+  content: " ";
+  z-index: 1;
+}
+g.title text {
+  fill: black;
+
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight--bold);
+  font-style: italic;
+
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+g.unit text {
+  font-size: var(--text-sm);
+}
+
+.data-point {
+  fill: black;
+  fill-opacity: 0.8;
+}
+
+.data-point-bg {
+  fill: white;
+  fill-opacity: 0.8;
+}
+
+.curve path {
+  fill: transparent;
+  stroke: #009900;
+  stroke-linecap: round;
+}
+
+.tick line {
+  stroke: #666666;
+
+  stroke-width: 0.5px;
+  stroke-dasharray: 1 1;
+  opacity: 1;
+}
+
+g.x-axis .tick line {
+  stroke-dasharray: 0;
+}
+
+.tick.primary line {
+  stroke-width: 0.25px;
+}
+
+.tick text {
+  fill: #666666;
+
+  font-family: "Barlow Condensed";
+  font-size: var(--text-xs);
+
+  font-variant-numeric: tabular-nums;
+}
+
+</style>

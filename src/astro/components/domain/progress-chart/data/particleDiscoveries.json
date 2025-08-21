@@ -1,0 +1,111 @@
+[
+  {
+    "year": 1897,
+    "label__de": "Elektron",
+    "label__en": "electron"
+  },
+  {
+    "year": 1914,
+    "label__de": "Photon",
+    "label__en": "photon"
+  },
+  {
+    "year": 1932,
+    "label__de": "Positron",
+    "label__en": "positron"
+  },
+  {
+    "year": 1936,
+    "label__de": "Muon",
+    "label__en": "muon"
+  },
+  {
+    "year": 1956,
+    "label__de": "Elektron-Neutrino",
+    "label__en": "electron neutrino"
+  },
+  {
+    "year": 1962,
+    "label__de": "Muon-Neutrino",
+    "label__en": "muon neutrino",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1968,
+    "label__de": "Down-Quark",
+    "label__en": "down quark",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1968,
+    "label__de": "Strange-Quark",
+    "label__en": "strange quark",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1968,
+    "label__de": "Up-Quark",
+    "label__en": "up quark",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1974,
+    "label__de": "Charm-Quark",
+    "label__en": "charm quark",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1975,
+    "label__de": "Tau",
+    "label__en": "tau",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1977,
+    "label__de": "Bottom-Quark",
+    "label__en": "bottom quark",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1979,
+    "label__de": "Gluon",
+    "label__en": "gluon",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1983,
+    "label__de": "W-minus-Boson",
+    "label__en": "W+",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1983,
+    "label__de": "Z-null-Boson",
+    "label__en": "Z0",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1983,
+    "label__de": "W-plus-Boson",
+    "label__en": "W-",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 1995,
+    "label__de": "Top-Quark",
+    "label__en": "top quark",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 2000,
+    "label__de": "Tau-Neutrino",
+    "label__en": "tau neutrino",
+    "isAcceleratorBased": true
+  },
+  {
+    "year": 2012,
+    "label__de": "Higgs-Boson",
+    "label__en": "Higgs Boson",
+    "isAcceleratorBased": true
+  }
+]

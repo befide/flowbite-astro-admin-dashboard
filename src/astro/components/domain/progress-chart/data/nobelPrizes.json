@@ -1,0 +1,127 @@
+[
+  {
+    "year": 1939,
+    "label__de": "Zyklotron",
+    "label__en": "Cyclotron"
+  },
+  {
+    "year": 1951,
+    "label__de": "Cockcroft-Walton-Beschleuniger",
+    "label__en": "Cockcroft-Walton accelerator"
+  },
+  {
+    "year": 1952,
+    "label__de": "Magnetmoment des Neutrons",
+    "label__en": "Magnetic moment of the neutron"
+  },
+  {
+    "year": 1957,
+    "label__de": "Paritätsgesetz",
+    "label__en": "Parity law"
+  },
+  {
+    "year": 1959,
+    "label__de": "Antiproton",
+    "label__en": "Antiproton"
+  },
+  {
+    "year": 1960,
+    "label__de": "Blasenkammer",
+    "label__en": "Bubble chamber"
+  },
+  {
+    "year": 1961,
+    "label__de": "Struktur der Nukleonen",
+    "label__en": "Structure of nucleons"
+  },
+  {
+    "year": 1963,
+    "label__de": "Nukleare Schalenstruktur",
+    "label__en": "Nuclear shell structure"
+  },
+  {
+    "year": 1967,
+    "label__de": "Stellare Kernreaktionen",
+    "label__en": "Stellar nuclear reactions"
+  },
+  {
+    "year": 1968,
+    "label__de": "Resonanzzustände",
+    "label__en": "Resonance states"
+  },
+  {
+    "year": 1976,
+    "label__de": "J/Psi",
+    "label__en": "J/Psi"
+  },
+  {
+    "year": 1979,
+    "label__de": "Elektroschwache Wechselwirkung",
+    "label__en": "Electroweak interaction"
+  },
+  {
+    "year": 1980,
+    "label__de": "CP-Verletzung",
+    "label__en": "CP violation"
+  },
+  {
+    "year": 1981,
+    "label__de": "Elektronenspektroskopie",
+    "label__en": "Electron spectroscopy"
+  },
+  {
+    "year": 1983,
+    "label__de": "Stellare Kernreaktionen",
+    "label__en": "Stellar nuclear reactions"
+  },
+  {
+    "year": 1984,
+    "label__de": "W- und Z-Bosonen",
+    "label__en": "W and Z bosons"
+  },
+  {
+    "year": 1986,
+    "label__de": "Elektronenmikroskop",
+    "label__en": "Electron microscope"
+  },
+  {
+    "year": 1988,
+    "label__de": "Myon-Neutrino",
+    "label__en": "Muon neutrino"
+  },
+  {
+    "year": 1989,
+    "label__de": "Ionenfallentechnik",
+    "label__en": "Ion trap technique"
+  },
+  {
+    "year": 1990,
+    "label__de": "Quarkmodell",
+    "label__en": "Quark model"
+  },
+  {
+    "year": 1992,
+    "label__de": "Vieldraht-Proportionalkammer",
+    "label__en": "Multi-wire proportional chamber"
+  },
+  {
+    "year": 1995,
+    "label__de": "Tauon",
+    "label__en": "Tauon"
+  },
+  {
+    "year": 2004,
+    "label__de": "Asymptotische Freiheit",
+    "label__en": "Asymptotic freedom"
+  },
+  {
+    "year": 2008,
+    "label__de": "Symmetriebrechnung",
+    "label__en": "Symmetry theory"
+  },
+  {
+    "year": 2013,
+    "label__de": "Higgs-Mechanismus",
+    "label__en": "Higgs mechanism"
+  }
+]

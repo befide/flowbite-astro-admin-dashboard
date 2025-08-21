@@ -1,0 +1,19 @@
+@page {
+  margin: 25mm 20mm 20mm 10mm;
+  size: A4;
+
+  @bottom-right {
+    font-size: var(--text-sm);
+    content: "Seite " counter(page) " von " counter(pages);
+  }
+}
+
+@media print {
+  html {
+    font-size: 16px;
+  }
+  #main-content footer,
+  nav {
+    display: none;
+  }
+}

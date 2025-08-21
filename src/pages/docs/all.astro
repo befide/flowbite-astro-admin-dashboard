@@ -1,29 +1,15 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content"
-import LayoutSidebar from "../../app/LayoutSidebar.astro"
-import { ascending } from "d3-array"
+import { getCollection } from "astro:content"
+import LayoutSidebar from "@astro/LayoutSidebar.astro"
+import { ascending } from "d3"
 import ContentPage from "../../modules/ContentPage.astro"
 
-export async function getStaticPaths() {
-  const docs = await getCollection("docs")
-  return docs.map((doc) => ({
-    params: { id: doc.id },
-    props: { doc },
-  }))
-}
 
-type Props = {
-  doc: CollectionEntry<"docs">
-}
 
-const { doc } = Astro.props
-// const { Content, headings } = await render(doc)
-// const { description, title } = doc.data
-
-const docs = await getCollection("docs")
-docs.sort((a, b) => ascending(a.data.sectionNumber, b.data.sectionNumber))
+const sections = await getCollection("sections")
+sections.sort((a, b) => ascending(a.data.sectionNumber, b.data.sectionNumber))
 ---
 
 <LayoutSidebar>
-  {docs.map((doc) => <ContentPage doc={doc} />)}
+  {sections.map((section) => <ContentPage {section} />)}
 </LayoutSidebar>

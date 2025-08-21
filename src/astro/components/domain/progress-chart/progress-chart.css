@@ -1,0 +1,55 @@
+g.title text {
+  fill: black;
+
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight--bold);
+  font-style: italic;
+
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+g.unit text {
+  font-size: var(--text-sm);
+}
+
+.data-point {
+  fill: black;
+  fill-opacity: 0.8;
+}
+
+.data-point-bg {
+  fill: white;
+  fill-opacity: 0.8;
+}
+
+.curve path {
+  fill: transparent;
+  stroke: #009900;
+  stroke-linecap: round;
+}
+
+.tick line {
+  stroke: #666666;
+
+  stroke-width: 0.5px;
+  stroke-dasharray: 1 1;
+  opacity: 1;
+}
+
+g.x-axis .tick line {
+  stroke-dasharray: 0;
+}
+
+.tick.primary line {
+  stroke-width: 0.25px;
+}
+
+.tick text {
+  fill: #666666;
+
+  font-family: "Barlow Condensed";
+  font-size: var(--text-xs);
+
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,55 @@
+---
+import type { ResearchAgenda } from './research-agenda'
+import _data from './research-agenda.json'
+
+let data: ResearchAgenda = Object.values(_data)
+
+export interface Props {
+  filter: string
+}
+
+const { filter } = Astro.props
+
+const item = data.find((item) => item.path === filter)
+---
+
+<figure class="objective">
+  <div class="container">
+    <object
+      data={'/svg/research-agenda/' + filter + '.svg'}
+      type="image/svg+xml"></object>
+  </div>
+  <figcaption>
+    <p class="md">
+      <strong>{item?.label}: </strong>{item?.description}
+    </p>
+  </figcaption>
+</figure>
+
+<style>
+  figure {
+    display: flex;
+    flex-direction: row;
+    width: 23rem;
+    height: 11rem;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .container {
+    flex: 0 0 7rem;
+    position: relative;
+  }
+
+  object {
+    position: absolute;
+    width: 19rem;
+    height: 19rem;
+    top: -4rem;
+    left: -7rem;
+  }
+
+  figcaption {
+    flex: 0 0 15rem;
+  }
+</style>

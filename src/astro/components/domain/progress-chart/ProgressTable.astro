@@ -1,0 +1,104 @@
+---
+import { JSDOM } from "jsdom"
+import { axisBottom, axisLeft, axisRight } from "d3"
+
+import { format, formatLocale } from "d3"
+import { scaleLinear, scaleLog } from "d3"
+import { select } from "d3"
+
+import { curveCardinal, line } from "d3"
+
+import chartMetas from "./ProgressChart.config"
+import type { Fragment } from "astro/jsx-runtime"
+
+export interface ProgressChart {
+  baselineHeight?: number
+  widthInGridUnits?: number
+  heightInGridUnits?: number
+  dimension?: string
+}
+
+export type Data = Datum[]
+
+export interface Datum {
+  year: number
+  value: number
+  value_sum?: number
+}
+
+const { dimension = "nuclideDiscoveriesPerYear" } = Astro.props
+
+const chartMeta = chartMetas[dimension]
+
+if (!chartMeta) throw new Error("undefined dimension: " + dimension)
+---
+
+<table class="progress-chart md">
+  <thead>
+    <tr>
+      <th>year</th>
+      <th>value</th>
+      <th>source</th>
+    </tr>
+  </thead>
+  <tbody>
+    {
+      chartMeta.data.map((d) => (
+        <tr>
+          <td>{d.year}</td>
+          <td>{d.value}</td>
+          <td class="url">
+            <a
+              class="truncate text-slate-400 hover:text-teal-400"
+              href={d.source}
+              target="_blank"
+            >
+              {d.source}
+            </a>
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+
+  <caption class="md">
+    <slot />
+  </caption>
+</table>
+
+<style is:global>
+  @import "./progress-chart.css";
+
+  svg {
+    background-color: rgba(white, 0.9);
+    font-family: "Barlow Condensed";
+  }
+
+  figure.md.progress-chart {
+    overflow: visible;
+    margin-top: 1rem;
+  }
+
+  .progress-chart::before {
+    content: " ";
+    position: absolute;
+    background-color: rgba(white, 0.5);
+    z-index: -1;
+    top: -0.25rem;
+    bottom: -0.25rem;
+    left: -0.25rem;
+    right: -0.25rem;
+  }
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+  }
+  td.url {
+    width: 100px;
+    white-space: nobreak;
+    word-break: break-all;
+  }
+</style>

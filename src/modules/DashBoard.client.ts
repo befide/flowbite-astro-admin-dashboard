@@ -1,9 +1,9 @@
 /* eslint-disable max-lines */
 
-import ApexCharts from "apexcharts"
+import ApexCharts from "apexcharts";
 
 const getMainChartOptions = () => {
-  let mainChartColors = {}
+  let mainChartColors = {};
 
   if (document.documentElement.classList.contains("dark")) {
     mainChartColors = {
@@ -11,14 +11,14 @@ const getMainChartOptions = () => {
       labelColor: "#9CA3AF",
       opacityFrom: 0,
       opacityTo: 0.15,
-    }
+    };
   } else {
     mainChartColors = {
       borderColor: "#F3F4F6",
       labelColor: "#6B7280",
       opacityFrom: 0.45,
       opacityTo: 0,
-    }
+    };
   }
 
   return {
@@ -118,7 +118,7 @@ const getMainChartOptions = () => {
           fontWeight: 500,
         },
         formatter(value) {
-          return `$${value}`
+          return `$${value}`;
         },
       },
     },
@@ -145,20 +145,20 @@ const getMainChartOptions = () => {
         },
       },
     ],
-  }
-}
+  };
+};
 
 if (document.getElementById("main-chart")) {
   const chart = new ApexCharts(
     document.getElementById("main-chart"),
-    getMainChartOptions()
-  )
-  chart.render()
+    getMainChartOptions(),
+  );
+  chart.render();
 
   // init again when toggling dark mode
   document.addEventListener("dark-mode", () => {
-    chart.updateOptions(getMainChartOptions())
-  })
+    chart.updateOptions(getMainChartOptions());
+  });
 }
 
 if (document.getElementById("new-products-chart")) {
@@ -242,13 +242,13 @@ if (document.getElementById("new-products-chart")) {
     fill: {
       opacity: 1,
     },
-  }
+  };
 
   const chart = new ApexCharts(
     document.getElementById("new-products-chart"),
-    options
-  )
-  chart.render()
+    options,
+  );
+  chart.render();
 }
 
 if (document.getElementById("sales-by-category")) {
@@ -358,28 +358,28 @@ if (document.getElementById("sales-by-category")) {
     fill: {
       opacity: 1,
     },
-  }
+  };
 
   const chart = new ApexCharts(
     document.getElementById("sales-by-category"),
-    options
-  )
-  chart.render()
+    options,
+  );
+  chart.render();
 }
 
 const getVisitorsChartOptions = () => {
-  let visitorsChartColors = {}
+  let visitorsChartColors = {};
 
   if (document.documentElement.classList.contains("dark")) {
     visitorsChartColors = {
       fillGradientShade: "dark",
       fillGradientShadeIntensity: 0.45,
-    }
+    };
   } else {
     visitorsChartColors = {
       fillGradientShade: "light",
       fillGradientShadeIntensity: 1,
-    }
+    };
   }
 
   return {
@@ -433,11 +433,11 @@ const getVisitorsChartOptions = () => {
         fontFamily: "Inter, sans-serif",
       },
     },
-  }
-}
+  };
+};
 
 const getSignupsChartOptions = () => {
-  let signupsChartColors = {}
+  let signupsChartColors = {};
 
   if (document.documentElement.classList.contains("dark")) {
     signupsChartColors = {
@@ -450,7 +450,7 @@ const getSignupsChartOptions = () => {
         "#374151",
         "#374151",
       ],
-    }
+    };
   } else {
     signupsChartColors = {
       backgroundBarColors: [
@@ -462,7 +462,7 @@ const getSignupsChartOptions = () => {
         "#E5E7EB",
         "#E5E7EB",
       ],
-    }
+    };
   }
 
   return {
@@ -552,33 +552,33 @@ const getSignupsChartOptions = () => {
     legend: {
       show: false,
     },
-  }
-}
+  };
+};
 
 if (document.getElementById("week-signups-chart")) {
   const chart = new ApexCharts(
     document.getElementById("week-signups-chart"),
-    getSignupsChartOptions()
-  )
-  chart.render()
+    getSignupsChartOptions(),
+  );
+  chart.render();
 
   // init again when toggling dark mode
   document.addEventListener("dark-mode", () => {
-    chart.updateOptions(getSignupsChartOptions())
-  })
+    chart.updateOptions(getSignupsChartOptions());
+  });
 }
 
 const getTrafficChannelsChartOptions = () => {
-  let trafficChannelsChartColors = {}
+  let trafficChannelsChartColors = {};
 
   if (document.documentElement.classList.contains("dark")) {
     trafficChannelsChartColors = {
       strokeColor: "#1f2937",
-    }
+    };
   } else {
     trafficChannelsChartColors = {
       strokeColor: "#ffffff",
-    }
+    };
   }
 
   return {
@@ -626,13 +626,13 @@ const getTrafficChannelsChartOptions = () => {
       x: {
         show: true,
         formatter(_, { seriesIndex, w }) {
-          const label = w.config.labels[seriesIndex]
-          return label
+          const label = w.config.labels[seriesIndex];
+          return label;
         },
       },
       y: {
         formatter(value) {
-          return `${value}%`
+          return `${value}%`;
         },
       },
     },
@@ -645,18 +645,18 @@ const getTrafficChannelsChartOptions = () => {
     legend: {
       show: false,
     },
-  }
-}
+  };
+};
 
 if (document.getElementById("traffic-by-device")) {
   const chart = new ApexCharts(
     document.getElementById("traffic-by-device"),
-    getTrafficChannelsChartOptions()
-  )
-  chart.render()
+    getTrafficChannelsChartOptions(),
+  );
+  chart.render();
 
   // init again when toggling dark mode
   document.addEventListener("dark-mode", () => {
-    chart.updateOptions(getTrafficChannelsChartOptions())
-  })
+    chart.updateOptions(getTrafficChannelsChartOptions());
+  });
 }

@@ -1,27 +1,24 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content"
-import LayoutSidebar from "../../app/LayoutSidebar.astro"
+import LayoutSidebar from "@astro/LayoutSidebar.astro"
 import ContentPage from "../../modules/ContentPage.astro"
 
 export async function getStaticPaths() {
-  const docs = await getCollection("docs")
-  return docs.map((doc) => ({
-    params: { id: doc.id },
-    props: { doc },
+  const sections = await getCollection("sections")
+  return sections.map((section) => ({
+    params: { id: section.id },
+    props: { section },
   }))
 }
 
 type Props = {
-  doc: CollectionEntry<"docs">
+  section: CollectionEntry<"sections">
 }
 
-const { doc } = Astro.props
-// const { Content, headings } = await render(doc)
-// const { description, title } = doc.data
+const { section } = Astro.props
 
-const docs = await getCollection("docs")
 ---
 
 <LayoutSidebar>
-  <ContentPage {doc} />
+  <ContentPage {section} />
 </LayoutSidebar>

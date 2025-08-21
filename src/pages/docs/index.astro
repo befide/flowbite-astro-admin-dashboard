@@ -1,45 +1,38 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content"
-import LayoutSidebar from "../../app/LayoutSidebar.astro"
+import LayoutSidebar from "@astro/LayoutSidebar.astro"
 import { ascending } from "d3-array"
 
-export async function getStaticPaths() {
-  const docs = await getCollection("docs")
-  return docs.map((doc) => ({
-    params: { id: doc.id },
-    props: { doc },
-  }))
-}
 
-type Props = {
-  doc: CollectionEntry<"docs">
-}
+const sections = await getCollection("sections")
+sections.sort((a, b) => ascending(a.data.sectionNumber, b.data.sectionNumber))
 
-const { doc } = Astro.props
-// const { Content, headings } = await render(doc)
-// const { description, title } = doc.data
-
-const docs = await getCollection("docs")
-docs.sort((a, b) => ascending(a.data.sectionNumber, b.data.sectionNumber))
+const docsByChapter = Object.values(
+  Object.groupBy(
+    sections,
+    (d: CollectionEntry<"sections">) => d.data.sectionNumbers[0]
+  )
+)
 ---
 
 <LayoutSidebar>
-  <div class="m-4 grid grid-cols-1 gap-4">
+  <div class="m-4 grid grid-cols-4 gap-4">
     {
-      docs.map((d) => (
-        <a
-          href={"/docs/" + d.id}
-          class="block rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-        >
-          <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <span class="section-number">{d.data.sectionNumber}</span>
-            {d.data.title}
-          </h5>
-          <p class="text-base font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
-        </a>
+      docsByChapter.map((chapter) => (
+        <div>
+          {chapter?.map((d) => (
+            <a
+              href={"/docs/" + d.id}
+              class="block rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+            >
+              <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <span class="section-number">{d.data.sectionNumber}</span>
+                {d.data.title}
+              </h5>
+              <p class="text-base font-normal text-gray-700 dark:text-gray-400" />
+            </a>
+          ))}
+        </div>
       ))
     }
   </div>

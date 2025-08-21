@@ -1,0 +1,152 @@
+[
+  {
+    "year": 1968,
+    "industry__y": "492,21",
+    "industry__count": 779,
+    "total__y": 480,
+    "total__count": 2000,
+    "medicine__y": 500,
+    "medicine__count": 0,
+    "science__count": 1221
+  },
+  {
+    "year": 1970,
+    "industry__y": "485,21",
+    "industry__count": 1479,
+    "total__y": 471,
+    "total__count": 2900,
+    "medicine__y": 499,
+    "medicine__count": 100,
+    "science__count": 1321
+  },
+  {
+    "year": 1976,
+    "industry__y": "482,21",
+    "industry__count": 1779,
+    "total__y": 463,
+    "total__count": 3700,
+    "medicine__y": 499,
+    "medicine__count": 100,
+    "science__count": 1821
+  },
+  {
+    "year": 1979,
+    "industry__y": 477,
+    "industry__count": 2300,
+    "total__y": 451,
+    "total__count": 4900,
+    "medicine__y": "497,46",
+    "medicine__count": 254,
+    "science__count": 2346
+  },
+  {
+    "year": 1984,
+    "industry__y": 447,
+    "industry__count": 5300,
+    "total__y": 416,
+    "total__count": 8400,
+    "medicine__y": "483,46",
+    "medicine__count": 1654,
+    "science__count": 1446
+  },
+  {
+    "year": 1989,
+    "industry__y": "426,99",
+    "industry__count": 7301,
+    "total__y": 380,
+    "total__count": 12000,
+    "medicine__y": "470,46",
+    "medicine__count": 2954,
+    "science__count": 1745
+  },
+  {
+    "year": 1994,
+    "industry__y": "410,58",
+    "industry__count": 8942,
+    "total__y": "350,57",
+    "total__count": 14943,
+    "medicine__y": "454,58",
+    "medicine__count": 4542,
+    "science__count": 1459
+  },
+  {
+    "year": 1998,
+    "industry__y": "388,58",
+    "industry__count": 11142,
+    "total__y": "310,57",
+    "total__count": 18943,
+    "medicine__y": "442,58",
+    "medicine__count": 5742,
+    "science__count": 2059
+  },
+  {
+    "year": 2000,
+    "industry__y": "370,57",
+    "industry__count": 12943,
+    "total__y": "290,57",
+    "total__count": 20943,
+    "medicine__y": "434,58",
+    "medicine__count": 6542,
+    "science__count": 1458
+  },
+  {
+    "year": 2004,
+    "industry__y": "350,57",
+    "industry__count": 14943,
+    "total__y": "250,56",
+    "total__count": 24944,
+    "medicine__y": "415,58",
+    "medicine__count": 8442,
+    "science__count": 1559
+  },
+  {
+    "year": 2007,
+    "industry__y": "315,16",
+    "industry__count": 18484,
+    "total__y": "206,49",
+    "total__count": 29351,
+    "medicine__y": "409,7",
+    "medicine__count": 9030,
+    "science__count": 1837
+  },
+  {
+    "year": 2009,
+    "industry__y": "290,15",
+    "industry__count": 20985,
+    "total__y": "177,48",
+    "total__count": 32252,
+    "medicine__y": "402,7",
+    "medicine__count": 9730,
+    "science__count": 1537
+  },
+  {
+    "year": 2012,
+    "industry__y": "256,15",
+    "industry__count": 24385,
+    "total__y": "129,48",
+    "total__count": 37052,
+    "medicine__y": "386,69",
+    "medicine__count": 11331,
+    "science__count": 1336
+  },
+  {
+    "year": 2014,
+    "industry__y": "225,15",
+    "industry__count": 27485,
+    "total__y": "88,48",
+    "total__count": 41152,
+    "medicine__y": "376,69",
+    "medicine__count": 12331,
+    "science__count": 1336
+  },
+  {
+    "year": 2017,
+    "industry__y": "198,74",
+    "industry__count": 30126,
+    "total__y": "43,88",
+    "total__count": 45612,
+    "medicine__y": "364,91",
+    "medicine__count": 13509,
+    "science__count": 1977
+  }
+]

@@ -1,4 +1,4 @@
-import type { APIRoute } from "astro"
+import type { APIRoute } from "astro";
 
 export const get: APIRoute = function get(/* { params, request } */) {
   /* IDEA: Can be dynamicized (alternative colors…) */
@@ -80,12 +80,12 @@ export const get: APIRoute = function get(/* { params, request } */) {
 		</linearGradient>
 	</defs>
 </svg>
-`
+`;
 
   return {
     body: icon,
     headers: {
       "Content-Type": "image/svg+xml",
     },
-  }
-}
+  };
+};

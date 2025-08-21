@@ -1,0 +1,296 @@
+{
+  "schema": {
+    "fields": [
+      { "name": "index", "type": "integer" },
+      { "name": "index", "type": "integer" },
+      { "name": "year", "type": "integer" },
+      { "name": "projects__count", "type": "integer" },
+      { "name": "funding_amount__sum", "type": "integer" },
+      { "name": "projects__cumcount", "type": "integer" },
+      { "name": "funding_amount__cumsum", "type": "integer" }
+    ],
+    "primaryKey": ["index"],
+    "pandas_version": "1.4.0"
+  },
+  "data": [
+    {
+      "level_0": 0,
+      "index": 0,
+      "year": 1974,
+      "projects__count": 2,
+      "funding_amount__sum": 1724055,
+      "projects__cumcount": 2,
+      "funding_amount__cumsum": 1724055
+    },
+    {
+      "level_0": 1,
+      "index": 1,
+      "year": 1977,
+      "projects__count": 1,
+      "funding_amount__sum": 372928,
+      "projects__cumcount": 3,
+      "funding_amount__cumsum": 2096983
+    },
+    {
+      "level_0": 2,
+      "index": 2,
+      "year": 1983,
+      "projects__count": 1,
+      "funding_amount__sum": 1188411,
+      "projects__cumcount": 4,
+      "funding_amount__cumsum": 3285394
+    },
+    {
+      "level_0": 3,
+      "index": 3,
+      "year": 1985,
+      "projects__count": 1,
+      "funding_amount__sum": 453220,
+      "projects__cumcount": 5,
+      "funding_amount__cumsum": 3738614
+    },
+    {
+      "level_0": 4,
+      "index": 4,
+      "year": 1989,
+      "projects__count": 1,
+      "funding_amount__sum": 318415,
+      "projects__cumcount": 6,
+      "funding_amount__cumsum": 4057029
+    },
+    {
+      "level_0": 5,
+      "index": 5,
+      "year": 1994,
+      "projects__count": 1,
+      "funding_amount__sum": 54708,
+      "projects__cumcount": 7,
+      "funding_amount__cumsum": 4111737
+    },
+    {
+      "level_0": 6,
+      "index": 6,
+      "year": 1995,
+      "projects__count": 4,
+      "funding_amount__sum": 761625,
+      "projects__cumcount": 11,
+      "funding_amount__cumsum": 4873362
+    },
+    {
+      "level_0": 7,
+      "index": 7,
+      "year": 1996,
+      "projects__count": 2,
+      "funding_amount__sum": 548133,
+      "projects__cumcount": 13,
+      "funding_amount__cumsum": 5421495
+    },
+    {
+      "level_0": 8,
+      "index": 8,
+      "year": 1997,
+      "projects__count": 1,
+      "funding_amount__sum": 153388,
+      "projects__cumcount": 14,
+      "funding_amount__cumsum": 5574883
+    },
+    {
+      "level_0": 9,
+      "index": 9,
+      "year": 1998,
+      "projects__count": 7,
+      "funding_amount__sum": 2342284,
+      "projects__cumcount": 21,
+      "funding_amount__cumsum": 7917167
+    },
+    {
+      "level_0": 10,
+      "index": 10,
+      "year": 1999,
+      "projects__count": 2,
+      "funding_amount__sum": 209396,
+      "projects__cumcount": 23,
+      "funding_amount__cumsum": 8126563
+    },
+    {
+      "level_0": 11,
+      "index": 11,
+      "year": 2001,
+      "projects__count": 7,
+      "funding_amount__sum": 2023345,
+      "projects__cumcount": 30,
+      "funding_amount__cumsum": 10149908
+    },
+    {
+      "level_0": 12,
+      "index": 12,
+      "year": 2004,
+      "projects__count": 10,
+      "funding_amount__sum": 2125198,
+      "projects__cumcount": 40,
+      "funding_amount__cumsum": 12275106
+    },
+    {
+      "level_0": 13,
+      "index": 13,
+      "year": 2005,
+      "projects__count": 1,
+      "funding_amount__sum": 399710,
+      "projects__cumcount": 41,
+      "funding_amount__cumsum": 12674816
+    },
+    {
+      "level_0": 14,
+      "index": 14,
+      "year": 2006,
+      "projects__count": 2,
+      "funding_amount__sum": 607803,
+      "projects__cumcount": 43,
+      "funding_amount__cumsum": 13282619
+    },
+    {
+      "level_0": 15,
+      "index": 15,
+      "year": 2007,
+      "projects__count": 2,
+      "funding_amount__sum": 786595,
+      "projects__cumcount": 45,
+      "funding_amount__cumsum": 14069214
+    },
+    {
+      "level_0": 16,
+      "index": 16,
+      "year": 2008,
+      "projects__count": 1,
+      "funding_amount__sum": 3906973,
+      "projects__cumcount": 46,
+      "funding_amount__cumsum": 17976187
+    },
+    {
+      "level_0": 17,
+      "index": 17,
+      "year": 2009,
+      "projects__count": 31,
+      "funding_amount__sum": 8805218,
+      "projects__cumcount": 77,
+      "funding_amount__cumsum": 26781405
+    },
+    {
+      "level_0": 18,
+      "index": 18,
+      "year": 2010,
+      "projects__count": 20,
+      "funding_amount__sum": 10245342,
+      "projects__cumcount": 97,
+      "funding_amount__cumsum": 37026747
+    },
+    {
+      "level_0": 19,
+      "index": 19,
+      "year": 2011,
+      "projects__count": 3,
+      "funding_amount__sum": 17609511,
+      "projects__cumcount": 100,
+      "funding_amount__cumsum": 54636258
+    },
+    {
+      "level_0": 20,
+      "index": 20,
+      "year": 2012,
+      "projects__count": 45,
+      "funding_amount__sum": 28650847,
+      "projects__cumcount": 145,
+      "funding_amount__cumsum": 83287105
+    },
+    {
+      "level_0": 21,
+      "index": 21,
+      "year": 2013,
+      "projects__count": 22,
+      "funding_amount__sum": 9155343,
+      "projects__cumcount": 167,
+      "funding_amount__cumsum": 92442448
+    },
+    {
+      "level_0": 22,
+      "index": 22,
+      "year": 2014,
+      "projects__count": 3,
+      "funding_amount__sum": 2117705,
+      "projects__cumcount": 170,
+      "funding_amount__cumsum": 94560153
+    },
+    {
+      "level_0": 23,
+      "index": 23,
+      "year": 2015,
+      "projects__count": 12,
+      "funding_amount__sum": 6694669,
+      "projects__cumcount": 182,
+      "funding_amount__cumsum": 101254822
+    },
+    {
+      "level_0": 24,
+      "index": 24,
+      "year": 2016,
+      "projects__count": 26,
+      "funding_amount__sum": 11250324,
+      "projects__cumcount": 208,
+      "funding_amount__cumsum": 112505146
+    },
+    {
+      "level_0": 25,
+      "index": 25,
+      "year": 2018,
+      "projects__count": 17,
+      "funding_amount__sum": 8222388,
+      "projects__cumcount": 225,
+      "funding_amount__cumsum": 120727534
+    },
+    {
+      "level_0": 26,
+      "index": 26,
+      "year": 2019,
+      "projects__count": 37,
+      "funding_amount__sum": 14288964,
+      "projects__cumcount": 262,
+      "funding_amount__cumsum": 135016498
+    },
+    {
+      "level_0": 27,
+      "index": 27,
+      "year": 2020,
+      "projects__count": 4,
+      "funding_amount__sum": 10000000,
+      "projects__cumcount": 266,
+      "funding_amount__cumsum": 145016498
+    },
+    {
+      "level_0": 28,
+      "index": 28,
+      "year": 2021,
+      "projects__count": 15,
+      "funding_amount__sum": 8616037,
+      "projects__cumcount": 281,
+      "funding_amount__cumsum": 153632535
+    },
+    {
+      "level_0": 29,
+      "index": 29,
+      "year": 2022,
+      "projects__count": 29,
+      "funding_amount__sum": 12462677,
+      "projects__cumcount": 310,
+      "funding_amount__cumsum": 166095212
+    },
+    {
+      "level_0": 30,
+      "index": 30,
+      "year": 2023,
+      "projects__count": 2,
+      "funding_amount__sum": 1203221,
+      "projects__cumcount": 312,
+      "funding_amount__cumsum": 167298433
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+@layer my-reset, starlight, obsidian, my-overrides;
+
+@layer my-overrides {
+  .content-panel {
+    margin-bottom: 1rem;
+    padding: 0rem var(--sl-content-pad-x);
+  }
+  .content-panel + .content-panel {
+    border-top: none;
+  }
+  .sl-container {
+    max-width: var(--sl-content-width);
+  }
+
+  .sl-container > :global(* + *) {
+    margin-top: unset;
+  }
+
+  .sl-container > * + * {
+    margin-top: unset;
+  }
+
+  @media (min-width: 72rem) {
+    .sl-container {
+      margin-inline: var(--content-margin-inline, auto);
+    }
+  }
+
+  .mobile-header {
+    padding: 0 var(--content-pad-x);
+  }
+
+  @media (min-width: 50em) {
+    .mobile-header {
+      display: none;
+      visibility: hidden;
+    }
+    .main-frame {
+      padding-top: 0;
+    }
+    .main-pane {
+      margin-top: 0;
+    }
+  }
+  .sidebar-top {
+    display: flex;
+
+    background-color: var(--sl-color-bg-nav);
+
+    padding-top: 1rem;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
