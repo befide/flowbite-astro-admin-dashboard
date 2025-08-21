@@ -1,4 +1,4 @@
-import {defineConfig, envField} from "astro/config"
+import { defineConfig, envField } from "astro/config"
 
 import sitemap from "@astrojs/sitemap"
 // import tailwind from '@astrojs/tailwind';
@@ -6,11 +6,14 @@ import tailwindcss from "@tailwindcss/vite"
 import astroD2 from "astro-d2"
 
 import mdx from "@astrojs/mdx"
+import { pocketbaseIntegration } from "astro-integration-pocketbase"
 
 // import {pocketbaseIntegration} from "astro-integration-pocketbase"
 
 
 import netlify from "@astrojs/netlify";
+
+
 
 
 const DEV_PORT = 4350
@@ -40,10 +43,12 @@ export default defineConfig({
   integrations: [
     //
     // tailwind(),
-
+    ...(process.env.NODE_ENV === "production"
+      ? []
+      : [astroD2({ inline: true })]),
     sitemap(),
     mdx(),
-    astroD2(),
+
     //  pocketbase({
     //   // default values
     // pocketbaseIntegration({
