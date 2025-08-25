@@ -1,24 +1,28 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content"
+import {getCollection, type CollectionEntry} from "astro:content"
 import LayoutSidebar from "@astro/LayoutSidebar.astro"
 import ContentPage from "../../modules/ContentPage.astro"
+import type {
+  InferGetStaticParamsType,
+  InferGetStaticPropsType,
+  GetStaticPaths,
+} from "astro";
 
-export async function getStaticPaths() {
+
+export const getStaticPaths = (async () => {
+
   const sections = await getCollection("sections")
   return sections.map((section) => ({
-    params: { id: section.id },
-    props: { section },
+    params: {id: section.id},
+    props: {section},
   }))
-}
+})  satisfies GetStaticPaths
 
-type Props = {
-  section: CollectionEntry<"sections">
-}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { section } = Astro.props
-
+const {section} = Astro.props
 ---
 
 <LayoutSidebar>
-  <ContentPage {section} />
+  <ContentPage {section}/>
 </LayoutSidebar>

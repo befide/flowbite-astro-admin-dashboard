@@ -13,11 +13,12 @@ const Element = 'h' + (section.data.sectionDepth+1);
 ---
 
 <section class="bg-white dark:bg-gray-900">
-  <div class2="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
-    <div class="" class2="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+  <!--<div data-class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">-->
+  <!--  <div class="" data-class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">-->
       <header>
-      <Element data-section-number={section.data.sectionNumber}
+      <Element
         class="tracking-tight text-gray-900 dark:text-white"
+        data-section-number={section.data.sectionNumber}
       >
         {section.data.title}
       </Element>
@@ -26,8 +27,8 @@ const Element = 'h' + (section.data.sectionDepth+1);
       <div class="format">
         <Content />
       </div>
-    </div>
-  </div>
+  <!--  </div>-->
+  <!--</div>-->
 </section>
 
 

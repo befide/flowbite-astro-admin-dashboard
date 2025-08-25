@@ -1,0 +1,110 @@
+.explorer__chart svg {
+  display: inline-block;
+  /* background-color: gray; */
+}
+
+.explorer__chart text {
+  font-size: var(--text-sm);
+
+  font-variant-numeric: tabular-nums;
+  filter: drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 3px white);
+}
+
+.explorer__chart rect {
+  cursor: pointer;
+}
+
+.explorer__chart rect:hover {
+  fill-opacity: 1;
+}
+
+.explorer__chart--bar rect.selection {
+  fill: var(--interaction__color--spot);
+  stroke: var(--interaction__color--spot);
+  stroke-width: 0px;
+}
+
+.explorer__chart--bar .stack rect {
+  fill: var(--interaction__color--spot);
+  stroke-width: 0;
+}
+
+.explorer__chart--bar .stack rect.deselected {
+  fill: var(--interaction__color--neutral--dark);
+}
+
+.explorer__chart--row .axis {
+  display: none;
+}
+
+.explorer__chart--row g.row rect {
+  cursor: pointer;
+  fill-opacity: 0.9;
+  fill: var(--color-kfb-yellow);
+  stroke: var(--color-kfb-yellow);
+  stroke-width: 1px;
+  stroke-opacity: 1;
+}
+
+.filter.filtered g.row rect {
+  fill: var(--interaction__color--spot);
+}
+
+.filter.filtered g.row rect.deselected {
+  fill: var(--interaction__color--neutral--dark, #808080);
+}
+
+.explorer__chart g.row rect.selected {
+  fill: var(--interaction__color--spot);
+}
+
+.explorer__chart g.row rect:hover {
+  fill: var(--interaction__color--spot);
+  fill-opacity: 0.5;
+  stroke: var(--interaction__color--spot);
+}
+
+.explorer__chart g.row,
+.explorer__chart g.row text {
+  cursor: pointer;
+}
+
+.explorer__chart g.row text g.selection {
+  fill: var(--interaction__color--spot);
+}
+
+.explorer__chart .axis {
+  font-family: "Barlow Semi Condensed";
+}
+
+.explorer__chart .axis path.domain {
+  display: none;
+}
+
+.explorer__chart .axis line {
+  opacity: 0.1;
+}
+
+.explorer__chart .axis text {
+  font-size: var(--text-2xs);
+}
+
+.explorer__chart .deselected + text {
+  opacity: 0.8;
+}
+
+.explorer__chart .titlerow {
+  /* fill-opacity: 0.5; */
+  font-weight: normal;
+}
+
+.explorer__chart .tick text {
+  font-weight: normal;
+  font-size: var(--text-2xs);
+  fill: #999999;
+}
+
+.grid-line.horizontal {
+  stroke: black;
+  stroke-width: 1px;
+}

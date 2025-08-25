@@ -1,0 +1,42 @@
+---
+import {
+  rowChartId,
+  rowChartTileId,
+} from "@/astro/components/dc-explorer/components"
+
+const {
+  collection,
+  dimension,
+  title,
+  accessorPath,
+  dimensionIsLocalized = false,
+  dimensionIsArray = false,
+} = Astro.props
+
+const tileId = rowChartTileId(collection, dimension)
+const chartId = rowChartId(collection, dimension)
+const tileType = "row-chart"
+---
+
+<section
+  class="dc-explorer__tile filter"
+  id={tileId}
+  data-dc-collection={collection}
+  data-dc-dimension={dimension}
+  data-dc-dimension-is-localized={dimensionIsLocalized}
+  data-dc-dimension-is-array={dimensionIsArray}
+  data-dc-accessor-path={accessorPath}
+  data-dc-tile-type={tileType}
+>
+  <header class="dc-explorer__tile__header">
+    <div class="dc-explorer__tile__title">{title}</div>
+    <div class="dc-explorer__tile__actions">
+      <button class="reset-action" data-chart={chartId}
+        >{Astro.locals.t("dc-explorer.actions.reset")}</button
+      >
+    </div>
+  </header>
+  <div class="dc-explorer__tile__body">
+    <div id={chartId} class="explorer__chart explorer__chart--row"></div>
+  </div>
+</section>

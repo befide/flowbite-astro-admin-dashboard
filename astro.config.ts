@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import {defineConfig} from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
@@ -14,7 +14,6 @@ import AstroPWA from "@vite-pwa/astro";
 const DEV_PORT = 4350;
 
 // https://astro.build/config
-// @ts-ignore
 export default defineConfig({
   site: process.env.CI
     ? "https://kfb-inventory.netlify.app"
@@ -33,7 +32,10 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [dsv(), tailwindcss()],
+    plugins: [
+      // @ts-ignore
+      dsv(),
+      tailwindcss()],
   },
 
   integrations: [
@@ -41,7 +43,7 @@ export default defineConfig({
     // tailwind(),
     ...(process.env.NODE_ENV === "production"
       ? []
-      : [astroD2({ inline: true })]),
+      : [astroD2({inline: true})]),
     sitemap(),
     mdx(),
     AstroPWA({

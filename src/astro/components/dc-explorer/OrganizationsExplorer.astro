@@ -1,0 +1,53 @@
+---
+import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
+import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
+import DCExplorerTable from "@components/dc-explorer/components/DCExplorerTable.astro"
+import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
+---
+
+<DCExplorer collection="organizations">
+  <div class="dc-explorer__filters">
+    <DCExplorerCount collection="organizations" dimension="count" />
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="instanceOfs__term"
+      title="Category"
+      dimensionIsArray={true}
+    />
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="location__country"
+      title="Country"
+    />
+
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="with_userFacilities"
+      title={Astro.locals.t("dc-explorer.tiles.title.with_userFacilities")}
+    />
+
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="with_facilities"
+      title={Astro.locals.t("dc-explorer.tiles.title.with_facilities")}
+    />
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="with_theses"
+      title={Astro.locals.t("dc-explorer.tiles.title.with_theses")}
+    />
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="with_teachingEvents"
+      title={Astro.locals.t("dc-explorer.tiles.title.with_teachingEvents")}
+    />
+
+    <!-- </details> -->
+  </div>
+  <div class="dc-explorer__items">
+    <DCExplorerTable collection="organizations" dimension="id" />
+  </div>
+  <div class="dc-explorer__item">
+    <!-- <DCExplorerItemCard collection="organizations" dimension="id" /> -->
+  </div>
+</DCExplorer>

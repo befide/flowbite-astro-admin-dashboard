@@ -1,0 +1,27 @@
+---
+import {
+  treeDataSectionsId,
+  treeDataSectionsTileId,
+} from "@/astro/components/dc-explorer/components/index"
+
+const { collection, dimension, title } = Astro.props
+
+const tileId = treeDataSectionsTileId(collection, dimension)
+const chartId = treeDataSectionsId(collection, dimension)
+const tileType = "tree-data-sections"
+---
+
+<section
+  class="dc-explorer__tile loading"
+  id={tileId}
+  data-dc-collection={collection}
+  data-dc-dimension={dimension}
+  data-dc-tile-type={tileType}
+>
+  <div class="dc-explorer__tile__header">
+    <h2>{title}</h2>
+  </div>
+  <div class="dc-explorer__tile__body">
+    <div id={chartId}></div>
+  </div>
+</section>

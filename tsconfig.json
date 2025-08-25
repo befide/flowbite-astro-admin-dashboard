@@ -1,9 +1,10 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
   "include": [
     ".astro/types.d.ts",
     "src/env.d.ts",
     "src/**/*",
+    "scripts/**/*",
     "astro.config.ts",
     "node_modules/**/*.d.ts"
   ],
@@ -18,6 +19,7 @@
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
+
       }
     ],
     "strictNullChecks": true,
@@ -39,8 +41,8 @@
       "@layouts/*": [
         "./src/astro/layouts/*"
       ],
-      "@domain/*": [
-        "./src/astro/domain/*"
+      "@lib/*": [
+        "./src/lib/*"
       ],
       "@content/*": [
         "./src/content/*"
@@ -50,6 +52,12 @@
       ],
       "@astro/*": [
         "./src/astro/*"
+      ],
+      "@domain/*": [
+        "./src/lib/domain/*"
+      ],
+      "@nanostores/*": [
+        "./src/lib/nanostores/*"
       ]
     }
   }

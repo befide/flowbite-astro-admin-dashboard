@@ -1,0 +1,37 @@
+---
+import {
+  countChartId,
+  countChartTileId,
+} from "@/astro/components/dc-explorer/components"
+
+const { collection, dimension } = Astro.props
+
+const tileId = countChartTileId(collection, dimension)
+const chartId = countChartId(collection, dimension)
+const tileType = "count"
+---
+
+<section
+  class="dc-explorer__tile filter"
+  id={tileId}
+  data-dc-collection={collection}
+  data-dc-dimension={dimension}
+  data-dc-tile-type={tileType}
+>
+  <header class="dc-explorer__tile__header">
+    <div class="dc-explorer__tile__title">
+      {Astro.locals.t("dc-explorer.tiles.title.count")}
+    </div>
+    <div class="dc-explorer__tile__actions">
+      <button class="reset-action"
+        >{Astro.locals.t("dc-explorer.actions.reset-all")}</button
+      >
+    </div>
+  </header>
+  <div class="dc-explorer__tile__body">
+    <div class="explorer__chart explorer__chart--count" id={chartId}>
+      <!-- <span class="filter-count"></span> selected out of <span
+        class="total-count"></span> -->
+    </div>
+  </div>
+</section>

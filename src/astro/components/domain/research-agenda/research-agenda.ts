@@ -1,16 +1,16 @@
 import { optimize } from "svgo";
-import { type HierarchyNode } from "d3-hierarchy";
+import { type HierarchyNode } from "d3";
 
 import css from "./research-agenda.css";
 
 import { JSDOM } from "jsdom";
-import { hsl, rgb } from "d3-color";
-import { scaleOrdinal } from "d3-scale";
-import { cluster, stratify } from "d3-hierarchy";
-import { select } from "d3-selection";
-import { ribbon } from "d3-chord";
+import { hsl, rgb } from "d3";
+import { scaleOrdinal } from "d3";
+import { cluster, stratify } from "d3";
+import { select } from "d3";
+import { ribbon } from "d3";
 
-import { arc } from "d3-shape";
+import { arc } from "d3";
 
 import _data from "./research-agenda.json";
 export interface ResearchAgendaItem {

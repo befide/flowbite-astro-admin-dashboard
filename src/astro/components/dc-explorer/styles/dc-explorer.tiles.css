@@ -1,0 +1,103 @@
+.dc-explorer__tile {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.dc-explorer__tile::after {
+  display: block;
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.dc-explorer__tile__header {
+  flex: 0 0 1rem;
+  background-color: rgba(128, 128, 128, 0.1);
+  font-size: var(--text-sm);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  position: relative;
+}
+.dc-explorer__tile__header::after {
+  display: block;
+  content: " ";
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.dc-explorer__tile__title {
+  flex: 0 0 75%;
+  line-height: 1rem;
+  padding: 0 var(--content-pad-x);
+  /* height: 1rem; */
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  height: 1rem;
+  text-overflow: ellipsis;
+}
+.dc-explorer__tile__actions {
+  flex: 0 0 25%;
+  padding: 0 var(--content-pad-x);
+  margin: 0;
+}
+
+.dc-explorer__tile__actions button {
+  cursor: pointer;
+  text-align: right;
+  text-decoration: dotted;
+  white-space: nowrap;
+  font-size: var(--text-2xs);
+  height: 0.5rem;
+  width: 100%;
+  line-height: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.dc-explorer__tile__actions .reset-all-action,
+.dc-explorer__tile__actions .reset-action {
+  opacity: 0;
+  transition: opacity;
+  transition-duration: 200ms;
+}
+
+.filtered .dc-explorer__tile__actions .reset-all-action,
+.filtered .dc-explorer__tile__actions .reset-action {
+  opacity: 1;
+  transition: opacity;
+  transition-duration: 200ms;
+}
+
+.dc-explorer__tile__body {
+  line-height: 0;
+  font-family: "Barlow Condensed";
+  /* flex: 1; */
+  margin: 0;
+  padding: 0rem 0;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+.dc-explorer__tile__body .explorer__chart--count p {
+  line-height: 2rem;
+  padding: 0 var(--content-pad-x);
+  height: 2rem;
+  font-size: var(--text-xl);
+}
+
+.main-count {
+  font-weight: bold;
+  font-size: var(--text-2xl);
+}

@@ -1,4 +1,10 @@
 import { defineSectionCollection } from "@/lib/sections";
+import {
+  type CourseSchema, defineCoursesCollection,
+  defineFacilityCollection, defineOrganizationCollection, defineReferencesCollection, defineTaxonomyItemsCollection,
+  defineThesesCollection, type FacilitySchema, type OrganizationSchema, type TaxonomyItemSchema, type ThesisSchema
+} from "@lib/domain";
+import {defineReviewStatusesCollection} from "@lib/config.reviewStatuses.ts";
 
 // import { pocketbaseLoader } from "astro-loader-pocketbase"
 
@@ -22,4 +28,20 @@ import { defineSectionCollection } from "@/lib/sections";
 //   })
 // });
 
-export const collections = { sections: defineSectionCollection };
+export type DomainObject =
+  | CourseSchema
+  | OrganizationSchema
+  | TaxonomyItemSchema
+  | FacilitySchema
+  | ThesisSchema
+
+
+export const collections = {
+  reviewStatuses: defineReviewStatusesCollection,
+  taxonomyItems: defineTaxonomyItemsCollection,
+  organizations: defineOrganizationCollection,
+  facilities: defineFacilityCollection,
+  courses: defineCoursesCollection,
+  theses: defineThesesCollection,
+  references: defineReferencesCollection,
+  sections: defineSectionCollection };

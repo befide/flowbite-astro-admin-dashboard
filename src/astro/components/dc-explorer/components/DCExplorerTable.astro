@@ -1,0 +1,30 @@
+---
+import {
+  tableId,
+  tableTileId,
+} from "@/astro/components/dc-explorer/components/index"
+
+const { collection, dimension } = Astro.props
+
+const tileId = tableTileId(collection, dimension)
+const chartId = tableId(collection, dimension)
+const tileType = "table"
+---
+
+<section
+  class="dc-explorer__tile loading"
+  id={tileId}
+  data-dc-collection={collection}
+  data-dc-dimension={dimension}
+  data-dc-tile-type={tileType}
+>
+  <div class="dc-explorer__tile__body">
+    <table class="grid-table" id={chartId}>
+      <thead>
+        <tr class="table-header">
+          <!-- Programmatically insert table headers here -->
+        </tr>
+      </thead>
+    </table>
+  </div>
+</section>

@@ -10,5 +10,5 @@ export default defineConfig({
   preset: {
     ...minimal2023Preset,
   },
-  images: "public/appicon.svg",
+  images: "public/app-icon.svg",
 });

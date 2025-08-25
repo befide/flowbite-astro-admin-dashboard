@@ -1,0 +1,166 @@
+---
+import "@components/dc-explorer/styles/dc-explorer.css"
+
+const { collection } = Astro.props
+
+const locale = Astro.currentLocale
+---
+
+<dc-explorer
+  class="dc-explorer not-content"
+  data-collection={collection}
+  data-locale={locale}
+>
+  <slot />
+</dc-explorer>
+
+<script>
+  import "dc/src/compat/d3v6"
+
+  import { config, filterAll, redrawAll, renderAll } from "dc"
+
+  import {
+    charts,
+    createBarChart,
+    createRowChart,
+    createCountChart,
+    createTableChart,
+    getValue,
+    getLocale,
+    createTreeDataTableChart,
+    createTreeDataSectionsChart,
+  } from "."
+  import { getCollectionIndex } from "@nanostores/index"
+  import {
+    tableConfigMap,
+    treeTableConfigMap,
+    treeSectionsConfigMap,
+  } from "@components/dc-explorer/config"
+  import type { NestableDomainObjectSchema } from "@content/config.common"
+
+  const locale = getLocale()
+
+  class DCExplorer extends HTMLElement {
+    connectedCallback() {
+      config.defaultColors(["schemeCategory10"])
+
+      const collection = this.dataset.collection
+
+      console.log({ collection })
+
+      const $idx = getCollectionIndex(collection)
+
+      $idx?.listen(() => {
+        const idx = $idx.get()
+
+        console.log({ idx })
+
+        if (idx) {
+          const filters = document.getElementsByClassName(
+            "dc-explorer__tile"
+          ) as HTMLCollectionOf<HTMLElement>
+          Array.from(filters).forEach((filter) => {
+            const {
+              dcTileType,
+              dcCollection,
+              dcDimensionIsLocalized,
+              dcDimension,
+              dcAccessorPath,
+              dcDimensionIsArray,
+            } = filter.dataset
+
+            if (!dcTileType || !dcCollection || !dcDimension) return
+
+            if (dcTileType === "count") {
+              /*something here*/
+              const dimension = idx.dimension((d) => d.id)
+              const group = dimension.group().reduceCount()
+
+              createCountChart(dcCollection, dcDimension, idx, dimension, group)
+            } else if (dcTileType === "row-chart") {
+              // something here
+
+              const valuePath =
+                dcDimensionIsLocalized === "true"
+                  ? dcAccessorPath || dcDimension
+                  : dcAccessorPath || dcDimension
+
+              const dimension = idx.dimension(
+                (d) => getValue(d, valuePath) || "",
+                dcDimensionIsArray !== "false"
+              )
+
+              const group = dimension.group().reduceCount()
+
+              createRowChart(dcCollection, dcDimension, dimension, group)
+            } else if (dcTileType === "bar-chart") {
+              const dimension = idx.dimension(
+                (d) => getValue(d, dcAccessorPath || dcDimension) || "other"
+              )
+
+              const group = dimension.group()
+
+              createBarChart(dcCollection, dcDimension, dimension, group)
+            } else if (dcTileType === "table") {
+              const idDimension = idx.dimension((d: DomainObject) => d.id)
+
+              createTableChart(
+                dcCollection,
+                dcDimension,
+                tableConfigMap(dcCollection, locale),
+                idDimension
+              )
+            } else if (dcTileType === "tree-data-table") {
+              const idDimension = idx.dimension(
+                (nestableDomainObject: NestableDomainObjectSchema) =>
+                  nestableDomainObject
+              )
+
+              createTreeDataTableChart(
+                dcCollection,
+                dcDimension,
+                treeTableConfigMap(dcCollection),
+                idDimension
+              )
+            } else if (dcTileType === "tree-data-sections") {
+              const idDimension = idx.dimension(
+                (nestableDomainObject: NestableDomainObjectSchema) =>
+                  nestableDomainObject
+              )
+
+              createTreeDataSectionsChart(
+                dcCollection,
+                dcDimension,
+                treeSectionsConfigMap(dcCollection),
+                idDimension
+              )
+            }
+          })
+
+          renderAll()
+
+          const resetButtons = document.querySelectorAll(
+            ".dc-explorer__tile__actions button.reset-action"
+          )
+          resetButtons.forEach((button) => {
+            button.addEventListener("click", function (e) {
+              const chartId = (e.currentTarget as HTMLElement).getAttribute(
+                "data-chart"
+              )
+
+              if (chartId) {
+                charts.get(chartId)?.filterAll()
+              } else {
+                filterAll()
+              }
+
+              redrawAll()
+              e.preventDefault()
+            })
+          })
+        }
+      })
+    }
+  }
+  customElements.define("dc-explorer", DCExplorer)
+</script>

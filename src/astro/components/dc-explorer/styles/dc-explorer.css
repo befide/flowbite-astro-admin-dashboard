@@ -1,0 +1,10 @@
+@import "./dc-explorer.layout.css";
+@import "./dc-explorer.tiles.css";
+@import "./dc-explorer.charts.css";
+@import "./dc-explorer.tree.css";
+@import "./dc-explorer.tree-sections.css";
+
+.dc-explorer {
+  --interaction__color--spot: var(--color-kfb-yellow);
+  --interaction__color--neutral--dark: #ccc;
+}

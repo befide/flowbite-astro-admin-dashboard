@@ -1,0 +1,25 @@
+section.forest li[depth="1"] > .term {
+  font-size: var(--text-2xl);
+  text-transform: none;
+}
+.term {
+  font-weight: bold;
+}
+section.forest ul {
+  padding-left: 0.5rem;
+  list-style: none;
+}
+
+section.forest .children {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  border: 1px dotted gray;
+}
+
+section.forest .leaf {
+  flex: 0 1 50%;
+  background-color: red;
+}

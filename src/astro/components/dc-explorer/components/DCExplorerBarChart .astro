@@ -1,0 +1,39 @@
+---
+import {
+  barChartId,
+  barChartTileId,
+} from "@/astro/components/dc-explorer/components"
+
+const {
+  collection,
+  dimension,
+  title,
+  accessorPath,
+  dimensionIsArray = false,
+} = Astro.props
+
+const tileId = barChartTileId(collection, dimension)
+const chartId = barChartId(collection, dimension)
+
+const tileType = "bar-chart"
+---
+
+<section
+  class="dc-explorer__tile"
+  id={tileId}
+  data-dc-collection={collection}
+  data-dc-dimension={dimension}
+  data-dc-dimension-is-array={dimensionIsArray}
+  data-dc-accessor-path={accessorPath}
+  data-dc-tile-type={tileType}
+>
+  <header class="dc-explorer__tile__header">
+    <div class="dc-explorer__tile__title">{title}</div>
+    <div class="dc-explorer__tile__actions">
+      <button class="reset-action" data-chart={chartId}>Reset</button>
+    </div>
+  </header>
+  <div class="dc-explorer__tile__body">
+    <div id={chartId} class="explorer__chart explorer__chart--bar"></div>
+  </div>
+</section>

@@ -1,26 +1,5 @@
-import { z } from "astro:content";
+import type {NestableDomainObjectSchema} from "@lib/content.common.ts";
 
-export const DomainObjectZodSchema = z.object({
-  id: z.string().describe("Unique identifier for this entry."),
-});
-// export type DomainObjectSchema = z.infer<typeof DomainObjectZodSchema>;
-export type DomainObjectSchema = {
-  id: string;
-  isSelected?: boolean;
-};
-
-export const NestableDomainObjectZodSchema = DomainObjectZodSchema.extend({
-  parent__id: z
-    .string()
-    .nullable()
-    .describe("Identifier of the parent entry, if any."),
-});
-export type NestableDomainObjectSchema = DomainObjectSchema & {
-  parent__id: string | null;
-};
-
-// type IdOperator  = (o: DomainObjectSchema) => string;
-// type ParentIdOperator  = (o: NestableDomainObjectSchema) => string;
 
 export interface TreeNode<Datum extends NestableDomainObjectSchema> {
   id: string;
