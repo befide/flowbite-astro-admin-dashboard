@@ -1,9 +1,9 @@
 ---
 /* eslint max-lines: 'off' */
 
-import { fetchData } from "../lib/data.js"
+import { fetchData } from "../../src/lib/data.js"
 import NavPagination from "@astro/components/NavPagination.astro"
-import {getSections} from "../lib/sections";
+import {getSections} from "../../src/lib/sections";
 
 const products = await getSections()
 ---

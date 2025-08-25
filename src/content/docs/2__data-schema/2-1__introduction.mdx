@@ -7,13 +7,8 @@ This chapter introduces you to the what and how it is being captured in the KfB 
 
 The what aspect of the Inventory is called the **data model**, the how aspect is the **database schema**.
 
-
-
-
-* The **data model** is like the conceptual blueprint -- it describes what kinds of things we need to capture, what their relevant properties are, and how they relate to each other.
-The kind of things the KfB Inventory consists of are for instance `OrganizationalUnit`,  `Facility`, `Course`, or `Thesis`;  relevant properties are like `name`, `facilityType`, `weeklyContactHours`, or `DOI`; examples for relation are `OrganizationalUnit` `hosts` `Facility`, `Facility` `hasSuccessor` `Facility`, `Course` `isOfferedBy` `OrganizationalUnit`, `Thesis` `isAboutFacility` `Facility`.
-*	The **database schema** is the concrete plan used by the database itself -- it spells out exactly how data is stored. The schema tells the database what tables there are, what columns those tables have, what data types those columns use (like text, numbers, dates), and what rules or constraints exist (like “Customer ID must be unique”). It’s directly implemented inside the database software and is much more detailed and specific, showing the practical setup resulting from the data model
-
-
+- The **data model** is like the conceptual blueprint -- it describes what kinds of things we need to capture, what their relevant properties are, and how they relate to each other.
+  The kind of things the KfB Inventory consists of are for instance `OrganizationalUnit`, `Facility`, `Course`, or `Thesis`; relevant properties are like `name`, `facilityType`, `weeklyContactHours`, or `DOI`; examples for relation are `OrganizationalUnit` `hosts` `Facility`, `Facility` `hasSuccessor` `Facility`, `Course` `isOfferedBy` `OrganizationalUnit`, `Thesis` `isAboutFacility` `Facility`.
+- The **database schema** is the concrete plan used by the database itself -- it spells out exactly how data is stored. The schema tells the database what tables there are, what columns those tables have, what data types those columns use (like text, numbers, dates), and what rules or constraints exist (like “Customer ID must be unique”). It’s directly implemented inside the database software and is much more detailed and specific, showing the practical setup resulting from the data model
 
 ## Ontology excurse

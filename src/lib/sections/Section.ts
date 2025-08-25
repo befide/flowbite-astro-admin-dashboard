@@ -1,18 +1,17 @@
-import type { SectionSchema } from "./sections.config"
+import type { SectionSchema } from "./sections.config";
 
 export class Section {
-  data: SectionSchema
+  data: SectionSchema;
 
   constructor(data: SectionSchema) {
-    this.data = data
+    this.data = data;
   }
 
   getSectionNumbers() {
-    return this.data.sectionNumber?.split(".") || []
+    return this.data.sectionNumber?.split(".") || [];
   }
 
   getDepth() {
-    return this.getSectionNumbers().length
+    return this.getSectionNumbers().length;
   }
-
 }

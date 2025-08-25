@@ -1,50 +1,49 @@
-import {curveStepAfter, format, formatDefaultLocale, group, groups} from "d3";
+import { curveStepAfter, format, formatDefaultLocale, group, groups } from "d3";
 
-import acceleratorsInUse from "./data/acceleratorsInUsePerYear.json" assert {type: "json"};
+import acceleratorsInUse from "./data/acceleratorsInUsePerYear.json" assert { type: "json" };
 
-import nuclideDiscoveriesPerYear from "./data/nuclideDiscoveriesPerYear.json" assert {type: "json"};
+import nuclideDiscoveriesPerYear from "./data/nuclideDiscoveriesPerYear.json" assert { type: "json" };
 
-import _particleDiscoveries from "./data/particleDiscoveries.json" assert {type: "json"};
+import _particleDiscoveries from "./data/particleDiscoveries.json" assert { type: "json" };
 
-import pdbEntries from "./data/proteinStructures.json" assert {type: "json"};
+import pdbEntries from "./data/proteinStructures.json" assert { type: "json" };
 
-import _nobelPrizes from "./data/nobelPrizes.json" assert {type: "json"};
+import _nobelPrizes from "./data/nobelPrizes.json" assert { type: "json" };
 
-import conferences from "./data/conferences.json" assert {type: "json"};
+import conferences from "./data/conferences.json" assert { type: "json" };
 
-import professorships from "./data/professorships.json" assert {type: "json"};
+import professorships from "./data/professorships.json" assert { type: "json" };
 
-import publications from "./data/publications__prab.tsv"
-import publications__prab from "./data/publications__prab.json" assert {type: "json"};
-import publications_openAlex from "./data/publications_open-alex.json" assert {type: "json"};
-import doctoralTheses from "./data/doctoralTheses.json" assert {type: "json"};
-import masterTheses from "./data/masterTheses.json" assert {type: "json"};
+import publications from "./data/publications__prab.tsv";
+import publications__prab from "./data/publications__prab.json" assert { type: "json" };
+import publications_openAlex from "./data/publications_open-alex.json" assert { type: "json" };
+import doctoralTheses from "./data/doctoralTheses.json" assert { type: "json" };
+import masterTheses from "./data/masterTheses.json" assert { type: "json" };
 
-import betaElectron from "./data/betaElectron.json" assert {type: "json"};
+import betaElectron from "./data/betaElectron.json" assert { type: "json" };
 
-import betaProton from "./data/betaProton.json" assert {type: "json"};
+import betaProton from "./data/betaProton.json" assert { type: "json" };
 
-import energyProton from "./data/energyProton.json" assert {type: "json"};
+import energyProton from "./data/energyProton.json" assert { type: "json" };
 
-import energyElectron from "./data/energyElectron.json" assert {type: "json"};
+import energyElectron from "./data/energyElectron.json" assert { type: "json" };
 
-import magneticFieldStrength from "./data/magneticFieldStrength.json" assert {type: "json"};
+import magneticFieldStrength from "./data/magneticFieldStrength.json" assert { type: "json" };
 
-import srfGradient from "./data/srfGradient.json" assert {type: "json"};
+import srfGradient from "./data/srfGradient.json" assert { type: "json" };
 
-import emittance from "./data/emittance.json" assert {type: "json"};
+import emittance from "./data/emittance.json" assert { type: "json" };
 
-import currentProton from "./data/currentProton.json" assert {type: "json"};
+import currentProton from "./data/currentProton.json" assert { type: "json" };
 
-import peakLuminosity from "./data/peakLuminosity.json" assert {type: "json"};
+import peakLuminosity from "./data/peakLuminosity.json" assert { type: "json" };
 
-import peakBrilliance from "./data/peakBrilliance.json" assert {type: "json"};
+import peakBrilliance from "./data/peakBrilliance.json" assert { type: "json" };
 
-import neutronFlux from "./data/neutronFlux.json" assert {type: "json"};
+import neutronFlux from "./data/neutronFlux.json" assert { type: "json" };
 
-import projectFunding
-  from "./data/projektfoerderung_pt-desy.2-aggregated.accelerator_related_projects_per_year.json" assert {type: "json"};
-import excellenceRate from "./data/excellence-rate.json" assert {type: "json"};
+import projectFunding from "./data/projektfoerderung_pt-desy.2-aggregated.accelerator_related_projects_per_year.json" assert { type: "json" };
+import excellenceRate from "./data/excellence-rate.json" assert { type: "json" };
 
 const nobelPrizes = Array.from(
   groups(Object.values(_nobelPrizes), ({ year }) => year),

@@ -1,6 +1,4 @@
-
 import { defineSectionCollection } from "@/lib/sections";
-
 
 // import { pocketbaseLoader } from "astro-loader-pocketbase"
 

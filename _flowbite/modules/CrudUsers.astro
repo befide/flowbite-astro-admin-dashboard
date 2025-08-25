@@ -3,7 +3,7 @@
 
 import NavPagination from "@astro/components/NavPagination.astro"
 
-import {getSections} from "../lib/sections";
+import {getSections} from "../../src/lib/sections";
 
 const { class: clazz } = Astro.props
 const users = await getSections()
