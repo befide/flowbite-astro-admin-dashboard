@@ -1,44 +1,44 @@
-@layer my-reset, starlight, my-overrides;
+/*@layer my-reset, starlight, my-overrides;*/
 
-@layer my-overrides {
-  .card-container {
-    display: flex;
+/*@layer my-overrides {*/
+/*  .card-container {*/
+/*    display: flex;*/
 
-    margin: 0 -1.5rem;
-    padding: 1rem;
+/*    margin: 0 -1.5rem;*/
+/*    padding: 1rem;*/
 
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+/*    flex-wrap: wrap;*/
+/*    gap: 1rem;*/
+/*  }*/
 
-  .card {
-    display: flex;
+/*  .card {*/
+/*    display: flex;*/
 
-    padding: 0;
+/*    padding: 0;*/
 
-    flex: 1 1 10rem;
-    flex-direction: column;
-    gap: 0;
-  }
+/*    flex: 1 1 10rem;*/
+/*    flex-direction: column;*/
+/*    gap: 0;*/
+/*  }*/
 
-  .card__header {
-    background-color: rgb(0 0 0 / 10%);
-    padding: 0 0.5rem;
-  }
-  .card__header h3 {
-    font-size: var(--sl-text-base);
-    @apply baseline-1/0;
-  }
+/*  .card__header {*/
+/*    background-color: rgb(0 0 0 / 10%);*/
+/*    padding: 0 0.5rem;*/
+/*  }*/
+/*  .card__header h3 {*/
+/*    font-size: var(--sl-text-base);*/
+/*    @apply baseline-1/0;*/
+/*  }*/
 
-  .card__body {
-    background-color: rgb(0 0 0 / 5%);
+/*  .card__body {*/
+/*    background-color: rgb(0 0 0 / 5%);*/
 
-    margin-top: 0;
+/*    margin-top: 0;*/
 
-    padding: 0 0.5rem;
+/*    padding: 0 0.5rem;*/
 
-    font-size: var(--text-base);
+/*    font-size: var(--text-base);*/
 
-    flex: 5;
-  }
-}
+/*    flex: 5;*/
+/*  }*/
+/*}*/

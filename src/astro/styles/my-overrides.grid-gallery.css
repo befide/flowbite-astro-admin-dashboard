@@ -1,94 +1,94 @@
-@layer my-overrides {
-  .grid-gallery,
-  .grid-gallery td,
-  .grid-gallery th {
-    margin: 0;
-    padding: 0;
+/*@layer my-overrides {*/
+/*  .grid-gallery,*/
+/*  .grid-gallery td,*/
+/*  .grid-gallery th {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
 
-    font-size: var(--text-sm);
+/*    font-size: var(--text-sm);*/
 
-    border-collapse: collapse;
-    border-spacing: 0;
-    line-height: 0.5rem;
-  }
-  .grid-gallery {
-    display: grid;
+/*    border-collapse: collapse;*/
+/*    border-spacing: 0;*/
+/*    line-height: 0.5rem;*/
+/*  }*/
+/*  .grid-gallery {*/
+/*    display: grid;*/
 
-    position: relative;
+/*    position: relative;*/
 
-    border-collapse: collapse;
-    min-width: 100%;
-    grid-template-columns: repeat(6, minmax(150px, 1fr));
-    row-gap: 1px;
+/*    border-collapse: collapse;*/
+/*    min-width: 100%;*/
+/*    grid-template-columns: repeat(6, minmax(150px, 1fr));*/
+/*    row-gap: 1px;*/
 
-    background-image: linear-gradient(
-      90deg,
-      #ffffff 25%,
-      #666666 25%,
-      #666666 50%,
-      #ffffff 50%,
-      #ffffff 75%,
-      #666666 75%,
-      #666666 100%
-    );
-    background-size: 4px 4px;
-    /* grid-auto-rows: 1rem; */
-    /* These are just initial values which are overriden using JavaScript when a column is resized */
-  }
+/*    background-image: linear-gradient(*/
+/*      90deg,*/
+/*      #ffffff 25%,*/
+/*      #666666 25%,*/
+/*      #666666 50%,*/
+/*      #ffffff 50%,*/
+/*      #ffffff 75%,*/
+/*      #666666 75%,*/
+/*      #666666 100%*/
+/*    );*/
+/*    background-size: 4px 4px;*/
+/*    !* grid-auto-rows: 1rem; *!*/
+/*    !* These are just initial values which are overriden using JavaScript when a column is resized *!*/
+/*  }*/
 
-  .grid-gallery thead,
-  .grid-gallery tbody,
-  .grid-gallery tr {
-    display: contents;
-  }
+/*  .grid-gallery thead,*/
+/*  .grid-gallery tbody,*/
+/*  .grid-gallery tr {*/
+/*    display: contents;*/
+/*  }*/
 
-  .grid-gallery th,
-  .grid-gallery td {
-    background-color: white;
+/*  .grid-gallery th,*/
+/*  .grid-gallery td {*/
+/*    background-color: white;*/
 
-    padding: 00.25rem;
+/*    padding: 00.25rem;*/
 
-    overflow: hidden;
+/*    overflow: hidden;*/
 
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+/*    text-overflow: ellipsis;*/
+/*    white-space: nowrap;*/
+/*  }*/
 
-  .grid-gallery th {
-    position: sticky;
+/*  .grid-gallery th {*/
+/*    position: sticky;*/
 
-    top: 0;
+/*    top: 0;*/
 
-    font-weight: normal;
-    /* background: #6c7ae0; */
-    text-align: left;
-    /* color: white; */
-  }
+/*    font-weight: normal;*/
+/*    !* background: #6c7ae0; *!*/
+/*    text-align: left;*/
+/*    !* color: white; *!*/
+/*  }*/
 
-  .grid-gallery th:last-child {
-    border: 0;
-  }
+/*  .grid-gallery th:last-child {*/
+/*    border: 0;*/
+/*  }*/
 
-  .grid-gallery .resize-handle {
-    width: 3px;
+/*  .grid-gallery .resize-handle {*/
+/*    width: 3px;*/
 
-    position: absolute;
+/*    position: absolute;*/
 
-    top: 0;
-    right: 0;
-    bottom: 0;
+/*    top: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
 
-    background: black;
-    opacity: 0;
-    cursor: col-resize;
-  }
+/*    background: black;*/
+/*    opacity: 0;*/
+/*    cursor: col-resize;*/
+/*  }*/
 
-  .grid-gallery .resize-handle:hover,
-  .header--being-resized .resize-handle {
-    opacity: 0.5;
-  }
+/*  .grid-gallery .resize-handle:hover,*/
+/*  .header--being-resized .resize-handle {*/
+/*    opacity: 0.5;*/
+/*  }*/
 
-  .grid-table th:hover .resize-handle {
-    opacity: 0.3;
-  }
-}
+/*  .grid-table th:hover .resize-handle {*/
+/*    opacity: 0.3;*/
+/*  }*/
+/*}*/

@@ -43,8 +43,9 @@
   const themeToggleLightIcon = document.getElementById(
     "theme-toggle-light-icon"
   )
+  const themeToggleBtn = document.getElementById("theme-toggle")
 
-  if (!!themeToggleLightIcon && !!themeToggleDarkIcon) {
+  if (!!themeToggleLightIcon && !!themeToggleDarkIcon && themeToggleBtn) {
 
     // Change the icons inside the button based on previous settings
     if (
@@ -58,7 +59,8 @@
       themeToggleLightIcon.classList.remove("hidden")
     }
 
-    const themeToggleBtn = document.getElementById("theme-toggle")
+
+
 
     let event = new Event("dark-mode")
 

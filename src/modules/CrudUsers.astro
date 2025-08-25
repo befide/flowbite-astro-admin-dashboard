@@ -2,10 +2,11 @@
 /* eslint max-lines: 'off' */
 
 import NavPagination from "@astro/components/NavPagination.astro"
-import { asset, fetchData } from "../lib/data.js"
+
+import {getSections} from "../lib/sections";
 
 const { class: clazz } = Astro.props
-const users = await fetchData("users")
+const users = await getSections()
 ---
 
 <entities-crud
@@ -302,11 +303,7 @@ const users = await fetchData("users")
                         </div>
                       </td>
                       <td class="mr-12 flex items-center space-x-6 p-4 whitespace-nowrap">
-                        <img
-                          class="h-10 w-10 rounded-full"
-                          src={asset(`/images/users/${user.avatar}`)}
-                          alt={`${user.name} avatar`}
-                        />
+
                         <div class="text-sm font-normal text-gray-500 dark:text-gray-400">
                           <div class="text-base font-semibold text-gray-900 dark:text-white">
                             {user.name}

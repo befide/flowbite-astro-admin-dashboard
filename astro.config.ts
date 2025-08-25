@@ -1,30 +1,26 @@
-import { defineConfig, envField } from "astro/config"
+import {defineConfig} from "astro/config"
 
 import sitemap from "@astrojs/sitemap"
 // import tailwind from '@astrojs/tailwind';
 import tailwindcss from "@tailwindcss/vite"
 import astroD2 from "astro-d2"
+import dsv from '@rollup/plugin-dsv';
 
 import mdx from "@astrojs/mdx"
-import { pocketbaseIntegration } from "astro-integration-pocketbase"
 
 // import {pocketbaseIntegration} from "astro-integration-pocketbase"
-
-
 import netlify from "@astrojs/netlify";
-
-
-
+import AstroPWA from '@vite-pwa/astro'
 
 const DEV_PORT = 4350
 
 // https://astro.build/config
 export default defineConfig({
   site: process.env.CI
-    ? "https://themesberg.github.io"
+    ? "https://kfb-inventory.netlify.app"
     : `http://localhost:${DEV_PORT}`,
 
-  base: process.env.CI ? "/flowbite-astro-admin-dashboard" : "/",
+  base: "/", //process.env.CI ? "/flowbite-astro-admin-dashboard" : "/",
 
   // output: 'server',
 
@@ -37,7 +33,7 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [dsv(), tailwindcss()],
   },
 
   integrations: [
@@ -45,10 +41,12 @@ export default defineConfig({
     // tailwind(),
     ...(process.env.NODE_ENV === "production"
       ? []
-      : [astroD2({ inline: true })]),
+      : [astroD2({inline: true})]),
     sitemap(),
     mdx(),
-
+    AstroPWA({
+      /* your pwa options */
+    })
     //  pocketbase({
     //   // default values
     // pocketbaseIntegration({

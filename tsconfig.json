@@ -1,14 +1,19 @@
 {
-  "extends": "astro/tsconfigs/base",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist", "node_modules"],
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "src/**/*"],
   "compilerOptions": {
+    "types": [
+      "astro/client",
+      "vite-plugin-pwa/vanillajs",
+      "vite-plugin-pwa/info"
+    ],
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
       }
     ],
     "strictNullChecks": true,
+    "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
