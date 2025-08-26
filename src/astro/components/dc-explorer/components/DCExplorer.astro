@@ -37,6 +37,7 @@ const locale = Astro.currentLocale
     treeSectionsConfigMap,
   } from "@components/dc-explorer/config"
   import type { NestableDomainObjectSchema } from "@content/config.common"
+  import {DomainObjectSchema} from "../../../../lib/content.common";
 
   const locale = getLocale()
 
@@ -73,10 +74,10 @@ const locale = Astro.currentLocale
 
             if (dcTileType === "count") {
               /*something here*/
-              const dimension = idx.dimension((d) => d.id)
+              const dimension = idx.dimension((d: DomainObjectSchema) => d.id)
               const group = dimension.group().reduceCount()
 
-              createCountChart(dcCollection, dcDimension, idx, dimension, group)
+              createCountChart(dcCollection, dcDimension, idx, dimension)
             } else if (dcTileType === "row-chart") {
               // something here
 
@@ -102,12 +103,12 @@ const locale = Astro.currentLocale
 
               createBarChart(dcCollection, dcDimension, dimension, group)
             } else if (dcTileType === "table") {
-              const idDimension = idx.dimension((d: DomainObject) => d.id)
+              const idDimension = idx.dimension((d: DomainObjectSchema) => d.id)
 
               createTableChart(
                 dcCollection,
                 dcDimension,
-                tableConfigMap(dcCollection, locale),
+                tableConfigMap(dcCollection),
                 idDimension
               )
             } else if (dcTileType === "tree-data-table") {

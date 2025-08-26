@@ -1,8 +1,13 @@
 ---
+import { getLangFromUrl, useTranslations } from '@astro/i18n/utils';
+
 import {
   rowChartId,
   rowChartTileId,
 } from "@/astro/components/dc-explorer/components"
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const {
   collection,
@@ -32,7 +37,7 @@ const tileType = "row-chart"
     <div class="dc-explorer__tile__title">{title}</div>
     <div class="dc-explorer__tile__actions">
       <button class="reset-action" data-chart={chartId}
-        >{Astro.locals.t("dc-explorer.actions.reset")}</button
+        >{t("dc-explorer.actions.reset")}</button
       >
     </div>
   </header>

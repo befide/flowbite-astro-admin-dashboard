@@ -1,4 +1,6 @@
 ---
+import { getLangFromUrl, useTranslations } from '@astro/i18n/utils';
+
 import {
   countChartId,
   countChartTileId,
@@ -6,6 +8,8 @@ import {
 
 const { collection, dimension } = Astro.props
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const tileId = countChartTileId(collection, dimension)
 const chartId = countChartId(collection, dimension)
 const tileType = "count"
@@ -20,11 +24,11 @@ const tileType = "count"
 >
   <header class="dc-explorer__tile__header">
     <div class="dc-explorer__tile__title">
-      {Astro.locals.t("dc-explorer.tiles.title.count")}
+      {t("dc-explorer.tiles.title.count")}
     </div>
     <div class="dc-explorer__tile__actions">
       <button class="reset-action"
-        >{Astro.locals.t("dc-explorer.actions.reset-all")}</button
+        >{t("dc-explorer.actions.reset-all")}</button
       >
     </div>
   </header>

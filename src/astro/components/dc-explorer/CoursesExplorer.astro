@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from '@astro/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
 import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
 import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
@@ -12,41 +17,41 @@ import DCExplorerTable from "@components/dc-explorer/components/DCExplorerTable.
       collection="courses"
       dimension="university__label_short"
       dimensionIsLocalized={true}
-      title={Astro.locals.t("dc-explorer.tiles.title.universities")}
+      title={t("dc-explorer.tiles.title.universities")}
     />
     <DCExplorerRowChart
       collection="courses"
       dimension="teachingEvent__term"
-      title={Astro.locals.t("dc-explorer.tiles.title.teaching-event")}
+      title={t("dc-explorer.tiles.title.teaching-event")}
     />
     <DCExplorerRowChart
       collection="courses"
       dimension="studyLevels__term"
       dimensionIsArray={true}
-      title={Astro.locals.t("dc-explorer.tiles.title.study-levels")}
+      title={t("dc-explorer.tiles.title.study-levels")}
     />
     <DCExplorerRowChart
       collection="courses"
       dimension="partOfProgrammesOfStudy"
       dimensionIsArray={true}
-      title={Astro.locals.t("dc-explorer.tiles.title.programmes-of-study")}
+      title={t("dc-explorer.tiles.title.programmes-of-study")}
     />
     <DCExplorerRowChart
       collection="courses"
       dimension="semesters"
       dimensionIsArray={true}
-      title={Astro.locals.t("dc-explorer.tiles.title.semesters")}
+      title={t("dc-explorer.tiles.title.semesters")}
     />
     <DCExplorerRowChart
       collection="courses"
       dimension="weeklySemesterHours"
-      title={Astro.locals.t("dc-explorer.tiles.title.weeklySemesterHours")}
+      title={t("dc-explorer.tiles.title.weeklySemesterHours")}
     />
 
     <DCExplorerRowChart
       collection="courses"
       dimension="languages"
-      title={Astro.locals.t("dc-explorer.tiles.title.languages")}
+      title={t("dc-explorer.tiles.title.languages")}
       dimensionIsArray={true}
     />
   </div>

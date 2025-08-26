@@ -8,7 +8,7 @@ import type { FacilityDto } from "@domain/facilities/facility"
 import { numberFormat, oneLineFormat } from "./config"
 import type { TaxonomyItemDto } from "@domain/taxonomy/taxonomyItem.ts"
 import fastCartesian from "fast-cartesian"
-import { OrganizationDto } from "@domain/"
+import { type OrganizationDto } from "@domain/organizations/index.ts"
 function getValue(obj: any, path: string) {
   const pathParts = path.split(".")
   for (let i = 0; i < pathParts.length; i++) {

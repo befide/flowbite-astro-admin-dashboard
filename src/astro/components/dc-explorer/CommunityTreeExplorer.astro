@@ -1,6 +1,11 @@
 ---
+import { getLangFromUrl, useTranslations } from '@astro/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
-import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
+// import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
 import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
 import DCExplorerTreeDataTable from "@components/dc-explorer/components/DCExplorerTreeDataTable.astro"
 ---
@@ -12,7 +17,7 @@ import DCExplorerTreeDataTable from "@components/dc-explorer/components/DCExplor
     <!-- <DCExplorerRowChart
       collection="community"
       dimension="befideOrganizationCategories"
-      title={Astro.locals.t("dc-explorer.tiles.title.categories")}
+      title={t("dc-explorer.tiles.title.categories")}
       dimensionIsArray={true}
     /> -->
   </div>

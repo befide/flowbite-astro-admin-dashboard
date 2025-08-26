@@ -2,7 +2,7 @@ import {defineCollection, z} from "astro:content";
 import {globWithParser} from "@/lib/globWithParser.ts";
 
 import spaceCommander from "@/lib/space-commander.ts";
-import {mergeDeep} from "@/lib/merge-deep.ts";
+import { mergeDeep } from "../mergeDeep";
 
 const SectionZodSchema = z.object({
   title: z.string().max(60),

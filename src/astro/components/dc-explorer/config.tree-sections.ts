@@ -1,5 +1,5 @@
 import type { TreeNode } from "@lib/content.tree"
-import type { TaxonomyItemDto } from "@utils/taxonomy/taxonomyItem.ts"
+import type { TaxonomyItemDto } from "@domain/taxonomy/index.ts"
 
 export const treeSectionsConfigMap = (key: string) => {
   if (key === "domainTaxonomy" || key === "genericTaxonomy") {

@@ -1,5 +1,6 @@
-import type { OrganizationDto, ThesisDto } from "@domain"
-import type { CourseDto } from "@domain/courses/course"
+import type { OrganizationDto } from "@domain/organizations/index.ts"
+import type { ThesisDto } from "@domain/theses/index.ts"
+import type { CourseDto } from "@domain/courses/index.ts"
 import { numberFormat, oneLineFormat, pillFormat } from "./config"
 
 export type TableConfigEntry = {

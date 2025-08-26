@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from '@astro/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
 import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
 import DCExplorerTable from "@components/dc-explorer/components/DCExplorerTable.astro"
@@ -23,23 +28,23 @@ import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
     <DCExplorerRowChart
       collection="organizations"
       dimension="with_userFacilities"
-      title={Astro.locals.t("dc-explorer.tiles.title.with_userFacilities")}
+      title={t("dc-explorer.tiles.title.with_userFacilities")}
     />
 
     <DCExplorerRowChart
       collection="organizations"
       dimension="with_facilities"
-      title={Astro.locals.t("dc-explorer.tiles.title.with_facilities")}
+      title={t("dc-explorer.tiles.title.with_facilities")}
     />
     <DCExplorerRowChart
       collection="organizations"
       dimension="with_theses"
-      title={Astro.locals.t("dc-explorer.tiles.title.with_theses")}
+      title={t("dc-explorer.tiles.title.with_theses")}
     />
     <DCExplorerRowChart
       collection="organizations"
       dimension="with_teachingEvents"
-      title={Astro.locals.t("dc-explorer.tiles.title.with_teachingEvents")}
+      title={t("dc-explorer.tiles.title.with_teachingEvents")}
     />
 
     <!-- </details> -->

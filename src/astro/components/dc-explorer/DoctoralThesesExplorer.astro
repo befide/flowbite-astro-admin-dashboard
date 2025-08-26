@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from '@astro/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
 import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
 import DCExplorerBarChart from "@components/dc-explorer/components/DCExplorerBarChart .astro"
@@ -12,41 +17,41 @@ import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
     <DCExplorerBarChart
       collection="theses"
       dimension="year"
-      title={Astro.locals.t("dc-explorer.tiles.title.year")}
+      title={t("dc-explorer.tiles.title.year")}
     />
     <DCExplorerRowChart
       collection="theses"
       dimension="degreeTitle"
-      title={Astro.locals.t("dc-explorer.tiles.title.degree")}
+      title={t("dc-explorer.tiles.title.degree")}
     />
     <DCExplorerRowChart
       collection="theses"
       dimension="gender"
-      title={Astro.locals.t("dc-explorer.tiles.title.gender")}
+      title={t("dc-explorer.tiles.title.gender")}
       accessorPath="author.gender"
     />
     <DCExplorerRowChart
       collection="theses"
       dimension="university__label_short"
-      title={Astro.locals.t("dc-explorer.tiles.title.university")}
+      title={t("dc-explorer.tiles.title.university")}
     />
     <DCExplorerRowChart
       collection="theses"
       dimension="facilities__label_short"
-      title={Astro.locals.t("dc-explorer.tiles.title.facilities")}
+      title={t("dc-explorer.tiles.title.facilities")}
       dimensionIsArray={true}
     />
     <DCExplorerRowChart
       collection="theses"
       dimension="affiliations__label_short"
-      title={Astro.locals.t("dc-explorer.tiles.title.facilities")}
+      title={t("dc-explorer.tiles.title.facilities")}
       dimensionIsArray={true}
     />
 
     <DCExplorerRowChart
       collection="theses"
       dimension="language"
-      title={Astro.locals.t("dc-explorer.tiles.title.language")}
+      title={t("dc-explorer.tiles.title.language")}
     />
     <!-- </details> -->
   </div>

@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { NestableDomainObjectSchema } from "@lib/content.common"
-import { hierarchy, select, stratify } from "d3"
-import { ascending, descending } from "d3"
-import { BaseMixin } from "dc"
-import { TableConfigEntry } from "../config.tables"
-import { getRoots, TreeNode } from "@lib/content.tree"
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import type {NestableDomainObjectSchema} from "@lib/content.common"
+import {ascending, descending, select} from "d3"
+// @ts-ignore
+import {BaseMixin} from "dc"
+import type {TableConfigEntry} from "../config.tables"
+import {getRoots, type TreeNode} from "@lib/content.tree"
 
 const LABEL_CSS_CLASS = "dc-tree-table-label"
 const ROW_CSS_CLASS = "dc-table-row"

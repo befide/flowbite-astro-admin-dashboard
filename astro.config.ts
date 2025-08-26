@@ -1,4 +1,4 @@
-import {defineConfig} from "astro/config";
+import {defineConfig, fontProviders} from "astro/config";
 
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
@@ -18,9 +18,23 @@ export default defineConfig({
   site: process.env.CI
     ? "https://kfb-inventory.netlify.app"
     : `http://localhost:${DEV_PORT}`,
-
+  experimental: {
+    fonts: [{
+      provider: fontProviders.fontsource(),
+      name: "Barlow Semi Condensed",
+      cssVariable: "--font-barlow-semi-condensed"
+    },
+      {
+        provider: fontProviders.fontsource(),
+        name: "Barlow Condensed",
+        cssVariable: "--font-barlow-condensed"
+      }]
+  },
   base: "/", //process.env.CI ? "/flowbite-astro-admin-dashboard" : "/",
-
+  i18n: {
+    locales: ["en", "de"],
+    defaultLocale: "en",
+  },
   // output: 'server',
 
   /* Like Vercel, Netlify,… Mimicking for dev. server */
