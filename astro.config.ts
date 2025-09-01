@@ -1,4 +1,11 @@
 import {defineConfig, fontProviders} from "astro/config";
+import rehypeRewrite from 'rehype-rewrite';
+import remarkSectionize from 'remark-sectionize';
+
+
+
+import spaceCommander from "./src/lib/space-commander";
+
 
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
@@ -18,18 +25,18 @@ export default defineConfig({
   site: process.env.CI
     ? "https://kfb-inventory.netlify.app"
     : `http://localhost:${DEV_PORT}`,
-  experimental: {
-    fonts: [{
-      provider: fontProviders.fontsource(),
-      name: "Barlow Semi Condensed",
-      cssVariable: "--font-barlow-semi-condensed"
-    },
-      {
-        provider: fontProviders.fontsource(),
-        name: "Barlow Condensed",
-        cssVariable: "--font-barlow-condensed"
-      }]
-  },
+  // experimental: {
+  //   fonts: [{
+  //     provider: fontProviders.fontsource(),
+  //     name: "Barlow Semi Condensed",
+  //     cssVariable: "--font-barlow-semi-condensed"
+  //   },
+  //     {
+  //       provider: fontProviders.fontsource(),
+  //       name: "Barlow Condensed",
+  //       cssVariable: "--font-barlow-condensed"
+  //     }]
+  // },
   base: "/", //process.env.CI ? "/flowbite-astro-admin-dashboard" : "/",
   i18n: {
     locales: ["en", "de"],
@@ -44,8 +51,52 @@ export default defineConfig({
     /* Dev. server only */
     port: DEV_PORT,
   },
+  markdown: {
+    remarkPlugins: [
+  //     // remarkDirective,
+  //
+      remarkSectionize,
+  //     //   [smartypants, {
+  //     //     options: {
+  //     //       openingQuotes: { double: "»", single: "›" },
+  //     //       closingQuotes: { double: "«", single: "‹" },
+  //     //     }
+  //     //   }],
+    ],
+    rehypePlugins: [
+  //     // [rehypeFigure, { className: "md" }],
+  //     // [
+  //     //   rehypeCitation,
+  //     //   {
+  //     //     bibliography: 'src/kfb_bf2035__used.csl.json',
+  //     //     linkCitations: true,
+  //     //   },
+  //     // ],
+  //
+  //     // [
+  //     //   rehypeAddClasses,
+  //     //   {
+  //     //     'img,figure,table,section,h1,h2,h3,h4,p,ol,ul,li,blockquote': 'md',
+  //     //   },
+  //     // ],
+      [
+        rehypeRewrite,
+        {
+          rewrite: (node: any) => {
+            if (node.type === 'text') {
+              node.value = spaceCommander(node.value);
+            }
+          },
+        },
+      ],
+    ],
+  },
 
   vite: {
+    logLevel: 'info',
+    define: {
+      __DATE__: `'${new Date().toISOString()}'`,
+    },
     plugins: [
       // @ts-ignore
       dsv(),

@@ -8,7 +8,7 @@ const treeNode = (
   items: TreeNode<NestableDomainObjectSchema>[],
   selectedItems: TreeNode<NestableDomainObjectSchema>[]
 ) => {
-  console.log("treeNode")
+  // console.log("treeNode")
   const selectedItemIds = selectedItems
     ? selectedItems.map((d) => d.id)
     : items.map((d) => d.id)

@@ -1,7 +1,7 @@
 ---
 import pkg from "../../package.json" assert {type: "json"}
 import {url} from "../lib/data.js"
-import {Font} from 'astro:assets';
+
 
 import {pwaInfo} from 'virtual:pwa-info';
 import ReloadPrompt from '@astro/components/ReloadPrompt.astro';
@@ -19,8 +19,6 @@ const {class: clazz} = Astro.props
 <!doctype html>
 <html lang="en">
 <head>
-  <Font cssVariable="--font-barlow-condensed"/>
-  <Font cssVariable="--font-barlow-semi-condensed"/>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">

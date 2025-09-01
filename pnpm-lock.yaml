@@ -26,6 +26,9 @@ importers:
       '@astropub/md':
         specifier: 1.0.0
         version: 1.0.0(@astrojs/markdown-remark@6.3.6)
+      '@duplojs/zod-to-typescript':
+        specifier: 0.4.2
+        version: 0.4.2(zod@3.25.76)
       '@nanostores/persistent':
         specifier: 1.1.0
         version: 1.1.0(nanostores@1.0.1)
@@ -913,6 +916,11 @@ packages:
 
   '@dual-bundle/import-meta-resolve@4.1.0':
     resolution: {integrity: sha512-+nxncfwHM5SgAtrVzgpzJOI1ol0PkumhVo469KCf9lUi21IGcY90G98VuHm9VRrUypmAzawAHO9bs6hqeADaVg==}
+
+  '@duplojs/zod-to-typescript@0.4.2':
+    resolution: {integrity: sha512-W45xPeaGleN4LVnUcZXMoh2IulndYH0+OZDdqPs0/9FtTf/ILTmrX6GvVgauQKrdYzYv1SBmVygkReNMkJZ6ZA==}
+    peerDependencies:
+      zod: '>=3.23.8 <4.0.0'
 
   '@emmetio/abbreviation@2.3.3':
     resolution: {integrity: sha512-mgv58UrU3rh4YgbE/TzgLQwJ3pFsHHhCLqY20aJq+9comytTXUDNGG/SMtSeMJdkpxgXSXunBGLD8Boka3JyVA==}
@@ -7038,6 +7046,11 @@ packages:
   typescript-auto-import-cache@0.3.6:
     resolution: {integrity: sha512-RpuHXrknHdVdK7wv/8ug3Fr0WNsNi5l5aB8MYYuXhq2UH5lnEB1htJ1smhtD5VeCsGr2p8mUDtd83LCQDFVgjQ==}
 
+  typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   typescript@5.9.2:
     resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==}
     engines: {node: '>=14.17'}
@@ -8675,6 +8688,11 @@ snapshots:
       node-source-walk: 7.0.1
 
   '@dual-bundle/import-meta-resolve@4.1.0': {}
+
+  '@duplojs/zod-to-typescript@0.4.2(zod@3.25.76)':
+    dependencies:
+      typescript: 5.5.4
+      zod: 3.25.76
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:
@@ -15893,6 +15911,8 @@ snapshots:
   typescript-auto-import-cache@0.3.6:
     dependencies:
       semver: 7.7.2
+
+  typescript@5.5.4: {}
 
   typescript@5.9.2: {}
 

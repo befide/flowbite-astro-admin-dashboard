@@ -91,9 +91,9 @@
 }
 
 .dc-explorer__tile__body .explorer__chart--count p {
-  line-height: 2rem;
+  line-height: 3rem;
   padding: 0 var(--content-pad-x);
-  height: 2rem;
+  height: 3rem;
   font-size: var(--text-xl);
 }
 

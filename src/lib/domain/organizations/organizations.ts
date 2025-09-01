@@ -21,7 +21,7 @@ export const allCommunityTopLevelOrganizations = async () =>
   await getCollection(
     "organizations",
     (entry) =>
-      entry.data.isPartOfCommunity &&
+      entry.data.partOfCommunityDegree &&
       entry.data.parent__id &&
       !entry.data.topLevel__id &&
       entry.data.befideOrganizationCategories.indexOf("committee") !== 0
@@ -31,7 +31,7 @@ export const allCommunityOrganizations = async () =>
   await getCollection(
     "organizations",
     (entry) =>
-      entry.data.isPartOfCommunity &&
+      entry.data.partOfCommunityDegree &&
       entry.data.befideOrganizationCategories.indexOf("committee") !== 0
   )
 

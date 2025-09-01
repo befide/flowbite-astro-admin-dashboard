@@ -1,6 +1,5 @@
 import type {NestableDomainObjectSchema} from "@lib/content.common.ts";
 
-
 export interface TreeNode<Datum extends NestableDomainObjectSchema> {
   id: string;
   parent__id: string | null;

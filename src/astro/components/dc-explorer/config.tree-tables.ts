@@ -4,11 +4,9 @@ import {
   genders,
 } from "@domain/organizations/const"
 import type { TreeNode } from "@lib/content.tree"
-import type { FacilityDto } from "@domain/facilities/facility"
+import type { FacilityDto, TaxonomyItemDto, OrganizationDto } from "@lib/common.d"
 import { numberFormat, oneLineFormat } from "./config"
-import type { TaxonomyItemDto } from "@domain/taxonomy/taxonomyItem.ts"
 import fastCartesian from "fast-cartesian"
-import { type OrganizationDto } from "@domain/organizations/index.ts"
 function getValue(obj: any, path: string) {
   const pathParts = path.split(".")
   for (let i = 0; i < pathParts.length; i++) {

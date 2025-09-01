@@ -1,18 +1,12 @@
-import { optimize } from "svgo";
-import { type HierarchyNode } from "d3";
+import {arc, cluster, type HierarchyNode, hsl, rgb, ribbon, scaleOrdinal, select, stratify} from "d3";
 
 import css from "./research-agenda.css";
 
-import { JSDOM } from "jsdom";
-import { hsl, rgb } from "d3";
-import { scaleOrdinal } from "d3";
-import { cluster, stratify } from "d3";
-import { select } from "d3";
-import { ribbon } from "d3";
-
-import { arc } from "d3";
+import {JSDOM} from "jsdom";
 
 import _data from "./research-agenda.json";
+import type {HierarchyPointNode} from "d3-hierarchy";
+
 export interface ResearchAgendaItem {
   additionalUserGroups?: string[];
   ancestors?: string[];
@@ -33,7 +27,10 @@ export interface ResearchAgendaItem {
   usedInResearchAgenda: boolean;
   userGroup?: string;
 }
+
 export type ResearchAgenda = ResearchAgendaItem[];
+
+export type ResearchAgendaItemHierarchyNode = HierarchyNode<ResearchAgendaItem>
 
 export const createResearchAgenda = (filter = "agenda.facilities") => {
   const dTheta = 0.0;
@@ -53,7 +50,7 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     return scaleOrdinal(
       ["topics", "facilities", "objectives"],
       [red.toString(), blue.toString(), green.toString()],
-    )(d.data.ancestors[2]);
+    )(d.data.ancestors![2]);
   }
 
   function nameFixer(label = "") {
@@ -83,28 +80,6 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     d.links = d.links.map((id, i) => itemsById.get(id)?.path);
   });
 
-  // add missing parent nodes
-  // for (let i = 0; i < researchAgenda.length; i++) {
-  //   const d = researchAgenda[i]
-  //   d.parent = d.path.split('.').slice(0, -1).join('.')
-  //   if (d.parent && !researchAgenda.find((e) => e.path === d.parent)) researchAgenda.push({ path: d.parent, links: [] })
-  // }
-
-  // interface ResearchAgendaNode {
-  //   name: string
-  //   parent: string
-  //   groupName: string
-  //   ancestors: string[]
-  //   links: string[]
-  // }
-
-  // const nodes = researchAgenda.map((d) => ({
-  //   ...d,
-  //   name: nameFixer(d.name),
-  //   group: nameFixer(d.group),
-  //   ancestors: d.path.split('.').reverse(),
-  //   links: d.links.map((targetId) => nodeById[targetId]?.path).filter((l) => l)
-  // }))
 
   const stratified: HierarchyNode<ResearchAgendaItem> =
     stratify<ResearchAgendaItem>().path((d: ResearchAgendaItem) =>
@@ -154,7 +129,7 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     clusterLayout.leaves().map((d) => [d.data.path, d]),
   );
 
-  const { document } = new JSDOM().window;
+  const {document} = new JSDOM().window;
   const svg = select(document.body).append("svg");
 
   svg
@@ -166,6 +141,7 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
   function gradientId(link: { id: string }) {
     return `gradient-${link.id}`;
   }
+
   const defsElement = svg.append("defs");
 
   const filterElement = defsElement
@@ -185,7 +161,7 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     .join("linearGradient")
     .attr("id", gradientId)
     .attr("gradientUnits", "userSpaceOnUse")
-    .attr("x1", ({ source, target }) => {
+    .attr("x1", ({source, target}) => {
       return (
         radius *
         Math.cos(clusterLayoutLeavesByPath.get(source)?.x - Math.PI / 2)
@@ -193,19 +169,19 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     })
     .attr(
       "y1",
-      ({ source }) =>
+      ({source}) =>
         radius *
         Math.sin(clusterLayoutLeavesByPath.get(source)?.y - Math.PI / 2),
     )
     .attr(
       "x2",
-      ({ target }) =>
+      ({target}) =>
         radius *
         Math.cos(clusterLayoutLeavesByPath.get(target)?.x - Math.PI / 2),
     )
     .attr(
       "y2",
-      ({ target }) =>
+      ({target}) =>
         radius *
         Math.sin(clusterLayoutLeavesByPath.get(target)?.y - Math.PI / 2),
     );
@@ -215,7 +191,7 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     .attr("offset", "0%")
     .attr(
       "stop-color",
-      ({ source }) =>
+      ({source}) =>
         clusterLayoutLeavesByPath.get(source) &&
         color(clusterLayoutLeavesByPath.get(source)),
     );
@@ -224,7 +200,7 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     .attr("offset", "100%")
     .attr(
       "stop-color",
-      ({ target }) =>
+      ({target}) =>
         clusterLayoutLeavesByPath.get(target) &&
         color(clusterLayoutLeavesByPath.get(target)),
     );
@@ -258,19 +234,19 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     .attr("x", (d) =>
       d.x < Math.PI ? baselineHeight / 2 : -baselineHeight / 2,
     )
-    .attr("text-anchor", ({ x }) => (x < Math.PI ? "start" : "end"))
-    .attr("transform", ({ x }) => (x >= Math.PI ? "rotate(180)" : null))
+    .attr("text-anchor", ({x}) => (x < Math.PI ? "start" : "end"))
+    .attr("transform", ({x}) => (x >= Math.PI ? "rotate(180)" : null))
     .attr("fill", color);
 
   nodeElementsText
     .append("tspan")
-    .text((d) => (d.x <= Math.PI ? d.data.group : d.data.label))
-    .classed("group", ({ x }) => x <= Math.PI)
+    .text((d: HierarchyPointNode<ResearchAgendaItem>) => (d.x <= Math.PI) ? d.data.group || "" : d.data.label)
+    .classed("group", ({x}) => x <= Math.PI)
     .on("mouseover", (_, d) => {
       filter =
-        d.x <= Math.PI
-          ? d.data.ancestors.slice(1).reverse().join(".")
-          : d.data.ancestors.slice(0).reverse().join(".");
+        (d.x <= Math.PI
+          ? d.data.ancestors?.slice(1).reverse().join(".")
+          : d.data.ancestors?.slice(0).reverse().join(".")) || "";
     });
   nodeElementsText
     .append("tspan")
@@ -281,9 +257,9 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     .attr("dx", 7)
     .on("mouseover", (_, d) => {
       filter =
-        d.x > Math.PI
-          ? d.data.ancestors.slice(1).reverse().join(".")
-          : d.data.ancestors.slice(0).reverse().join(".");
+        (d.x > Math.PI
+          ? d.data.ancestors?.slice(1).reverse().join(".")
+          : d.data.ancestors?.slice(0).reverse().join(".")) || "";
     });
 
   const linkElements = linksElement
@@ -295,19 +271,18 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
       return `url(#${gradientId(d)})`;
     })
     .classed("link", true)
-    .attr("stroke-width", ({ source, target }) =>
+    .attr("stroke-width", ({source, target}) =>
       filter === "" ||
       (activeElements.has(source) && activeElements.has(target))
         ? 3
         : 3,
     )
-    .attr("stroke-opacity", ({ source, target }) =>
+    .attr("stroke-opacity", ({source, target}) =>
       filter === "" ||
       (activeElements.has(source) && activeElements.has(target))
         ? 0.3
         : 0.0,
     )
-
     .attr("d", (d) => {
       return ribbon()({
         source: {
@@ -341,8 +316,8 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
       height: 1,
       name: "Ziele",
       color: green,
-      startAngle: Math.min(...objectiveNodes.map(({ x }) => x)),
-      endAngle: Math.max(...objectiveNodes.map(({ x }) => x)),
+      startAngle: Math.min(...objectiveNodes.map(({x}) => x)),
+      endAngle: Math.max(...objectiveNodes.map(({x}) => x)),
     },
     {
       level: 0,
@@ -350,16 +325,16 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
       name: "Anlagen",
       color: blue,
       label: "Anlagen",
-      startAngle: Math.min(...facilityNodes.map(({ x }) => x)),
-      endAngle: Math.max(...facilityNodes.map(({ x }) => x)),
+      startAngle: Math.min(...facilityNodes.map(({x}) => x)),
+      endAngle: Math.max(...facilityNodes.map(({x}) => x)),
     },
     {
       level: 0,
       height: 1,
       name: "Themen",
       color: red,
-      startAngle: Math.min(...topicsNodes.map(({ x }) => x)),
-      endAngle: Math.max(...topicsNodes.map(({ x }) => x)),
+      startAngle: Math.min(...topicsNodes.map(({x}) => x)),
+      endAngle: Math.max(...topicsNodes.map(({x}) => x)),
       innerRadius: radius - baselineHeight,
       outerRadius: radius + baselineHeight,
     },
@@ -372,10 +347,10 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     .join("path")
     .classed("legend", true)
     .attr("filter", "url(#shadow)")
-    .attr("id", ({ name }) => name)
-    .attr("fill", ({ color }) => `${color}`)
+    .attr("id", ({name}) => name)
+    .attr("fill", ({color}) => `${color}`)
     .attr("fill-opacity", 0.95)
-    .datum(({ startAngle, endAngle, level, height }) => ({
+    .datum(({startAngle, endAngle, level, height}) => ({
       startAngle: startAngle - 0.05,
       endAngle: endAngle + 0.05,
       innerRadius: radius + (level - 1) * baselineHeight,
@@ -393,8 +368,8 @@ export const createResearchAgenda = (filter = "agenda.facilities") => {
     .attr("dy", 8)
     .append("textPath")
     .attr("fill", "white")
-    .attr("href", ({ name }) => `#${name}`)
-    .text(({ name }) => name);
+    .attr("href", ({name}) => `#${name}`)
+    .text(({name}) => name);
 
   // updateFilter(nodeElements);
 
@@ -409,10 +384,10 @@ function updateFilter(nodeElements: any) {
   //   }
   // });
   nodeElements
-    .attr("fill-opacity", (d) =>
+    .attr("fill-opacity", (d: ResearchAgendaItemHierarchyNode) =>
       filter === "" || activeElements.has(d.data.path) ? 1 : 0.1,
     )
-    .attr("fill", (d) =>
+    .attr("fill", (d: ResearchAgendaItemHierarchyNode) =>
       filter === "" || activeElements.has(d.data.path) ? color(d) : "#f0f0f0",
     );
 
@@ -425,15 +400,15 @@ function updateFilter(nodeElements: any) {
   //   );
 
   linkElements
-    .attr("stroke-width", ({ path = "" }) =>
+    .attr("stroke-width", ({path = ""}) =>
       filter === "" || activeElements.has(path) ? 3 : 3,
     )
-    .attr("stroke-opacity", ({ id = "" }) =>
+    .attr("stroke-opacity", ({id = ""}) =>
       filter === "" || activeElements.has(id) ? 0.3 : 0.0,
     )
-    .style("stroke", ({ id = "" }) =>
+    .style("stroke", ({id = ""}) =>
       filter === "" || activeElements.has(id)
-        ? `url(#${gradientId({ id })})`
+        ? `url(#${gradientId({id})})`
         : "#999999",
     );
 }

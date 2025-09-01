@@ -3,6 +3,7 @@ import path from "node:path"
 
 import { defineCollection, z } from "astro:content"
 import { DomainObjectZodSchema } from "@lib/content.common.ts"
+import {ZodToTypescript} from "@duplojs/zod-to-typescript";
 
 const INPUT_FILEPATH = path.join("src", "data", "zotero", "kfb_theses.json")
 
@@ -170,3 +171,5 @@ export const defineThesesCollection = defineCollection({
   },
   schema: ThesisZodSchema,
 })
+
+

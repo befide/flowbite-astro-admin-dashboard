@@ -1,10 +1,14 @@
 import { defineSectionCollection } from "@/lib/sections";
 import {
-  type CourseSchema, defineCoursesCollection,
-  defineFacilityCollection, defineOrganizationCollection, defineReferencesCollection, defineTaxonomyItemsCollection,
-  defineThesesCollection, type FacilitySchema, type OrganizationSchema, type TaxonomyItemSchema, type ThesisSchema
-} from "@lib/domain";
+  type CourseSchema, type FacilitySchema, type OrganizationSchema, type TaxonomyItemSchema, type ThesisSchema
+} from "@lib/common.d";
 import {defineReviewStatusesCollection} from "@lib/config.reviewStatuses.ts";
+import {
+  defineCoursesCollection,
+  defineFacilityCollection,
+  defineOrganizationCollection, defineReferencesCollection,
+  defineTaxonomyItemsCollection, defineThesesCollection
+} from "@lib/domain";
 
 // import { pocketbaseLoader } from "astro-loader-pocketbase"
 

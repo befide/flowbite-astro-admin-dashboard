@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { glob } from "astro/loaders"
-
 import { defineCollection, z } from "astro:content"
 
 import {
@@ -41,6 +40,11 @@ export const BefideOrganizationMetaBefideOrganizationCategories = z.enum([
   "root",
   "consortium",
 ])
+export const PartOFCommunityDegreeSchema = z.enum([
+  "none",
+  "partial",
+  "full"
+])
 
 export const OrganizationZodSchema = NestableDomainObjectZodSchema.extend({
   topLevel__id: z.string().nullable(),
@@ -49,7 +53,10 @@ export const OrganizationZodSchema = NestableDomainObjectZodSchema.extend({
     return (input + "").split(/\s?,\s?/).toSorted()
   }, z.array(BefideOrganizationMetaBefideOrganizationCategories)),
 
-  isPartOfCommunity: z.boolean(),
+
+  partOfCommunityDegree: PartOFCommunityDegreeSchema
+    .describe("Indicates to what degree the unit is part of the community."),
+
   label: z.object({
     fullName: LocalizedString,
     short: NullableLocalizedString,
@@ -101,8 +108,6 @@ export const defineOrganizationCollection = defineCollection({
   }),
   schema: OrganizationZodSchema,
 })
-
-export type OrganizationSchema = z.infer<typeof OrganizationZodSchema>
 
 import fastCartesian from "fast-cartesian"
 import {

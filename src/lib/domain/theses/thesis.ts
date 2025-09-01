@@ -4,15 +4,6 @@ import {getFacilitiesReferencesLabel, getOrganizationsReferencesShortLabel} from
 
 export type Theses = Thesis[]
 
-export type ThesisDto = Pick<
-  ThesisSchema,
-  "id" | "title" | "year" | "fulltextLink" | "author" | "language"
-> & {
-  university__label_short: string
-  affiliations__label_short: string[]
-  facilities__label_short: string[]
-  degreeTitle: string
-}
 
 export interface Author {
   familyName: string

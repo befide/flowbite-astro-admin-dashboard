@@ -10,26 +10,28 @@ import reviewProcess from "@assets/review-process.svg";
 
 <Image src={reviewProcess} alt="Business Process Model of the review process" />
 
-1. Preparation
-   1. The process starts with drafting and reviewing the proposal.
+## 1. Preparation
 
-2. Prerreview Request Phase
-   1. A prereview request is sent out for initial feedback.
-   2. The system waits for a response by a deadline. If the deadline is missed, a prereview reminder is sent.
+The process starts with creating a draft and reviewer proposal by DR.
 
-## Prerreview Response Phase
+## 2. Prereview Request
 
-- Upon receiving a prereview response, the response is analyzed:
-  - If a change is required with resubmission, the process loops back to process the change request and sends another prereview request.
-  - If a change is required but resubmission is not necessary, the change request is processed and the process moves forward.
-  - If no change is needed, the process advances to sending a review request.
+1. A prereview request is sent out for initial feedback.
+2. The system waits for a response by a deadline. If the deadline is missed, a prereview reminder is sent.
 
-## Review Request Phase
+## 3. Prereview Response
+
+Upon receiving a prereview response, the response is analyzed:
+- If a change is required with resubmission, the process loops back to process the change request and sends another prereview request.
+- If a change is required but resubmission is not necessary, the change request is processed and the process moves forward.
+- If no change is needed, the process advances to sending a review request.
+
+## Review Request
 
 - A formal review request is sent.
 - The system waits for a response by a deadline, with reminders sent if necessary.
 
-## Review Response Phase
+## Review Response
 
 - After receiving the review response, it is analyzed:
 - If a change is required with resubmission, the process loops back to process the change request and another review request is sent.
@@ -41,7 +43,8 @@ import reviewProcess from "@assets/review-process.svg";
 - The process concludes with the document or proposal being approved.
 
 Key Features
-• Iterative Feedback Loops: Both prereview and review phases allow for iterative changes, with the possibility to resubmit or process changes without resubmission.
-• Automated Reminders: The system sends reminders if responses are not received by the deadline.
-• Decision Points: At each response analysis, decisions are made whether to require changes, resubmission, or proceed.
+
+- Iterative Feedback Loops: Both prereview and review phases allow for iterative changes, with the possibility to resubmit or process changes without resubmission.
+- Automated Reminders: The system sends reminders if responses are not received by the deadline.
+- Decision Points: At each response analysis, decisions are made whether to require changes, resubmission, or proceed.
 This process ensures thorough review and quality control, with clear steps for feedback, revision, and escalation toward final approval.

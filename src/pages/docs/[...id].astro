@@ -11,7 +11,7 @@ import type {
 export const getStaticPaths = (async () => {
 
   const sections = await getCollection("sections")
-  return sections.map((section) => ({
+  return sections.map((section: any) => ({
     params: {id: section.id},
     props: {section},
   }))

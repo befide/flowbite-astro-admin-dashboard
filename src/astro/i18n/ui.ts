@@ -73,10 +73,11 @@ export const ui = {
     "dc-explorer.tiles.title.year": "Year",
     "dc-explorer.tiles.title.primaryBeamParticles": "Primary Beam Particles",
     "dc-explorer.tiles.title.secondaryBeamParticles": "Secondary Beam Particles",
-    "dc-explorer.tiles.title.with_userFacilities": "with user facilities",
-    "dc-explorer.tiles.title.with_facilities": "with facilities",
-    "dc-explorer.tiles.title.with_theses": "with doctoral theses",
-    "dc-explorer.tiles.title.with_teachingEvents": "with teaching events"
+    "dc-explorer.tiles.title.userFacilities_count": "user facilities",
+    "dc-explorer.tiles.title.facilities_count": "facilities",
+    "dc-explorer.tiles.title.theses_count": "doctoral theses",
+    "dc-explorer.tiles.title.teachingEvents_count": "teaching events",
+    "dc-explorer.tiles.title.people_count": "Staff",
   }
   ,
   de: {
@@ -146,9 +147,15 @@ export const ui = {
     "dc-explorer.tiles.title.year": "Jahr",
     "dc-explorer.tiles.title.primaryBeamParticles": "Primärstrahl-Teilchen",
     "dc-explorer.tiles.title.secondaryBeamParticles": "Seknundärstrahl-Teilchen",
-    "dc-explorer.tiles.title.with_userFacilities": "with user facilities",
-    "dc-explorer.tiles.title.with_facilities": "with facilities",
-    "dc-explorer.tiles.title.with_theses": "with doctoral theses",
-    "dc-explorer.tiles.title.with_teachingEvents": "with teaching events"
+    "dc-explorer.tiles.title.with_userFacilities": "mit Nutzer-Anlagen",
+    "dc-explorer.tiles.title.with_facilities": "mit Beschleunigeranlagen",
+    "dc-explorer.tiles.title.with_theses": "mit Doktorarbeiten",
+    "dc-explorer.tiles.title.with_teachingEvents": "mit Lehrveranstaltungen",
+    "dc-explorer.tiles.title.userFacilities_count": "user facilities",
+    "dc-explorer.tiles.title.facilities_count": "facilities",
+    "dc-explorer.tiles.title.theses_count": "doctoral theses",
+    "dc-explorer.tiles.title.teachingEvents_count": "teaching events",
+    "dc-explorer.tiles.title.people_count": "Mitarbeitende",
 
+  }
 } as const;

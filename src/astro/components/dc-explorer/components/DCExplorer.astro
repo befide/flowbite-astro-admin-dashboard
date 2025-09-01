@@ -36,8 +36,8 @@ const locale = Astro.currentLocale
     treeTableConfigMap,
     treeSectionsConfigMap,
   } from "@components/dc-explorer/config"
-  import type { NestableDomainObjectSchema } from "@content/config.common"
-  import {DomainObjectSchema} from "../../../../lib/content.common";
+  import type { DomainObjectSchema, NestableDomainObjectSchema } from "@lib/common.d.ts"
+
 
   const locale = getLocale()
 
@@ -47,14 +47,14 @@ const locale = Astro.currentLocale
 
       const collection = this.dataset.collection
 
-      console.log({ collection })
+      // console.log({ collection })
 
       const $idx = getCollectionIndex(collection)
 
       $idx?.listen(() => {
         const idx = $idx.get()
 
-        console.log({ idx })
+        // console.log({ idx })
 
         if (idx) {
           const filters = document.getElementsByClassName(

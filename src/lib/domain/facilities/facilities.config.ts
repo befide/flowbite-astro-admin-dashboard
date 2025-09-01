@@ -8,6 +8,8 @@ import {
   NullableLocalizedString,
   ReviewSchema,
 } from "@lib/content.common"
+import {ZodToTypescript} from "@duplojs/zod-to-typescript";
+import {CourseZodSchema} from "@lib/domain";
 
 export const FacilityZodSchema = NestableDomainObjectZodSchema.extend({
   partOf__id: z.string().nullable(),
@@ -65,25 +67,6 @@ export const defineFacilityCollection = defineCollection({
   schema: FacilityZodSchema,
 })
 
-export type FacilitySchema = z.infer<typeof FacilityZodSchema>
-//
-// export type Facility = {
-//   label: string
-//   tagLine: string[]
-//   description: string
-//   host_label: string
-//   instanceOf_label: string
-//   isBMBF_FIS: boolean
-//   isUserFacility: boolean
-//   primaryApplicationTaxons_label: string[]
-//   secondaryApplicationTaxons_label: string[]
-//   operation_startYear: number | undefined
-//   operation_endYear: number | undefined
-//   parameters: {
-//     primaryBeamParticles: string[]
-//     secondaryBeamParticles: string[]
-//   }
-//   links: {
-//     homepage: string
-//   }
-// }
+
+
+

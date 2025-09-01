@@ -6,21 +6,6 @@ import { type FacilitySchema } from ".."
 
 export type Facilities = Facility[]
 
-export type FacilityDto = Pick<FacilitySchema, "id"> & {
-  label: string
-  tagLine: string
-  host__label_short: string
-  parent__id: string | null
-  instanceOf__term: string
-  currentStatus__term: string
-  operation_startYear: number | null
-  operation_endYear: number | null
-  isUserFacility: boolean
-  isBMBF_FIS: boolean
-  primaryBeamParticles: string[]
-  secondaryBeamParticles: string[]
-  length__m: number | null
-}
 
 export class Facility {
   _data: FacilitySchema

@@ -40,10 +40,10 @@ Organizational units can be nested: each unit may have (at most) one parent.
 ### Common Fields
 
 <SchemaTable
-
+  ident={false}
 entries={[
 {
-name: "isPartOfCommunity",
+name: "partOfCommunityDegree",
 required: true,
 description: "Indicates whether the unit is part of the community.",
 type: "boolean",
@@ -56,31 +56,24 @@ description:
 type: "enum(`committee`, `committee/erum-committee`, `consortium`, `department`, `funding-organization`, `research-institution`, `subdepartment`, `university`, `working-group`)[]",
 },
 {
-name: "label",
-required: true,
-description:
-"Localized names of the unit",
-type: "object",
-},
-{
-name: "label.fullName",
+name: "label.fullName.(en|de)",
 required: true,
 description:
 "Official, localized name of the unit (e.g., `Europäische Organisation für Kernforschung`)",
-type: "{de: string, en: string}",
+type: "string",
 },
 {
-name: "label.short",
+name: "label.short.(en|de)",
 required: true,
 description:
 "Preferred, localized short label for the unit (e.g., `CERN`)",
-type: "{de: string, en: string}",
+type: "string",
 },
 {
-name: "tagline",
+name: "tagline.(en|de)",
 required: true,
 description: "Concise, localized one-liner about the unit.",
-type: "{de: string, en: string}",
+type: "string",
 },
 {
 name: "location",
@@ -95,23 +88,23 @@ description: "Country code of the organizational unit’s location",
 type: "string",
 },
 {
-name: "location.lat",
+name: "location.coords.lat",
 required: false,
 description: "Latitude (for geographical visualization)",
 type: "number",
 },
 {
-name: "location.lng",
+name: "location.coords.lng",
 required: false,
 description: "Longitude (for geographical visualization)",
 type: "number",
 },
 {
-name: "location.city",
+name: "location.city.(en|de)",
 required: false,
 description:
 "Localized name of city of the organizational unit’s location",
-type: "{de: string, en: string}",
+type: "string",
 },
 {
 name: "links",
@@ -120,10 +113,10 @@ description: "Links",
 type: "object",
 },
 {
-name: "links.homepage",
+name: "links.homepage.(en|de)",
 required: false,
 description: "Localized link to the unit's homepage",
-type: "{de: url, en: url}",
+type: "string",
 },
 {
 name: "links.ror",
@@ -141,7 +134,7 @@ type: "string",
 {
 name: "head.contactsId",
 required: false,
-description: "Head of the unit as reference to the conttacts collection ",
+description: "Head of the unit as reference to the contacts collection ",
 type: "string",
 },
 {
@@ -149,7 +142,7 @@ name: "head.literal",
 required: true,
 description: "Name of the unit's head",
 type: "string",
-},
+}
 
 ]}
 />
@@ -726,3 +719,10 @@ From these 54 fields, 56 further numbers are derived:
 
 ]}
 />
+
+
+
+## Research to-dos
+
+- Uni Jena and HI Jena: which research groups to add
+-

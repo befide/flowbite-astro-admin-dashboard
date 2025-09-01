@@ -19,19 +19,21 @@ export function createBarChart(
   const tileElementIdSelector = "#" + barChartTileId(collection, dimension)
   const chartElementIdSelector = "#" + barChartId(collection, dimension)
 
-  const allYears = cfGroup
+  console.log({dimension})
+  const domain = cfGroup
     .top(Infinity)
     .map((y: { key: number }) => +y.key)
     // .filter((y) => y !== "")
     .sort()
+  console.log({cfGroup})
 
   const filterWidth = getChartWidth(chartElementIdSelector)
   const tileElement = select(tileElementIdSelector)
   const chart = barChart(chartElementIdSelector)
     .x(
       scaleLinear().domain([
-        (allYears[0] || 0) - 0,
-        allYears[allYears.length - 1] + 0.5,
+        (domain[0] || 0) - 0,
+        domain[domain.length - 1] + 0.5,
       ])
     )
     .width(filterWidth)

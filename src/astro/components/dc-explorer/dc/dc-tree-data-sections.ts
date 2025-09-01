@@ -180,7 +180,7 @@ export class TreeDataSections extends BaseMixin<NestableDomainObjectSchema> {
     const roots = getRoots<NestableDomainObjectSchema>(
       selectedEntriesAndAncestors
     )
-    console.log({ roots })
+    // console.log({ roots })
 
     return roots
   }

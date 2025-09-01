@@ -2,6 +2,12 @@
 /* eslint max-lines: 'off' */
 
 import { url } from "../lib/data.js"
+
+const thisUrl = Astro.url.toString()
+
+const englishUrl = thisUrl.replace("/de/", "/en/")
+const germanUrl = thisUrl.replace("/en/", "/de/")
+
 ---
 
 <!-- TODO: Dynamic dropdowns -->
@@ -114,7 +120,7 @@ import { url } from "../lib/data.js"
               </svg>
               <span
                 class="ml-3 flex-1 text-left whitespace-nowrap"
-                sidebar-toggle-item>Data</span
+                sidebar-toggle-item>Data Explorers</span
               >
               <svg
                 sidebar-toggle-item
@@ -134,18 +140,36 @@ import { url } from "../lib/data.js"
                 <!-- {{ if eq $page_slug "products" }} -->
                 <!-- bg-gray-100 dark:bg-gray-700 -->
                 <a
-                  href={url("crud/sections")}
+                  href={url("en/explorer/2-1__formal-organizations")}
                   class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
-                  >Sections</a
+                  >Formal Organizations</a
+                >
+              </li>
+              <li>
+                <!-- {{ if eq $page_slug "products" }} -->
+                <!-- bg-gray-100 dark:bg-gray-700 -->
+                <a
+                  href={url("en/explorer/2-2__research-groups")}
+                  class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                >Research groups</a
+                >
+              </li>
+              <li>
+                <!-- {{ if eq $page_slug "products" }} -->
+                <!-- bg-gray-100 dark:bg-gray-700 -->
+                <a
+                  href={url("en/explorer/3__facilities")}
+                  class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                >Facilities</a
                 >
               </li>
               <li>
                 <!--  {{ if eq $page_slug "users" }} -->
                 <!-- bg-gray-100 dark:bg-gray-700 -->
                 <a
-                  href={url("crud/users")}
+                  href={url("en/explorer/4_2__doctoral-theses")}
                   class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
-                  >Users</a
+                  >Doctoral theses</a
                 >
               </li>
             </ul>
@@ -328,7 +352,7 @@ import { url } from "../lib/data.js"
         <ul class="py-1" role="none">
           <li>
             <a
-              href="#"
+              href={englishUrl}
               class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
               role="menuitem"
             >
@@ -360,13 +384,13 @@ import { url } from "../lib/data.js"
                       transform="scale(3.9385)"></path>
                   </g>
                 </svg>
-                English (US)
+                English
               </div>
             </a>
           </li>
           <li>
             <a
-              href="#"
+              href={germanUrl}
               class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
               role="menuitem"
             >
@@ -382,78 +406,6 @@ import { url } from "../lib/data.js"
                   <path fill="#d00" d="M0 170.7h512v170.6H0z"></path>
                 </svg>
                 Deutsch
-              </div>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-              role="menuitem"
-            >
-              <div class="inline-flex items-center">
-                <svg
-                  class="mr-2 h-3.5 w-3.5 rounded-full"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="flag-icon-css-it"
-                  viewBox="0 0 512 512"
-                >
-                  <g fill-rule="evenodd" stroke-width="1pt">
-                    <path fill="#fff" d="M0 0h512v512H0z"></path>
-                    <path fill="#009246" d="M0 0h170.7v512H0z"></path>
-                    <path fill="#ce2b37" d="M341.3 0H512v512H341.3z"></path>
-                  </g>
-                </svg>
-                Italiano
-              </div>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
-              role="menuitem"
-            >
-              <div class="inline-flex items-center">
-                <svg
-                  class="mr-2 h-3.5 w-3.5 rounded-full"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  id="flag-icon-css-cn"
-                  viewBox="0 0 512 512"
-                >
-                  <defs>
-                    <path id="a" fill="#ffde00" d="M1-.3L-.7.8 0-1 .6.8-1-.3z"
-                    ></path>
-                  </defs>
-                  <path fill="#de2910" d="M0 0h512v512H0z"></path>
-                  <use
-                    width="30"
-                    height="20"
-                    transform="matrix(76.8 0 0 76.8 128 128)"
-                    xlink:href="#a"></use>
-                  <use
-                    width="30"
-                    height="20"
-                    transform="rotate(-121 142.6 -47) scale(25.5827)"
-                    xlink:href="#a"></use>
-                  <use
-                    width="30"
-                    height="20"
-                    transform="rotate(-98.1 198 -82) scale(25.6)"
-                    xlink:href="#a"></use>
-                  <use
-                    width="30"
-                    height="20"
-                    transform="rotate(-74 272.4 -114) scale(25.6137)"
-                    xlink:href="#a"></use>
-                  <use
-                    width="30"
-                    height="20"
-                    transform="matrix(16 -19.968 19.968 16 256 230.4)"
-                    xlink:href="#a"></use>
-                </svg>
-                中文 (繁體)
               </div>
             </a>
           </li>

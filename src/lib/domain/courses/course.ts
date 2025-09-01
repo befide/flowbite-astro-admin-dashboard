@@ -1,22 +1,11 @@
-import { type CollectionEntry, getEntry } from "astro:content"
+import {type CollectionEntry, getEntry} from "astro:content"
 
-import { getLocalizedValue, getReferenceLocalizedValue } from "../../content.ts"
-import type { CourseSchema } from "./courses.config.ts"
+import {getLocalizedValue, getReferenceLocalizedValue} from "../../content.ts"
 import {getValueTranslation} from "@lib/domain";
+import type {CourseDto, CourseSchema} from "@lib/common";
 
 
 export type Courses = Course[]
-
-export type CourseDto = Pick<CourseSchema, "id" | "weeklySemesterHours"> & {
-  title: string
-  teachingEvent__term: string
-  university__label_short: string
-  languages: string[]
-  semesters: string[]
-  link: string
-  studyLevels__term: string[]
-  partOfProgrammesOfStudy: string[]
-}
 
 export class Course {
   _data: CourseSchema

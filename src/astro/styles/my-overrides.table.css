@@ -1,0 +1,118 @@
+@layer my-overrides {
+  table,
+  td,
+  th {
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    font-size: var(--text-sm);
+
+  }
+  table {
+    background-color: rgba(0, 0, 0, 0.01);
+    table-layout: fixed;
+  }
+
+  tr {
+    position: relative;
+    height: auto;
+  }
+
+  tr:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+
+    background-image: linear-gradient(
+      90deg,
+      #ffffff 25%,
+      #666666 25%,
+      #666666 50%,
+      #ffffff 50%,
+      #ffffff 75%,
+      #666666 75%,
+      #666666 100%
+    );
+    background-size: 4px 4px;
+  }
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: baseline;
+    padding: 0.25rem;
+    white-space: nowrap;
+    line-height: 1rem;
+  }
+  th {
+    text-transform: uppercase;
+    font-size: var(--text-2xs);
+    color: gray;
+  }
+
+  [data-gender-icon] {
+    position: relative;
+    visibility: hidden;
+  }
+
+  [data-gender-icon]::after {
+    display: inline-block;
+    position: absolute;
+    visibility: visible;
+    left: 0;
+    top: 0;
+    content: " ";
+    width: 1rem;
+    height: 1rem;
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-venus-and-mars-icon lucide-venus-and-mars'%3E%3Cpath d='M10 20h4'/%3E%3Cpath d='M12 16v6'/%3E%3Cpath d='M17 2h4v4'/%3E%3Cpath d='m21 2-5.46 5.46'/%3E%3Ccircle cx='12' cy='11' r='5'/%3E%3C/svg%3E"); */
+    background-size: 0.5rem;
+    background-repeat: no-repeat;
+  }
+
+  [data-gender-icon="male"]::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mars-icon lucide-mars'%3E%3Cpath d='M16 3h5v5'/%3E%3Cpath d='m21 3-6.75 6.75'/%3E%3Ccircle cx='10' cy='14' r='6'/%3E%3C/svg%3E");
+  }
+
+  [data-gender-icon="female"]::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXZlbnVzLWljb24gbHVjaWRlLXZlbnVzIj48cGF0aCBkPSJNMTIgMTV2NyIvPjxwYXRoIGQ9Ik05IDE5aDYiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjkiIHI9IjYiLz48L3N2Zz4=");
+  }
+
+  .number {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  td.truncable > div {
+    /* height: 1rem; */
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  th.sortable {
+    cursor: pointer;
+  }
+  th.sortable .sort-state {
+    margin-left: 0.25rem;
+    display: inline-block;
+    width: 0.5rem;
+
+    height: 0.4rem;
+
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWFycm93LWRvd24tdXAtaWNvbiBsdWNpZGUtYXJyb3ctZG93bi11cCI+PHBhdGggZD0ibTMgMTYgNCA0IDQtNCIvPjxwYXRoIGQ9Ik03IDIwVjQiLz48cGF0aCBkPSJtMjEgOC00LTQtNCA0Ii8+PHBhdGggZD0iTTE3IDR2MTYiLz48L3N2Zz4=);
+    background-size: 0.4rem;
+    background-repeat: no-repeat;
+  }
+
+  th.sortable[data-sort="ascending"] .sort-state {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWFycm93LWRvd24tbmFycm93LXdpZGUtaWNvbiBsdWNpZGUtYXJyb3ctZG93bi1uYXJyb3ctd2lkZSI+PHBhdGggZD0ibTMgMTYgNCA0IDQtNCIvPjxwYXRoIGQ9Ik03IDIwVjQiLz48cGF0aCBkPSJNMTEgNGg0Ii8+PHBhdGggZD0iTTExIDhoNyIvPjxwYXRoIGQ9Ik0xMSAxMmgxMCIvPjwvc3ZnPg==);
+  }
+  th.sortable[data-sort="descending"] .sort-state {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWFycm93LXVwLXdpZGUtbmFycm93LWljb24gbHVjaWRlLWFycm93LXVwLXdpZGUtbmFycm93Ij48cGF0aCBkPSJtMyA4IDQtNCA0IDQiLz48cGF0aCBkPSJNNyA0djE2Ii8+PHBhdGggZD0iTTExIDEyaDEwIi8+PHBhdGggZD0iTTExIDE2aDciLz48cGF0aCBkPSJNMTEgMjBoNCIvPjwvc3ZnPg==);
+  }
+}

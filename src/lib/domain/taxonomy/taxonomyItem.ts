@@ -6,15 +6,7 @@ import { getTaxonomyItemRoots } from "@lib/domain/taxonomy/taxonomy.ts"
 import type {NestableDomainObjectSchema} from "@lib/content.common.ts";
 import {getLocalizedValue, getValue} from "@lib/content.ts";
 
-export type TaxonomyItemDto = NestableDomainObjectSchema & {
-  id: string
-  parent__id: string | null
-  term: string
-  definition: string
-  abbreviations: string[]
-  synonyms: string[]
-  taxonomyURI: string
-}
+
 
 export class TaxonomyItem {
   _data: TaxonomyItemSchema

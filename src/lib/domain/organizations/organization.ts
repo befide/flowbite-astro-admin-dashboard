@@ -1,32 +1,12 @@
-import { getCollection, getEntry } from "astro:content"
+import {getCollection} from "astro:content"
+import {useTranslations} from '@astro/i18n/utils';
 
-import { getLocalizedValue, getTaxonomyReferencesTerm } from "../../content.ts"
-import type { OrganizationSchema } from "@domain"
+import {getLocalizedValue, getTaxonomyReferencesTerm} from "../../content.ts"
 
-import { sum } from "d3"
-import { getRoots } from "../../content.tree.ts"
+import {sum} from "d3"
+import {getRoots} from "../../content.tree.ts"
+import type {OrganizationDto, OrganizationSchema} from "@lib/common";
 
-export type OrganizationDto = Pick<
-  OrganizationSchema,
-  "uniquePeopleCount" | "uniquePeopleCountRecursiveSum"
-> & {
-  id: string
-  parent__id: string | null
-  instanceOfs__term: string[]
-  label__fullName: string
-  label__short: string
-  location__country: string
-  location__city: string
-  theses_count: number
-  with_theses: boolean
-  facilities_count: number
-  with_facilities: boolean
-  userFacilities_count: number
-  with_userFacilities: boolean
-  weeklySemesterHours_count: number
-  with_teachingEvents: boolean
-  people_count: number
-}
 
 export class Organization {
   _data: OrganizationSchema
@@ -76,20 +56,19 @@ export class Organization {
       await getCollection(
         "organizations",
         ({ data }) =>
-          (data.isPartOfCommunity && this._data.id === undefined) ||
+          (data.partOfCommunityDegree && this._data.id === undefined) ||
           data.topLevel__id === this._data.id ||
           data.id === this._data.id ||
           data.id === ":"
       )
     ).map((d) => d.data)
 
-    const organizationRoots = getRoots<OrganizationSchema>(organizations)
-    return organizationRoots
+    return getRoots<OrganizationSchema>(organizations)
   }
 
-  async getDto(locale: string): Promise<OrganizationDto> {
-    const i18n = await getEntry("i18n", locale)
+  async getDto(locale: "en" | "de"): Promise<OrganizationDto> {
 
+    const t = useTranslations(locale);
     const theses_count = (await this.getTheses()).length
     const facilities_count = (await this.getFacilities({})).length
     const userFacilities_count = (
@@ -119,9 +98,7 @@ export class Organization {
       parent__id: this._data.parent__id,
       label__short: getLocalizedValue(this._data, "label.short", locale),
       label__fullName: getLocalizedValue(this._data, "label.fullName", locale),
-      location__country: i18n?.data[
-        "country.name." + this._data.location?.country?.code
-      ] as string,
+      location__country: t("country.name." + this._data.location?.country?.code) || "",
       location__city: this._data.location?.city as string,
       people_count: this._data.uniquePeopleCountRecursiveSum?.total || 0,
     }

@@ -39,9 +39,9 @@ export const defineSectionCollection = defineCollection({
       const computedData = {
         sectionNumbers,
         sectionDepth,
-        slug,
+        // slug,
       };
-
+console.log(computedData)
       return mergeDeep(entry, {data: computedData});
     },
   }),

@@ -12,7 +12,7 @@ const { Content } = await render(section)
 const Element = 'h' + (section.data.sectionDepth+1);
 ---
 
-<section class="bg-white dark:bg-gray-900">
+<section class="section bg-white dark:bg-gray-900">
   <!--<div data-class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">-->
   <!--  <div class="" data-class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">-->
       <header>
@@ -33,7 +33,7 @@ const Element = 'h' + (section.data.sectionDepth+1);
 
 
 <style is:global>
-  section {
+  .section {
     padding-left: 3rem;
     page-break-before: always;
   }

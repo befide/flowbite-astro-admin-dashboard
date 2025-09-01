@@ -1,4 +1,4 @@
-import { csv2json } from "csv42"
+import { createFormatValue, csv2json, json2csv } from "csv42"
 import fs from "fs"
 import path from "path"
 import YAML from "yaml"
@@ -71,23 +71,23 @@ async function doTable(
       review: any
     }
     (d: any): {
-      slug: any
-      taxonomyURI: any
       id: any
       parent__id: any
+      slug: any
       term: any
       definition: any
       abbreviations: { en: string[]; de: string[] }
       synonyms: { en: string[]; de: string[] }
       iris: string[]
       review: any
+      taxonomyURI: any
     }
     (d: any): {
       slug: any
       id: any
       parent__id: any
       topLevel__id: any
-      isPartOfCommunity: any
+      partOfCommunityDegree: any
       instanceOfs__taxonomyId: string[]
       befideOrganizationCategories: string[]
       label: any
@@ -140,6 +140,17 @@ async function doTable(
     }
     console.log("Directory created successfully!")
   })
+  const csvFolder = path.join(
+    __dirname,
+    "../src/data/",
+  )
+
+  fs.mkdir(csvFolder, (err) => {
+    if (err) {
+      return console.error(err)
+    }
+    console.log("Directory created successfully!")
+  })
 
   const data = await fetch(
     "https://befide.getgrist.com/api/docs/vGtqDxisUdjkKYGmpzAkDj/download/csv?tableId=" +
@@ -157,16 +168,39 @@ async function doTable(
 
   if (postprocess) postprocess(data)
 
+
+
+
+  const csvResult: any[] = []
+
+
   data.forEach((d: any) => {
     const id = idMapper(d)
     const filePath = path.join(outputFolder, id + ".mdx")
 
-    const result = { slug: id, ...mapper(d) }
-    const markdown = "---\n" + YAML.stringify(result) + "---\n"
+    const frontmatter = { ...mapper(d) }
+
+
+
+    const markdown = "---\n" + YAML.stringify(frontmatter) + "---\n"
 
     console.log("writing file: " + filePath)
     fs.writeFileSync(filePath, markdown)
+
+
+
+    csvResult.push(frontmatter)
   })
+
+  function formatValue(value: unknown): string {
+    return  (Array.isArray(value)) ?  createFormatValue(",")(value.join(",")) : createFormatValue(",")(value)
+  }
+
+  if (Array.isArray(data)) {
+    const csvFilePath = path.join(csvFolder, collectionKey + ".csv")
+    fs.writeFileSync(csvFilePath, json2csv(csvResult, {formatValue}))
+
+  }
 }
 
 const courseIdGenerator = ({
@@ -210,8 +244,6 @@ const doTaxonomy = async () =>
       iris: string | undefined
       review: any
     }) => ({
-      slug: d.id,
-      taxonomyURI: d.taxonomyURI,
       id: d.id,
       parent__id: !d.parent__id ? null : d.id.split("/").slice(0, -1).join("/"),
       term: d.term,
@@ -225,7 +257,7 @@ const doTaxonomy = async () =>
         de: stringToArray(d.synonyms.de),
       },
       iris: stringToArray(d.iris),
-
+      taxonomyURI: d.taxonomyURI,
       review: d.review,
     })
   )
@@ -239,7 +271,7 @@ const doOrganizations = async () =>
       id: any
       parent__id: any
       topLevel__id: any
-      isPartOfCommunity: any
+      partOfCommunityDegree: any
       instanceOfs__taxonomyId: string | undefined
       befideOrganizationCategories: string | undefined
       label: any
@@ -253,11 +285,10 @@ const doOrganizations = async () =>
       uniquePeopleCountRecursiveSum: any
       review: any
     }) => ({
-      slug: d.id,
       id: d.id,
       parent__id: d.parent__id,
       topLevel__id: d.topLevel__id,
-      isPartOfCommunity: d.isPartOfCommunity,
+      partOfCommunityDegree: d.partOfCommunityDegree,
       instanceOfs__taxonomyId: stringToArray(d.instanceOfs__taxonomyId),
       befideOrganizationCategories: stringToArray(
         d.befideOrganizationCategories
@@ -276,10 +307,10 @@ const doOrganizations = async () =>
     (data: any[]) => {
       const communityOrganizations = data.filter(
         (d: {
-          isPartOfCommunity: any
+          partOfCommunityDegree: any
           befideOrganizationCategories: string | string[]
         }) =>
-          d.isPartOfCommunity &&
+          d.partOfCommunityDegree &&
           d.befideOrganizationCategories.indexOf("committee") !== 0
       )
       const roots = getRoots(communityOrganizations)
@@ -316,9 +347,7 @@ const doFacilities = async () =>
       review: any
     }) => ({
       id: d.id,
-      slug: d.id,
       instanceOf__taxonomyId: d.instanceOf__taxonomyId,
-
       partOf__id: d.partOf__id,
       host__organizationsId: d.host__organizationsId,
       successorOf__id: d.successorOf__id,

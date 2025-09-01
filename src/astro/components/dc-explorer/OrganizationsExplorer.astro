@@ -5,6 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
+import DCExplorerBarChart from "@components/dc-explorer/components/DCExplorerBarChart.astro"
 import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
 import DCExplorerTable from "@components/dc-explorer/components/DCExplorerTable.astro"
 import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
@@ -45,6 +46,16 @@ import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
       collection="organizations"
       dimension="with_teachingEvents"
       title={t("dc-explorer.tiles.title.with_teachingEvents")}
+    />
+    <DCExplorerBarChart
+      collection="organizations"
+      dimension="people_count"
+      title={t("dc-explorer.tiles.title.people_count")}
+    />
+<DCExplorerBarChart
+      collection="organizations"
+      dimension="theses_count"
+      title={t("dc-explorer.tiles.title.theses_count")}
     />
 
     <!-- </details> -->

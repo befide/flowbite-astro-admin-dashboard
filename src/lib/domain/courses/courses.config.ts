@@ -6,6 +6,7 @@ import {
 import { glob } from "astro/loaders"
 import { defineCollection, z } from "astro:content"
 
+
 export const CourseZodSchema = DomainObjectZodSchema.extend({
   title: NullableLocalizedString,
   teachingEvent__taxonomyId: z.string(),
@@ -31,4 +32,4 @@ export const defineCoursesCollection = defineCollection({
   schema: CourseZodSchema,
 })
 
-export type CourseSchema = z.infer<typeof CourseZodSchema>
+
