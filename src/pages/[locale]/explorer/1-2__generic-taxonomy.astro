@@ -1,9 +1,21 @@
 ---
-title: Generic Taxonomy
-tableOfContents: false
-sectionNumber: "E.1.2"
+import LayoutSidebar from "../../../astro/LayoutSidebar.astro";
+import TaxonomyTreeExplorer from "@components/dc-explorer/TaxonomyTreeExplorer.astro"
+import {getCollection} from "astro:content";
+import type {GetStaticPaths, InferGetStaticPropsType} from "astro";
+
+export const getStaticPaths = (async () => {
+  const locales = ["en", "de"]
+
+  return locales.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }))
+}) satisfies GetStaticPaths
+
+
 ---
 
-import TaxonomyTreeExplorer from "@components/dc-explorer/TaxonomyTreeExplorer.astro"
-
+<LayoutSidebar >
 <TaxonomyTreeExplorer collection="genericTaxonomy" />
+</LayoutSidebar>
