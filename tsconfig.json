@@ -1,26 +1,10 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [
-    ".astro/types.d.ts",
-    "src/env.d.ts",
-    "src/**/*",
-    "scripts/**/*",
-    "astro.config.ts",
-    "node_modules/**/*.d.ts"
-  ],
-  "exclude": [
-    "scripts",
-    "_flowbite",
-    "playwright-report",
-    "dist",
-    "node_modules"
-  ],
   "compilerOptions": {
     "types": [
       "astro/client",
       "vite-plugin-pwa/vanillajs",
-      "vite-plugin-pwa/info",
-      "vite-plugin-pwa/pwa-assets"
+      "vite-plugin-pwa/info"
     ],
     "plugins": [
       {
