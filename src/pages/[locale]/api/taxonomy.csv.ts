@@ -1,5 +1,8 @@
-import { communityForAPI } from "@domain/organizations"
+import { taxonomyForAPI } from "@domain/taxonomy/"
 import type { APIRoute, GetStaticPaths, InferGetStaticPropsType } from "astro"
+import { getCollection } from "astro:content"
+import { json2csv } from "csv42"
+import { formatValue } from "@/pages/[locale]/api/community.csv.ts"
 
 export const getStaticPaths = (async () => {
   const locales = ["en", "de"]
@@ -14,10 +17,10 @@ export const GET: APIRoute = async ({ props }) => {
   type Props = InferGetStaticPropsType<typeof getStaticPaths>
   const { locale } = props as Props
 
-  const community = await communityForAPI(locale)
+  const taxonomy = await taxonomyForAPI(locale)
 
   try {
-    return new Response(JSON.stringify(community, null, 2))
+    return new Response(json2csv(taxonomy, { formatValue }))
   } catch (e) {
     throw new Error("Something went wrong in json-resource.json route: " + e)
   }

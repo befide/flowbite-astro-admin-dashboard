@@ -1,5 +1,10 @@
 import { communityForAPI } from "@domain/organizations"
 import type { APIRoute, GetStaticPaths, InferGetStaticPropsType } from "astro"
+import { createFormatValue, json2csv } from "csv42"
+
+export function formatValue(value: unknown): string {
+  return Array.isArray(value) ? createFormatValue(",")(value.join(",")) : createFormatValue(",")(value)
+}
 
 export const getStaticPaths = (async () => {
   const locales = ["en", "de"]
@@ -17,7 +22,7 @@ export const GET: APIRoute = async ({ props }) => {
   const community = await communityForAPI(locale)
 
   try {
-    return new Response(JSON.stringify(community, null, 2))
+    return new Response(json2csv(community, { formatValue }))
   } catch (e) {
     throw new Error("Something went wrong in json-resource.json route: " + e)
   }

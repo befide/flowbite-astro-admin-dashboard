@@ -27,25 +27,25 @@ export default defineConfig({
     ...(process.env.NODE_ENV === "production" ? [] : [astroD2({ inline: true })]),
     sitemap(),
     mdx(),
-    pdf({
-      baseOptions: {
-        path: "/pdfs[pathname].pdf",
-        throwOnFail: true,
-        pdf: {
-          printBackground: true,
-          format: "A4",
-          scale: 1,
-          preferCSSPageSize: true,
-        },
-      },
-      pages: (pathname) => {
-        if (pathname.indexOf("/en/data/formal-organizations/all") > -1) {
-          return {
-            path: "/pdfs/" + pathname.replaceAll("/", "__").replace(/__$/, "") + ".pdf",
-          }
-        }
-      },
-    }),
+    // pdf({
+    //   baseOptions: {
+    //     path: "/pdfs[pathname].pdf",
+    //     throwOnFail: true,
+    //     pdf: {
+    //       printBackground: true,
+    //       format: "A4",
+    //       scale: 1,
+    //       preferCSSPageSize: true,
+    //     },
+    //   },
+    //   pages: (pathname) => {
+    //     if (pathname.indexOf("/en/data/formal-organizations/all") > -1) {
+    //       return {
+    //         path: "/pdfs/" + pathname.replaceAll("/", "__").replace(/__$/, "") + ".pdf",
+    //       }
+    //     }
+    //   },
+    // }),
     AstroPWA({
       /* your pwa options */
     }),
