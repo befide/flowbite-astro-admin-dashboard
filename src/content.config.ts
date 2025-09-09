@@ -1,14 +1,20 @@
-import { defineSectionCollection } from "@/lib/sections";
+import { defineSectionCollection } from "@/lib/sections"
 import {
-  type CourseSchema, type FacilitySchema, type OrganizationSchema, type TaxonomyItemSchema, type ThesisSchema
-} from "@lib/common.d";
-import {defineReviewStatusesCollection} from "@lib/config.reviewStatuses.ts";
+  type CourseSchema,
+  type FacilitySchema,
+  type OrganizationSchema,
+  type TaxonomyItemSchema,
+  type ThesisSchema,
+} from "@lib/common.d"
+import { defineReviewStatusesCollection } from "@lib/config.reviewStatuses.ts"
 import {
   defineCoursesCollection,
   defineFacilityCollection,
-  defineOrganizationCollection, defineReferencesCollection,
-  defineTaxonomyItemsCollection, defineThesesCollection
-} from "@lib/domain";
+  defineOrganizationCollection,
+  defineReferencesCollection,
+  defineTaxonomyItemsCollection,
+  defineThesesCollection,
+} from "@lib/domain"
 
 // import { pocketbaseLoader } from "astro-loader-pocketbase"
 
@@ -39,7 +45,6 @@ export type DomainObject =
   | FacilitySchema
   | ThesisSchema
 
-
 export const collections = {
   reviewStatuses: defineReviewStatusesCollection,
   taxonomyItems: defineTaxonomyItemsCollection,
@@ -48,4 +53,5 @@ export const collections = {
   courses: defineCoursesCollection,
   theses: defineThesesCollection,
   references: defineReferencesCollection,
-  sections: defineSectionCollection };
+  sections: defineSectionCollection,
+}

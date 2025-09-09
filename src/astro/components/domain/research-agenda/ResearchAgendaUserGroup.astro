@@ -1,39 +1,39 @@
 ---
-export type ResearchAgenda = ResearchAgendaItem[];
+export type ResearchAgenda = ResearchAgendaItem[]
 
 export interface ResearchAgendaItem {
-  id: string;
-  path: string;
-  name: string;
-  group?: string;
-  label: string;
-  description?: string;
-  'links:agenda-topics'?: string[];
-  'links:agenda-facilities'?: string[];
-  usedInResearchAgenda: boolean;
-  links: string[];
-  'links:agenda-objectives'?: string[];
-  collection?: string;
-  nameIsAcronymFor?: string;
-  userGroup?: string;
-  facilityName?: string;
-  lifeCycleStage?: string;
-  isInGermany?: boolean;
-  additionalUserGroups?: string[];
-  facilityVersion?: string;
-  isBmbfFis?: boolean;
+  id: string
+  path: string
+  name: string
+  group?: string
+  label: string
+  description?: string
+  "links:agenda-topics"?: string[]
+  "links:agenda-facilities"?: string[]
+  usedInResearchAgenda: boolean
+  links: string[]
+  "links:agenda-objectives"?: string[]
+  collection?: string
+  nameIsAcronymFor?: string
+  userGroup?: string
+  facilityName?: string
+  lifeCycleStage?: string
+  isInGermany?: boolean
+  additionalUserGroups?: string[]
+  facilityVersion?: string
+  isBmbfFis?: boolean
 }
 
-import { Image } from 'astro:assets';
-import _data from './research-agenda.json';
+import { Image } from "astro:assets"
+import _data from "./research-agenda.json"
 
-let data: ResearchAgenda = _data;
+let data: ResearchAgenda = _data
 
 export interface Props {
-  filter: string;
+  filter: string
 }
 
-let { filter } = Astro.props;
+let { filter } = Astro.props
 ---
 
 <figure class="user-group">

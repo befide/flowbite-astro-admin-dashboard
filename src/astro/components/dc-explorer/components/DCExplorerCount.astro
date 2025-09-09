@@ -1,5 +1,8 @@
 ---
-import { getLangFromUrl, useTranslations } from '@astro/i18n/utils';
+import {
+  getLangFromUrl,
+  useTranslations,
+} from "@astro/i18n/utils"
 
 import {
   countChartId,
@@ -8,8 +11,8 @@ import {
 
 const { collection, dimension } = Astro.props
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 const tileId = countChartTileId(collection, dimension)
 const chartId = countChartId(collection, dimension)
 const tileType = "count"
@@ -33,7 +36,10 @@ const tileType = "count"
     </div>
   </header>
   <div class="dc-explorer__tile__body">
-    <div class="explorer__chart explorer__chart--count" id={chartId}>
+    <div
+      class="explorer__chart explorer__chart--count"
+      id={chartId}
+    >
       <!-- <span class="filter-count"></span> selected out of <span
         class="total-count"></span> -->
     </div>

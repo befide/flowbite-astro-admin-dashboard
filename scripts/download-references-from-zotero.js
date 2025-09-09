@@ -21,18 +21,20 @@ const items = await Promise.all(
     } catch (err) {
       console.error(`I'm down, this time. ${err}`)
     }
-  })
+  }),
 )
 
 const flattenedItems = items.flat()
 
-console.log("References downloaded: " + flattenedItems.length)
+console.log(
+  "References downloaded: " + flattenedItems.length,
+)
 
 try {
   fs.writeFileSync(
     path.join("./src/data/zotero/kfb_bf2035.json"),
     JSON.stringify(flattenedItems, null, 2),
-    "utf8"
+    "utf8",
   )
   console.log("Data successfully saved to disk")
 } catch (error) {

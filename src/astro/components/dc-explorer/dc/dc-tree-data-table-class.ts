@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type {NestableDomainObjectSchema} from "@lib/content.common"
-import {ascending, descending, select} from "d3"
-import {BaseMixin} from "dc"
-import type {TableConfigEntry} from "../config.tables"
-import {getRoots, type TreeNode} from "@lib/content.tree"
+import type { NestableDomainObjectSchema } from "@lib/content.common"
+import { ascending, descending, select } from "d3"
+import { BaseMixin } from "dc"
+import type { TableConfigEntry } from "../config.tables"
+import { getRoots, type TreeNode } from "@lib/content.tree"
 
 const LABEL_CSS_CLASS = "dc-tree-table-label"
 const ROW_CSS_CLASS = "dc-table-row"
@@ -85,8 +85,10 @@ const HEAD_CSS_CLASS = "dc-table-head"
 
 export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
   _allEntries: NestableDomainObjectSchema[] = []
-  _entriesMap: Map<string, NestableDomainObjectSchema> = new Map()
-  _ancestorsMap: Map<string, NestableDomainObjectSchema[]> = new Map()
+  _entriesMap: Map<string, NestableDomainObjectSchema> =
+    new Map()
+  _ancestorsMap: Map<string, NestableDomainObjectSchema[]> =
+    new Map()
   // _allEntriesTree
   _size = 25
   _sortBy = (d: any) => d
@@ -135,17 +137,26 @@ export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
       this._ancestorsMap.clear()
       allEntries.forEach((entry) => {
         if (entry.parent__id) {
-          let parent = this._entriesMap.get(entry.parent__id)
+          let parent = this._entriesMap.get(
+            entry.parent__id,
+          )
           while (parent) {
-            const ancestors = this._ancestorsMap.get(entry.id)
+            const ancestors = this._ancestorsMap.get(
+              entry.id,
+            )
             if (ancestors) {
-              this._ancestorsMap.set(entry.id, [...ancestors, parent])
+              this._ancestorsMap.set(entry.id, [
+                ...ancestors,
+                parent,
+              ])
             } else {
               this._ancestorsMap.set(entry.id, [parent])
             }
 
             if (parent.parent__id) {
-              parent = this._entriesMap.get(parent.parent__id)
+              parent = this._entriesMap.get(
+                parent.parent__id,
+              )
             } else {
               parent = undefined
             }
@@ -164,28 +175,30 @@ export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
     // const uniqueSelectedEntries = new Set(
     //   selectedEntries.map((entry) => entry.id)
     // )
-    const selectedEntriesAndAncestorIds = selectedEntries.flatMap(
-      (entry: NestableDomainObjectSchema) => {
-        const ancestors = this._ancestorsMap.get(entry.id)
+    const selectedEntriesAndAncestorIds =
+      selectedEntries.flatMap(
+        (entry: NestableDomainObjectSchema) => {
+          const ancestors = this._ancestorsMap.get(entry.id)
 
-        if (ancestors) {
-          const ancestorIds = ancestors.map((d) => d.id)
-          return [entry.id, ...ancestorIds]
-        } else {
-          return [entry.id]
-        }
-      }
-    )
+          if (ancestors) {
+            const ancestorIds = ancestors.map((d) => d.id)
+            return [entry.id, ...ancestorIds]
+          } else {
+            return [entry.id]
+          }
+        },
+      )
     const uniqueSelectedEntriesAndAncestorIds = Array.from(
-      new Set(selectedEntriesAndAncestorIds)
+      new Set(selectedEntriesAndAncestorIds),
     )
 
-    const selectedEntriesAndAncestors = uniqueSelectedEntriesAndAncestorIds
-      .map((id) => this._entriesMap.get(id))
-      .filter((d) => !!d)
+    const selectedEntriesAndAncestors =
+      uniqueSelectedEntriesAndAncestorIds
+        .map((id) => this._entriesMap.get(id))
+        .filter((d) => !!d)
 
     const roots = getRoots<NestableDomainObjectSchema>(
-      selectedEntriesAndAncestors
+      selectedEntriesAndAncestors,
     )
     return roots
   }
@@ -212,8 +225,13 @@ export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
     // }
   }
 
-  updateNextLevel(selection: any, data: TreeNode<NestableDomainObjectSchema>) {
-    selection.call((selection2: any) => this.renderNode(selection2, data))
+  updateNextLevel(
+    selection: any,
+    data: TreeNode<NestableDomainObjectSchema>,
+  ) {
+    selection.call((selection2: any) =>
+      this.renderNode(selection2, data),
+    )
     // if (!node.hasOwnProperty("children")) return
     const items = selection
       .append("ul")
@@ -228,7 +246,11 @@ export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
       .append("li")
       .classed("tree-node", true)
       // .classed("has-children", (d) => d.children.length)
-      .attr("depth", (d: TreeNode<NestableDomainObjectSchema>) => d.depth)
+      .attr(
+        "depth",
+        (d: TreeNode<NestableDomainObjectSchema>) =>
+          d.depth,
+      )
       // .merge(items)
       .each((data: any, index: number, nodes: any) => {
         this.updateNextLevel(select(nodes[index]), data)
@@ -237,7 +259,7 @@ export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
 
   makeForest(
     selection: any,
-    treeRoots: TreeNode<NestableDomainObjectSchema>[]
+    treeRoots: TreeNode<NestableDomainObjectSchema>[],
   ) {
     const rootItems = selection
       .append("ul")
@@ -259,9 +281,11 @@ export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
 
     super.root().call((selection: any) => {
       const forest = this.makeForest(selection, treeRoots)
-      forest.each((data: any, index: number, nodes: any) => {
-        this.updateNextLevel(select(nodes[index]), data)
-      })
+      forest.each(
+        (data: any, index: number, nodes: any) => {
+          this.updateNextLevel(select(nodes[index]), data)
+        },
+      )
     })
   }
 
@@ -273,7 +297,10 @@ export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
   // }
   // // Recursively append child nodes
 
-  renderNode(selection: any, node: TreeNode<NestableDomainObjectSchema>) {
+  renderNode(
+    selection: any,
+    node: TreeNode<NestableDomainObjectSchema>,
+  ) {
     if (node.children?.length > 0) {
       const details = selection.append("details")
       details.attr("open", true)
@@ -288,7 +315,10 @@ export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
         .enter()
         .append("div")
         .classed("tree-node__cell", true)
-        .attr("style", (_d: any, i: number) => this._columns[i].width)
+        .attr(
+          "style",
+          (_d: any, i: number) => this._columns[i].width,
+        )
         .html((d, i) => this._columns[i].format(d))
 
       //recurse pass ul as parentDOM
@@ -303,8 +333,13 @@ export class TreeTable extends BaseMixin<NestableDomainObjectSchema> {
         .enter()
         .append("div")
         .classed("tree-node__cell", true)
-        .attr("style", (_d: any, i: number) => this._columns[i].width)
-        .html((d: any, i: number) => this._columns[i].format(d))
+        .attr(
+          "style",
+          (_d: any, i: number) => this._columns[i].width,
+        )
+        .html((d: any, i: number) =>
+          this._columns[i].format(d),
+        )
     }
   }
 }

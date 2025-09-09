@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {type CollectionEntry, type CollectionKey, getEntry,} from "astro:content"
+import { type CollectionEntry, type CollectionKey, getEntry } from "astro:content"
+import { slug } from "../../scripts/download-grist.ts"
 
 export function getValue(obj: any, path: string) {
   const pathParts = path.split(".")
@@ -27,60 +28,36 @@ export async function getReference(collection: CollectionKey, id: string) {
   return await getEntry(collection, id)
 }
 
-export async function getReferenceLocalizedValue(
-  collection: CollectionKey,
-  id: string,
-  path: string,
-  locale = "en"
-) {
+export async function getReferenceLocalizedValue(collection: CollectionKey, id: string, path: string, locale: string = "en") {
   return getLocalizedValue(await getReference(collection, id), path, locale)
 }
 
 export async function getReferences(collection: CollectionKey, ids: string[]) {
-  return (
-    await Promise.all(
-      ids.map(async (id: string) => await getEntry(collection, id))
-    )
-  ).filter((item: unknown) => !!item)
+  return (await Promise.all(ids.map(async (id: string) => await getEntry(collection, id)))).filter((item: unknown) => !!item)
 }
 
-export const getTaxonomyReferencesTerm = async (
-  ids: string[] = [],
-  locale = "en"
-) =>
-  (
+export const getTaxonomyReferenceTerm = async (id: string, locale: string) => (id ? (await getTaxonomyReferencesTerm([id], locale)).pop() : null)
+
+export const getTaxonomyReferencesTerm = async (ids: string[] = [], locale = "en") => {
+  return (
     (await Promise.all(
-      ids.map(async (d) => await getEntry("taxonomyItems", d))
+      ids
+        .map((d) => slug(d))
+        .map(async (d) => {
+          return await getEntry("taxonomyItems", d)
+        }),
     )) as CollectionEntry<"taxonomyItems">[]
   )
     .filter((taxon: CollectionEntry<"taxonomyItems">) => !!taxon)
-    .map((taxon: CollectionEntry<"taxonomyItems">) =>
-      getLocalizedValue(taxon, "data.term", locale)
-    )
-export const getOrganizationsReferencesShortLabel = async (
-  ids: string[],
-  locale = "en"
-) =>
-  (
-    (await Promise.all(
-      ids.map(async (d) => await getEntry("organizations", d))
-    )) as CollectionEntry<"organizations">[]
-  )
-    .filter((taxon: CollectionEntry<"organizations">) => !!taxon)
-    .map((taxon: CollectionEntry<"organizations">) =>
-      getLocalizedValue(taxon, "data.label.short", locale)
-    )
+    .map((taxon: CollectionEntry<"taxonomyItems">) => getLocalizedValue(taxon, "data.term", locale))
+}
 
-export const getFacilitiesReferencesLabel = async (
-  ids: string[],
-  locale = "en"
-) =>
-  (
-    (await Promise.all(
-      ids.map(async (d) => await getEntry("facilities", d))
-    )) as CollectionEntry<"facilities">[]
-  )
+export const getOrganizationsReferencesShortLabel = async (ids: string[], locale = "en") =>
+  ((await Promise.all(ids.map(async (d) => await getEntry("organizations", d)))) as CollectionEntry<"organizations">[])
+    .filter((taxon: CollectionEntry<"organizations">) => !!taxon)
+    .map((taxon: CollectionEntry<"organizations">) => getLocalizedValue(taxon, "data.label.short", locale))
+
+export const getFacilitiesReferencesLabel = async (ids: string[], locale = "en") =>
+  ((await Promise.all(ids.map(async (d) => await getEntry("facilities", d)))) as CollectionEntry<"facilities">[])
     .filter((taxon: CollectionEntry<"facilities">) => !!taxon)
-    .map((taxon: CollectionEntry<"facilities">) =>
-      getLocalizedValue(taxon, "data.label", locale)
-    )
+    .map((taxon: CollectionEntry<"facilities">) => getLocalizedValue(taxon, "data.label", locale))

@@ -1,6 +1,14 @@
-import type { OrganizationDto, ThesisDto, CourseDto } from "@lib/common.d"
+import type {
+  OrganizationDto,
+  ThesisDto,
+  CourseDto,
+} from "@lib/common.d"
 
-import { numberFormat, oneLineFormat, pillFormat } from "./config"
+import {
+  numberFormat,
+  oneLineFormat,
+  pillFormat,
+} from "./config"
 
 export type TableConfigEntry = {
   label: string
@@ -12,13 +20,16 @@ export type TableConfigEntry = {
   width?: string
 }
 
-export function tableConfigMap(key: string): TableConfigEntry[] {
+export function tableConfigMap(
+  key: string,
+): TableConfigEntry[] {
   if (key === "theses") {
     return [
       {
         label: "University",
         className: "text-short",
-        sortAccessor: (d: ThesisDto) => d.university__label_short,
+        sortAccessor: (d: ThesisDto) =>
+          d.university__label_short,
         format: function (d: ThesisDto) {
           return pillFormat(d.university__label_short)
         },
@@ -34,7 +45,8 @@ export function tableConfigMap(key: string): TableConfigEntry[] {
       {
         label: "Gender",
         className: "icon",
-        sortAccessor: (d: ThesisDto) => d.author.gender as string,
+        sortAccessor: (d: ThesisDto) =>
+          d.author.gender as string,
         format: function (d: ThesisDto) {
           return `<div class='pillFormat'><span data-gender-icon='${d.author.gender}'>${d.author.gender}</span></div>`
         },
@@ -44,7 +56,11 @@ export function tableConfigMap(key: string): TableConfigEntry[] {
         className: "text-long",
         sortAccessor: (d: ThesisDto) => d.title,
         format: function (d: ThesisDto) {
-          return "<div class='title truncable one-line'>" + d.title + "</div>"
+          return (
+            "<div class='title truncable one-line'>" +
+            d.title +
+            "</div>"
+          )
         },
       },
       {
@@ -76,25 +92,28 @@ export function tableConfigMap(key: string): TableConfigEntry[] {
     return [
       {
         label: "short name",
-        className: "text-short",
-        sortAccessor: (d: OrganizationDto) => d.label__short,
+        className: "text-short ",
+        sortAccessor: (d: OrganizationDto) =>
+          d.label__short,
         format: function (d: OrganizationDto) {
-          return `<div class='one-line bold'>${d.label__short}</div>`
+          return `<a class='font-bold underline decoration-dotted' href="./formal-organizations/${d.id}">${d.label__short}</a>`
         },
       },
       {
         label: "full name",
         className: "text-long",
-        sortAccessor: (d: OrganizationDto) => d.label__fullName,
+        sortAccessor: (d: OrganizationDto) =>
+          d.label__fullName,
         format: function (d: OrganizationDto) {
-          return `<div class='one-line'>${d.label__fullName}</div>`
+          return `<a class='underline decoration-dotted' href="./formal-organizations/${d.id}">${d.label__fullName}</a>`
         },
       },
 
       {
         label: "#people",
         className: "number",
-        sortAccessor: (d: OrganizationDto) => d.people_count,
+        sortAccessor: (d: OrganizationDto) =>
+          d.people_count,
         format: function (d: OrganizationDto) {
           return numberFormat(d.people_count)
         },
@@ -103,7 +122,8 @@ export function tableConfigMap(key: string): TableConfigEntry[] {
       {
         label: "#facilties",
         className: "number",
-        sortAccessor: (d: OrganizationDto) => d.facilities_count,
+        sortAccessor: (d: OrganizationDto) =>
+          d.facilities_count,
         format: function (d: OrganizationDto) {
           return numberFormat(d.facilities_count)
         },
@@ -111,14 +131,16 @@ export function tableConfigMap(key: string): TableConfigEntry[] {
       {
         label: "#user facilties",
         className: "number",
-        sortAccessor: (d: OrganizationDto) => d.userFacilities_count,
+        sortAccessor: (d: OrganizationDto) =>
+          d.userFacilities_count,
         format: function (d: OrganizationDto) {
           return numberFormat(d.userFacilities_count)
         },
       },
       {
         label: "#sws",
-        sortAccessor: (d: OrganizationDto) => d.weeklySemesterHours_count,
+        sortAccessor: (d: OrganizationDto) =>
+          d.weeklySemesterHours_count,
         className: "number",
         format: function (d: OrganizationDto) {
           return numberFormat(d.weeklySemesterHours_count)
@@ -127,7 +149,8 @@ export function tableConfigMap(key: string): TableConfigEntry[] {
       {
         label: "#theses",
         className: "number",
-        sortAccessor: (d: OrganizationDto) => d.theses_count,
+        sortAccessor: (d: OrganizationDto) =>
+          d.theses_count,
         format: function (d: OrganizationDto) {
           return numberFormat(d.theses_count)
         },
@@ -138,7 +161,8 @@ export function tableConfigMap(key: string): TableConfigEntry[] {
       {
         label: "University",
         className: "text-short",
-        sortAccessor: (d: CourseDto) => d.university__label_short,
+        sortAccessor: (d: CourseDto) =>
+          d.university__label_short,
         format: function (d: CourseDto) {
           return pillFormat(d.university__label_short)
         },
@@ -154,7 +178,8 @@ export function tableConfigMap(key: string): TableConfigEntry[] {
       {
         label: "Art",
         className: "text-short",
-        sortAccessor: (d: CourseDto) => d.teachingEvent__term,
+        sortAccessor: (d: CourseDto) =>
+          d.teachingEvent__term,
         format: function (d: CourseDto) {
           return pillFormat(d.teachingEvent__term)
         },
@@ -162,7 +187,8 @@ export function tableConfigMap(key: string): TableConfigEntry[] {
       {
         label: "Weekly hours",
         className: "number",
-        sortAccessor: (d: CourseDto) => d.weeklySemesterHours,
+        sortAccessor: (d: CourseDto) =>
+          d.weeklySemesterHours,
         format: function (d: CourseDto) {
           return numberFormat(d.weeklySemesterHours)
         },

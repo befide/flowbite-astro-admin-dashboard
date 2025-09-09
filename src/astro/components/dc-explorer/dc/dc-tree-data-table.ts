@@ -1,12 +1,17 @@
 import type { TreeNode } from "@lib/content.tree"
 import type { NestableDomainObjectSchema } from "@lib/content.common"
-import { hierarchy, select, type Selection, stratify } from "d3"
+import {
+  hierarchy,
+  select,
+  type Selection,
+  stratify,
+} from "d3"
 import { ascending, descending } from "d3"
 import { baseMixin } from "dc"
 
 const treeNode = (
   items: TreeNode<NestableDomainObjectSchema>[],
-  selectedItems: TreeNode<NestableDomainObjectSchema>[]
+  selectedItems: TreeNode<NestableDomainObjectSchema>[],
 ) => {
   // console.log("treeNode")
   const selectedItemIds = selectedItems
@@ -39,8 +44,8 @@ const treeNode = (
     .id((d) => d.id)
     .parentId((d) => d.parent__id)(rootedEntries)
 
-  const tree = hierarchy(root, (d) => d.children).sum((d) =>
-    d.children?.length > 0 ? 0 : 1
+  const tree = hierarchy(root, (d) => d.children).sum(
+    (d) => (d.children?.length > 0 ? 0 : 1),
   )
 
   return tree
@@ -82,7 +87,8 @@ export default function (parent, chartGroup?) {
   const LABEL_CSS_CLASS = "dc-tree-table-label"
   const ROW_CSS_CLASS = "dc-table-row"
   const COLUMN_CSS_CLASS = "dc-table-column"
-  const SECTION_CSS_CLASS = "dc-table-section dc-table-group"
+  const SECTION_CSS_CLASS =
+    "dc-table-section dc-table-group"
   const HEAD_CSS_CLASS = "dc-table-head"
 
   const _chart = baseMixin({})
@@ -163,21 +169,26 @@ export default function (parent, chartGroup?) {
     // const uniqueSelectedEntries = new Set(
     //   selectedEntries.map((entry) => entry.id)
     // )
-    const selectedEntriesAndAncestorIds = selectedEntries.flatMap((entry) => [
-      entry.id,
-      ..._ancestorsMap[entry.id],
-    ])
+    const selectedEntriesAndAncestorIds =
+      selectedEntries.flatMap((entry) => [
+        entry.id,
+        ..._ancestorsMap[entry.id],
+      ])
     const uniqueSelectedEntriesAndAncestorIds = Array.from(
-      new Set(selectedEntriesAndAncestorIds)
+      new Set(selectedEntriesAndAncestorIds),
     )
 
-    const selectedEntriesAndAncestors = uniqueSelectedEntriesAndAncestorIds
-      .map((id) => _entriesMap[id])
-      .filter((d) => !!d)
+    const selectedEntriesAndAncestors =
+      uniqueSelectedEntriesAndAncestorIds
+        .map((id) => _entriesMap[id])
+        .filter((d) => !!d)
 
     //selectedEntriesAndAncestors.sort((a, b) => a.label.localeCompare(b.label))
 
-    return treeNode(selectedEntriesAndAncestors, selectedEntries)
+    return treeNode(
+      selectedEntriesAndAncestors,
+      selectedEntries,
+    )
   }
 
   function makeTree(selection) {
@@ -190,7 +201,9 @@ export default function (parent, chartGroup?) {
       .classed("tree-node", true)
   }
   function updateTree(selection, root) {
-    selection.select("li.tree-node").call(updateNextLevel, treeRoot())
+    selection
+      .select("li.tree-node")
+      .call(updateNextLevel, treeRoot())
     // selection.select(".tree > .tree-node__row > span").remove()
   }
 
@@ -212,7 +225,7 @@ export default function (parent, chartGroup?) {
         .html((d, i) =>
           node.parent
             ? _chart.columns()[i].format(d)
-            : _chart.columns()[i].label
+            : _chart.columns()[i].label,
         )
 
       //recurse pass ul as parentDOM
@@ -254,7 +267,10 @@ export default function (parent, chartGroup?) {
   }
 
   function renderRoot() {
-    _chart.root().call(makeTree).call(updateTree, treeRoot())
+    _chart
+      .root()
+      .call(makeTree)
+      .call(updateTree, treeRoot())
   }
 
   _chart._doRedraw = function () {
@@ -422,7 +438,9 @@ export default function (parent, chartGroup?) {
    * @returns {Boolean|dc.dataTable}
    */
 
-  _chart.allEntries = function (allEntries: NestableDomainObjectSchema[]) {
+  _chart.allEntries = function (
+    allEntries: NestableDomainObjectSchema[],
+  ) {
     if (!arguments.length) {
       return _allEntries
     }
@@ -439,7 +457,7 @@ export default function (parent, chartGroup?) {
         (node) =>
           (_ancestorsMap[node.data.data.id] = node
             .ancestors()
-            .map((d) => d.data.data.id))
+            .map((d) => d.data.data.id)),
       )
 
       return _chart

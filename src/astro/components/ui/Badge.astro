@@ -1,0 +1,63 @@
+---
+import { type BadgeComponentProps } from "./badge"
+
+import type { HTMLAttributes } from "astro/types"
+
+type Props = BadgeComponentProps & HTMLAttributes<"span">
+
+const {
+  text,
+  prefix,
+  variant,
+  size,
+  class: customClass,
+  ...attrs
+} = Astro.props
+---
+
+<span
+  class:list={[
+    "prefixed-badge",
+    variant,
+    size,
+    customClass,
+  ]}
+  {...attrs}
+  ><span class="prefixed-badge__prefix">{prefix}</span>
+  <span class="prefixed-badge__text">{text}</span>
+</span>
+
+<style>
+  .prefixed-badge {
+    display: inline-flex;
+    line-height: normal;
+    font-family: var(--font-mono), ui-monospace;
+    overflow-wrap: anywhere;
+  }
+
+  .prefixed-badge__prefix {
+    border: 1px dotted var(--color-kfb-gray--light);
+    border-right: none;
+    border-radius: 0.25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--color-kfb-gray--dark);
+    padding: 0.125rem 0.375rem;
+    color: #eee;
+  }
+  .prefixed-badge__text {
+    border: 1px solid var(--color-kfb-gray--light);
+    border-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: var(--color-kfb-gray--light);
+    padding: 0.125rem 0.375rem;
+    color: #333;
+  }
+
+  /* Sidebar overrides */
+  .prefixed-badge {
+    font-size: var(--text-xs);
+    line-height: 1;
+  }
+</style>

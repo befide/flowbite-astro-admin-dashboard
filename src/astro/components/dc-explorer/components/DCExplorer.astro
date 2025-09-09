@@ -17,7 +17,12 @@ const locale = Astro.currentLocale
 <script>
   import "dc/src/compat/d3v6"
 
-  import { config, filterAll, redrawAll, renderAll } from "dc"
+  import {
+    config,
+    filterAll,
+    redrawAll,
+    renderAll,
+  } from "dc"
 
   import {
     charts,
@@ -36,8 +41,10 @@ const locale = Astro.currentLocale
     treeTableConfigMap,
     treeSectionsConfigMap,
   } from "@components/dc-explorer/config"
-  import type { DomainObjectSchema, NestableDomainObjectSchema } from "@lib/common.d.ts"
-
+  import type {
+    DomainObjectSchema,
+    NestableDomainObjectSchema,
+  } from "@lib/common.d.ts"
 
   const locale = getLocale()
 
@@ -58,7 +65,7 @@ const locale = Astro.currentLocale
 
         if (idx) {
           const filters = document.getElementsByClassName(
-            "dc-explorer__tile"
+            "dc-explorer__tile",
           ) as HTMLCollectionOf<HTMLElement>
           Array.from(filters).forEach((filter) => {
             const {
@@ -70,14 +77,26 @@ const locale = Astro.currentLocale
               dcDimensionIsArray,
             } = filter.dataset
 
-            if (!dcTileType || !dcCollection || !dcDimension) return
+            if (
+              !dcTileType ||
+              !dcCollection ||
+              !dcDimension
+            )
+              return
 
             if (dcTileType === "count") {
               /*something here*/
-              const dimension = idx.dimension((d: DomainObjectSchema) => d.id)
+              const dimension = idx.dimension(
+                (d: DomainObjectSchema) => d.id,
+              )
               const group = dimension.group().reduceCount()
 
-              createCountChart(dcCollection, dcDimension, idx, dimension)
+              createCountChart(
+                dcCollection,
+                dcDimension,
+                idx,
+                dimension,
+              )
             } else if (dcTileType === "row-chart") {
               // something here
 
@@ -88,52 +107,72 @@ const locale = Astro.currentLocale
 
               const dimension = idx.dimension(
                 (d) => getValue(d, valuePath) || "",
-                dcDimensionIsArray !== "false"
+                dcDimensionIsArray !== "false",
               )
 
               const group = dimension.group().reduceCount()
 
-              createRowChart(dcCollection, dcDimension, dimension, group)
+              createRowChart(
+                dcCollection,
+                dcDimension,
+                dimension,
+                group,
+              )
             } else if (dcTileType === "bar-chart") {
               const dimension = idx.dimension(
-                (d) => getValue(d, dcAccessorPath || dcDimension) || "other"
+                (d) =>
+                  getValue(
+                    d,
+                    dcAccessorPath || dcDimension,
+                  ) || "other",
               )
 
               const group = dimension.group()
 
-              createBarChart(dcCollection, dcDimension, dimension, group)
+              createBarChart(
+                dcCollection,
+                dcDimension,
+                dimension,
+                group,
+              )
             } else if (dcTileType === "table") {
-              const idDimension = idx.dimension((d: DomainObjectSchema) => d.id)
+              const idDimension = idx.dimension(
+                (d: DomainObjectSchema) => d.id,
+              )
 
               createTableChart(
                 dcCollection,
                 dcDimension,
                 tableConfigMap(dcCollection),
-                idDimension
+                idDimension,
               )
             } else if (dcTileType === "tree-data-table") {
               const idDimension = idx.dimension(
-                (nestableDomainObject: NestableDomainObjectSchema) =>
-                  nestableDomainObject
+                (
+                  nestableDomainObject: NestableDomainObjectSchema,
+                ) => nestableDomainObject,
               )
 
               createTreeDataTableChart(
                 dcCollection,
                 dcDimension,
                 treeTableConfigMap(dcCollection),
-                idDimension
+                idDimension,
               )
-            } else if (dcTileType === "tree-data-sections") {
+            } else if (
+              dcTileType === "tree-data-sections"
+            ) {
               const idDimension = idx.dimension(
-                (nestableDomainObject: NestableDomainObjectSchema) =>
-                  nestableDomainObject
+                (
+                  nestableDomainObject: NestableDomainObjectSchema,
+                ) => nestableDomainObject,
               )
 
               createTreeDataSectionsChart(
                 dcCollection,
                 dcDimension,
                 treeSectionsConfigMap(dcCollection),
-                idDimension
+                idDimension,
               )
             }
           })
@@ -141,13 +180,13 @@ const locale = Astro.currentLocale
           renderAll()
 
           const resetButtons = document.querySelectorAll(
-            ".dc-explorer__tile__actions button.reset-action"
+            ".dc-explorer__tile__actions button.reset-action",
           )
           resetButtons.forEach((button) => {
             button.addEventListener("click", function (e) {
-              const chartId = (e.currentTarget as HTMLElement).getAttribute(
-                "data-chart"
-              )
+              const chartId = (
+                e.currentTarget as HTMLElement
+              ).getAttribute("data-chart")
 
               if (chartId) {
                 charts.get(chartId)?.filterAll()

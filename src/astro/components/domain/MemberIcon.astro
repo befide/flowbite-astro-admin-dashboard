@@ -1,0 +1,64 @@
+---
+const { careerLevel, disciplinaryProfession, gender } = Astro.props
+
+const definedClasses = [careerLevel, disciplinaryProfession, gender].filter(
+  (d) => d
+)
+---
+
+<span
+  class:list={["member-icon", ...definedClasses]}
+  title={definedClasses.join(",")}>{definedClasses.join(",")}</span
+>
+
+<style>
+  .member-icon {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    overflow: hidden;
+    border-top-style: solid;
+    border-top-color: #bbbbbb;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+  }
+  .member-icon.engineer {
+    border-radius: 0;
+    width: 5px;
+  }
+  .member-icon.other {
+    border-radius: 0;
+    transform: rotate(45deg);
+  }
+
+  .member-icon,
+  .member-icon.nonbinary {
+    background-color: #666666;
+  }
+  .member-icon.female {
+    background-color: #b85887;
+    border-top-color: #ffc2df;
+  }
+  .member-icon.male {
+    background-color: #2768a4;
+    border-top-color: #b1d9ff;
+  }
+  .member-icon.professor {
+    border-top-width: 0px;
+  }
+  .member-icon.seniorResearcher {
+    border-top-width: 1px;
+  }
+  .member-icon.postDoc {
+    border-top-width: 2px;
+  }
+  .member-icon.phdStudent {
+    border-top-width: 3px;
+  }
+  .member-icon.masterStudent {
+    border-top-width: 4px;
+  }
+  .member-icon.bachelorStudent {
+    border-top-width: 5px;
+  }
+</style>

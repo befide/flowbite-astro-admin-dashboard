@@ -1,0 +1,119 @@
+---
+import {getFacilities, getFacilityRoots} from "@/astro/domain/facilities/facilities"
+
+import {flattenTreeNodes} from "@/astro/domain/content.tree"
+import {Badge} from "@astrojs/starlight/components"
+import {getEntry} from "astro:content"
+
+const items = await getFacilities({});
+const facilityRoots = getFacilityRoots(items.map(d => d.datax))
+const list = flattenTreeNodes (facilityRoots)
+---
+
+<table class="tree-table">
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>particles</th>
+        <th>application</th>
+        <th>life cycle</th>
+    </tr>
+    </thead>
+    <tbody>
+    {
+      list.map ((item) => (
+              <tr
+                      data-depth={item.depth}
+                      data-child-index={item.childIndex}
+                      data-has-children={item.children.length > 0}
+              >
+                  <td class="tree-table__name tree-table__indent">
+                    {(item.children.length > 0) &&
+                            <input
+                                    id={"collapsible-" + item.depth + "-" + item.childIndex}
+                                    class="toggle"
+                                    checked="checked"
+                                    type="checkbox"
+                            />
+                            <label
+                                    for={"collapsible-" + item.depth + "-" + item.childIndex}
+                                    class="lbl-toggle"
+                            >
+
+                                <span class="name">{item.data.label?.fullName?.en}</span>
+                            </label>
+
+                    }
+                    {!(item.children.length > 0) &&
+
+                            <span class="name">{item.data.label?.fullName?.en}</span>
+                            <div class="type">
+                              {item.data.isInstanceOfId &&
+                                  getEntry (item.data.isInstanceOfId!).then (
+                                      (d) => d && d.data.term?.en
+                                  )}
+                            </div>
+                    }
+                  </td>
+
+                  <td>
+                      <div class="nowrap">
+                        {item.data.primaryBeamParticles?.map ((entry: string) => (
+                                <Badge size="small" text={entry}/>
+                        ))
+                        }
+                      </div>
+                  </td>
+                  <td>
+                      <div class="">
+                        {item.data.primaryApplications?.map ((entry) => (
+                            getEntry (entry).then (
+                                (application) => (
+                                    application &&
+                                        <Badge size="small" text={application.data?.term?.en}/>)
+                            )))
+                        }
+                      </div>
+                  </td>
+                  <td>
+                      <div class="nowrap">
+                        {item.data.lifeCycle?.currentStatus &&
+                            (getEntry (item.data.lifeCycle.currentStatus).then (
+                                (d) => d && d.data.term.en
+                            ))
+                        }
+                      </div>
+                  </td>
+              </tr>
+      ))
+    }
+    </tbody>
+</table>
+
+
+
+<style>
+    .tree-table {
+        width: 100%;
+    }
+
+    .tree-table th:first-child {
+        width: 50%;
+    }
+
+    .nowrap {
+        white-space: nowrap;
+    }
+
+    .name {
+        font-weight: bold;
+        font-size: var(--sl-text-base);
+    }
+
+    .type {
+        font-style: italic;
+    }
+
+</style>
+
+

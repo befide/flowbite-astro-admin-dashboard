@@ -1,0 +1,142 @@
+---
+import { flattenTreeNodes } from "@lib/content.tree"
+import { getFacilityRoots } from "@lib/domain"
+import type { Facility } from "@/lib/domain/facilities/facility"
+import {getEntry} from "astro:content"
+import type { FacilitySchema } from "../../../lib/common"
+import { getReferenceLocalizedValue, getTaxonomyReferenceTerm } from "../../../lib/content"
+
+
+interface Props {
+  facilities: FacilitySchema[]
+}
+let {facilities} = Astro.props
+
+
+// console.log(facilities)
+
+const facilityRoots = getFacilityRoots (facilities)
+const list = flattenTreeNodes (facilityRoots)
+
+
+---
+
+<ol class="">
+
+    {
+      list.map (async (facility) => (
+              <li
+                      data-depth={facility.depth}
+                      data-child-index={facility.childIndex}
+                      data-has-children={facility.children.length > 0}
+              >
+                <div class="name">{facility.data.label.en}</div>
+                <table class="property-table not-format">
+                  <tbody>
+
+                    <tr>
+                      <th>Type</th>
+                      <th>en</th>
+                      <td>{await getTaxonomyReferenceTerm(facility.data.instanceOf__taxonomyId, "en")}</td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <th>de</th>
+                      <td>{await getTaxonomyReferenceTerm(facility.data.instanceOf__taxonomyId, "de")}</td>
+                    </tr>
+                    <tr>
+                      <th>current life cycle</th>
+                      <th>en</th>
+                      <td>{await getTaxonomyReferenceTerm(facility.data.lifeCycle.currentStatus__taxonomyId, "en")}</td>
+                    </tr>
+
+                    <tr>
+                      <th>label</th>
+                      <th>en</th>
+                      <td>{facility.data.label.en}</td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <th>de</th>
+                      <td>{facility.data.label.de}</td>
+                    </tr>
+                    <tr>
+                      <th>tagline</th>
+                      <th>en</th>
+                      <td>{facility.data.tagLine.en}</td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <th>de</th>
+                      <td>{facility.data.tagLine.de}</td>
+                    </tr>
+
+                    <tr>
+                      <th>description</th>
+                      <th>en</th>
+                      <td>{facility.data.definition.en}</td>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <th>de</th>
+                      <td>{facility.data.definition.de}</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+
+
+                  <!--<td>-->
+                  <!--    <div class="nowrap">-->
+                  <!--      {item.data.primaryBeamParticles?.map ((entry: string) => (-->
+                  <!--              <Badge size="small" text={entry}/>-->
+                  <!--      ))-->
+                  <!--      }-->
+                  <!--    </div>-->
+                  <!--</td>-->
+                  <!--<td>-->
+                  <!--    <div class="">-->
+                  <!--      {item.data.primaryApplications?.map ((entry) => (-->
+                  <!--          getEntry (entry).then (-->
+                  <!--              (application) => (-->
+                  <!--                  application &&-->
+                  <!--                      <Badge size="small" text={application.data?.term?.en}/>)-->
+                  <!--          )))-->
+                  <!--      }-->
+                  <!--    </div>-->
+                  <!--</td>-->
+                  <!--<td>-->
+                  <!--    <div class="nowrap">-->
+                  <!--      {item.data.lifeCycle?.currentStatus &&-->
+                  <!--          (getEntry (item.data.lifeCycle.currentStatus).then (-->
+                  <!--              (d) => d && d.data.term.en-->
+                  <!--          ))-->
+                  <!--      }-->
+                  <!--    </div>-->
+                  <!--</td>-->
+              </li>
+      ))
+    }
+
+</ol>
+
+
+
+<style>
+  li[data-depth=1] {
+  padding-left: .5rem;
+  }
+  li[data-depth=2] {
+  padding-left: 1rem;
+  }
+li[data-depth=3] {
+  padding-left: 1.5rem;
+  }
+li[data-depth=4] {
+  padding-left: 4rem;
+  }
+
+</style>
+
+

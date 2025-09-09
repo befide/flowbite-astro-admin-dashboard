@@ -1,1 +1,1 @@
-export * from "./SchemaTable.astro";
+export * from "./SchemaTable.astro"

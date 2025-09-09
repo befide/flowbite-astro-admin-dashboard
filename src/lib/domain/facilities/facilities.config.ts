@@ -2,14 +2,7 @@ import { glob } from "astro/loaders"
 
 import { defineCollection, z } from "astro:content"
 
-import {
-  LocalizedString,
-  NestableDomainObjectZodSchema,
-  NullableLocalizedString,
-  ReviewSchema,
-} from "@lib/content.common"
-import {ZodToTypescript} from "@duplojs/zod-to-typescript";
-import {CourseZodSchema} from "@lib/domain";
+import { LocalizedString, NestableDomainObjectZodSchema, NullableLocalizedString, ReviewZodSchema } from "@lib/content.common"
 
 export const FacilityZodSchema = NestableDomainObjectZodSchema.extend({
   partOf__id: z.string().nullable(),
@@ -23,7 +16,7 @@ export const FacilityZodSchema = NestableDomainObjectZodSchema.extend({
   isBMBF_FIS: z.boolean(),
   isUserFacility: z.boolean(),
 
-  instanceOf__taxonomyId: z.string().nullable(),
+  instanceOf__taxonomyId: z.string(),
 
   lifeCycle: z.object({
     currentStatus__taxonomyId: z.string().nullable(),
@@ -56,7 +49,7 @@ export const FacilityZodSchema = NestableDomainObjectZodSchema.extend({
     homepage: NullableLocalizedString,
   }),
   references: z.array(z.string()),
-  review: ReviewSchema,
+  review: ReviewZodSchema,
 })
 
 export const defineFacilityCollection = defineCollection({
@@ -66,7 +59,3 @@ export const defineFacilityCollection = defineCollection({
   }),
   schema: FacilityZodSchema,
 })
-
-
-
-

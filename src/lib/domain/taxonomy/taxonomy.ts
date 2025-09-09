@@ -12,22 +12,30 @@ export const allItems = async (locale = "en") =>
 
     .sort((a, b) =>
       getLocalizedValue(a, "term", locale).localeCompare(
-        getLocalizedValue(b, "term", locale)
-      )
+        getLocalizedValue(b, "term", locale),
+      ),
     )
 
 export const taxonomyItemRoots = async (locale = "en") => {
   return getTaxonomyItemRoots(await allItems(locale))
 }
-export const getTaxonomyItemRoots = (items: TaxonomyItemSchema[]) => {
+export const getTaxonomyItemRoots = (
+  items: TaxonomyItemSchema[],
+) => {
   return getRoots<TaxonomyItemSchema>(items)
 }
 
 export const taxonomyForAPI = async (locale = "en") => {
   const items = await allItems(locale)
 
+  console.log(items)
+
   return await Promise.all(
-    items.map(async (item) => await new TaxonomyItem(item).getDto(locale))
+    items.map(
+      async (item) =>
+        await new TaxonomyItem(item).getDto(locale),
+    ),
+
   )
 
   // const roots = await taxonomyItemRoots(locale)

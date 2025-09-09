@@ -1,0 +1,110 @@
+---
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils"
+import { sum } from "d3"
+import { getEntry } from "astro:content"
+import { Course, Organization } from "../../../lib/domain"
+import { type CourseSchema } from "../../../lib/common"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+interface Props {
+  organization: Organization
+  teachingOffers: CourseSchema[]
+  locale?: string
+}
+
+let { organization, teachingOffers, locale = "en" } = Astro.props
+
+//
+
+const teachingOffersInstances = teachingOffers.map((d) => new Course(d))
+const teachingOffersDtos = await Promise.all(teachingOffersInstances.map(async (d) => await d.getDto(locale)))
+
+const bachelorCourses = teachingOffers.filter((to) => to.studyLevels__taxonomyId.indexOf("bachelor") > -1)
+const masterCourses = teachingOffers.filter((to) => to.studyLevels__taxonomyId.indexOf("master") > -1)
+const universityLabel = (await organization.getDto(lang)).label__short
+
+// const coursesGroupedBySemester = groups(courses, (d) => d.data.semester)
+
+const weeklySemesterHours_total = sum(teachingOffers.map((d) => d.weeklySemesterHours))
+
+// const engineeringDegreeCount = courseDtos.filter(
+//   (d) => d..indexOf("Dr.-Ing.") > -1,
+// ).length
+// const naturalScienceDegreeCount = courseDtos.filter(
+//   (d) => d.degreeTitle.indexOf("Dr. rer. nat.") > -1,
+// ).length
+// const femaleCount = courseDtos.filter(
+//   (d) => d.author.gender === "female",
+// ).length
+// const maleCount = courseDtos.filter(
+//   (d) => d.author.gender === "male",
+// ).length
+---
+
+<section class="format">
+  <h4>Teaching offers</h4>
+  {
+    teachingOffersInstances.length > 0 ? (
+      <p>
+        In academic year 2024/25, {universityLabel} offered {teachingOffers.length} courses related to accelerator research of which
+        {!bachelorCourses.length && <span>all addresses bachelor students.</span>}
+        and
+        {!masterCourses.length && <span>all addresses master students.</span>}. The combined weekly semester hours was {weeklySemesterHours_total}.
+      </p>
+    ) : (
+      <p>Currently, only courses offered by universities are listed. However, the data model provides for the inclusion of affiliated organizations and summer schools, so that corresponding entries could be displayed here.</p>
+    )
+  }
+
+  <ol>
+    {
+      teachingOffersDtos.map(async (teachingOffer) => (
+        <li>
+          <div class="course__title">
+            <span class="course__title font-bold">{teachingOffer.title}</span>
+          </div>
+          <table class="property-table not-format">
+            <tbody>
+              {teachingOffer.teachingEvent__term && (
+                <tr>
+                  <th> {t("dc-explorer.tiles.title.teaching-event")}</th>
+                  <td>{teachingOffer.teachingEvent__term}</td>
+                </tr>
+              )}
+              {teachingOffer.weeklySemesterHours && (
+                <tr>
+                  <th>{t("dc-explorer.tiles.title.weeklySemesterHours")}</th>
+                  <td>{teachingOffer.weeklySemesterHours}</td>
+                </tr>
+              )}
+              {teachingOffer.languages && (
+                <tr>
+                  <th>{t("dc-explorer.tiles.title.languages")}</th>
+                  <td>{teachingOffer.languages}</td>
+                </tr>
+              )}
+              {teachingOffer.semesters && (
+                <tr>
+                  <th>{t("dc-explorer.tiles.title.semesters")}</th>
+                  <td>{teachingOffer.semesters}</td>
+                </tr>
+              )}
+              {teachingOffer.link && (
+                <tr>
+                  <th>Link</th>
+                  <td>
+                    <div style="white-space: nowrap;">
+                      <div style="overflow: hidden; text-overflow: ellipsis;">{teachingOffer.link}</div>
+                    </div>
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </li>
+      ))
+    }
+  </ol>
+</section>

@@ -1,8 +1,8 @@
 ---
-import { Image } from 'astro:assets'
-import type { ImageMetadata } from 'astro'
-import _data from './research-agenda.json'
-import type { ResearchAgenda } from './research-agenda'
+import { Image } from "astro:assets"
+import type { ImageMetadata } from "astro"
+import _data from "./research-agenda.json"
+import type { ResearchAgenda } from "./research-agenda"
 
 let data: ResearchAgenda = Object.values(_data)
 
@@ -18,7 +18,7 @@ const item = data.find((item) => item.path === filter)
 <figure class="facility">
   <div class="container">
     <object
-      data={'/svg/research-agenda/' + filter + '.svg'}
+      data={"/svg/research-agenda/" + filter + ".svg"}
       type="image/svg+xml"></object>
   </div>
   <figcaption>

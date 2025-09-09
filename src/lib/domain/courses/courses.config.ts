@@ -1,11 +1,6 @@
-import {
-  DomainObjectZodSchema,
-  NullableLocalizedString,
-  ReviewSchema,
-} from "@lib/content.common.ts"
+import { DomainObjectZodSchema, NullableLocalizedString, ReviewZodSchema } from "@lib/content.common.ts"
 import { glob } from "astro/loaders"
 import { defineCollection, z } from "astro:content"
-
 
 export const CourseZodSchema = DomainObjectZodSchema.extend({
   title: NullableLocalizedString,
@@ -21,7 +16,7 @@ export const CourseZodSchema = DomainObjectZodSchema.extend({
   links: z.object({
     homepage: NullableLocalizedString,
   }),
-  review: ReviewSchema,
+  review: ReviewZodSchema,
 })
 
 export const defineCoursesCollection = defineCollection({
@@ -31,5 +26,3 @@ export const defineCoursesCollection = defineCollection({
   }),
   schema: CourseZodSchema,
 })
-
-

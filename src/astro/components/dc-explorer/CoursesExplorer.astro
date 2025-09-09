@@ -1,8 +1,11 @@
 ---
-import { getLangFromUrl, useTranslations } from '@astro/i18n/utils';
+import {
+  getLangFromUrl,
+  useTranslations,
+} from "@astro/i18n/utils"
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
 import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
@@ -12,7 +15,10 @@ import DCExplorerTable from "@components/dc-explorer/components/DCExplorerTable.
 
 <DCExplorer collection="courses">
   <div class="dc-explorer__filters">
-    <DCExplorerCount collection="courses" dimension="count" />
+    <DCExplorerCount
+      collection="courses"
+      dimension="count"
+    />
     <DCExplorerRowChart
       collection="courses"
       dimension="university__label_short"
@@ -34,7 +40,9 @@ import DCExplorerTable from "@components/dc-explorer/components/DCExplorerTable.
       collection="courses"
       dimension="partOfProgrammesOfStudy"
       dimensionIsArray={true}
-      title={t("dc-explorer.tiles.title.programmes-of-study")}
+      title={t(
+        "dc-explorer.tiles.title.programmes-of-study",
+      )}
     />
     <DCExplorerRowChart
       collection="courses"
@@ -45,7 +53,9 @@ import DCExplorerTable from "@components/dc-explorer/components/DCExplorerTable.
     <DCExplorerRowChart
       collection="courses"
       dimension="weeklySemesterHours"
-      title={t("dc-explorer.tiles.title.weeklySemesterHours")}
+      title={t(
+        "dc-explorer.tiles.title.weeklySemesterHours",
+      )}
     />
 
     <DCExplorerRowChart

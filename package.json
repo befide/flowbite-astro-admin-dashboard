@@ -8,9 +8,9 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
-    "build:download-grist": "node --loader ts-node/esm --inspect ./scripts/download-grist.ts",
-    "build:download-references-from-zotero": "node ./scripts/download-references-from-zotero.js",
-    "build:download-theses-from-zotero": "node ./scripts/download-theses-from-zotero.js",
+    "build:download-grist": "bun ./scripts/download-grist.ts",
+    "build:download-references-from-zotero": "bun ./scripts/download-references-from-zotero.js",
+    "build:download-theses-from-zotero": "bun ./scripts/download-theses-from-zotero.js",
     "dev": "astro dev",
     "format": "prettier --write .",
     "lint:astro": "astro check",
@@ -21,7 +21,7 @@
     "sync": "astro sync"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
+    "@astrojs/check": "0.9.4",
     "@astrojs/mdx": "4.3.4",
     "@astrojs/netlify": "6.5.7",
     "@astrojs/sitemap": "3.5.0",
@@ -31,11 +31,11 @@
     "@nanostores/persistent": "1.1.0",
     "@tailwindcss/vite": "4.1.12",
     "@vite-pwa/astro": "1.1.0",
-    "apexcharts": "5.3.3",
-    "astro": "5.13.2",
+    "astro": "5.13.5",
     "astro-d2": "0.8.0",
     "astro-integration-pocketbase": "2.1.1",
     "astro-loader-pocketbase": "2.7.1",
+    "astro-pdf": "1.7.2",
     "csv42": "5.0.3",
     "d3": "7.9.0",
     "eventsource": "4.0.0",
@@ -52,6 +52,7 @@
     "typescript": "5.9.2"
   },
   "devDependencies": {
+    "yaml": "2.8.1",
     "@rollup/plugin-dsv": "3.0.5",
     "@tailwindcss/postcss": "4.1.12",
     "@types/d3": "7.4.3",
@@ -98,7 +99,8 @@
     "unified-engine": "11.2.2",
     "unified-prettier": "2.0.1",
     "vite-plugin-pwa": "1.0.3",
-    "workbox-window": "7.3.0"
+    "workbox-window": "7.3.0",
+    "zotero-api-client": "0.47.0"
   },
   "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }

@@ -1,5 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "exclude": ["./scripts/download-grist.ts"],
   "compilerOptions": {
     "types": [
       "astro/client",
@@ -15,39 +16,17 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@components/*": [
-        "./src/astro/components/*"
-      ],
-      "@styles/*": [
-        "./src/app/styles/*"
-      ],
-      "@utils/*": [
-        "./src/astro/domain/*"
-      ],
-      "@layouts/*": [
-        "./src/astro/layouts/*"
-      ],
-      "@lib/*": [
-        "./src/lib/*"
-      ],
-      "@content/*": [
-        "./src/content/*"
-      ],
-      "@assets/*": [
-        "./src/assets/*"
-      ],
-      "@astro/*": [
-        "./src/astro/*"
-      ],
-      "@domain/*": [
-        "./src/lib/domain/*"
-      ],
-      "@nanostores/*": [
-        "./src/lib/nanostores/*"
-      ]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/astro/components/*"],
+      "@styles/*": ["./src/app/styles/*"],
+      "@utils/*": ["./src/astro/domain/*"],
+      "@layouts/*": ["./src/astro/layouts/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@content/*": ["./src/content/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@astro/*": ["./src/astro/*"],
+      "@domain/*": ["./src/lib/domain/*"],
+      "@nanostores/*": ["./src/lib/nanostores/*"]
     }
   }
 }

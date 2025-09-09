@@ -1,6 +1,6 @@
 ---
-import type { ResearchAgenda } from './research-agenda'
-import _data from './research-agenda.json'
+import type { ResearchAgenda } from "./research-agenda"
+import _data from "./research-agenda.json"
 
 let data: ResearchAgenda = Object.values(_data)
 
@@ -16,7 +16,7 @@ const item = data.find((item) => item.path === filter)
 <figure class="topic">
   <div class="container">
     <object
-      data={'/svg/research-agenda/' + filter + '.svg'}
+      data={"/svg/research-agenda/" + filter + ".svg"}
       type="image/svg+xml"></object>
   </div>
   {

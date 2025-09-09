@@ -4,15 +4,28 @@ interface Props {
   checked?: boolean
   class?: string
 }
-const { id, checked = false, class: clazz, ...attrs } = Astro.props
+const {
+  id,
+  checked = false,
+  class: clazz,
+  ...attrs
+} = Astro.props
 ---
 
 <label
   for={id}
-  class:list={["relative flex cursor-pointer items-center", clazz]}
+  class:list={[
+    "relative flex cursor-pointer items-center",
+    clazz,
+  ]}
   {...attrs}
 >
-  <input type="checkbox" id={id} class="sr-only" {checked} />
+  <input
+    type="checkbox"
+    id={id}
+    class="sr-only"
+    {checked}
+  />
   <span
     class:list={[
       "bg-gray-200 dark:bg-gray-700",

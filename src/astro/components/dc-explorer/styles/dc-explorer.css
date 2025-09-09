@@ -8,3 +8,9 @@
   --interaction__color--spot: var(--color-kfb-yellow);
   --interaction__color--neutral--dark: #ccc;
 }
+
+
+.one-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

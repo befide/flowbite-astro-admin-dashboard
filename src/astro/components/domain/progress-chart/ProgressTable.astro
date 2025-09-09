@@ -1,15 +1,15 @@
 ---
-import {JSDOM} from "jsdom"
-import {axisBottom, axisLeft, axisRight} from "d3"
+import { JSDOM } from "jsdom"
+import { axisBottom, axisLeft, axisRight } from "d3"
 
-import {format, formatLocale} from "d3"
-import {scaleLinear, scaleLog} from "d3"
-import {select} from "d3"
+import { format, formatLocale } from "d3"
+import { scaleLinear, scaleLog } from "d3"
+import { select } from "d3"
 
-import {curveCardinal, line} from "d3"
+import { curveCardinal, line } from "d3"
 
 import chartMetas from "./ProgressChart.config"
-import type {Fragment} from "astro/jsx-runtime"
+import type { Fragment } from "astro/jsx-runtime"
 
 export interface ProgressChart {
   baselineHeight?: number
@@ -26,32 +26,30 @@ export interface Datum {
   value_sum?: number
 }
 
-const {dimension = "nuclideDiscoveriesPerYear"} = Astro.props
+const { dimension = "nuclideDiscoveriesPerYear" } =
+  Astro.props
 
 const data = chartMetas[dimension]
 
-if (!data) throw new Error("undefined dimension: " + dimension)
+if (!data)
+  throw new Error("undefined dimension: " + dimension)
 
 const columns = Object.keys(data.data[0])
 ---
 
 <table class="grid-table not-format">
   <thead>
-  <tr>
-    {
-      columns.map((column) => (
-        <th>{column}</th>
-      ))
-    }
-  </tr>
+    <tr>
+      {columns.map((column) => <th>{column}</th>)}
+    </tr>
   </thead>
   <tbody>
-  {
-    data.data.map((d) => (
-      <tr>
-        {
-          columns.map((key) => (
-            typeof d[key] === "string" && d[key].startsWith("http") ?
+    {
+      data.data.map((d) => (
+        <tr>
+          {columns.map((key) =>
+            typeof d[key] === "string" &&
+            d[key].startsWith("http") ? (
               <td class="url">
                 <a
                   class="truncate text-slate-400 hover:text-teal-400"
@@ -60,34 +58,30 @@ const columns = Object.keys(data.data[0])
                 >
                   {d.source}
                 </a>
-              </td> :
-            <td>{d[key]}</td>
-          ))
-        }
-
-
-      </tr>
-    ))
-  }
+              </td>
+            ) : (
+              <td>{d[key]}</td>
+            ),
+          )}
+        </tr>
+      ))
+    }
   </tbody>
 
   <caption class="md">
-    <slot/>
+    <slot />
   </caption>
 </table>
 
 <style>
-
   .truncate {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: block;
-
   }
   .grid-table {
     grid-template-columns: 1fr 1fr 1fr 1fr 4fr;
-
   }
   td.url {
     white-space: nobreak;

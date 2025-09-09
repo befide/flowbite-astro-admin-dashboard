@@ -1,3 +1,64 @@
+.format {
+  max-width: unset;
+}
+
+.format p {
+  font-size: var(--text-base);
+  margin-top: 0 !important;
+  /*max-width: 70ch;*/
+  @apply baseline-1/1;
+}
+
+.format p + p {
+  text-indent: 0.5rem;
+}
+.format ol,
+.format ul {
+  font-size: var(--text-base);
+  padding-bottom: 1rem;
+  /*max-width: 70ch;*/
+  @apply baseline-1/1;
+}
+.format ol {
+  list-style: decimal-leading-zero;
+}
+
+.format li::marker,
+.format li {
+  margin: 0;
+  padding: 0;
+}
+
+.format h2 {
+  font-size: var(--text-2xl);
+  padding-bottom: 1rem;
+  /*max-width: 70ch;*/
+  @apply baseline-1/1;
+}
+
+p.description {
+  font-size: var(--text-xl);
+  padding-bottom: 1rem;
+  @apply baseline-2/1;
+}
+
+.format h3 {
+  text-transform: uppercase;
+  font-size: var(--text-lg);
+  font-weight: bold;
+  @apply baseline-3/1;
+}
+.format h4 {
+  text-transform: uppercase;
+  font-size: var(--text-base);
+  font-weight: bold;
+  @apply baseline-2/2;
+}
+
+ol li {
+  page-break-inside: avoid;
+}
+
 /*@layer my-reset, starlight, obsidian, my-overrides;*/
 
 /*@layer my-overrides {*/

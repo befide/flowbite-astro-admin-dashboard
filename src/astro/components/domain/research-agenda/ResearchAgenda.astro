@@ -1,17 +1,18 @@
 ---
-import { createResearchAgenda } from './research-agenda'
+import { createResearchAgenda } from "./research-agenda"
 
 export interface Props {
   filter: string
 }
-let { filter = 'agenda/facilities' } = Astro.props
+let { filter = "agenda/facilities" } = Astro.props
 
 const svg = createResearchAgenda(filter)
 ---
 
 <figure class="research-agenda">
-  <object data={'/svg/research-agenda/' + filter + '.svg'} type="image/svg+xml"
-  ></object>
+  <object
+    data={"/svg/research-agenda/" + filter + ".svg"}
+    type="image/svg+xml"></object>
   <figcaption>
     <slot />
   </figcaption>

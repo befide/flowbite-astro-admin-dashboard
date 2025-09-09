@@ -3,7 +3,7 @@ title: Organizational Units
 sectionNumber: "B.03"
 ---
 
-import SchemaTable from "@components/domain/SchemaTable.astro";
+import SchemaTable from "@components/domain/SchemaTable.astro"
 
 The **organizational units** schema describes all organizational units that are stakeholders with respect to the inventory.
 
@@ -18,7 +18,8 @@ Organizational units can be nested: each unit may have (at most) one parent.
     {
       name: "id",
       required: true,
-      description: "Unique identifier for the organizational unit.",
+      description:
+        "Unique identifier for the organizational unit.",
       type: "string",
     },
     {
@@ -719,8 +720,6 @@ From these 54 fields, 56 further numbers are derived:
 
 ]}
 />
-
-
 
 ## Research to-dos
 

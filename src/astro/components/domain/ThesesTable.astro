@@ -1,0 +1,137 @@
+---
+import { allTheses, allThesesForUniversity } from "@domain/theses"
+import Badge from "../Badge.astro"
+import { getEntry } from "astro:content"
+import type { CollectionEntry } from "astro:content"
+
+interface Props {
+  universityId?: string
+}
+
+let { universityId } = Astro.props
+
+const theses = universityId
+  ? await allThesesForUniversity(universityId)
+  : await allTheses()
+
+const engineeringDegreeCount = theses.filter(
+  (d) => d.data.thesisType.indexOf("Dr. Ing.") > -1
+).length
+const naturalScienceDegreeCount = theses.filter(
+  (d) => d.data.thesisType.indexOf("Dr. rer. nat.") > -1
+).length
+
+const getUniversity = async (thesis: CollectionEntry<"theses">) => {
+  if (!thesis.data.degree.grantedBy__organizationsId) return null
+  const university = await getEntry(thesis.data.university__organizationsId)
+  return university
+}
+---
+
+<div class="explorer">
+  <div class="explorer__entries">
+    <p>
+      There are {theses.length} doctoral theses being published since 2010 listed
+      in our database, of which
+      {naturalScienceDegreeCount} lead to a science degree and {
+        engineeringDegreeCount
+      } to an engineering degree.
+    </p>
+
+    <table id="dc-table-graph">
+      <thead>
+        <tr class="table-header">
+          {!universityId && <th>university</th>}
+          <th>year</th>
+          <th>language</th>
+          <th>gender</th>
+          <th>author, title, links</th>
+          <th>degree</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          theses.map(async (thesis) => (
+            <tr>
+              {!universityId && (
+                <td class="nowrap">
+                  {(await getUniversity(thesis))?.data.label.short.en}
+                </td>
+              )}
+              <td>
+                <div>{thesis.data.year}</div>
+              </td>
+              <td>{thesis.data.language}</td>
+              <td>
+                <div>{thesis.data.author.gender}</div>
+              </td>
+              <td>
+                <span class="reference__author">
+                  <span class="reference__author-given-name">
+                    {thesis.data.author.givenName}
+                  </span>
+                  <span class="reference__author-family-name">
+                    {thesis.data.author.familyName}
+                  </span>
+                </span>
+                <span class="reference__title">{thesis.data.title}</span>
+                <ul class="reference__links">
+                  {thesis.data.doi && (
+                    <li class="reference__link">
+                      <a href={encodeURI("https://doi.org/" + thesis.data.doi)}>
+                        <Badge
+                          prefix="doi"
+                          text={thesis.data.doi}
+                          size="medium"
+                        />
+                      </a>
+                    </li>
+                  )}
+                  {thesis.data.urn && (
+                    <li class="reference__link">
+                      <a
+                        href={encodeURI(
+                          "https://nbn-resolving.de/" + thesis.data.urn
+                        )}
+                      >
+                        <Badge
+                          prefix="URN"
+                          text={thesis.data.urn}
+                          size="medium"
+                        />
+                      </a>
+                    </li>
+                  )}
+                  {thesis.data.fulltextLink && (
+                    <li>
+                      <a href={thesis.data.fulltextLink}>
+                        <Badge prefix="PDF" text="fulltext" size="medium" />
+                      </a>
+                    </li>
+                  )}
+                </ul>
+              </td>
+              <td class="nowrap">
+                {thesis.data.thesisType
+                  .replace(")", "")
+                  .replace("Doctoral thesis (", "")}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .explorer {
+    display: flex;
+  }
+  .explorer__filters {
+    flex: 0 0 200px;
+  }
+  .explorer__items {
+    flex: 1 1 100%;
+  }
+</style>

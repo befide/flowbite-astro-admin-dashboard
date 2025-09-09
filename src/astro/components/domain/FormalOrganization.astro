@@ -1,0 +1,103 @@
+---
+import { Organization } from "@domain/organizations/organization"
+
+import ProfileFacilityTreeTable from "./ProfileFacilityTreeTable.astro"
+import ProfileTheses from "./ProfileTheses.astro"
+import ProfileTeachingEvents from "./ProfileTeachingEvents.astro"
+
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils"
+import { getLocalizedValue } from "../../../lib/content"
+import ProfileOrganizationTreeTable from "./ProfileOrganizationTreeTable.astro"
+import ProfileFacilityList from "./ProfileFacilityList.astro"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+type Props = {
+  organization: Organization
+  locale: string
+}
+
+const { locale, organization } = Astro.props
+
+const theses = await organization.getTheses()
+
+const teachingOffers = await organization.getTeachingEventsDefinitions()
+// const facilities = await organization.getFacilityDefinitions()
+const userFacilities = await organization.getFacilityDefinitions(undefined, true)
+const testFacilities = await organization.getFacilityDefinitions(undefined, false)
+---
+
+<section class="organization format">
+  <header>
+    <h3 class="uppercase">
+      {getLocalizedValue(organization, "_data.label.fullName", locale)}
+    </h3>
+  </header>
+  <section>
+    <h3>General information</h3>
+    <table class="property-table not-format">
+      <tbody>
+        <tr>
+          <th>Short label for the unit</th>
+          <th>en</th>
+          <td>{getLocalizedValue(organization, "_data.label.short", "en")}</td>
+        </tr>
+        <tr>
+          <th></th>
+          <th>de</th>
+          <td>{getLocalizedValue(organization, "_data.label.short", "de")}</td>
+        </tr>
+        <tr>
+          <th>Official name of the organization</th>
+          <th>en</th>
+          <td>{getLocalizedValue(organization, "_data.label.fullName", "en")}</td>
+        </tr>
+        <tr>
+          <th></th>
+          <th>de</th>
+          <td>{getLocalizedValue(organization, "_data.label.fullName", "de")}</td>
+        </tr>
+        <tr>
+          <th>One-line summary</th>
+          <th>en</th>
+          <td>{getLocalizedValue(organization, "_data.tagline", "en")}</td>
+        </tr>
+        <tr>
+          <th></th>
+          <th>de</th>
+          <td>{getLocalizedValue(organization, "_data.tagline", "de")}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h3>Research Groups</h3>
+    <ProfileOrganizationTreeTable organization={organization} />
+  </section>
+  <section>
+    <h3>Facilities</h3>
+    <section>
+      <h4>User facilities</h4>
+      <ProfileFacilityList facilities={userFacilities} />
+    </section>
+    <section>
+      <h4>Test facilities</h4>
+      <ProfileFacilityList facilities={testFacilities} />
+    </section>
+  </section>
+
+  <section class="format">
+    <h3>Teaching</h3>
+
+    <ProfileTeachingEvents teachingOffers={teachingOffers} {locale} organization={organization} />
+    <ProfileTheses theses={theses} />
+  </section>
+</section>
+
+<style>
+  section.organization {
+    page-break-before: always;
+  }
+</style>

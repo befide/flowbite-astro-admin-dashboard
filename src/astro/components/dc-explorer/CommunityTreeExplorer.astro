@@ -1,5 +1,4 @@
 ---
-
 import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
 // import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
 import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
@@ -8,7 +7,10 @@ import DCExplorerTreeDataTable from "@components/dc-explorer/components/DCExplor
 
 <DCExplorer collection="community">
   <div class="dc-explorer__filters">
-    <DCExplorerCount collection="community" dimension="count" />
+    <DCExplorerCount
+      collection="community"
+      dimension="count"
+    />
 
     <!-- <DCExplorerRowChart
       collection="community"
@@ -18,6 +20,9 @@ import DCExplorerTreeDataTable from "@components/dc-explorer/components/DCExplor
     /> -->
   </div>
   <div class="dc-explorer__items">
-    <DCExplorerTreeDataTable collection="community" dimension="id" />
+    <DCExplorerTreeDataTable
+      collection="community"
+      dimension="id"
+    />
   </div>
 </DCExplorer>

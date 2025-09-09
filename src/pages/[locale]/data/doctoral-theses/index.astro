@@ -1,0 +1,18 @@
+---
+import LayoutSidebar from "@astro/LayoutSidebar.astro"
+import type { GetStaticPaths } from "astro"
+import DoctoralThesesExplorer from "@components/dc-explorer/DoctoralThesesExplorer.astro"
+
+export const getStaticPaths = (async () => {
+  const locales = ["en", "de"]
+
+  return locales.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }))
+}) satisfies GetStaticPaths
+---
+
+<LayoutSidebar>
+  <DoctoralThesesExplorer />
+</LayoutSidebar>

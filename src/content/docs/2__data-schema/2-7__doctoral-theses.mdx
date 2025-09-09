@@ -43,10 +43,12 @@ It is based on the schema used for the 2019 relaunch of KfB's website beschleuni
 
 ### Derived fields
 
-- **tags** (mandatory list of strings)<br/>
+- **tags[]** (mandatory list of strings)<br/>
   list of strings derived from splitting the keyword field by the delimiter ";"
 - **URN**<br/>
   _Uniform Resource Name_
+- **isOpenAccess**<br/>
+  if there is a fulltext link, then it is open access
 
 - **degree**
   - **level (constant mandatory string)**<br/>

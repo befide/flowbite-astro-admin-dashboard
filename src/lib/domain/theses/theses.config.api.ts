@@ -2,8 +2,7 @@ import fs from "node:fs"
 import path from "node:path"
 
 import { defineCollection, z } from "astro:content"
-import { DomainObjectZodSchema } from "@lib/content.common.ts"
-import {ZodToTypescript} from "@duplojs/zod-to-typescript";
+import { DomainObjectZodSchema, type ThesisSchema } from "@lib/content.common.ts"
 
 const INPUT_FILEPATH = path.join("src", "data", "zotero", "kfb_theses.json")
 
@@ -43,6 +42,7 @@ export const ThesisZodSchema = DomainObjectZodSchema.extend({
   url: z.string().url().optional(),
   thesisType: z.string(),
   fulltextLink: z.string().url().optional(),
+  isOpenAccess: z.boolean().default(false),
   doi: z.string().optional(),
   urn: z.string().optional(),
   isbn: z.string().optional(),
@@ -62,8 +62,6 @@ export const ThesisZodSchema = DomainObjectZodSchema.extend({
   }),
 })
 
-export type ThesisSchema = z.infer<typeof ThesisZodSchema>
-
 export const defineThesesCollection = defineCollection({
   loader: async () => {
     const dataRaw = JSON.parse(fs.readFileSync(INPUT_FILEPATH).toString())
@@ -77,6 +75,7 @@ export const defineThesesCollection = defineCollection({
         language: item.data.language,
         abstract: item.data.abstractNote,
         thesisType: item.data.thesisType,
+        isOpenAccess: false,
 
         year: Number((item.data.date as string)?.substring(0, 4)),
         publisher: item.data.publisher || item.data.university,
@@ -84,6 +83,7 @@ export const defineThesesCollection = defineCollection({
         author: {
           familyName: item.data.creators[0]?.lastName,
           givenName: item.data.creators[0]?.firstName,
+          gender: undefined,
         },
         degree: {
           title: "",
@@ -108,31 +108,15 @@ export const defineThesesCollection = defineCollection({
       if (item.data.extra)
         item.data.extra.split("\n").forEach((extraLine: string) => {
           const splittedExtraLine = extraLine.split(/: /)
-          if (
-            splittedExtraLine.length == 2 &&
-            splittedExtraLine[0] &&
-            splittedExtraLine[0].toLowerCase() === "doi"
-          ) {
+          if (splittedExtraLine.length == 2 && splittedExtraLine[0] && splittedExtraLine[0].toLowerCase() === "doi") {
             dataItem.doi = splittedExtraLine[1]
-          } else if (
-            splittedExtraLine.length == 2 &&
-            splittedExtraLine[0] &&
-            splittedExtraLine[0].toLowerCase() === "isbn"
-          ) {
+          } else if (splittedExtraLine.length == 2 && splittedExtraLine[0] && splittedExtraLine[0].toLowerCase() === "isbn") {
             dataItem.isbn = splittedExtraLine[1]
-          } else if (
-            splittedExtraLine.length == 2 &&
-            splittedExtraLine[0] &&
-            splittedExtraLine[0].toLowerCase() === "citation key"
-          ) {
+          } else if (splittedExtraLine.length == 2 && splittedExtraLine[0] && splittedExtraLine[0].toLowerCase() === "citation key") {
             dataItem.citationKey = splittedExtraLine[1]
-          } else if (
-            splittedExtraLine.length == 2 &&
-            splittedExtraLine[0] &&
-            splittedExtraLine[0].toLowerCase() === "fulltext-url" &&
-            splittedExtraLine[1] !== "none"
-          ) {
+          } else if (splittedExtraLine.length == 2 && splittedExtraLine[0] && splittedExtraLine[0].toLowerCase() === "fulltext-url" && splittedExtraLine[1] !== "none") {
             dataItem.fulltextLink = splittedExtraLine[1]
+            dataItem.isOpenAccess = true
           }
         })
 
@@ -141,10 +125,7 @@ export const defineThesesCollection = defineCollection({
           dataItem.degree.title = tag.replace("#degree/title/:", "")
         }
         if (tag?.startsWith("#degree/granted-by/:")) {
-          dataItem.degree.grantedBy__organizationsId = tag.replace(
-            "#degree/granted-by/:",
-            ""
-          )
+          dataItem.degree.grantedBy__organizationsId = tag.replace("#degree/granted-by/:", "")
         }
 
         if (tag?.startsWith("#has-affiliation/:")) {
@@ -155,14 +136,10 @@ export const defineThesesCollection = defineCollection({
           dataItem.author.gender = tag.replace("#author/gender/:", "")
         }
         if (tag?.startsWith("#is-about/facility/:")) {
-          dataItem.isAbout.facility__facilitiesId.push(
-            tag.replace("#is-about/facility/:", "")
-          )
+          dataItem.isAbout.facility__facilitiesId.push(tag.replace("#is-about/facility/:", ""))
         }
         if (tag?.startsWith("#is-about/acceleration-process/:")) {
-          dataItem.isAbout.accelerationProcess__taxonomyId.push(
-            tag.replace("#is-about/acceleration-process/:", "")
-          )
+          dataItem.isAbout.accelerationProcess__taxonomyId.push(tag.replace("#is-about/acceleration-process/:", ""))
         }
       })
 
@@ -171,5 +148,3 @@ export const defineThesesCollection = defineCollection({
   },
   schema: ThesisZodSchema,
 })
-
-

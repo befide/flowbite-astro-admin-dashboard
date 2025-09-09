@@ -18,9 +18,7 @@ import { actions } from "./_actions.js"
 ---
 
 <LayoutSidebar class="mb-20 bg-slate-800 px-8 py-16 text-slate-100">
-  <h1 class="ml-8 text-3xl font-bold lg:text-4xl xl:text-7xl">
-    🕹&nbsp;Playground
-  </h1>
+  <h1 class="ml-8 text-3xl font-bold lg:text-4xl xl:text-7xl">🕹&nbsp;Playground</h1>
 
   <dummy-spacer class="mb-36 block"></dummy-spacer>
 
@@ -119,13 +117,12 @@ import { actions } from "./_actions.js"
   document.querySelectorAll("[data-action]").forEach((b) =>
     b.addEventListener("click", (e) =>
       document.querySelectorAll("entities-crud").forEach((crud) => {
-        const name = (e.target as HTMLElement).dataset
-          .action as PlaygroundAction
+        const name = (e.target as HTMLElement).dataset.action as PlaygroundAction
 
         console.log("Action!", name, e.target)
 
         playgroundActions[name](crud)
-      })
-    )
+      }),
+    ),
   )
 </script>

@@ -1,5 +1,5 @@
 @page {
-  margin: 25mm 40mm 20mm 10mm;
+  margin: 25mm 15mm 20mm 15mm;
   size: A4;
 
   @bottom-right {
@@ -9,8 +9,11 @@
 }
 
 @media print {
+  #main-content {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
   html {
-    font-size: 16px;
   }
   #main-content footer,
   nav {

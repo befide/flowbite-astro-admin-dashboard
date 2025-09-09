@@ -8,28 +8,42 @@ export const $domainTaxonomy = computed($locale, (locale) =>
     return await fetch("/" + locale + "/api/taxonomy.json")
       .then((response) => response.json())
       .then((s) =>
-        s.filter((d: TaxonomyItemDto) => d.taxonomyURI === "befidesh")
+        s.filter(
+          (d: TaxonomyItemDto) =>
+            d.taxonomyURI === "befidesh",
+        ),
       )
-  })
+  }),
 )
 
-export const $domainTaxonomyIndex = computed($domainTaxonomy, (taxonomy) =>
-  task(async () => {
-    return crossfilter((await taxonomy) || [])
-  })
+export const $domainTaxonomyIndex = computed(
+  $domainTaxonomy,
+  (taxonomy) =>
+    task(async () => {
+      return crossfilter((await taxonomy) || [])
+    }),
 )
-export const $genericTaxonomy = computed($locale, (locale) =>
-  task(async () => {
-    return await fetch("/" + locale + "/api/taxonomy.json")
-      .then((response) => response.json())
-      .then((s) =>
-        s.filter((d: TaxonomyItemDto) => d.taxonomyURI !== "befidesh")
+export const $genericTaxonomy = computed(
+  $locale,
+  (locale) =>
+    task(async () => {
+      return await fetch(
+        "/" + locale + "/api/taxonomy.json",
       )
-  })
+        .then((response) => response.json())
+        .then((s) =>
+          s.filter(
+            (d: TaxonomyItemDto) =>
+              d.taxonomyURI !== "befidesh",
+          ),
+        )
+    }),
 )
 
-export const $genericTaxonomyIndex = computed($genericTaxonomy, (taxonomy) =>
-  task(async () => {
-    return crossfilter((await taxonomy) || [])
-  })
+export const $genericTaxonomyIndex = computed(
+  $genericTaxonomy,
+  (taxonomy) =>
+    task(async () => {
+      return crossfilter((await taxonomy) || [])
+    }),
 )

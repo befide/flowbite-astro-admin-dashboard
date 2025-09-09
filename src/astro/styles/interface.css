@@ -1,9 +1,3 @@
-/* CSS for Paged.js interface – v0.2 
-Julie Blanc - 2020
-MIT License https://opensource.org/licenses/MIT
-A simple stylesheet to see pages on screen (with baseline included) */
-
-/* Change the look */
 :root {
   --color-background: whitesmoke;
   --color-pageSheet: #cfcfcf;
@@ -64,9 +58,7 @@ A simple stylesheet to see pages on screen (with baseline included) */
   }
 
   .pagedjs_left_page {
-    width: calc(
-      var(--pagedjs-bleed-left) + var(--pagedjs-pagebox-width)
-    ) !important;
+    width: calc(var(--pagedjs-bleed-left) + var(--pagedjs-pagebox-width)) !important;
     z-index: 20;
   }
 
@@ -124,7 +116,7 @@ A simple stylesheet to see pages on screen (with baseline included) */
     .pagedjs_page {
         margin: 0 auto;
         margin-top: 10mm;
-    } 
+    }
 
     .pagedjs_left_page{
         width: calc(var(--pagedjs-bleed-left) + var(--pagedjs-pagebox-width) + var(--pagedjs-bleed-left))!important;
@@ -136,11 +128,11 @@ A simple stylesheet to see pages on screen (with baseline included) */
 
     .pagedjs_left_page .pagedjs_bleed-right .pagedjs_marks-middle{
         width: var(--pagedjs-cross-size)!important;
-    } 
+    }
 
     .pagedjs_right_page{
-        left: 0; 
-    } 
+        left: 0;
+    }
     */
 
   /*--------------------------------------------------------------------------------------*/

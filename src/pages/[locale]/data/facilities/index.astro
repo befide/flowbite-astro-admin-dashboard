@@ -1,0 +1,22 @@
+---
+// title: Facilities
+// tableOfContents: false
+// sectionNumber: "E.3"
+
+import LayoutSidebar from "@astro/LayoutSidebar.astro"
+import type { GetStaticPaths } from "astro"
+import FacilitiesTreeExplorer from "@components/dc-explorer/FacilitiesTreeExplorer.astro"
+
+export const getStaticPaths = (async () => {
+  const locales = ["en", "de"]
+
+  return locales.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }))
+}) satisfies GetStaticPaths
+---
+
+<LayoutSidebar>
+  <FacilitiesTreeExplorer />
+</LayoutSidebar>

@@ -7,7 +7,11 @@ export const careerLevels = [
   "masterStudent",
   "bachelorStudent",
 ]
-export const disciplinaryProfessions = ["physicist", "engineer", "other"]
+export const disciplinaryProfessions = [
+  "physicist",
+  "engineer",
+  "other",
+]
 export const peopleCountDiscriminators = [
   ...careerLevels,
   ...disciplinaryProfessions,

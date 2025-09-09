@@ -20,7 +20,7 @@ const items = (
       } catch (err) {
         console.error(`I'm down, this time. ${err}`)
       }
-    })
+    }),
   )
 ).flat()
 
@@ -28,7 +28,7 @@ try {
   fs.writeFileSync(
     path.join("./src/data/zotero/kfb_theses.json"),
     JSON.stringify(items, null, 2),
-    "utf8"
+    "utf8",
   )
   console.log("Data successfully saved to disk")
 } catch (error) {

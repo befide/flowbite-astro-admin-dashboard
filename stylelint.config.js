@@ -1,6 +1,9 @@
 /** @type {import('stylelint').Config} */
 export default {
-  extends: ["stylelint-config-tailwindcss", "stylelint-prettier/recommended"],
+  extends: [
+    "stylelint-config-tailwindcss",
+    "stylelint-prettier/recommended",
+  ],
   plugins: ["stylelint-order"],
   rules: {
     // "prettier/prettier": true,
@@ -80,4 +83,4 @@ export default {
       },
     ],
   },
-};
+}

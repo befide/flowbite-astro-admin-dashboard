@@ -22,7 +22,9 @@ export const margins = {
 }
 
 export function getLocale(): string {
-  return document.location.href.indexOf("/de/") > -1 ? "de" : "en"
+  return document.location.href.indexOf("/de/") > -1
+    ? "de"
+    : "en"
 }
 
 export const getValue = (obj: any, path: string) => {
@@ -30,8 +32,13 @@ export const getValue = (obj: any, path: string) => {
 
   const keys = path.split(".")
 
-  return keys.reduce((currentObj, key) => currentObj[key], obj)
+  return keys.reduce(
+    (currentObj, key) => currentObj[key],
+    obj,
+  )
 }
 
 export const getChartWidth = (containerSelector: any) =>
-  Number(select(containerSelector).style("width").slice(0, -2))
+  Number(
+    select(containerSelector).style("width").slice(0, -2),
+  )

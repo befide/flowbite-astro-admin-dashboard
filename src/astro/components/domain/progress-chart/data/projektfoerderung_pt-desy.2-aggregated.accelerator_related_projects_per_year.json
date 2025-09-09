@@ -7,7 +7,10 @@
       { "name": "projects__count", "type": "integer" },
       { "name": "funding_amount__sum", "type": "integer" },
       { "name": "projects__cumcount", "type": "integer" },
-      { "name": "funding_amount__cumsum", "type": "integer" }
+      {
+        "name": "funding_amount__cumsum",
+        "type": "integer"
+      }
     ],
     "primaryKey": ["index"],
     "pandas_version": "1.4.0"

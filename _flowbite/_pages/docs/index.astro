@@ -3,16 +3,10 @@ import { getCollection, type CollectionEntry } from "astro:content"
 import LayoutSidebar from "@astro/LayoutSidebar.astro"
 import { ascending } from "d3"
 
-
 const sections = await getCollection("sections")
 sections.sort((a, b) => ascending(a.data.sectionNumber, b.data.sectionNumber))
 
-const docsByChapter = Object.values(
-  Object.groupBy(
-    sections,
-    (d: CollectionEntry<"sections">) => d.data.sectionNumbers[0]
-  )
-)
+const docsByChapter = Object.values(Object.groupBy(sections, (d: CollectionEntry<"sections">) => d.data.sectionNumbers[0]))
 ---
 
 <LayoutSidebar>
@@ -21,10 +15,7 @@ const docsByChapter = Object.values(
       docsByChapter.map((chapter) => (
         <div>
           {chapter?.map((d) => (
-            <a
-              href={"/docs/" + d.id}
-              class="block rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
-            >
+            <a href={"/docs/" + d.id} class="block rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
               <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                 <span class="section-number">{d.data.sectionNumber}</span>
                 {d.data.title}

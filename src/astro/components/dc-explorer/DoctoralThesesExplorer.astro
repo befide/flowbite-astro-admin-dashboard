@@ -1,8 +1,11 @@
 ---
-import { getLangFromUrl, useTranslations } from '@astro/i18n/utils';
+import {
+  getLangFromUrl,
+  useTranslations,
+} from "@astro/i18n/utils"
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
 import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
@@ -13,7 +16,10 @@ import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
 
 <DCExplorer collection="theses">
   <div class="dc-explorer__filters">
-    <DCExplorerCount collection="theses" dimension="count" />
+    <DCExplorerCount
+      collection="theses"
+      dimension="count"
+    />
     <DCExplorerBarChart
       collection="theses"
       dimension="year"
@@ -47,11 +53,15 @@ import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
       title={t("dc-explorer.tiles.title.facilities")}
       dimensionIsArray={true}
     />
-
     <DCExplorerRowChart
       collection="theses"
       dimension="language"
       title={t("dc-explorer.tiles.title.language")}
+    />
+    <DCExplorerRowChart
+      collection="theses"
+      dimension="isOpenAccess"
+      title={t("dc-explorer.tiles.title.isOpenAccess")}
     />
     <!-- </details> -->
   </div>

@@ -3,20 +3,16 @@
   .grid-table td,
   .grid-table th {
     border-spacing: 0;
-    line-height: 1rem;
-
   }
   .grid-table {
     display: grid;
-
-    font-size: var(--text-sm);
 
     margin: 0 !important;
     padding: 0 !important;
 
     /*border-collapse: collapse;*/
     /*min-width: 100%;*/
-    grid-auto-rows: calc(1rem);
+    grid-auto-rows: calc(2rem - 1px);
     grid-template-columns: repeat(5, minmax(10px, 1fr));
     row-gap: 1px;
     /*background-image: linear-gradient(*/
@@ -67,9 +63,10 @@
 
   .grid-table th,
   .grid-table td {
+    font-size: var(--text-base);
     background-color: white;
 
-    padding: 0 0.25rem;
+    padding: 0.25rem;
 
     position: relative;
     overflow: hidden;
@@ -82,7 +79,6 @@
     text-align: start;
   }
 }
-
 
 .grid-table .sortable {
   cursor: pointer;

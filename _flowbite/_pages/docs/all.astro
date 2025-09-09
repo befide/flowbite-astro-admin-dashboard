@@ -4,8 +4,6 @@ import LayoutSidebar from "@astro/LayoutSidebar.astro"
 import { ascending } from "d3"
 import ContentPage from "../../../src/modules/ContentPage.astro"
 
-
-
 const sections = await getCollection("sections")
 sections.sort((a, b) => ascending(a.data.sectionNumber, b.data.sectionNumber))
 ---

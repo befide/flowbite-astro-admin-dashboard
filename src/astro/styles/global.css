@@ -3,6 +3,7 @@
 @import "./my-overrides.grid-table.css";
 @import "./my-overrides.table.css";
 @import "./print.css";
+@import "./my-overrides.typography.css";
 
 @plugin "flowbite-typography";
 @custom-variant dark (&:where(.dark, .dark *));
@@ -20,40 +21,34 @@
   --color-primary-900: #1e3a8a;
 
   --kfb__blue: #2174a8;
-  --kfb__red: #C53228;
-  --kfb__yellow: #EDC500;
-  --kfb__green: #C53228;
+  --kfb__red: #c53228;
+  --kfb__yellow: #edc500;
+  --kfb__green: #c53228;
   --kfb__gray: #757575;
-  --kfb__gray--light: #EEE;
+  --kfb__gray--light: #eee;
   --kfb__gray--dark: #666;
 
   --font-sans:
-    "Barlow Semi Condensed", "ui-sans-serif", "system-ui", "-apple-system",
-    "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans",
-    "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Barlow Semi Condensed", "ui-sans-serif", "system-ui", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
   --font-body:
-    "Barlow Semi Condensed", "ui-sans-serif", "system-ui", "-apple-system",
-    "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans",
-    "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Barlow Semi Condensed", "ui-sans-serif", "system-ui", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
-  --font-mono:
-    "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
-    "Liberation Mono", "Courier New", "monospace";
+  --font-mono: "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace";
 
-  --line-height: 20px;
+  --line-height: 18px;
   --breakpoint-xs: 22.5rem;
   --breakpoint-2xl: 75rem;
   --breakpoint-3xl: 90rem;
   --spacing: 0.25rem;
 
-  --text-2xs: 7pt;
-  --text-xs: 10px;
-  --text-sm: 12px;
-  --text-base: 14px;
-  --text-lg: 12pt;
-  --text-xl: 14pt;
-  --text-2xl: 24pt;
+  --text-2xs: 0.5rem;
+  --text-xs: 0.6rem;
+  --text-sm: 0.7rem;
+  --text-base: 0.8rem;
+  --text-lg: 1rem;
+  --text-xl: 1.2rem;
+
   --color-text-gray: #999;
 
   --font-weight-normal: 300;
@@ -63,16 +58,14 @@
 }
 
 html {
-  font-size: var(--line-height);
-
   --color-kfb-blue: #2174a8;
-  --color-kfb-red: #C53228;
-  --color-kfb-yellow: #EDC500;
-  --color-kfb-green: #C53228;
+  --color-kfb-red: #c53228;
+  --color-kfb-yellow: #edc500;
+  --color-kfb-green: #c53228;
   --color-kfb-gray: #757575;
-  --color-kfb-gray--light: #EEE;
+  --color-kfb-gray--light: #eee;
   --color-kfb-gray--dark: #666;
-
+  font-size: var(--line-height);
 }
 
 /*@import "./my-overrides.config.css";
@@ -86,47 +79,3 @@ html {
 @import "./my-overrides.grid-gallery.css";
 
 @import "./my-overrides.tree.css"; */
-
-.format {
-  max-width: unset;
-}
-
-.format p {
-  font-size: var(--text-base);
-  margin-top: 0 !important;
-  max-width: 70ch;
-  @apply baseline-1/1;
-}
-
-.format p + p {
-  text-indent: 0.5rem;
-}
-.format ol,
-.format ul {
-  font-size: var(--text-base);
-  padding-bottom: 1rem;
-  max-width: 70ch;
-  @apply baseline-1/1;
-}
-.format ol {
-  list-style: decimal-leading-zero;
-}
-
-.format li::marker,
-.format li {
-  margin: 0;
-  padding: 0;
-}
-
-.format h2 {
-  font-size: var(--text-lg);
-  padding-bottom: 1rem;
-  max-width: 70ch;
-  @apply baseline-1/1;
-}
-
-p.description {
-  font-size: var(--text-xl);
-  padding-bottom: 1rem;
-  @apply baseline-2/1;
-}

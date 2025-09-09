@@ -5,7 +5,10 @@ export * from "./theses"
 export * from "./references"
 export * from "./taxonomy"
 
-const translations: Record<string, Record<string, string>> = {
+const translations: Record<
+  string,
+  Record<string, string>
+> = {
   ":male": {
     en: "male",
     de: "männlich",
@@ -30,12 +33,16 @@ const translations: Record<string, Record<string, string>> = {
     en: "1. Winter semester",
     de: "1. Winter-Semester",
   },
-  "Brandenburgisch Technische Universität Cottbus-Senftenberg": {
-    en: "BTU Cottbus-Senftenberg",
-    de: "BTU Cottbus-Senftenberg",
-  },
+  "Brandenburgisch Technische Universität Cottbus-Senftenberg":
+    {
+      en: "BTU Cottbus-Senftenberg",
+      de: "BTU Cottbus-Senftenberg",
+    },
 }
 
-export const getValueTranslation = (key: string, locale: string) => {
+export const getValueTranslation = (
+  key: string,
+  locale: string,
+) => {
   return translations[key] ? translations[key][locale] : key
 }

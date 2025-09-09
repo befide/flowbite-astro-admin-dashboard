@@ -9,38 +9,37 @@ const { section } = Astro.props
 
 const { Content } = await render(section)
 
-const Element = 'h' + (section.data.sectionDepth+1);
+const Element = "h" + (section.data.sectionDepth + 1)
 ---
 
 <section class="section bg-white dark:bg-gray-900">
-  <!--<div data-class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">-->
-  <!--  <div class="" data-class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">-->
-      <header>
-      <Element
-        class="tracking-tight text-gray-900 dark:text-white"
-        data-section-number={section.data.sectionNumber}
-      >
-        {section.data.title}
-      </Element>
-        <p class="description">{section.data.description}</p>
-      </header>
-      <div class="format">
-        <Content />
-      </div>
-  <!--  </div>-->
-  <!--</div>-->
+  <header>
+    <Element class="tracking-tight text-gray-900 dark:text-white" data-section-number={section.data.sectionNumber}>
+      {section.data.title}
+    </Element>
+    <p class="description">{section.data.description}</p>
+  </header>
+  <div class="format">
+    <Content />
+  </div>
 </section>
-
 
 <style is:global>
   .section {
     padding-left: 3rem;
     page-break-before: always;
   }
-  h1, h2, h3, h4, h5 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     position: relative;
   }
-  h1[data-section-number]::before, h2[data-section-number]::before, h3[data-section-number]::before, h4[data-section-number]::before {
+  h1[data-section-number]::before,
+  h2[data-section-number]::before,
+  h3[data-section-number]::before,
+  h4[data-section-number]::before {
     content: attr(data-section-number);
     /* font-size: var(--text-base); */
     display: block;

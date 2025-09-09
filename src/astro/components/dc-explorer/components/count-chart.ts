@@ -1,7 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import crossfilter from "crossfilter2"
-import { format, formatSpecifier, precisionFixed, select } from "d3"
+import {
+  format,
+  formatSpecifier,
+  precisionFixed,
+  select,
+} from "d3"
 import { numberDisplay } from "dc"
 
 const templates = {
@@ -26,51 +31,66 @@ const templates = {
 const numberFormat = format(
   Object.assign(formatSpecifier("f"), {
     precision: precisionFixed(0),
-  }).toString()
+  }).toString(),
 )
 
-export const countChartTileId = (collection: string, dimension: string) => {
-  return "dc-explorer__tile--count-" + collection + "-" + dimension
+export const countChartTileId = (
+  collection: string,
+  dimension: string,
+) => {
+  return (
+    "dc-explorer__tile--count-" +
+    collection +
+    "-" +
+    dimension
+  )
 }
-export const countChartId = (collection: string, dimension: string) => {
-  return "dc-explorer__chart--count-" + collection + "-" + dimension
+export const countChartId = (
+  collection: string,
+  dimension: string,
+) => {
+  return (
+    "dc-explorer__chart--count-" +
+    collection +
+    "-" +
+    dimension
+  )
 }
 
 export function createCountChart<T, U>(
   collection: string,
   dimension: string,
   cf: crossfilter.Crossfilter<T>,
-  cfDimension: crossfilter.Dimension<T, U>
+  cfDimension: crossfilter.Dimension<T, U>,
 ) {
-  const tileElementIdSelector = "#" + countChartTileId(collection, dimension)
+  const tileElementIdSelector =
+    "#" + countChartTileId(collection, dimension)
   const tileElement = select(tileElementIdSelector)
 
   // const totalCount = idx.size()
-  const countChartSelector = "#" + countChartId(collection, dimension)
+  const countChartSelector =
+    "#" + countChartId(collection, dimension)
   const chart = numberDisplay(countChartSelector)
     .dimension(cf)
     .group(cf.groupAll())
     .valueAccessor((x) => x)
     .html({
-      some: templates["en"]["dataCountTemplate__some"].replace(
-        /%total-count/,
-        cf.size().toString()
-      ),
-      one: templates["en"]["dataCountTemplate__one"].replace(
-        /%total-count/,
-        cf.size().toString()
-      ),
-      none: templates["en"]["dataCountTemplate__none"].replace(
-        /%total-count/,
-        cf.size().toString()
-      ),
+      some: templates["en"][
+        "dataCountTemplate__some"
+      ].replace(/%total-count/, cf.size().toString()),
+      one: templates["en"][
+        "dataCountTemplate__one"
+      ].replace(/%total-count/, cf.size().toString()),
+      none: templates["en"][
+        "dataCountTemplate__none"
+      ].replace(/%total-count/, cf.size().toString()),
     })
     .formatNumber(numberFormat)
 
   chart.on("renderlet", () => {
     tileElement.classed(
       "filtered",
-      cfDimension.top(Infinity).length < cf.size()
+      cfDimension.top(Infinity).length < cf.size(),
     )
   })
   return chart

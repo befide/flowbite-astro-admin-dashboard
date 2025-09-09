@@ -113,4 +113,4 @@ module.exports = {
     require("flowbite-typography"),
     require("tailwind-scrollbar")({ nocompatible: true }),
   ],
-};
+}

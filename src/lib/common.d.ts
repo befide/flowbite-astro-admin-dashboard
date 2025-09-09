@@ -1,200 +1,213 @@
-import type {ThesisSchema} from "@lib/domain";
+import type { ThesisSchema } from "@lib/domain"
+import { z } from "astro:content"
 
 export type DomainObjectSchema = {
-  id: string;
-  isSelected?: boolean;
-};
+  id: string
+  isSelected?: boolean
+}
+
+export type ReviewSchema = {
+  status__id: string
+  reviewer__contactId: string | null
+  log: string | null
+}
 
 export type NestableDomainObjectSchema = {
-  id: string;
-  isSelected?: boolean;
-  parent__id: string | null;
-};
+  id: string
+  isSelected?: boolean
+  parent__id: string | null
+}
 
 export type OrganizationSchema = NestableDomainObjectSchema & {
   /** Unique identifier for this entry. */
-  id: string;
+  id: string
   /** Identifier of the parent entry, if any. */
-  parent__id: string | null;
-  topLevel__id: string | null;
-  instanceOfs__taxonomyId: string[];
-  befideOrganizationCategories: ("fraunhofer" | "hgf" | "international" | "mpg" | "government" | "university" | "committee" | "funder" | "root" | "consortium")[];
-  partOfCommunityDegree: "none" | "full" | "partial";
+  parent__id: string | null
+  topLevel__id: string | null
+  instanceOfs__taxonomyID: string[]
+  befideOrganizationCategories: ("fraunhofer" | "hgf" | "international" | "mpg" | "government" | "university" | "committee" | "funder" | "root" | "consortium")[]
+  partOfCommunityDegree: "none" | "full" | "partial"
   label: {
     fullName: {
-      de: string;
-      en: string;
-    };
+      de: string
+      en: string
+    }
     short: {
-      de: string | null;
-      en: string | null;
-    };
-  };
+      de: string | null
+      en: string | null
+    }
+  }
   description: {
-    de: string | null;
-    en: string | null;
-  };
+    de: string | null
+    en: string | null
+  }
+  tagline: {
+    de?: string | null
+    en: string | null
+  }
   links: {
     homepage: {
-      de: string | null;
-      en: string | null;
-    };
-    rorId: string | null;
-  };
-  location: ({
-    country: ({
-      code: (string | undefined) | null;
-    } | undefined) | null;
-    city: (string | undefined) | null;
-    lat: (number | undefined) | null;
-    lng: (number | undefined) | null;
-  } | undefined) | null;
+      de: string | null
+      en: string | null
+    }
+    rorId?: string | null
+  }
+  hasHeads: {
+    literal: string[]
+    contact__contactIDs: string[]
+  }
+  isFormalOrganization: boolean
+  isResearchInstitution: boolean
+  isUniversity: boolean
+  isWorkingGroup: boolean
+  location?: {
+    country: {
+      code?: string | null
+    }
+
+    city?: string | null
+    lat?: string | null
+    lng?: string | null
+  } | null
+
   uniquePeopleCount: {
     professor: {
       physicist: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       engineer: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       other: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
-    };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
+    }
     seniorResearcher: {
       physicist: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       engineer: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       other: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
-    };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
+    }
     postDoc: {
       physicist: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       engineer: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       other: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
-    };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
+    }
     phdStudent: {
       physicist: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       engineer: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       other: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
-    };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
+    }
     masterStudent: {
       physicist: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       engineer: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       other: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
-    };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
+    }
     bachelorStudent: {
       physicist: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       engineer: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
       other: {
-        male: (number | undefined) | null;
-        female: (number | undefined) | null;
-        nonbinary: (number | undefined) | null;
-      };
-    };
-  };
+        male?: number | null
+        female?: number | null
+        nonbinary?: number | null
+      }
+    }
+  }
   uniquePeopleCountSum: {
-    total: number;
-    professor: number;
-    seniorResearcher: number;
-    postDoc: number;
-    phdStudent: number;
-    masterStudent: number;
-    bachelorStudent: number;
-    physicist: number;
-    engineer: number;
-    other: number;
-    female: number;
-    male: number;
-    nonbinary: number;
-  };
-  uniquePeopleCountRecursiveSum: {
-    total: number;
-    professor: number;
-    seniorResearcher: number;
-    postDoc: number;
-    phdStudent: number;
-    masterStudent: number;
-    bachelorStudent: number;
-    physicist: number;
-    engineer: number;
-    other: number;
-    female: number;
-    male: number;
-    nonbinary: number;
-  } | undefined;
-  review: {
-    status__id: (string | undefined) | null;
-    reviewer__contactId: (string | undefined) | null;
-    log: (string | undefined) | null;
-  };
-};
+    total: number
+    professor: number
+    seniorResearcher: number
+    postDoc: number
+    phdStudent: number
+    masterStudent: number
+    bachelorStudent: number
+    physicist: number
+    engineer: number
+    other: number
+    female: number
+    male: number
+    nonbinary: number
+  }
+  uniquePeopleCountRecursiveSum?: {
+    total: number
+    professor: number
+    seniorResearcher: number
+    postDoc: number
+    phdStudent: number
+    masterStudent: number
+    bachelorStudent: number
+    physicist: number
+    engineer: number
+    other: number
+    female: number
+    male: number
+    nonbinary: number
+  }
+  review: ReviewSchema
+}
 
-
-export type OrganizationDto = Pick<
-  OrganizationSchema,
-  "uniquePeopleCount" | "uniquePeopleCountRecursiveSum"
-> & {
+export type OrganizationDto = Pick<OrganizationSchema, "uniquePeopleCount" | "uniquePeopleCountRecursiveSum"> & {
   id: string
   parent__id: string | null
   instanceOfs__term: string[]
@@ -208,46 +221,42 @@ export type OrganizationDto = Pick<
   with_facilities: boolean
   userFacilities_count: number
   with_userFacilities: boolean
+  teachingEvents_count: number
   weeklySemesterHours_count: number
   with_teachingEvents: boolean
   people_count: number
 }
 
-
 export type CourseSchema = DomainObjectSchema & {
   /** Unique identifier for this entry. */
   // id: string;
   title: {
-    de: string | null;
-    en: string | null;
-  };
-  teachingEvent__taxonomyId: string;
-  university__organizationsId: string;
-  semesters: string[];
-  studyLevels__taxonomyId: string[];
-  partOfProgrammesOfStudy: string[];
-  languages: string[];
+    de: string | null
+    en: string | null
+  }
+  teachingEvent__taxonomyId: string
+  university__organizationsId: string
+  semesters: string[]
+  studyLevels__taxonomyId: string[]
+  partOfProgrammesOfStudy: string[]
+  languages: string[]
   objectives: {
-    de: string | null;
-    en: string | null;
-  };
+    de: string | null
+    en: string | null
+  }
   contents: {
-    de: string | null;
-    en: string | null;
-  };
-  weeklySemesterHours: number;
+    de: string | null
+    en: string | null
+  }
+  weeklySemesterHours: number
   links: {
     homepage: {
-      de: string | null;
-      en: string | null;
-    };
-  };
-  review: {
-    status__id: (string | undefined) | null;
-    reviewer__contactId: (string | undefined) | null;
-    log: (string | undefined) | null;
-  };
-};
+      de: string | null
+      en: string | null
+    }
+  }
+  review: ReviewSchema
+}
 
 export type CourseDto = Pick<CourseSchema, "id" | "weeklySemesterHours"> & {
   title: string
@@ -265,62 +274,58 @@ export type FacilitySchema = NestableDomainObjectSchema & {
   // id: string;
   /** Identifier of the parent entry, if any. */
   // parent__id: string | null;
-  partOf__id: string | null;
-  successorOf__id: string | null;
-  host__organizationsId: string | null;
+  partOf__id: string | null
+  successorOf__id: string | null
+  host__organizationsId: string | null
   label: {
-    de: string;
-    en: string;
-  };
+    de: string
+    en: string
+  }
   tagLine: {
-    de: string | null;
-    en: string | null;
-  };
+    de: string | null
+    en: string | null
+  }
   definition: {
-    de: string | null;
-    en: string | null;
-  };
-  isBMBF_FIS: boolean;
-  isUserFacility: boolean;
-  instanceOf__taxonomyId: string | null;
+    de: string | null
+    en: string | null
+  }
+  isBMBF_FIS: boolean
+  isUserFacility: boolean
+  instanceOf__taxonomyId: string
   lifeCycle: {
-    currentStatus__taxonomyId: string | null;
+    currentStatus__taxonomyId: string
     design: {
-      startYear: number | null;
-    };
+      startYear: number | null
+    }
     realization: {
-      startYear: number | null;
-    };
+      startYear: number | null
+    }
     operation: {
-      startYear: number | null;
-      endYear: number | null;
-    };
-  };
-  primaryApplications__taxonomyId: string[];
-  secondaryApplications__taxonomyId: string[];
+      startYear: number | null
+      endYear: number | null
+    }
+  }
+  primaryApplications__taxonomyId: string[]
+  secondaryApplications__taxonomyId: string[]
   parameters: {
-    primaryBeamParticles: string[];
-    secondaryBeamParticles: string[];
-    length__m: number | null;
-    E0__eV: number | null;
-    E1__eV: number | null;
-    emittance__mrad: number | null;
-    powerConsumption__W: number | null;
-    srPowerLoss__W: number | null;
-  };
+    primaryBeamParticles: string[]
+    secondaryBeamParticles: string[]
+    length__m: number | null
+    E0__eV: number | null
+    E1__eV: number | null
+    emittance__mrad: number | null
+    powerConsumption__W: number | null
+    srPowerLoss__W: number | null
+  }
   links: {
     homepage: {
-      de: string | null;
-      en: string | null;
-    };
-  };
-  references: string[];
-  review: {
-    status__id: (string | undefined) | null;
-    reviewer__contactId: (string | undefined) | null;
-    log: (string | undefined) | null;
-  };
-};
+      de: string | null
+      en: string | null
+    }
+  }
+  references: string[]
+  review: ReviewSchema
+}
 
 export type FacilityDto = Pick<FacilitySchema, "id"> & {
   label: string
@@ -338,32 +343,25 @@ export type FacilityDto = Pick<FacilitySchema, "id"> & {
   length__m: number | null
 }
 
-
-
-
 type TaxonomyItemSchema = {
   /** Unique identifier for this entry. */
-  id: string;
+  id: string
   /** Identifier of the parent entry, if any. */
-  parent__id: string | null;
-  taxonomyURI: string;
+  parent__id: string | null
+  taxonomyURI: string
   term: {
-    de: string;
-    en: string;
-  };
+    de: string
+    en: string
+  }
   definition: {
-    de: string | null;
-    en: string | null;
-  };
-  abbreviations: Record<string, string[]>;
-  synonyms: Record<string, string[]>;
-  iris: string[];
-  review: {
-    status__id: (string | undefined) | null;
-    reviewer__contactId: (string | undefined) | null;
-    log: (string | undefined) | null;
-  };
-};
+    de: string | null
+    en: string | null
+  }
+  abbreviations: Record<string, string[]>
+  synonyms: Record<string, string[]>
+  iris: string[]
+  review: ReviewSchema
+}
 
 export type TaxonomyItemDto = NestableDomainObjectSchema & {
   id: string
@@ -375,44 +373,42 @@ export type TaxonomyItemDto = NestableDomainObjectSchema & {
   taxonomyURI: string
 }
 
-
 type ThesisSchema = {
-  id: string;
-  citationKey: string;
+  id: string
+  citationKey: string
   author: {
-    familyName: string;
-    givenName: string;
-    gender: (string | undefined) | null;
-  };
-  year: number;
-  title: string;
-  language: "en" | "de";
-  url?: string | undefined;
-  thesisType: string;
-  fulltextLink?: string | undefined;
-  doi?: string | undefined;
-  urn?: string | undefined;
-  isbn?: string | undefined;
-  abstract: (string | undefined) | null;
-  publisher: string;
-  tags: (string | undefined)[];
+    familyName: string
+    givenName: string
+    gender?: string | null
+  }
+  year: number
+  title: string
+  language: "en" | "de"
+  url?: string | undefined
+  thesisType: string
+  isOpenAccess: boolean
+  fulltextLink?: string | undefined
+  doi?: string | undefined
+  urn?: string | undefined
+  isbn?: string | undefined
+  abstract?: string | null
+  publisher: string
+  tags: (string | undefined)[]
   degree: {
-    title: string;
-    level: string;
-    grantedBy__organizationsId?: string | undefined;
-  };
-  employsMethod?: string | undefined;
-  hasAffiliation__organizationsId: string[];
+    title: string
+    level: string
+    grantedBy__organizationsId?: string | undefined
+  }
+  employsMethod?: string | undefined
+  hasAffiliation__organizationsId: string[]
   isAbout: {
-    facility__facilitiesId: string[];
-    accelerationProcess__taxonomyId: (string | undefined)[];
-  };
-};
+    facility__facilitiesId: string[]
+    accelerationProcess__taxonomyId: (string | undefined)[]
+  }
+  review: ReviewSchema
+}
 
-export type ThesisDto = Pick<
-  ThesisSchema,
-  "id" | "title" | "year" | "fulltextLink" | "author" | "language"
-> & {
+export type ThesisDto = Pick<ThesisSchema, "id" | "doi" | "urn" | "isbn" | "title" | "year" | "fulltextLink" | "author" | "language" | "isOpenAccess"> & {
   university__label_short: string
   affiliations__label_short: string[]
   facilities__label_short: string[]

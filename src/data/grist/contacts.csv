@@ -1,0 +1,52 @@
+id,oricid,familyName,givenName,academicTitle,emailAddress,hasAffiliation__organizationId,hasAssociatedAffiliation__organizationIDs,isHeadOf__organizationIDs,gender
+arnold.michaela,https://orcid.org/0000-0002-9491-6524,Arnold,Michaela,Dr.,marnold@ikp.tu-darmstadt.de,tu-darmstadt,"","",w
+aßmann.ralph,,Aßmann,Ralph,Dr.,Dr. Ralph Aßmann,fair,"","",m
+aulenbacher.kurt,,Aulenbacher,Kurt,Univ.-Prof. Dr. ,,uni-frankfurt,"",him/acid,m
+bai.mei,,Bai,Mei,Prof. Dr.,,,"","",w
+barth.winfried,,Barth,Winfried,Prof. Dr.,,uni-mainz,him,"",m
+boine-frankenheim.oliver,,Boine-Frankenheim,Oliver,Prof. Dr.,,tu-darmstadt,gsi,"gsi/acc/aph,tu-darmstadt/fb-etit/temf/bp/achip,tu-darmstadt/fb-etit/temf/bp",m
+bründermann.erik,https://orcid.org/0000-0003-4119-3489,Bründermann,Erik,Dr. rer. nat. Dipl.-Phys.,erik.bruendermann@kit.edu,kit,"",kit/division-5/ibpt/ardop2,m
+cowan.thomas,,Cowan,Thomas,Prof. Dr.,,tu-dresden,"","hzdr/strahlenphysik,hzdr/strahlenphysik/hibef,hzdr/strahlenphysik/hed",m
+de-gersem.herbert,,De Gersem,Herbert,Prof. Dr.-Ing.,,tu-darmstadt,"","tu-darmstadt/fb-etit/temf/emft,tu-darmstadt/fb-etit/temf",m
+desch.klaus,,Desch,Klaus,Prof. Dr.,desch@physik.uni-bonn.de,uni-bonn,"","",m
+enders.joachim,,Enders,Joachim,Prof. Dr. ,,,"",tu-darmstadt/physik/institut-kernphysik/ag-enders,m
+franchetti.giuliano,,Franchetti,Giuliano,Prof. Dr. ,,,"","",m
+fritzsche.stephan,,Fritzsche,Stephan,Prof. Dr. ,,,"","",m
+fuchs.matthias,https://orcid.org/0000-0003-1878-8986,Fuchs,Matthias,Prof. Dr. ,matthias.fuchs@kit.edu,kit,"",kit/division-5/ibpt/ardop1,m
+grüner.florian,https://orcid.org/0000-0001-8382-9225,Grüner,Florian,Prof. Dr. ,florian.gruener@uni-hamburg.de,uni-hamburg,"desy,cfel","uni-hamburg/min/physik/experimental-physik/ag-gruener/lux,uni-hamburg/min/physik/experimental-physik/ag-gruener",m
+härer.bastian,https://orcid.org/0000-0002-4170-7630,Härer,Bastian,Dr.,bastian.haerer@kit.edu,kit,"",kit/division-5/ibpt/ardop1/accelerators/bdt,m
+helm.manfred,,Helm,Manfred,Prof. Dr.,m.helm@hzdr.de,hzdr,"","",m
+helml.wolfram,,Helml,Wolfram,Jun.-Prof. Dr.,,,"","",m
+hidding.bernhard,,Hidding,Bernhard,Prof. Dr.,Bernhard.Hidding@hhu.de,uni-duesseldorf,"","",m
+hillert.wolfgang,https://orcid.org/0000-0002-2762-5954,Hillert,Wolfgang,Prof. Dr. habil.,,uni-hamburg,desy,"uni-hamburg/min/physik/experimental-physik/ag-hillert,uni-hamburg/min/physik/experimental-physik/ag-hillert/seeding,uni-hamburg/min/physik/experimental-physik/ag-hillert/srfc",m
+hofsäss.hans-christian,,Hofsäss,Hans-Christian,Prof. Dr. ,,,"","",m
+hommelhoff.peter,https://orcid.org/0000-0003-4757-5410,Hommelhoff,Peter,Prof. Dr.,peter.hommelhoff@fau.de,uni-erlangen,"","uni-erlangen/physik-department/laser-physics,uni-erlangen/physik-department/laser-physics/achip",m
+hug.florian,https://orcid.org/0000-0002-0489-6313,Hug,Florian,Jun.-Prof. Dr. ,,,"","",m
+jankowiak.andreas,https://orcid.org/0000-0001-6802-1543,Jankowiak,Andreas,Prof. Dr. ,andreas.jankowiak@helmholtz-berlin.de,hzb,hu-berlin,"hzb/be,hzb/be/ia,hzb/be/ia/ard",m
+kaluza.malte-c.,,Kaluza,Malte C.,Prof. Dr.,,uni-jena,"","",m
+kamps.thorsten,https://orcid.org/0000-0002-5122-2290,Kamps,Thorsten,Prof. Dr. ,,hzb,hu-berlin,hzb/be/ahbb,m
+kärtner.franz-x.,https://orcid.org/0000-0001-8829-5461,Kärtner,Franz X.,Prof. Dr.,franz.kaertner@desy.de,cfel,"",cfel/ufox,m
+khan.shaukat,,Khan,Shaukat,Prof. Dr. ,,tu-dortmund,"","",m
+klingbeil.harald,,Klingbeil,Harald,Prof. Dr.-Ing. ,,,"",tu-darmstadt/fb-etit/temf/bt,m
+knobloch.jens,,Knobloch,Jens,Prof. Dr. ,,hzb,uni-siegen,hzb/be/ias,m
+kopka.klaus,,Kopka,Klaus,Prof. Dr.,k.kopka@hzdr.de,hzdr,"",hzdr/radiopharmazeutische-krebsforschung,m
+krause.mechthild,,Krause,Mechthild,Prof. Dr.,m.krause@hzdr.de,hzdr,"",hzdr/radioonkologie,w
+leemans.wim,https://orcid.org/0000-0001-6573-8434,Leemans,Wim,Prof. Dr. ,,desy,"","desy/m,desy/z-beschleunigerphysik",m
+lehrach.andreas,https://orcid.org/0000-0002-6991-2257,Lehrach,Andreas,Prof. Dr. rer. nat. habil.,,rwth-aachen,fz-juelich,"",m
+markus.roth,,Markus,Roth,,,,"",tu-darmstadt/physik/institut-kernphysik/ag-roth,m
+meseck.atoosa,,Meseck,Atoosa,Prof. Dr. ,,hzb,"","hzb/be/ia/hp,hzb/wi/aund",w
+müller.anke-susanne,,Müller,Anke-Susanne,Prof. Dr. ,,kit,"",kit/division-5/ibpt,w
+paulus.gerhard,,Paulus,Gerhard,Prof. Dr. ,,,"",uni-jena/physik/ioq,m
+pietralla.norbert,,Pietralla,Norbert,Prof. Dr. Dr. h.c. mult.,,,"",tu-darmstadt/physik/institut-kernphysik/ag-pietralla,m
+podlech.holger,,Podlech,Holger,Prof. Dr. ,,,"","",m
+pretz.jörg,,Pretz,Jörg,Prof. habil.,,fz-juelich,"","",m
+ralph.hollinger,,Ralph,Hollinger,Dr.,r.hollinger@gsi.de,gsi,"",gsi/acc/ope,m
+ratzinger.ulirch,,Ratzinger,Ulirch,Prof. Dr. ,,,"","",m
+härtig.frank,,Härtig,Frank,Dr.-Ing. Prof. h. c.,frank.haertig@ptb.de,ptb/abt7,"",ptb/abt7,m
+schramm.ullrich,,Schramm,Ullrich,Prof. Dr.,,hzdr,"","hzdr/strahlenphysik,hzdr/strahlenphysik/laser-teilenchen-beschleunigung,hzdr/strahlenphysik/laser-teilenchen-beschleunigung/draco",m
+stöhlker.thomas,,Stöhlker,Thomas,Prof. Dr. ,,uni-jena,"","",m
+van-rienen.ursula,,van Rienen,Ursula,Prof. Dr. rer. nat. habil. ,,uni-rostock,"","",w
+vélez-saiz.adolfo-,,Vélez Saiz,Adolfo ,Prof. Dr. ,,,"","",m
+zakalek.paul,,Zakalek,Paul,,,,"","",m
+zepf.matt,,Zepf,Matt,Prof. Dr. ,,uni-jena,"","",m
+rathje.dirk,,Rathje,Dirk,Dr. ,,,"","",m

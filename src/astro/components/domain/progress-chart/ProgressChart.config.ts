@@ -1,92 +1,112 @@
-import { curveStepAfter, format, formatDefaultLocale, group, groups } from "d3";
+import {
+  curveStepAfter,
+  format,
+  formatDefaultLocale,
+  group,
+  groups,
+} from "d3"
 
-import acceleratorsInUse from "./data/acceleratorsInUsePerYear.json" assert { type: "json" };
+import acceleratorsInUse from "./data/acceleratorsInUsePerYear.json" assert { type: "json" }
 
-import nuclideDiscoveriesPerYear from "./data/nuclideDiscoveriesPerYear.json" assert { type: "json" };
+import nuclideDiscoveriesPerYear from "./data/nuclideDiscoveriesPerYear.json" assert { type: "json" }
 
-import _particleDiscoveries from "./data/particleDiscoveries.json" assert { type: "json" };
+import _particleDiscoveries from "./data/particleDiscoveries.json" assert { type: "json" }
 
-import pdbEntries from "./data/proteinStructures.json" assert { type: "json" };
+import pdbEntries from "./data/proteinStructures.json" assert { type: "json" }
 
-import _nobelPrizes from "./data/nobelPrizes.json" assert { type: "json" };
+import _nobelPrizes from "./data/nobelPrizes.json" assert { type: "json" }
 
-import conferences from "./data/conferences.json" assert { type: "json" };
+import conferences from "./data/conferences.json" assert { type: "json" }
 
-import professorships from "./data/professorships.json" assert { type: "json" };
+import professorships from "./data/professorships.json" assert { type: "json" }
 
-import publications from "./data/publications__prab.tsv";
-import publications__prab from "./data/publications__prab.json" assert { type: "json" };
-import publications_openAlex from "./data/publications_open-alex.json" assert { type: "json" };
-import doctoralTheses from "./data/doctoralTheses.json" assert { type: "json" };
-import masterTheses from "./data/masterTheses.json" assert { type: "json" };
+import publications from "./data/publications__prab.tsv"
+import publications__prab from "./data/publications__prab.json" assert { type: "json" }
+import publications_openAlex from "./data/publications_open-alex.json" assert { type: "json" }
+import doctoralTheses from "./data/doctoralTheses.json" assert { type: "json" }
+import masterTheses from "./data/masterTheses.json" assert { type: "json" }
 
-import betaElectron from "./data/betaElectron.json" assert { type: "json" };
+import betaElectron from "./data/betaElectron.json" assert { type: "json" }
 
-import betaProton from "./data/betaProton.json" assert { type: "json" };
+import betaProton from "./data/betaProton.json" assert { type: "json" }
 
-import energyProton from "./data/energyProton.json" assert { type: "json" };
+import energyProton from "./data/energyProton.json" assert { type: "json" }
 
-import energyElectron from "./data/energyElectron.json" assert { type: "json" };
+import energyElectron from "./data/energyElectron.json" assert { type: "json" }
 
-import magneticFieldStrength from "./data/magneticFieldStrength.json" assert { type: "json" };
+import magneticFieldStrength from "./data/magneticFieldStrength.json" assert { type: "json" }
 
-import srfGradient from "./data/srfGradient.json" assert { type: "json" };
+import srfGradient from "./data/srfGradient.json" assert { type: "json" }
 
-import emittance from "./data/emittance.json" assert { type: "json" };
+import emittance from "./data/emittance.json" assert { type: "json" }
 
-import currentProton from "./data/currentProton.json" assert { type: "json" };
+import currentProton from "./data/currentProton.json" assert { type: "json" }
 
-import peakLuminosity from "./data/peakLuminosity.json" assert { type: "json" };
+import peakLuminosity from "./data/peakLuminosity.json" assert { type: "json" }
 
-import peakBrilliance from "./data/peakBrilliance.json" assert { type: "json" };
+import peakBrilliance from "./data/peakBrilliance.json" assert { type: "json" }
 
-import neutronFlux from "./data/neutronFlux.json" assert { type: "json" };
+import neutronFlux from "./data/neutronFlux.json" assert { type: "json" }
 
-import projectFunding from "./data/projektfoerderung_pt-desy.2-aggregated.accelerator_related_projects_per_year.json" assert { type: "json" };
-import excellenceRate from "./data/excellence-rate.json" assert { type: "json" };
+import projectFunding from "./data/projektfoerderung_pt-desy.2-aggregated.accelerator_related_projects_per_year.json" assert { type: "json" }
+import excellenceRate from "./data/excellence-rate.json" assert { type: "json" }
 
 const nobelPrizes = Array.from(
   groups(Object.values(_nobelPrizes), ({ year }) => year),
-).map(([y, v]) => ({ year: y, value: v.length }));
+).map(([y, v]) => ({ year: y, value: v.length }))
 
 const particleDiscoveries = Array.from(
-  group(Object.values(_particleDiscoveries), ({ year }) => year),
+  group(
+    Object.values(_particleDiscoveries),
+    ({ year }) => year,
+  ),
 ).map(([y, v]) => ({
   year: y,
   value: v.length,
-}));
+}))
 // .map((v, k) => {year: +k, value: v.length})
 
-const projectFundingProjectsCount = projectFunding.data.map((entry) => ({
-  year: entry.year,
-  value: entry.projects__count,
-}));
-const projectFundingAmount = projectFunding.data.map((entry) => ({
-  year: entry.year,
-  value: entry.funding_amount__sum,
-}));
+const projectFundingProjectsCount = projectFunding.data.map(
+  (entry) => ({
+    year: entry.year,
+    value: entry.projects__count,
+  }),
+)
+const projectFundingAmount = projectFunding.data.map(
+  (entry) => ({
+    year: entry.year,
+    value: entry.funding_amount__sum,
+  }),
+)
 
-const germanExcellenceRate = Object.values(excellenceRate).map((entry) => ({
+const germanExcellenceRate = Object.values(
+  excellenceRate,
+).map((entry) => ({
   year: entry.yearEnd,
-  value: entry["ten percent most cited with affiliation from Germany share"],
-}));
+  value:
+    entry[
+      "ten percent most cited with affiliation from Germany share"
+    ],
+}))
 
 formatDefaultLocale({
   decimal: ",",
   thousands: ".",
   grouping: [3],
   currency: ["", "\u00A0€"],
-});
+})
 
 export default {
   nuclideDiscoveriesPerYear: {
     yDomain: [0, 5000],
     scale: "linear",
     cumulate: false,
-    data: Object.values(nuclideDiscoveriesPerYear).map(({ year, sum }) => ({
-      year,
-      value: sum,
-    })),
+    data: Object.values(nuclideDiscoveriesPerYear).map(
+      ({ year, sum }) => ({
+        year,
+        value: sum,
+      }),
+    ),
     quantityName: "Nuklidentdeckungen",
     quantityNameQualifier: "",
     unit: "kumulierte Zahl der an Beschleunigern entdeckten Nuklide",
@@ -131,10 +151,12 @@ export default {
     yDomain: [0, 25000],
     scale: "linear",
     cumulate: false,
-    data: Object.values(acceleratorsInUse).map(({ year, medicine__count }) => ({
-      year,
-      value: medicine__count,
-    })),
+    data: Object.values(acceleratorsInUse).map(
+      ({ year, medicine__count }) => ({
+        year,
+        value: medicine__count,
+      }),
+    ),
     quantityName: "Beschleuniger in der Medizin",
 
     // unit: 'kumulierte Anzahl',
@@ -143,20 +165,24 @@ export default {
     yDomain: [0, 25000],
     scale: "linear",
     cumulate: false,
-    data: Object.values(acceleratorsInUse).map(({ year, industry__count }) => ({
-      year,
-      value: industry__count,
-    })),
+    data: Object.values(acceleratorsInUse).map(
+      ({ year, industry__count }) => ({
+        year,
+        value: industry__count,
+      }),
+    ),
     quantityName: "Beschleuniger in der Industrie",
   },
   accelerators_in_use__science: {
     yDomain: [0, 25000],
     scale: "linear",
     cumulate: false,
-    data: Object.values(acceleratorsInUse).map(({ year, science__count }) => ({
-      year,
-      value: science__count,
-    })),
+    data: Object.values(acceleratorsInUse).map(
+      ({ year, science__count }) => ({
+        year,
+        value: science__count,
+      }),
+    ),
     quantityName: "Beschleuniger für die Wissenschaft",
 
     // unit: 'kumulierte Anzahl',
@@ -207,7 +233,9 @@ export default {
     scale: "linear",
     yDomain: [0, 5000],
     cumulate: true,
-    data: Object.values(publications).sort((a, b) => a.year - b.year),
+    data: Object.values(publications).sort(
+      (a, b) => a.year - b.year,
+    ),
     quantityName: "Veröffentlichungen",
     quantityNameQualifier: "Akademenische ",
     unit: "in Physics Review Accelerators and Beams pro Jahr",
@@ -217,7 +245,9 @@ export default {
     scale: "linear",
     yDomain: [0, 250000],
     cumulate: true,
-    data: Object.values(publications_openAlex).sort((a, b) => a.year - b.year),
+    data: Object.values(publications_openAlex).sort(
+      (a, b) => a.year - b.year,
+    ),
     quantityName: "Veröffentlichungen",
     quantityNameQualifier: "Akademenische ",
     unit: "Open Alex",
@@ -367,4 +397,4 @@ export default {
     quantityNameQualifier: "Spitzen",
     unit: "Photonen / cm² / s",
   },
-};
+}

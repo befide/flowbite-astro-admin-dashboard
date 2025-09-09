@@ -2,18 +2,18 @@
 /* eslint max-lines: 'off' */
 
 import { url } from "../lib/data.js"
+import CopyrightNotice from "./components/CopyrightNotice.astro"
 
 const thisUrl = Astro.url.toString()
 
 const englishUrl = thisUrl.replace("/de/", "/en/")
 const germanUrl = thisUrl.replace("/en/", "/de/")
-
 ---
 
 <!-- TODO: Dynamic dropdowns -->
 <aside
   id="sidebar"
-  class="transition-width fixed top-0 left-0 z-20 flex hidden h-full w-64 flex-shrink-0 flex-col pt-16 font-normal duration-75 lg:flex"
+  class="transition-width fixed top-0 left-0 z-20 hidden h-full w-64 flex-shrink-0 flex-col pt-16 font-normal duration-75 lg:flex"
   aria-label="Sidebar"
 >
   <div
@@ -33,7 +33,9 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
         <ul class="space-y-2 pb-2">
           <li>
             <form action="#" method="GET" class="lg:hidden">
-              <label for="mobile-search" class="sr-only">Search</label>
+              <label for="mobile-search" class="sr-only"
+                >Search</label
+              >
               <div class="relative">
                 <div
                   class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
@@ -61,6 +63,27 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
           </li>
           <li>
             <a
+              href={url("/")}
+              class="group flex items-center rounded-lg p-2 text-base text-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+            >
+              <svg
+                class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"
+                ></path><path
+                  d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"
+                ></path></svg
+              >
+              <span class="ml-3" sidebar-toggle-item
+                >Dashboard</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
               href="/docs"
               class="group flex items-center rounded-lg p-2 text-base text-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
             >
@@ -78,23 +101,9 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
                   d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z"
                 ></path>
               </svg>
-              <span class="ml-3" sidebar-toggle-item>Docs</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href={url("dashboard")}
-              class="group flex items-center rounded-lg p-2 text-base text-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
-            >
-              <svg
-                class="h-6 w-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path
-                  d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg
+              <span class="ml-3" sidebar-toggle-item
+                >Docs</span
               >
-              <span class="ml-3" sidebar-toggle-item>Dashboard</span>
             </a>
           </li>
 
@@ -120,7 +129,7 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
               </svg>
               <span
                 class="ml-3 flex-1 text-left whitespace-nowrap"
-                sidebar-toggle-item>Data Explorers</span
+                sidebar-toggle-item>Data</span
               >
               <svg
                 sidebar-toggle-item
@@ -134,13 +143,16 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
                   clip-rule="evenodd"></path></svg
               >
             </button>
-            <ul id="dropdown-crud" class="hidden space-y-2 py-2">
+            <ul
+              id="dropdown-crud"
+              class="hidden space-y-2 py-2"
+            >
               <!-- if not (eq .Params.group crud) }}hidden {{ end }} -->
               <li>
                 <!-- {{ if eq $page_slug "products" }} -->
                 <!-- bg-gray-100 dark:bg-gray-700 -->
                 <a
-                  href={url("en/explorer/2-1__formal-organizations")}
+                  href={url("en/data/formal-organizations")}
                   class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
                   >Formal Organizations</a
                 >
@@ -149,25 +161,34 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
                 <!-- {{ if eq $page_slug "products" }} -->
                 <!-- bg-gray-100 dark:bg-gray-700 -->
                 <a
-                  href={url("en/explorer/2-2__research-groups")}
+                  href={url("en/data/research-groups")}
                   class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
-                >Research groups</a
+                  >Research groups</a
                 >
               </li>
               <li>
                 <!-- {{ if eq $page_slug "products" }} -->
                 <!-- bg-gray-100 dark:bg-gray-700 -->
                 <a
-                  href={url("en/explorer/3__facilities")}
+                  href={url("en/data/facilities")}
                   class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
-                >Facilities</a
+                  >Facilities</a
                 >
               </li>
               <li>
                 <!--  {{ if eq $page_slug "users" }} -->
                 <!-- bg-gray-100 dark:bg-gray-700 -->
                 <a
-                  href={url("en/explorer/4_2__doctoral-theses")}
+                  href={url("en/data/courses")}
+                  class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+                  >Courses</a
+                >
+              </li>
+              <li>
+                <!--  {{ if eq $page_slug "users" }} -->
+                <!-- bg-gray-100 dark:bg-gray-700 -->
+                <a
+                  href={url("en/data/doctoral-theses")}
                   class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
                   >Doctoral theses</a
                 >
@@ -175,7 +196,7 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
             </ul>
           </li>
 
-          <li>
+          <!-- <li>
             <button
               type="button"
               class="group flex w-full items-center rounded-lg p-2 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
@@ -208,7 +229,10 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
                   clip-rule="evenodd"></path></svg
               >
             </button>
-            <ul id="dropdown-auth" class="hidden space-y-2 py-2">
+            <ul
+              id="dropdown-auth"
+              class="hidden space-y-2 py-2"
+            >
               <li>
                 <a
                   href={url("authentication/sign-in")}
@@ -225,14 +249,18 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
               </li>
               <li>
                 <a
-                  href={url("authentication/forgot-password")}
+                  href={url(
+                    "authentication/forgot-password",
+                  )}
                   class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
                   >Forgot password</a
                 >
               </li>
               <li>
                 <a
-                  href={url("authentication/reset-password")}
+                  href={url(
+                    "authentication/reset-password",
+                  )}
                   class="group flex items-center rounded-lg p-2 pl-11 text-base text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
                   >Reset password</a
                 >
@@ -245,9 +273,10 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
                 >
               </li>
             </ul>
-          </li>
+          </li> -->
         </ul>
-        <div class="space-y-2 pt-2">
+
+        <!-- <div class="space-y-2 pt-2">
           <a
             href={"https://github.com/befide/flowbite-astro-admin-dashboard"}
             target="_blank"
@@ -259,14 +288,21 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512"
-              ><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            >
               <path
                 d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
               ></path></svg
             >
-            <span class="ml-3" sidebar-toggle-item>GitHub Repository</span>
+            <span class="ml-3" sidebar-toggle-item
+              >GitHub Repository</span
+            >
           </a>
-        </div>
+        </div> -->
+      </div>
+      <div
+        class="flex-1 space-y-1 divide-y divide-gray-200 bg-white px-3 dark:divide-gray-700 dark:bg-gray-800"
+      >
+        <p><CopyrightNotice /></p>
       </div>
     </div>
     <div
@@ -321,11 +357,13 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 3900 3900"
-          ><path fill="#b22234" d="M0 0h7410v3900H0z"></path><path
+          ><path fill="#b22234" d="M0 0h7410v3900H0z"
+          ></path><path
             d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
             stroke="#fff"
-            stroke-width="300"></path><path fill="#3c3b6e" d="M0 0h2964v2100H0z"
-          ></path><g fill="#fff"
+            stroke-width="300"></path><path
+            fill="#3c3b6e"
+            d="M0 0h2964v2100H0z"></path><g fill="#fff"
             ><g id="d"
               ><g id="c"
                 ><g id="e"
@@ -333,17 +371,22 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
                     ><path
                       id="a"
                       d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"
-                    ></path><use xlink:href="#a" y="420"></use><use
-                      xlink:href="#a"
-                      y="840"></use><use xlink:href="#a" y="1260"></use></g
+                    ></path><use xlink:href="#a" y="420"
+                    ></use><use xlink:href="#a" y="840"
+                    ></use><use xlink:href="#a" y="1260"
+                    ></use></g
                   ><use xlink:href="#a" y="1680"></use></g
-                ><use xlink:href="#b" x="247" y="210"></use></g
+                ><use xlink:href="#b" x="247" y="210"
+                ></use></g
               ><use xlink:href="#c" x="494"></use></g
-            ><use xlink:href="#d" x="988"></use><use xlink:href="#c" x="1976"
-            ></use><use xlink:href="#e" x="2470"></use></g
+            ><use xlink:href="#d" x="988"></use><use
+              xlink:href="#c"
+              x="1976"></use><use xlink:href="#e" x="2470"
+            ></use></g
           ></svg
         >
       </button>
+
       <!-- Dropdown -->
       <div
         class="z-50 my-4 hidden list-none divide-y divide-gray-100 rounded bg-white text-base shadow dark:bg-gray-700"
@@ -401,9 +444,13 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
                   id="flag-icon-css-de"
                   viewBox="0 0 512 512"
                 >
-                  <path fill="#ffce00" d="M0 341.3h512V512H0z"></path>
+                  <path
+                    fill="#ffce00"
+                    d="M0 341.3h512V512H0z"></path>
                   <path d="M0 0h512v170.7H0z"></path>
-                  <path fill="#d00" d="M0 170.7h512v170.6H0z"></path>
+                  <path
+                    fill="#d00"
+                    d="M0 170.7h512v170.6H0z"></path>
                 </svg>
                 Deutsch
               </div>
@@ -429,41 +476,49 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
       sidebar: HTMLElement,
       sidebarBackdrop: HTMLElement,
       toggleSidebarMobileHamburger: HTMLElement,
-      toggleSidebarMobileClose: HTMLElement
+      toggleSidebarMobileClose: HTMLElement,
     ) => {
       sidebar.classList.toggle("hidden")
       sidebarBackdrop.classList.toggle("hidden")
-      toggleSidebarMobileHamburger.classList.toggle("hidden")
+      toggleSidebarMobileHamburger.classList.toggle(
+        "hidden",
+      )
       toggleSidebarMobileClose.classList.toggle("hidden")
     }
 
-    const toggleSidebarMobileEl = document.getElementById("toggleSidebarMobile")
-    const sidebarBackdrop = document.getElementById("sidebarBackdrop")!
-    const toggleSidebarMobileHamburger = document.getElementById(
-      "toggleSidebarMobileHamburger"
+    const toggleSidebarMobileEl = document.getElementById(
+      "toggleSidebarMobile",
+    )
+    const sidebarBackdrop = document.getElementById(
+      "sidebarBackdrop",
     )!
-    const toggleSidebarMobileClose = document.getElementById(
-      "toggleSidebarMobileClose"
-    )!
-    const toggleSidebarMobileSearch = document.getElementById(
-      "toggleSidebarMobileSearch"
-    )!
+    const toggleSidebarMobileHamburger =
+      document.getElementById(
+        "toggleSidebarMobileHamburger",
+      )!
+    const toggleSidebarMobileClose =
+      document.getElementById("toggleSidebarMobileClose")!
+    const toggleSidebarMobileSearch =
+      document.getElementById("toggleSidebarMobileSearch")!
 
-    toggleSidebarMobileSearch?.addEventListener("click", () => {
-      toggleSidebarMobile(
-        sidebar,
-        sidebarBackdrop,
-        toggleSidebarMobileHamburger,
-        toggleSidebarMobileClose
-      )
-    })
+    toggleSidebarMobileSearch?.addEventListener(
+      "click",
+      () => {
+        toggleSidebarMobile(
+          sidebar,
+          sidebarBackdrop,
+          toggleSidebarMobileHamburger,
+          toggleSidebarMobileClose,
+        )
+      },
+    )
 
     toggleSidebarMobileEl?.addEventListener("click", () => {
       toggleSidebarMobile(
         sidebar,
         sidebarBackdrop,
         toggleSidebarMobileHamburger,
-        toggleSidebarMobileClose
+        toggleSidebarMobileClose,
       )
     })
 
@@ -472,7 +527,7 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
         sidebar,
         sidebarBackdrop,
         toggleSidebarMobileHamburger,
-        toggleSidebarMobileClose
+        toggleSidebarMobileClose,
       )
     })
   }

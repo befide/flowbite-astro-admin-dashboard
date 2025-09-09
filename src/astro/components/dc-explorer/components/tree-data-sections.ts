@@ -4,28 +4,46 @@ import { charts, treeDataTableTileId } from "."
 
 export const treeDataSectionsTileId = (
   collection: string,
-  dimension: string
+  dimension: string,
 ) => {
-  return "dc-explorer__tile--" + collection + "-" + dimension
+  return (
+    "dc-explorer__tile--" + collection + "-" + dimension
+  )
 }
-export const treeDataSectionsId = (collection: string, dimension: string) => {
-  return "dc-explorer__tree-sections--" + collection + "-" + dimension
+export const treeDataSectionsId = (
+  collection: string,
+  dimension: string,
+) => {
+  return (
+    "dc-explorer__tree-sections--" +
+    collection +
+    "-" +
+    dimension
+  )
 }
 
 export function createTreeDataSectionsChart(
   collection: string,
   dimension: string,
   tableHeaderConfig: any,
-  cfDimension: any
+  cfDimension: any,
 ) {
-  const tileElementIdSelector = "#" + treeDataTableTileId(collection, dimension)
-  const chartElementIdSelector = "#" + treeDataSectionsId(collection, dimension)
+  const tileElementIdSelector =
+    "#" + treeDataTableTileId(collection, dimension)
+  const chartElementIdSelector =
+    "#" + treeDataSectionsId(collection, dimension)
 
-  const chart = new TreeDataSections(tileElementIdSelector, cfDimension)
+  const chart = new TreeDataSections(
+    tileElementIdSelector,
+    cfDimension,
+  )
 
   chart.columns(tableHeaderConfig)
 
-  charts.set(treeDataSectionsId(collection, dimension), chart)
+  charts.set(
+    treeDataSectionsId(collection, dimension),
+    chart,
+  )
 
   chart.render()
 
