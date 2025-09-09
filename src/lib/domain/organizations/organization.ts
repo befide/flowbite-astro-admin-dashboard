@@ -3,11 +3,12 @@ import { useTranslations } from "@astro/i18n/utils"
 
 import { getLocalizedValue, getTaxonomyReferencesTerm } from "../../content.ts"
 
-import { descending, sum } from "d3"
+import { ascending, descending, sum } from "d3"
 import { getRoots } from "../../content.tree.ts"
 import type { OrganizationDto, OrganizationSchema } from "@lib/common"
 
-import { Course, Thesis } from "@lib/domain"
+import { Thesis } from "@lib/domain"
+import type { FacilitySchema } from "../../common.d"
 
 export class Organization {
   _data: OrganizationSchema
@@ -30,7 +31,7 @@ export class Organization {
     //   !data.lifeCycle?.currentStatus__taxonomyId ||
     //   data.lifeCycle?.currentStatus__taxonomyId.indexOf("/" + options.lifeCycleCategory) > -1),
 
-    return facilities.map((d) => d.data)
+    return facilities.map((d) => d.data).sort((a: FacilitySchema, b: FacilitySchema) => ascending(a.id, b.id))
     // return myFacilities.map((d) => new Facility(d.data as FacilitySchema))
   }
 

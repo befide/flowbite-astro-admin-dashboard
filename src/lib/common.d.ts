@@ -1,5 +1,4 @@
 import type { ThesisSchema } from "@lib/domain"
-import { z } from "astro:content"
 
 export type DomainObjectSchema = {
   id: string
@@ -343,7 +342,7 @@ export type FacilityDto = Pick<FacilitySchema, "id"> & {
   length__m: number | null
 }
 
-type TaxonomyItemSchema = {
+export type TaxonomyItemSchema = {
   /** Unique identifier for this entry. */
   id: string
   /** Identifier of the parent entry, if any. */

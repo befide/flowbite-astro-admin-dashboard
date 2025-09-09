@@ -8,6 +8,6 @@ export function getLangFromUrl(url: URL) {
 
 export function useTranslations(lang: keyof typeof ui) {
   return function t(key: string) {
-    return ui[lang || "en"][key]
+    return ui[lang || "en"][key] || key
   }
 }

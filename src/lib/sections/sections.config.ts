@@ -30,18 +30,15 @@ export const defineSectionCollection = defineCollection({
     base: "./src/content/docs",
     // @ts-ignore
     parser: (entry) => {
-      const sectionNumbers = entry.data.sectionNumber
-        ? (entry.data.sectionNumber as string).split(".")
-        : []
+      const sectionNumbers = entry.data.sectionNumber ? (entry.data.sectionNumber as string).split(".") : []
       const sectionDepth = sectionNumbers.length
-      const slug = entry.id.replaceAll(/([0-9-]*)__/gm, "")
 
       const computedData = {
         sectionNumbers,
         sectionDepth,
         // slug,
       }
-      console.log(computedData)
+      // console.log(computedData)
       return mergeDeep(entry, { data: computedData })
     },
   }),

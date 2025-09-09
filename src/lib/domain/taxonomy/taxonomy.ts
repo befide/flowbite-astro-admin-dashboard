@@ -10,33 +10,21 @@ export const allItems = async (locale = "en") =>
   (await getCollection("taxonomyItems"))
     .map(({ data }) => data)
 
-    .sort((a, b) =>
-      getLocalizedValue(a, "term", locale).localeCompare(
-        getLocalizedValue(b, "term", locale),
-      ),
-    )
+    .sort((a, b) => getLocalizedValue(a, "term", locale).localeCompare(getLocalizedValue(b, "term", locale)))
 
 export const taxonomyItemRoots = async (locale = "en") => {
   return getTaxonomyItemRoots(await allItems(locale))
 }
-export const getTaxonomyItemRoots = (
-  items: TaxonomyItemSchema[],
-) => {
+export const getTaxonomyItemRoots = (items: TaxonomyItemSchema[]) => {
   return getRoots<TaxonomyItemSchema>(items)
 }
 
 export const taxonomyForAPI = async (locale = "en") => {
   const items = await allItems(locale)
 
-  console.log(items)
+  // console.log(items)
 
-  return await Promise.all(
-    items.map(
-      async (item) =>
-        await new TaxonomyItem(item).getDto(locale),
-    ),
-
-  )
+  return await Promise.all(items.map(async (item) => await new TaxonomyItem(item).getDto(locale)))
 
   // const roots = await taxonomyItemRoots(locale)
   // const list = flattenTreeNodes(roots).map((item) => ({

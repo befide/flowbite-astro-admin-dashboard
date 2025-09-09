@@ -1,6 +1,6 @@
-import type { FacilitySchema, NestableDomainObjectSchema, OrganizationSchema } from "@lib/common.d.ts"
+import type { FacilitySchema, TaxonomyItemSchema, NestableDomainObjectSchema, OrganizationSchema } from "@lib/common.d.ts"
 
-type TreeSchema = OrganizationSchema | FacilitySchema
+type TreeSchema = OrganizationSchema | FacilitySchema | TaxonomyItemSchema
 
 export type TreeNode<Datum extends TreeSchema> = {
   id: string

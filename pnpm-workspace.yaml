@@ -1,0 +1,10 @@
+ignoredBuiltDependencies:
+  - '@parcel/watcher'
+  - '@tailwindcss/oxide'
+  - core-js-pure
+  - esbuild
+  - unrs-resolver
+
+onlyBuiltDependencies:
+  - puppeteer
+  - sharp

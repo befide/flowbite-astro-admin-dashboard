@@ -3,9 +3,12 @@ import { flattenTreeNodes } from "@lib/content.tree"
 import { getFacilityRoots } from "@lib/domain"
 import type { Facility } from "@/lib/domain/facilities/facility"
 import {getEntry} from "astro:content"
-import type { FacilitySchema } from "../../../lib/common"
+import type { FacilitySchema, OrganizationSchema } from "../../../lib/common"
 import { getRoots } from "../../../lib/content.tree"
+import { getLangFromUrl, useTranslations } from "../../i18n/utils"
 
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 interface Props {
   facilities: FacilitySchema[]
@@ -13,7 +16,7 @@ interface Props {
 let {facilities} = Astro.props
 
 const roots = getRoots<OrganizationSchema>(facilities)
-console.log(facilities)
+
 
 
 const facilityRoots = getFacilityRoots (facilities)

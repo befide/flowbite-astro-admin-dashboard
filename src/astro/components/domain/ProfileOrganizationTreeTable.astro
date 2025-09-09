@@ -1,10 +1,16 @@
 ---
 import fastCartesian from "fast-cartesian"
 import MemberIcon from "./MemberIcon.astro"
-import { careerLevels, disciplinaryProfessions, genders, Organization } from "../../../lib/domain"
-import { flattenTreeNodes, getRoots } from "../../../lib/content.tree"
+import { careerLevels, disciplinaryProfessions, genders, Organization } from "@lib/domain"
+import { flattenTreeNodes, getRoots, type TreeNode } from "@lib/content.tree"
+
+import type { OrganizationSchema } from "@lib/common.d.ts"
+
+import { getLangFromUrl, useTranslations } from "../../i18n/utils"
 import { getValue } from "../../../lib/content"
-import { OrganizationSchema } from "../../../lib/common"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 interface Props {
   organization: Organization
@@ -13,14 +19,14 @@ let { organization } = Astro.props
 
 const product = fastCartesian([[...careerLevels], [...disciplinaryProfessions], [...genders]])
 
-const organisations = (await organization.getOrganizationList()).map((d) => ({ ...d, parent__id: d.parent__id === "community" ? null : d.parent__id }))
-const roots = getRoots<OrganizationSchema>(organisations)
+const organisations = (await organization.getOrganizationList()).map((d: any) => ({ ...d, parent__id: d.parent__id === "community" ? null : d.parent__id }))
+let roots: TreeNode<OrganizationSchema>[] = getRoots<OrganizationSchema>(organisations)
 
 const list = flattenTreeNodes(roots)
 ---
 
 <section>
-  <table class="tree-table">
+  <table class="not-format table">
     <thead>
       <tr>
         <th class="name">Name</th>
@@ -29,7 +35,7 @@ const list = flattenTreeNodes(roots)
         {
           careerLevels.map((d) => (
             <th class="number">
-              <span>{d}</span>
+              <span>{t(d)}</span>
               <MemberIcon careerLevel={d} />
             </th>
           ))
@@ -37,7 +43,7 @@ const list = flattenTreeNodes(roots)
         {
           disciplinaryProfessions.map((d) => (
             <th class="number">
-              <span>{d}</span>
+              <span>{t(d)}</span>
               <MemberIcon disciplinaryProfession={d} />
             </th>
           ))
@@ -45,12 +51,12 @@ const list = flattenTreeNodes(roots)
         {
           genders.map((d) => (
             <th class="number">
-              <span>{d}</span>
+              <span>{t(d)}</span>
               <MemberIcon gender={d} />
             </th>
           ))
         }
-        <th class="number"><span>members recursive count</span><MemberIcon /></th>
+        <th class="number"><span>recursive sum</span></th>
       </tr>
     </thead>
     <tbody>
@@ -74,9 +80,11 @@ const list = flattenTreeNodes(roots)
             {genders.map((d) => (
               <td class="number">{getValue(item.data.uniquePeopleCountRecursiveSum, d) || "-"}</td>
             ))}
-            <td class="number">
-              <strong>{item.data.uniquePeopleCountRecursiveSum?.total}</strong>
-            </td>
+            {
+              <td class="number">
+                <strong>{item.data.uniquePeopleCountRecursiveSum?.total}</strong>
+              </td>
+            }
           </tr>
         ))
       }
@@ -85,49 +93,71 @@ const list = flattenTreeNodes(roots)
 </section>
 
 <style>
+  thead {
+    //height: 5rem;
+  }
   thead tr:first-child th {
     position: relative;
-    height: 5rem;
-    vertical-align: bottom;
+    //height: 5rem;
+    //vertical-align: bottom;
   }
   thead tr:first-child th span {
     display: block;
-    transform-origin: left bottom;
+    white-space: nowrap;
+    //width: 2rem;
+    line-height: 0.5rem;
+    font-size: var(--text-2xs);
+    transform-origin: bottom right;
     position: absolute;
+    right: 0.6rem;
+    bottom: 0.25rem;
     font-weight: 300;
-
-    transform: rotate(45deg) translate(calc(-100% - 1rem), 0rem);
+    text-align: right;
+    overflow: visible;
+    transform: rotate(90deg);
   }
-  .tree-table thead th.number,
-  .tree-table td.number {
-    width: 5ch;
+  thead th.number,
+  td.number {
+    width: 3ch;
   }
 
-  .tree-table th.members,
-  .tree-table td.members {
-    width: 20ch;
+  th.members,
+  td.members {
+    width: 20%;
     text-align: right;
   }
-  .tree-table th.name,
-  .tree-table td.name {
-    width: 40%;
+  th.name,
+  td.name {
+    width: 60%;
     white-space: break-spaces;
-    line-height: 0.75rem;
+    line-height: 0.6rem;
+    padding-bottom: 0.25rem;
+  }
+  @media print {
+    .members {
+      //display: none;
+    }
   }
 
   tr[data-depth="1"] .tree-table__indent {
-    text-indent: 0.25rem;
+    padding-left: 0.5rem;
   }
   tr[data-depth="2"] .tree-table__indent {
-    text-indent: 0.5rem;
+    padding-left: 0.75rem;
   }
   tr[data-depth="3"] .tree-table__indent {
-    text-indent: 1rem;
+    padding-left: 1rem;
   }
   tr[data-depth="4"] .tree-table__indent {
-    text-indent: 1.5rem;
+    padding-left: 1.25rem;
   }
   tr[data-depth="5"] .tree-table__indent {
-    text-indent: 2rem;
+    padding-left: 1.5rem;
+  }
+  tr[data-depth="6"] .tree-table__indent {
+    padding-left: 1.75rem;
+  }
+  td {
+    white-space: normal;
   }
 </style>

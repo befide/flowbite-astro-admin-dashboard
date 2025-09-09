@@ -1,61 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { type Axis, format, scaleLinear, select } from "d3"
 import { barChart } from "dc"
-import {
-  baselineHeight,
-  charts,
-  getChartWidth,
-  margins,
-} from "."
+import { baselineHeight, charts, getChartWidth, margins } from "."
 
-export const barChartTileId = (
-  collection: string,
-  dimension: string,
-) => {
-  return (
-    "dc-explorer__tile--" + collection + "-" + dimension
-  )
+export const barChartTileId = (collection: string, dimension: string) => {
+  return "dc-explorer__tile--" + collection + "-" + dimension
 }
-export const barChartId = (
-  collection: string,
-  dimension: string,
-) => {
-  return (
-    "dc-explorer__bar-chart--" +
-    collection +
-    "-" +
-    dimension
-  )
+export const barChartId = (collection: string, dimension: string) => {
+  return "dc-explorer__bar-chart--" + collection + "-" + dimension
 }
 
-export function createBarChart(
-  collection: string,
-  dimension: string,
-  cfDimension: any,
-  cfGroup: any,
-) {
-  const tileElementIdSelector =
-    "#" + barChartTileId(collection, dimension)
-  const chartElementIdSelector =
-    "#" + barChartId(collection, dimension)
+export function createBarChart(collection: string, dimension: string, cfDimension: any, cfGroup: any) {
+  const tileElementIdSelector = "#" + barChartTileId(collection, dimension)
+  const chartElementIdSelector = "#" + barChartId(collection, dimension)
 
-  console.log({ dimension })
+  // console.log({ dimension })
   const domain = cfGroup
     .top(Infinity)
     .map((y: { key: number }) => +y.key)
     // .filter((y) => y !== "")
     .sort()
-  console.log({ cfGroup })
+  // console.log({ cfGroup })
 
   const filterWidth = getChartWidth(chartElementIdSelector)
   const tileElement = select(tileElementIdSelector)
   const chart = barChart(chartElementIdSelector)
-    .x(
-      scaleLinear().domain([
-        (domain[0] || 0) - 0,
-        domain[domain.length - 1] + 0.5,
-      ]),
-    )
+    .x(scaleLinear().domain([(domain[0] || 0) - 0, domain[domain.length - 1] + 0.5]))
     .width(filterWidth)
     .height(4 * baselineHeight)
     .elasticY(false)
@@ -66,7 +36,7 @@ export function createBarChart(
     .margins({
       ...margins,
       left: 1.5 * baselineHeight,
-      bottom: 1 * baselineHeight,
+      bottom: baselineHeight,
     })
     .renderHorizontalGridLines(true)
 

@@ -1,5 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
+  "include": ["./astro.config.ts", "./src/**/*.ts", "./src/**/*.astro"],
   "exclude": ["./scripts/download-grist.ts"],
   "compilerOptions": {
     "types": [

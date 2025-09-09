@@ -14,7 +14,7 @@ const __dirname = import.meta.dirname
 //   return d ? d.replaceAll("b:", "b/").replaceAll("g:", "g/") : null
 //   return d ? d.toLowerCase().replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue").replaceAll(":", "!").replaceAll("/", "___").replaceAll(".", "__").replaceAll(" ", "-").trim() : null
 // }
-function slugify(d: string) {
+export function slugify(d: string) {
   return d ? d.toLowerCase().replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue").replaceAll(":", "!").replaceAll("/", "___").replaceAll(".", "__").replaceAll(" ", "-").trim() : null
 }
 

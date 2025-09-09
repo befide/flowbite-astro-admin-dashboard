@@ -14,7 +14,14 @@
     padding-left: 0 !important;
   }
   html {
+    font-size: 16px;
   }
+  @media print {
+    thead .member-icon {
+      display: none !important;
+    }
+  }
+
   #main-content footer,
   nav {
     display: none;

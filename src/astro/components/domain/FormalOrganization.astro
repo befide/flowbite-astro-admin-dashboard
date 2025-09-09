@@ -28,11 +28,11 @@ const userFacilities = await organization.getFacilityDefinitions(undefined, true
 const testFacilities = await organization.getFacilityDefinitions(undefined, false)
 ---
 
-<section class="organization format">
+<section class="organization format" data-organisation-type={organization._data.befideOrganizationCategories.join(" ")}>
   <header>
-    <h3 class="uppercase">
+    <h2 class="uppercase">
       {getLocalizedValue(organization, "_data.label.fullName", locale)}
-    </h3>
+    </h2>
   </header>
   <section>
     <h3>General information</h3>
@@ -99,5 +99,11 @@ const testFacilities = await organization.getFacilityDefinitions(undefined, fals
 <style>
   section.organization {
     page-break-before: always;
+    padding-top: 2rem;
+    margin-top: 0.5rem;
+  }
+  [data-organisation-type="university"] {
+    border-color: var(--kfb__red) !important;
+    border-top: 0.5rem solid;
   }
 </style>

@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { type CollectionEntry, type CollectionKey, getEntry } from "astro:content"
-import { slug } from "../../scripts/download-grist.ts"
 
 export function getValue(obj: any, path: string) {
   const pathParts = path.split(".")
@@ -42,7 +41,7 @@ export const getTaxonomyReferencesTerm = async (ids: string[] = [], locale = "en
   return (
     (await Promise.all(
       ids
-        .map((d) => slug(d))
+        .map((d) => d)
         .map(async (d) => {
           return await getEntry("taxonomyItems", d)
         }),
