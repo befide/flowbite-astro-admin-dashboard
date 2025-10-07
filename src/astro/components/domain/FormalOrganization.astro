@@ -27,7 +27,7 @@ const userFacilities = await organization.getFacilityDefinitions(undefined, true
 const testFacilities = await organization.getFacilityDefinitions(undefined, false)
 ---
 
-<section class="organization format" data-organisation-type={organization._data.befideOrganizationCategories.join(" ")}>
+<section class="organization format" data-organisation-type={organization._data.cate.join(" ")}>
   <header>
     <h2 class="uppercase">
       {getLocalizedValue(organization, "_data.label.fullName", locale)}

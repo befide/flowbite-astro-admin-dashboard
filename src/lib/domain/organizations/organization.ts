@@ -18,7 +18,7 @@ export class Organization {
   }
 
   async getTheses() {
-    const thesesData = await getCollection("theses", ({ data }) => data.degree.grantedBy__organizationsId === this._data.id)
+    const thesesData = await getCollection("theses", ({ data }) => data.degree.grantedBy__organizationsId === this._data.id.replace("community/", ""))
     return thesesData.sort((a, b) => descending(a.data.year, b.data.year)).map((d) => new Thesis(d.data))
   }
 
@@ -65,6 +65,7 @@ export class Organization {
       uniquePeopleCountRecursiveSum: this._data.uniquePeopleCountRecursiveSum,
       uniquePeopleCount: this._data.uniquePeopleCount,
       instanceOfs__term: await getTaxonomyReferencesTerm(this._data.instanceOfs__taxonomyID, locale),
+      category: this._data.category,
       theses_count,
       with_theses: theses_count > 0,
       facilities_count,

@@ -8,7 +8,7 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
-    "build:download-grist": "deno ./scripts/download-grist.ts",
+    "build:download-grist": "tsx ./scripts/download-grist.ts",
     "build:download-references-from-zotero": "bun ./scripts/download-references-from-zotero.js",
     "build:download-theses-from-zotero": "bun ./scripts/download-theses-from-zotero.js",
     "dev": "astro dev",
@@ -89,6 +89,7 @@
     "stylelint-order": "7.0.0",
     "stylelint-prettier": "5.0.3",
     "ts-node": "10.9.2",
+    "tsx": "4.20.6",
     "unified-engine": "11.2.2",
     "unified-prettier": "2.0.1",
     "vite-plugin-pwa": "1.0.3",

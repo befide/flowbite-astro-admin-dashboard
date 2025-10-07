@@ -3,12 +3,13 @@
   "include": [
     "./astro.config.ts",
     "./src/**/*.ts",
-    "./src/**/*.astro"
-  ],
-  "exclude": [
+    "./src/**/*.astro",
     "./scripts/download-grist.ts"
   ],
+  "exclude": [],
   "compilerOptions": {
+    "module": "esnext",
+    "target": "es2024",
     "types": [
       "astro/client",
       "vite-plugin-pwa/vanillajs",

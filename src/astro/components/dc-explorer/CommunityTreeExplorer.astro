@@ -7,22 +7,16 @@ import DCExplorerTreeDataTable from "@components/dc-explorer/components/DCExplor
 
 <DCExplorer collection="community">
   <div class="dc-explorer__filters">
-    <DCExplorerCount
-      collection="community"
-      dimension="count"
-    />
+    <DCExplorerCount collection="community" dimension="count" />
 
     <!-- <DCExplorerRowChart
       collection="community"
-      dimension="befideOrganizationCategories"
+      dimension="categopry"
       title={t("dc-explorer.tiles.title.categories")}
       dimensionIsArray={true}
     /> -->
   </div>
   <div class="dc-explorer__items">
-    <DCExplorerTreeDataTable
-      collection="community"
-      dimension="id"
-    />
+    <DCExplorerTreeDataTable collection="community" dimension="id" />
   </div>
 </DCExplorer>

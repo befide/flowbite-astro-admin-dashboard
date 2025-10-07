@@ -24,7 +24,7 @@ export type OrganizationSchema = NestableDomainObjectSchema & {
   parent__id: string | null
   topLevel__id: string | null
   instanceOfs__taxonomyID: string[]
-  befideOrganizationCategories: ("fraunhofer" | "hgf" | "international" | "mpg" | "government" | "university" | "committee" | "funder" | "root" | "consortium")[]
+  category: ("fraunhofer" | "hgf" | "hgf-university" | "hgf-university-mpg" | "international" | "mpg" | "government" | "university" | "committee" | "funder" | "root" | "consortium")[]
   partOfCommunityDegree: "none" | "full" | "partial"
   label: {
     fullName: {
@@ -208,6 +208,7 @@ export type OrganizationSchema = NestableDomainObjectSchema & {
 
 export type OrganizationDto = Pick<OrganizationSchema, "uniquePeopleCount" | "uniquePeopleCountRecursiveSum"> & {
   id: string
+  category: string
   parent__id: string | null
   instanceOfs__term: string[]
   label__fullName: string

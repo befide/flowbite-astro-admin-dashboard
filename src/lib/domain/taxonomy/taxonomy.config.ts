@@ -4,7 +4,7 @@ import { Locales, LocalizedString, NullableLocalizedString, ReviewZodSchema } fr
 import { NestableDomainObjectZodSchema } from "@lib/content.common.ts"
 
 const TaxonomyItemZodSchema = NestableDomainObjectZodSchema.extend({
-  taxonomyURI: z.string(),
+  taxonomyURI: z.string().nullable(),
   term: LocalizedString,
   definition: NullableLocalizedString,
   abbreviations: z.record(Locales, z.array(z.string())),

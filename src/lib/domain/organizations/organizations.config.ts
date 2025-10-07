@@ -23,15 +23,13 @@ export const peopleCountAcademicCareerLevel = z.object({
   bachelorStudent: peopleCountDiscipline,
 })
 
-export const BefideOrganizationMetaBefideOrganizationCategories = z.enum(["fraunhofer", "hgf", "international", "mpg", "government", "university", "committee", "funder", "root", "consortium"])
+export const OrganizationCategories = z.enum(["fraunhofer", "hgf", "hgf-university", "hgf-university-mpg", "international", "mpg", "government", "university", "committee", "funder", "root", "consortium"])
 export const PartOFCommunityDegreeSchema = z.enum(["none", "partial", "full"])
 
 export const OrganizationZodSchema = NestableDomainObjectZodSchema.extend({
   topLevel__id: z.string().nullable(),
   instanceOfs__taxonomyID: z.array(z.string()),
-  befideOrganizationCategories: z.preprocess((input) => {
-    return (input + "").split(/\s?,\s?/).toSorted()
-  }, z.array(BefideOrganizationMetaBefideOrganizationCategories)),
+  category: OrganizationCategories,
 
   partOfCommunityDegree: PartOFCommunityDegreeSchema.describe("Indicates to what degree the unit is part of the community."),
 

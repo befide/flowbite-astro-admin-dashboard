@@ -1,6 +1,6 @@
 import { createFormatValue, csv2json, json2csv } from "csv42"
-import fs from "fs"
-import path from "path"
+import fs from "node:fs"
+import path from "node:path"
 import YAML from "yaml"
 import { getRoots } from "@lib/content.tree.ts"
 
@@ -169,12 +169,12 @@ const doOrganizations = async () =>
         topLevel__id: d.topLevel__id,
         partOfCommunityDegree: d.partOfCommunityDegree,
         instanceOfs__taxonomyID: classes,
-        isFormalOrganization: classes.filter((d) => d === "g/organization/formal-organization").length > 0,
-        isResearchInstitution: classes.filter((d) => d === "g/organization/research-institution").length > 0,
-        isUniversity: classes.filter((d) => d === "g/organization/university").length > 0,
-        isWorkingGroup: classes.filter((d) => d === "g/organization/working-group").length > 0,
-        isDepartment: classes.filter((d) => d === "g/organization/formal-organization/department" || d === "g/organization/formal-organization/sub-department").length > 0,
-        befideOrganizationCategories: stringToArray(d.befideOrganizationCategories),
+        isFormalOrganization: classes.filter((d) => d === "/g/organization/formal-organization").length > 0,
+        isResearchInstitution: classes.filter((d) => d === "/g/organization/research-institution").length > 0,
+        isUniversity: classes.filter((d) => d === "/g/organization/university").length > 0,
+        isWorkingGroup: classes.filter((d) => d === "/g/organization/working-group").length > 0,
+        isDepartment: classes.filter((d) => d === "/g/organization/formal-organization/department" || d === "g/organization/formal-organization/sub-department").length > 0,
+        category: d.category,
         label: d.label,
         tagline: d.tagline,
         description: d.description,
@@ -191,7 +191,7 @@ const doOrganizations = async () =>
       }
     },
     (data: any[]) => {
-      const communityOrganizations = data.filter((d: { partOfCommunityDegree: any; befideOrganizationCategories: string | string[] }) => d.partOfCommunityDegree !== "none" && d.befideOrganizationCategories.indexOf("committee") !== 0)
+      const communityOrganizations = data.filter((d: { partOfCommunityDegree: any; category: string | string[] }) => d.partOfCommunityDegree !== "none" && d.category !== "committee")
       const roots = getRoots(communityOrganizations)
       const rolledUpNode = rollupUniquePeopleCountSum(roots[0])
       console.log(rolledUpNode)

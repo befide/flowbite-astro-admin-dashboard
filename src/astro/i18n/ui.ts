@@ -70,6 +70,11 @@ export const ui = {
     "organizationCategory.short.international": "International",
     "organizationCategory.short.mpg": "MPG",
     "organizationCategory.short.university": "Uni",
+    "dc-explorer.tiles.title.with_facilities": "with facilities",
+    "dc-explorer.tiles.title.with_teachingEvents": "with teaching events",
+    "dc-explorer.tiles.title.with_theses": "with doctoral theses",
+    "dc-explorer.tiles.title.with_userFacilities": "with user facilities",
+
     "taxonomy.type.accelerating-technique": "Accelerating Technique",
     "taxonomy.type.accelerator-based-facility-type": "accelerator-based Facility Type",
     "taxonomy.type.accelerator-based-facility": "Accelerator-based Facility",

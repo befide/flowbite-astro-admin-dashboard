@@ -1,49 +1,23 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { select } from "d3"
 import { rowChart } from "dc"
-import {
-  baselineHeight,
-  charts,
-  getChartWidth,
-  margins,
-} from "."
+import { baselineHeight, charts, getChartWidth, margins } from "."
 
-export const rowChartTileId = (
-  collection: string,
-  dimension: string,
-) => {
-  return (
-    "dc-explorer__tile--" + collection + "-" + dimension
-  )
+export const rowChartTileId = (collection: string, dimension: string) => {
+  return "dc-explorer__tile--" + collection + "-" + dimension
 }
-export const rowChartId = (
-  collection: string,
-  dimension: string,
-) => {
-  return (
-    "dc-explorer__row-chart--" +
-    collection +
-    "-" +
-    dimension
-  )
+export const rowChartId = (collection: string, dimension: string) => {
+  return "dc-explorer__row-chart--" + collection + "-" + dimension
 }
 
-export function createRowChart(
-  collection: string,
-  dimension: string,
-  cfDimension: any,
-  cfGroup: any,
-) {
-  const tileElementIdSelector =
-    "#" + rowChartTileId(collection, dimension)
-  const chartElementIdSelector =
-    "#" + rowChartId(collection, dimension)
+export function createRowChart(collection: string, dimension: string, cfDimension: any, cfGroup: any) {
+  const tileElementIdSelector = "#" + rowChartTileId(collection, dimension)
+  const chartElementIdSelector = "#" + rowChartId(collection, dimension)
 
   const filterWidth = getChartWidth(chartElementIdSelector)
 
   const tileElement = select(tileElementIdSelector)
-  const height =
-    (cfGroup.all().length * 0.5 + 1) * baselineHeight
+  const height = (cfGroup.all().length * 0.5 + 1) * baselineHeight
 
   const chart = rowChart(chartElementIdSelector)
     .width(filterWidth)
@@ -53,7 +27,7 @@ export function createRowChart(
     .labelOffsetX(0 * baselineHeight)
     .titleLabelOffsetX(filterWidth - 1.75 * baselineHeight)
     .title((d) => d.value)
-    .label((d) => d.key)
+    .label((d) => (d.key ? d.key : "false"))
     .margins({
       ...margins,
       top: 0.5 * baselineHeight,

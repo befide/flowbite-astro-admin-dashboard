@@ -1,8 +1,5 @@
 import { allCommunityOrganizations, allCommunityTopLevelOrganizations, careerLevels, communityForAPI, disciplinaryProfessions, genders, Organization, organizationsForAPI } from "@domain/organizations"
 import type { APIRoute, GetStaticPaths, InferGetStaticPropsType } from "astro"
-import { json2csv } from "csv42"
-import { formatValue } from "@/pages/[locale]/api/community.csv.ts"
-import type { OrganizationDto } from "@lib/common.d"
 import fastCartesian from "fast-cartesian"
 import { getValue } from "@lib/content.ts"
 const peopleKeys = fastCartesian([[...careerLevels], [...disciplinaryProfessions], [...genders]]).map((p) => p.join("."))
@@ -29,23 +26,31 @@ export const GET: APIRoute = async ({ props }) => {
     .filter((d) => d.id !== "community")
     .map((o: Organization) => {
       const subtype =
-        o._data.instanceOfs__taxonomyID.indexOf("g/organization/formal-organization") > -1
+        o._data.instanceOfs__taxonomyID.indexOf("/g/organization/formal-organization") > -1
           ? "top-level"
-          : o._data.instanceOfs__taxonomyID.indexOf("g/organization/working-group") > -1
+          : o._data.instanceOfs__taxonomyID.indexOf("/g/organization/working-group") > -1
             ? "group"
             : o._data.partOfCommunityDegree === "partial"
               ? "intermediate-partial"
               : "intermediate-full"
 
       return {
-        id: "community/" + o._data.id,
-        parent__id: o._data.parent__id ? "community/" + o._data.parent__id : null,
+        id: o._data.id,
+        parent__id: o._data.parent__id ? o._data.parent__id : null,
         type: "org",
+        sector: 0,
         subtype,
+        topLevel__id: o._data.topLevel__id,
         partOfCommunityDegree: o._data.partOfCommunityDegree,
-        isUniversity: o._data.instanceOfs__taxonomyID.indexOf("g/organization/university") > -1,
+        isUniversity: o._data.instanceOfs__taxonomyID.indexOf("/g/organization/university") > -1,
         label: o._data.label.short.en || o._data.label.fullName.en,
       }
+    })
+  organizationNodes.sort((a, b) => (a.isUniversity ? -1 : 1) * a.label.localeCompare(b.label))
+  organizationNodes
+    .filter((d) => d.subtype === "top-level")
+    .forEach((d, i) => {
+      d.sector = i
     })
 
   const peopleNodes = community
@@ -56,14 +61,14 @@ export const GET: APIRoute = async ({ props }) => {
     })
     .map((d, i) => ({ ...d, id: "p-" + i }))
 
-  const groupLinks = peopleNodes.map((p) => ({ source: p.id, target: "community/" + p.group, subtype: p.subtype, type: "group-member" }))
+  const groupLinks = peopleNodes.map((p) => ({ source: p.id, target: p.group, subtype: p.subtype, type: "group-member" }))
   const affiliationLinks = peopleNodes.map((p) => ({ source: p.id, target: "community/" + p.affiliation, type: "has-affiliation" }))
 
   const organizationLinks = community
     .filter((d) => d._data.parent__id && d._data.parent__id !== "community")
     .map((o: Organization) => ({
-      source: "community/" + o._data.id,
-      target: "community/" + o._data.parent__id,
+      source: o._data.id,
+      target: o._data.parent__id,
       type: "has-parent",
     }))
 

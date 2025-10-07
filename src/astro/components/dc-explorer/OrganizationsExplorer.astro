@@ -1,8 +1,5 @@
 ---
-import {
-  getLangFromUrl,
-  useTranslations,
-} from "@astro/i18n/utils"
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -16,65 +13,22 @@ import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
 
 <DCExplorer collection="organizations">
   <div class="dc-explorer__filters">
-    <DCExplorerCount
-      collection="organizations"
-      dimension="count"
-    />
-    <DCExplorerRowChart
-      collection="organizations"
-      dimension="instanceOfs__term"
-      title="Category"
-      dimensionIsArray={true}
-    />
-    <DCExplorerRowChart
-      collection="organizations"
-      dimension="location__country"
-      title="Country"
-    />
+    <DCExplorerCount collection="organizations" dimension="count" />
+    <DCExplorerRowChart collection="organizations" dimension="category" title="Category" />
+    <DCExplorerRowChart collection="organizations" dimension="location__country" title="Country" />
 
-    <DCExplorerRowChart
-      collection="organizations"
-      dimension="with_userFacilities"
-      title={t(
-        "dc-explorer.tiles.title.with_userFacilities",
-      )}
-    />
+    <DCExplorerRowChart collection="organizations" dimension="with_userFacilities" title={t("dc-explorer.tiles.title.with_userFacilities")} />
 
-    <DCExplorerRowChart
-      collection="organizations"
-      dimension="with_facilities"
-      title={t("dc-explorer.tiles.title.with_facilities")}
-    />
-    <DCExplorerRowChart
-      collection="organizations"
-      dimension="with_theses"
-      title={t("dc-explorer.tiles.title.with_theses")}
-    />
-    <DCExplorerRowChart
-      collection="organizations"
-      dimension="with_teachingEvents"
-      title={t(
-        "dc-explorer.tiles.title.with_teachingEvents",
-      )}
-    />
-    <DCExplorerBarChart
-      collection="organizations"
-      dimension="people_count"
-      title={t("dc-explorer.tiles.title.people_count")}
-    />
-    <DCExplorerBarChart
-      collection="organizations"
-      dimension="theses_count"
-      title={t("dc-explorer.tiles.title.theses_count")}
-    />
+    <DCExplorerRowChart collection="organizations" dimension="with_facilities" title={t("dc-explorer.tiles.title.with_facilities")} />
+    <DCExplorerRowChart collection="organizations" dimension="with_theses" title={t("dc-explorer.tiles.title.with_theses")} />
+    <DCExplorerRowChart collection="organizations" dimension="with_teachingEvents" title={t("dc-explorer.tiles.title.with_teachingEvents")} />
+    <DCExplorerBarChart collection="organizations" dimension="people_count" title={t("dc-explorer.tiles.title.people_count")} />
+    <DCExplorerBarChart collection="organizations" dimension="theses_count" title={t("dc-explorer.tiles.title.theses_count")} />
 
     <!-- </details> -->
   </div>
   <div class="dc-explorer__items">
-    <DCExplorerTable
-      collection="organizations"
-      dimension="id"
-    />
+    <DCExplorerTable collection="organizations" dimension="id" />
   </div>
   <div class="dc-explorer__item">
     <!-- <DCExplorerItemCard collection="organizations" dimension="id" /> -->

@@ -1,188 +1,64 @@
----
-import fastCartesian from "fast-cartesian"
-import { getValue } from "@lib/content.ts"
-const peopleKeys = fastCartesian([[...careerLevels], [...disciplinaryProfessions], [...genders]]).map((p) => p.join("."))
-
-import { allCommunityOrganizations, careerLevels, disciplinaryProfessions, genders, Organization } from "@/lib/domain"
-import { select, type Simulation } from "d3"
-
-const organizations = await allCommunityOrganizations()
-
-const community = await Promise.all(organizations.map(async (organization) => await new Organization(organization.data)))
-
-const organizationNodes = community.map((o: Organization) => {
-  const subtype =
-    o._data.instanceOfs__taxonomyID.indexOf("g/organization/formal-organization") > -1
-      ? "top-level"
-      : o._data.instanceOfs__taxonomyID.indexOf("g/organization/working-group") > -1
-        ? "group"
-        : o._data.partOfCommunityDegree === "partial"
-          ? "intermediate-partial"
-          : "intermediate-full"
-
-  return {
-    fx: Math.random() * 100,
-    fy: Math.random() * 100,
-    // x: Math.random() * 100,
-    id: o._data.id,
-    parent__id: o._data.parent__id,
-    type: "org",
-    subtype,
-    partOfCommunityDegree: o._data.partOfCommunityDegree,
-    isUniversity: o._data.instanceOfs__taxonomyID.indexOf("g/organization/university") > -1,
-    label: o._data.label.short.en || o._data.label.fullName.en,
-  }
-})
-
-const peopleNodes = community
-  .flatMap((o: Organization) => {
-    return peopleKeys
-      .filter((p) => getValue(o._data.uniquePeopleCount, p) > 0)
-      .flatMap((p) => new Array(getValue(o._data.uniquePeopleCount, p)).fill(0).map((d) => ({ group: o._data.id, affiliation: o._data.topLevel__id, type: "person", subtype: p })))
-  })
-  .map((d, i) => ({ ...d, id: "p-" + i }))
-
-const groupLinks = peopleNodes.map((p) => ({ source: p.id, target: p.group, type: "group-member" }))
-const affiliationLinks = peopleNodes.map((p) => ({ source: p.id, target: p.affiliation, type: "has-affiliation" }))
-
-// const organizationLinks = groupLinks
-//   // .filter((d) => d._data.parent__id)
-//   .map((o: Organization) => ({
-//     source: o._data.id,
-//     target: o._data.parent__id,
-//     type: "has-parent",
-//   }))
-
-// Copy the data to protect against mutation by d3.forceSimulation.
-const links = [].map((d) => Object.create(d))
-const nodes = organizationNodes.map((d) => Object.create(d))
-
-const graph = { links, nodes }
----
-
-<figure>
-  <div id="kowledge-map-container" data-graph={JSON.stringify(graph)}>
-    <svg> </svg>
+<div class="km-container">
+  <div class="info">
+    <dl>
+      <div>
+        <dt>ID</dt>
+        <dd class="info-id"></dd>
+      </div>
+      <div>
+        <dt>Type</dt>
+        <dd class="info-type"></dd>
+      </div>
+      <div>
+        <dt>Subtype</dt>
+        <dd class="info-subtype"></dd>
+      </div>
+    </dl>
   </div>
-
-  <figcaption class="md">
-    <slot />
-  </figcaption>
-</figure>
+</div>
 
 <style>
-  figure {
-    display: flex;
-
-    width: 100%;
-
-    margin-top: 1rem;
-
-    padding: 0rem;
-
-    position: relative;
-    overflow: visible;
-
-    font-family: "Barlow Condensed", sans-serif;
-
-    flex-direction: row;
-    gap: 1rem;
-    z-index: 10;
-  }
-
-  #kowledge-map-container svg {
-    flex: 0 0 270px;
-
-    position: relative;
-    background-color: red;
-  }
-
-  figcaption {
-    flex: 1;
-    z-index: 10;
+  .km-container {
     position: relative;
   }
-
-  figure:before {
-    background-color: #bbbbbb;
-    opacity: 0.1;
-
-    position: absolute;
-    top: -0.5rem;
-    right: -0.5rem;
-    bottom: -0.5rem;
-    left: -0.5rem;
-
-    content: " ";
-    z-index: 1;
-  }
-
-  g.title text {
-    fill: black;
-
-    font-size: var(--text-sm);
-    font-weight: var(--font-weight--bold);
-    font-style: italic;
-
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-  }
-
-  g.unit text {
+  .info {
     font-size: var(--text-xs);
-  }
+    position: absolute;
 
-  .data-point {
-    fill: black;
-    fill-opacity: 0.8;
-  }
-
-  .data-point-bg {
-    fill: white;
-    fill-opacity: 0.8;
-  }
-
-  .curve path {
-    fill: transparent;
-    stroke: #009900;
-    stroke-linecap: round;
-  }
-
-  .tick line {
-    stroke: #666666;
-
-    stroke-width: 1px;
-    stroke-dasharray: 1 1;
-    opacity: 1;
-  }
-
-  g.x-axis .tick line {
-    stroke-dasharray: 0;
-  }
-
-  .tick.primary line {
-    stroke-width: 2px;
-  }
-
-  .tick text {
-    fill: #666666;
-
-    font-family: "Barlow Condensed";
-    font-size: var(--text-sm);
-
-    font-variant-numeric: tabular-nums;
+    z-index: 1000;
   }
 </style>
-<script type="module">
+<script>
   import * as d3 from "d3"
-  // const { document } = new JSDOM().window
+  import { debug } from "node_modules/astro/dist/core/logger/core"
+  async function getData() {
+    const url = "/en/api/graph.json"
+    try {
+      const response = await fetch(url)
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return result
+    } catch (error: Error) {
+      console.error(error.message)
+    }
+  }
+
+  const data = await getData()
+
+  const topLevelCount = data.nodes.filter((d) => d.subtype === "top-level").length
+  console.log({ topLevelCount })
   const aspectRatio = 1
   const zoom = 1000
   const width = zoom * aspectRatio
   const height = zoom
   const color = (d) => {
+    if (d.id === "community/") return "white"
     if (d.type === "org") {
-      if (d.subtype === "top-level") return d3.color("hsl(203.11, 67.16%, 50.41%)")
+      const hue = d.isUniversity ? 0 : 203
+      if (d.subtype === "top-level") return d3.color("hsl(" + hue + ", 67.16%, 50.41%)")
       if (d.subtype === "intermediate-partial") return d3.color("hsl(203.11, 67.16%, 40.41%)")
       if (d.subtype === "intermediate-full") return d3.color("hsl(203.11, 67.16%, 40.41%)")
       if (d.subtype === "group") return d3.color("hsl(203.11, 67.16%, 30.41%)")
@@ -193,80 +69,156 @@ const graph = { links, nodes }
     return "black"
   }
 
+  const linkStrength = (d) => {
+    if (d.subtype === "group-member") {
+      return 0.1
+    }
+    if (d.subtype === "has-parent") {
+      return 0
+    }
+    return 0.1
+  }
+
   const size = (d) => {
     if (d.type === "org") {
       if (d.subtype === "top-level") {
         return 20
       }
       if (d.subtype === "intermediate-partial") {
-        return 18
+        return 15
       }
       if (d.subtype === "intermediate-full") {
-        return 18
+        return 15
       }
-      if (d.subtype === "group") return 16
+      if (d.subtype === "group") return 10
     }
     if (d.type === "person") {
-      if (d.subtype.indexOf("professor") > -1) return 20
-      if (d.subtype.indexOf("seniorResearcher") > -1) return 18
-      if (d.subtype.indexOf("phdStudent") > -1) return 16
-      if (d.subtype.indexOf("masterStudent") > -1) return 10
-      if (d.subtype.indexOf("bachelorStudent") > -1) return 10
-      return 10
+      if (d.subtype.indexOf("professor") > -1) return 10
+      if (d.subtype.indexOf("seniorResearcher") > -1) return 9
+      if (d.subtype.indexOf("postDoc") > -1) return 8
+      if (d.subtype.indexOf("phdStudent") > -1) return 7
+      if (d.subtype.indexOf("masterStudent") > -1) return 6
+      if (d.subtype.indexOf("bachelorStudent") > -1) return 5
+      return 100
     }
-    return 10
   }
 
-  const shape = (d) => {
-    console.log(d.subtype)
+  const cornerRadius = (d) => {
     if (d.type === "org") {
-      if (d.subtype === "top-level") return 20
-      if (d.subtype === "intermediate-partial") return 18
-      if (d.subtype === "intermediate-full") return 18
-      if (d.subtype === "group") return 16
+      return 2
     }
     if (d.type === "person") {
-      if (d.subtype.indexOf("professor") > -1) return 20
-      if (d.subtype.indexOf("seniorResearcher") > -1) return 18
-      if (d.subtype.indexOf("phdStudent") > -1) return 16
-      if (d.subtype.indexOf("masterStudent") > -1) return 14
-      if (d.subtype.indexOf("bachelorStudent") > -1) return 12
+      return 5
     }
-    return "black"
+    return 0
   }
 
-  const orgTypesRadii = {
-    "top-level": 50,
-    "intermediate-partial": 150,
-    "intermediate-full": 150,
-    group: 250,
+  const sectorToX = (sector: number, radius: number) => {
+    return width / 2 + radius * Math.sin(((2 * Math.PI) / topLevelCount) * sector)
+  }
+  const sectorToY = (sector: number, radius: number) => {
+    return width / 2 + radius * Math.cos(((2 * Math.PI) / topLevelCount) * sector)
   }
 
   const radius = (d) => {
     if (d.type === "org") {
-      return d.subtype === "group" ? (d.id.match(/\//g) || []).length * 25 + orgTypesRadii[d.subtype] : orgTypesRadii[d.subtype]
+      return d.id.split("/").length * 20 + 200
     }
-
     if (d.type === "person") {
-      return 550
+      if (d.subtype.startsWith("professor")) return 475
+      if (d.subtype.startsWith("seniorResearcher")) return 500
+      if (d.subtype.startsWith("postDoc")) return 525
+      if (d.subtype.startsWith("phdStudent")) return 560
+      if (d.subtype.startsWith("masterStudent")) return 580
+      if (d.subtype.startsWith("bachelorStudent")) return 600
+      return 10
     }
   }
 
-  const svg = d3.select("#kowledge-map-container").append("svg").attr("width", width).attr("height", height).attr("viewBox", [0, 0, width, height]).attr("style", "max-width: 100%; height: auto;")
+  // Copy the data to protect against mutation by d3.forceSimulation.
+  const links = data.links //.map((d) => Object.create(d))
+  const nodes = data.nodes //.map((d) => Object.create(d))
 
-  const linkGroups = svg
+  const nodesIndex = new Map(nodes.map((node) => [node.id, node]))
+
+  nodes.forEach((d, i) => {
+    if (d.id === "community/") {
+      d.fx = width / 2
+      d.fy = height / 2
+    }
+    if (d.subtype === "top-level") {
+      d.fx = sectorToX(d.sector, 150)
+      d.fy = sectorToY(d.sector, 150)
+    }
+  })
+
+  nodes
+    .filter((d) => d.type === "org" && d.subtype !== "top-level")
+    .forEach((n: any) => {
+      const topLevelNode = nodesIndex.get(n.topLevel__id)
+
+      const nodeDepth = n.id.split("/").length
+
+      if (topLevelNode) {
+        n.x = sectorToX(topLevelNode.sector, 150 + nodeDepth * 50)
+        n.y = sectorToY(topLevelNode.sector, 150 + nodeDepth * 50)
+      }
+    })
+  nodes
+    .filter((d) => d.type === "person")
+    .forEach((n: any) => {
+      const groupNode = nodesIndex.get(n.group)
+
+      if (groupNode) {
+        const topLevelNode = nodesIndex.get(groupNode.topLevel__id)
+
+        if (topLevelNode) {
+          n.x = sectorToX(topLevelNode.sector, 400)
+          n.y = sectorToY(topLevelNode.sector, 400)
+        }
+      }
+    })
+
+  const simulation = d3
+    .forceSimulation(nodes)
+    .force(
+      "link",
+      d3
+        .forceLink(links)
+        .strength(linkStrength)
+        .id((d) => d.id),
+    )
+    // .force("charge", d3.forceManyBody().strength(0))
+    // .force(
+    //   "r",
+    //   d3
+    //     .forceRadial(10, width / 2, height / 2)
+    //     .radius(radius)
+    //     .strength(0.1),
+    // )
+    .force(
+      "collide",
+      d3.forceCollide().radius((d) => size(d) - 1),
+    )
+    // .force("center", d3.forceCenter(width / 2, height / 2))
+    .tick(100)
+    .on("tick", ticked)
+
+  const svg = d3.select(".km-container").append("svg").attr("width", width).attr("height", height).attr("viewBox", [0, 0, width, height]).attr("style", "max-width: 100%; height: auto;")
+
+  const link = svg
     .append("g")
     .attr("stroke", "black")
     .attr("stroke-opacity", 0.6)
     .selectAll("line")
     .data(links)
     .join("line")
-    .attr("stroke-width", (d) => Math.sqrt(d.value))
+    .attr("stroke-width", (d) => 2)
 
-  const nodeGroups = svg
+  const node = svg
     .append("g")
-    .attr("stroke", "var(--theme-background)")
-    .attr("stroke-width", 1)
+    .attr("stroke", "white")
+    .attr("stroke-width", 2)
     .selectAll(".icon")
     .data(nodes)
     .join(
@@ -277,36 +229,19 @@ const graph = { links, nodes }
     .classed("icon", true)
     .attr("width", size)
     .attr("height", size)
-    .attr("rx", 5)
-    .attr("ry", 5)
-    // .attr("fill", (d) => color(d))
-    // .append("title")
-    .attr("title", (d) => d.id)
-  // .call(drag(simulation))
-
-  const simulation = d3
-    .forceSimulation(nodes)
-    .force(
-      "link",
-      d3
-        .forceLink(links)
-        .strength((d) => (d.subtype === "group" ? 0.5 : 0.1))
-        .id((d) => d.id),
-    )
-    .force("charge", d3.forceManyBody())
-    .force(
-      "r",
-      d3
-        .forceRadial(10, width / 2, height / 2)
-        .radius(radius)
-        .strength(0.9),
-    )
-    .force(
-      "collide",
-      d3.forceCollide().radius((d) => size(d) + 1),
-    )
-    .force("center", d3.forceCenter(width / 2, height / 2))
-    .on("tick", ticked)
+    .attr("rx", cornerRadius)
+    .attr("ry", cornerRadius)
+    // .attr("x", (d) => -size(d) / 2)
+    // .attr("y", (d) => -size(d) / 2)
+    .attr("fill", (d) => color(d))
+    .call(drag(simulation))
+    .on("mouseover", function (event, node) {
+      d3.select(".info-id").text(node.id)
+      d3.select(".info-type").text(node.type)
+      d3.select(".info-subtype").text(node.subtype)
+      //Makes the new div appear on hover:
+      // div.transition().duration(50).style("opacity", 1)
+    })
 
   // node.filter(d => d.type === "person")
   //     .join("circle")
@@ -314,13 +249,37 @@ const graph = { links, nodes }
   //     .attr("r", size)
   //     .attr("fill", (d) => color(d))
 
+  node.append("title").text((d) => d.id + " / " + d.type + " / " + d.subtype)
+  link.append("title").text((d) => d.id + "-" + d.subtype)
+
   function ticked() {
-    linkGroups
+    link
       .attr("x1", (d) => d.source.x)
       .attr("y1", (d) => d.source.y)
       .attr("x2", (d) => d.target.x)
       .attr("y2", (d) => d.target.y)
 
-    nodeGroups.attr("x", (d) => d.x).attr("y", (d) => d.y)
+    node.attr("x", (d) => d.x - size(d) / 2).attr("y", (d) => d.y - size(d) / 2)
+  }
+
+  function drag(simulation: any) {
+    function dragstarted(event: any) {
+      if (!event.active) simulation.alphaTarget(0.3).restart()
+      event.subject.fx = event.subject.x
+      event.subject.fy = event.subject.y
+    }
+
+    function dragged(event) {
+      event.subject.fx = event.x
+      event.subject.fy = event.y
+    }
+
+    function dragended(event) {
+      if (!event.active) simulation.alphaTarget(0)
+      event.subject.fx = null
+      event.subject.fy = null
+    }
+
+    return d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended)
   }
 </script>
