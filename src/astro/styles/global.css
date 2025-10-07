@@ -1,9 +1,10 @@
 @import "tailwindcss";
+
 @import "./baseline.css";
 @import "./my-overrides.grid-table.css";
 @import "./my-overrides.table.css";
 @import "./print.css";
-@import "./my-overrides.typography.css";
+/* @import "./my-overrides.typography.css"; */
 
 @plugin "flowbite-typography";
 @custom-variant dark (&:where(.dark, .dark *));
@@ -67,15 +68,3 @@ html {
   --color-kfb-gray--dark: #666;
   font-size: var(--line-height);
 }
-
-/*@import "./my-overrides.config.css";
-
-@import "./my-overrides.card.css";
-
-@import "./my-overrides.content-panel.css";
-@import "./my-overrides.typography.css";
-
-@import "./my-overrides.grid-table.css";
-@import "./my-overrides.grid-gallery.css";
-
-@import "./my-overrides.tree.css"; */

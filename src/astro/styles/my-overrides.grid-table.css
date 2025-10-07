@@ -10,22 +10,10 @@
     margin: 0 !important;
     padding: 0 !important;
 
-    /*border-collapse: collapse;*/
-    /*min-width: 100%;*/
     grid-auto-rows: calc(2rem - 1px);
     grid-template-columns: repeat(5, minmax(10px, 1fr));
     row-gap: 1px;
-    /*background-image: linear-gradient(*/
-    /*  90deg,*/
-    /*  #ffffff 25%,*/
-    /*  #666666 25%,*/
-    /*  #666666 50%,*/
-    /*  #ffffff 50%,*/
-    /*  #ffffff 75%,*/
-    /*  #666666 75%,*/
-    /*  #666666 100%*/
-    /*);*/
-    /*background-size: 4px 4px;*/
+
     background-color: var(--color-kfb-gray--light);
   }
 
@@ -36,30 +24,6 @@
 
     position: relative;
   }
-
-  /*tr::after {*/
-  /*  display: block;*/
-
-  /*  height: 1px;*/
-  /*  width: 100%;*/
-
-  /*  position: absolute;*/
-  /*  bottom: -1px;*/
-
-  /*  content: " ";*/
-
-  /*  background-image: linear-gradient(*/
-  /*    90deg,*/
-  /*    #ffffff 25%,*/
-  /*    #666666 25%,*/
-  /*    #666666 50%,*/
-  /*    #ffffff 50%,*/
-  /*    #ffffff 75%,*/
-  /*    #666666 75%,*/
-  /*    #666666 100%*/
-  /*  );*/
-  /*  background-size: 4px 4px;*/
-  /*}*/
 
   .grid-table th,
   .grid-table td {

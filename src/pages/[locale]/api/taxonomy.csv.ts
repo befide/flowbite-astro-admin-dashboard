@@ -1,8 +1,7 @@
+import { formatValue } from "@/pages/[locale]/api/community.csv.ts"
 import { taxonomyForAPI } from "@domain/taxonomy/"
 import type { APIRoute, GetStaticPaths, InferGetStaticPropsType } from "astro"
-import { getCollection } from "astro:content"
 import { json2csv } from "csv42"
-import { formatValue } from "@/pages/[locale]/api/community.csv.ts"
 
 export const getStaticPaths = (async () => {
   const locales = ["en", "de"]

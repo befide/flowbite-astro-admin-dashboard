@@ -1,20 +1,11 @@
 ---
-import {
-  type CollectionEntry,
-  getCollection,
-} from "astro:content"
+import { type CollectionEntry, getCollection } from "astro:content"
 import LayoutSidebar from "@astro/LayoutSidebar.astro"
 import { ascending } from "d3"
-import ContentPage from "../../modules/ContentPage.astro"
+import ContentPage from "@components/ContentPage.astro"
 
 const sections = await getCollection("sections")
-sections.sort(
-  (
-    a: CollectionEntry<"sections">,
-    b: CollectionEntry<"sections">,
-  ) =>
-    ascending(a.data.sectionNumber, b.data.sectionNumber),
-)
+sections.sort((a: CollectionEntry<"sections">, b: CollectionEntry<"sections">) => ascending(a.data.sectionNumber, b.data.sectionNumber))
 ---
 
 <LayoutSidebar>

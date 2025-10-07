@@ -1,14 +1,8 @@
 ---
-import {
-  getCollection,
-  type CollectionEntry,
-} from "astro:content"
+import { getCollection, type CollectionEntry } from "astro:content"
 import LayoutSidebar from "@astro/LayoutSidebar.astro"
-import ContentPage from "../../modules/ContentPage.astro"
-import type {
-  InferGetStaticPropsType,
-  GetStaticPaths,
-} from "astro"
+import ContentPage from "@components/ContentPage.astro"
+import type { InferGetStaticPropsType, GetStaticPaths } from "astro"
 
 export const getStaticPaths = (async () => {
   const sections = await getCollection("sections")
