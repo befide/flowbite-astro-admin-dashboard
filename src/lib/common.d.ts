@@ -24,7 +24,20 @@ export type OrganizationSchema = NestableDomainObjectSchema & {
   parent__id: string | null
   topLevel__id: string | null
   instanceOfs__taxonomyID: string[]
-  category: ("fraunhofer" | "hgf" | "hgf-university" | "hgf-university-mpg" | "international" | "mpg" | "government" | "university" | "committee" | "funder" | "root" | "consortium")[]
+  category: (
+    | "fraunhofer"
+    | "hgf"
+    | "hgf-university"
+    | "hgf-university-mpg"
+    | "international"
+    | "mpg"
+    | "government"
+    | "university"
+    | "committee"
+    | "funder"
+    | "root"
+    | "consortium"
+  )[]
   partOfCommunityDegree: "none" | "full" | "partial"
   label: {
     fullName: {
@@ -206,9 +219,12 @@ export type OrganizationSchema = NestableDomainObjectSchema & {
   review: ReviewSchema
 }
 
-export type OrganizationDto = Pick<OrganizationSchema, "uniquePeopleCount" | "uniquePeopleCountRecursiveSum"> & {
+export type OrganizationDto = Pick<
+  OrganizationSchema,
+  "uniquePeopleCount" | "uniquePeopleCountRecursiveSum"
+> & {
   id: string
-  category: string
+  category: OrganizationCategories
   parent__id: string | null
   instanceOfs__term: string[]
   label__fullName: string
@@ -408,7 +424,19 @@ type ThesisSchema = {
   review: ReviewSchema
 }
 
-export type ThesisDto = Pick<ThesisSchema, "id" | "doi" | "urn" | "isbn" | "title" | "year" | "fulltextLink" | "author" | "language" | "isOpenAccess"> & {
+export type ThesisDto = Pick<
+  ThesisSchema,
+  | "id"
+  | "doi"
+  | "urn"
+  | "isbn"
+  | "title"
+  | "year"
+  | "fulltextLink"
+  | "author"
+  | "language"
+  | "isOpenAccess"
+> & {
   university__label_short: string
   affiliations__label_short: string[]
   facilities__label_short: string[]

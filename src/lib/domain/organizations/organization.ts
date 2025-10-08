@@ -18,12 +18,21 @@ export class Organization {
   }
 
   async getTheses() {
-    const thesesData = await getCollection("theses", ({ data }) => data.degree.grantedBy__organizationsId === this._data.id.replace("community/", ""))
-    return thesesData.sort((a, b) => descending(a.data.year, b.data.year)).map((d) => new Thesis(d.data))
+    const thesesData = await getCollection(
+      "theses",
+      ({ data }) => data.degree.grantedBy__organizationsId === this._data.id,
+    )
+    return thesesData
+      .sort((a, b) => descending(a.data.year, b.data.year))
+      .map((d) => new Thesis(d.data))
   }
 
   async getFacilityDefinitions(lifeCycle = "", isUserFacility = true) {
-    const facilities: CollectionEntry<"facilities">[] = await getCollection("facilities", (d) => d.data.host__organizationsId === this._data.id && isUserFacility === d.data.isUserFacility)
+    const facilities: CollectionEntry<"facilities">[] = await getCollection(
+      "facilities",
+      (d) =>
+        d.data.host__organizationsId === this._data.id && isUserFacility === d.data.isUserFacility,
+    )
 
     // &&
     // (!options ||
@@ -31,22 +40,37 @@ export class Organization {
     //   !data.lifeCycle?.currentStatus__taxonomyId ||
     //   data.lifeCycle?.currentStatus__taxonomyId.indexOf("/" + options.lifeCycleCategory) > -1),
 
-    return facilities.map((d) => d.data).sort((a: FacilitySchema, b: FacilitySchema) => ascending(a.id, b.id))
+    return facilities
+      .map((d) => d.data)
+      .sort((a: FacilitySchema, b: FacilitySchema) => ascending(a.id, b.id))
     // return myFacilities.map((d) => new Facility(d.data as FacilitySchema))
   }
 
   async getTeachingEventsDefinitions() {
-    const teachingEvents = await getCollection("courses", (d) => d.data.university__organizationsId === this._data.id)
+    const teachingEvents = await getCollection(
+      "courses",
+      (d) => d.data.university__organizationsId === this._data.id,
+    )
     return teachingEvents.map((d) => d.data)
   }
 
   async getOrganizationList() {
-    const organizations = await getCollection("organizations", (o: CollectionEntry<"organizations">) => o.data.topLevel__id === this._data.id || o.data.id === this._data.id)
+    const organizations = await getCollection(
+      "organizations",
+      (o: CollectionEntry<"organizations">) =>
+        o.data.topLevel__id === this._data.id || o.data.id === this._data.id,
+    )
     return organizations.map((d) => d.data)
   }
 
   async getTreeRoots() {
-    const organizations = (await getCollection("organizations", (o: CollectionEntry<"organizations">) => o.data.topLevel__id === this._data.id || o.data.id === this._data.id)).map((d) => d.data)
+    const organizations = (
+      await getCollection(
+        "organizations",
+        (o: CollectionEntry<"organizations">) =>
+          o.data.topLevel__id === this._data.id || o.data.id === this._data.id,
+      )
+    ).map((d) => d.data)
 
     return getRoots<OrganizationSchema>(organizations)
   }
@@ -64,7 +88,10 @@ export class Organization {
       id: this._data.id,
       uniquePeopleCountRecursiveSum: this._data.uniquePeopleCountRecursiveSum,
       uniquePeopleCount: this._data.uniquePeopleCount,
-      instanceOfs__term: await getTaxonomyReferencesTerm(this._data.instanceOfs__taxonomyID, locale),
+      instanceOfs__term: await getTaxonomyReferencesTerm(
+        this._data.instanceOfs__taxonomyID,
+        locale,
+      ),
       category: this._data.category,
       theses_count,
       with_theses: theses_count > 0,

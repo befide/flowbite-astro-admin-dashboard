@@ -6,7 +6,7 @@
   .dc-explorer {
     display: flex;
     flex-direction: column;
-    gap: var(--sl-content-pad-x);
+    gap: 1rem;
   }
 }
 
@@ -14,7 +14,7 @@
   .dc-explorer {
     display: flex;
     flex-direction: row-reverse;
-    gap: var(--sl-content-pad-x);
+    gap: 1rem;
     width: calc(100%);
     margin: 0 -0.5rem;
     margin-left: 0;

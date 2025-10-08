@@ -1,8 +1,5 @@
 ---
-import {
-  getLangFromUrl,
-  useTranslations,
-} from "@astro/i18n/utils"
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -16,13 +13,11 @@ import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
 
 <DCExplorer collection="theses">
   <div class="dc-explorer__filters">
-    <DCExplorerCount
-      collection="theses"
-      dimension="count"
-    />
+    <DCExplorerCount collection="theses" dimension="count" />
     <DCExplorerBarChart
       collection="theses"
       dimension="year"
+      binWidth={1}
       title={t("dc-explorer.tiles.title.year")}
     />
     <DCExplorerRowChart

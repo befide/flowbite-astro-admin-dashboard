@@ -17,13 +17,49 @@ import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
     <DCExplorerRowChart collection="organizations" dimension="category" title="Category" />
     <DCExplorerRowChart collection="organizations" dimension="location__country" title="Country" />
 
-    <DCExplorerRowChart collection="organizations" dimension="with_userFacilities" title={t("dc-explorer.tiles.title.with_userFacilities")} />
+    <DCExplorerBarChart
+      collection="organizations"
+      dimension="facilities_count"
+      binWidth={1}
+      title={t("dc-explorer.tiles.title.facilities_count")}
+    />
 
-    <DCExplorerRowChart collection="organizations" dimension="with_facilities" title={t("dc-explorer.tiles.title.with_facilities")} />
-    <DCExplorerRowChart collection="organizations" dimension="with_theses" title={t("dc-explorer.tiles.title.with_theses")} />
-    <DCExplorerRowChart collection="organizations" dimension="with_teachingEvents" title={t("dc-explorer.tiles.title.with_teachingEvents")} />
-    <DCExplorerBarChart collection="organizations" dimension="people_count" title={t("dc-explorer.tiles.title.people_count")} />
-    <DCExplorerBarChart collection="organizations" dimension="theses_count" title={t("dc-explorer.tiles.title.theses_count")} />
+    <DCExplorerBarChart
+      collection="organizations"
+      dimension="people_count"
+      binWidth={25}
+      title={t("dc-explorer.tiles.title.people_count")}
+    />
+    <DCExplorerBarChart
+      collection="organizations"
+      dimension="userFacilities_count"
+      binWidth={1}
+      title={t("dc-explorer.tiles.title.userFacilities_count")}
+    />
+
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="with_teachingEvents"
+      title={t("dc-explorer.tiles.title.with_teachingEvents")}
+    />
+    <DCExplorerBarChart
+      collection="organizations"
+      dimension="weeklySemesterHours_count"
+      binWidth={5}
+      title={t("dc-explorer.tiles.title.weeklySemesterHours")}
+    />
+
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="with_theses"
+      title={t("dc-explorer.tiles.title.with_theses")}
+    />
+    <DCExplorerBarChart
+      collection="organizations"
+      dimension="theses_count"
+      binWidth={10}
+      title={t("dc-explorer.tiles.title.theses_count")}
+    />
 
     <!-- </details> -->
   </div>

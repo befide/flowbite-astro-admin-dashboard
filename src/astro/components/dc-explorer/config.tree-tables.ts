@@ -1,14 +1,6 @@
-import {
-  careerLevels,
-  disciplinaryProfessions,
-  genders,
-} from "@domain/organizations/const"
+import { careerLevels, disciplinaryProfessions, genders } from "@domain/organizations/const"
 import type { TreeNode } from "@lib/content.tree"
-import type {
-  FacilityDto,
-  TaxonomyItemDto,
-  OrganizationDto,
-} from "@lib/common.d"
+import type { FacilityDto, TaxonomyItemDto, OrganizationDto } from "@lib/common.d"
 import { numberFormat, oneLineFormat } from "./config"
 import fastCartesian from "fast-cartesian"
 function getValue(obj: any, path: string) {
@@ -20,27 +12,18 @@ function getValue(obj: any, path: string) {
   return obj
 }
 
-const product = fastCartesian([
-  [...careerLevels],
-  [...disciplinaryProfessions],
-  [...genders],
-])
+const product = fastCartesian([[...careerLevels], [...disciplinaryProfessions], [...genders]])
 
 export const treeTableConfigMap = (key: string) => {
-  if (
-    key === "domainTaxonomy" ||
-    key === "genericTaxonomy"
-  ) {
+  if (key === "domainTaxonomy" || key === "genericTaxonomy") {
     return [
       {
         label: "Term",
-        format: (d: TreeNode<TaxonomyItemDto>) =>
-          `${oneLineFormat(d.data.term)}`,
+        format: (d: TreeNode<TaxonomyItemDto>) => `${oneLineFormat(d.data.term)}`,
       },
       {
         label: "defintion",
-        format: (d: TreeNode<TaxonomyItemDto>) =>
-          `${oneLineFormat(d.data.definition)}`,
+        format: (d: TreeNode<TaxonomyItemDto>) => `${oneLineFormat(d.data.definition)}`,
       },
     ]
   } else if (key === "community") {
@@ -60,17 +43,14 @@ export const treeTableConfigMap = (key: string) => {
         label: "total",
         className: "tree-node__value",
         width: "flex: 1 0 10ch",
-        format: (d: TreeNode<OrganizationDto>) =>
-          d.data.uniquePeopleCountRecursiveSum?.total,
+        format: (d: TreeNode<OrganizationDto>) => d.data.uniquePeopleCountRecursiveSum?.total,
       },
       {
-        label: "members",
+        label: "mxembers",
         className: "tree-node__value",
         width: "flex: 1 0 10ch",
         format: (d: TreeNode<OrganizationDto>) =>
-          product.filter((p) =>
-            getValue(d.data.uniquePeopleCount, p.join(".")),
-          ),
+          product.filter((p) => getValue(d.data.uniquePeopleCount, p.join("."))),
       },
     ]
   } else if (key === "facilities") {
@@ -79,36 +59,33 @@ export const treeTableConfigMap = (key: string) => {
         label: "Label",
         format: (d: TreeNode<FacilityDto>) =>
           `<div class='font-bold tree-node__cell--label'>${d.data.label}</div>${
-            d.data.tagLine && false
-              ? "<div class='one-line'>" +
-                d.data.tagLine +
-                "</div>"
-              : ""
+            d.data.tagLine && false ? "<div class='one-line'>" + d.data.tagLine + "</div>" : ""
           }</div>`,
         width: "flex: 0 0 50ch",
       },
       {
         label: "Type",
-        format: (d: TreeNode<FacilityDto>) =>
-          d.data.instanceOf__term,
+        format: (d: TreeNode<FacilityDto>) => d.data.instanceOf__term,
         width: "flex: 0 0 30ch",
       },
       {
         label: "Host",
-        format: (d: TreeNode<FacilityDto>) =>
-          d.data.host__label_short,
+        format: (d: TreeNode<FacilityDto>) => d.data.host__label_short,
+        width: "flex: 0 0 30ch",
+      },
+      {
+        label: "user facility",
+        format: (d: TreeNode<FacilityDto>) => d.data.isUserFacility,
         width: "flex: 0 0 30ch",
       },
       {
         label: "Life cycle",
-        format: (d: TreeNode<FacilityDto>) =>
-          d.data.currentStatus__term,
+        format: (d: TreeNode<FacilityDto>) => d.data.currentStatus__term,
         width: "flex: 0 0 30ch",
       },
       {
         label: "Operation Start",
-        format: (d: TreeNode<FacilityDto>) =>
-          numberFormat(d.data.operation_startYear),
+        format: (d: TreeNode<FacilityDto>) => numberFormat(d.data.operation_startYear),
         width: "flex: 0 0 10ch",
       },
       {

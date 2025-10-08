@@ -108,13 +108,30 @@ export const defineThesesCollection = defineCollection({
       if (item.data.extra)
         item.data.extra.split("\n").forEach((extraLine: string) => {
           const splittedExtraLine = extraLine.split(/: /)
-          if (splittedExtraLine.length == 2 && splittedExtraLine[0] && splittedExtraLine[0].toLowerCase() === "doi") {
+          if (
+            splittedExtraLine.length == 2 &&
+            splittedExtraLine[0] &&
+            splittedExtraLine[0].toLowerCase() === "doi"
+          ) {
             dataItem.doi = splittedExtraLine[1]
-          } else if (splittedExtraLine.length == 2 && splittedExtraLine[0] && splittedExtraLine[0].toLowerCase() === "isbn") {
+          } else if (
+            splittedExtraLine.length == 2 &&
+            splittedExtraLine[0] &&
+            splittedExtraLine[0].toLowerCase() === "isbn"
+          ) {
             dataItem.isbn = splittedExtraLine[1]
-          } else if (splittedExtraLine.length == 2 && splittedExtraLine[0] && splittedExtraLine[0].toLowerCase() === "citation key") {
+          } else if (
+            splittedExtraLine.length == 2 &&
+            splittedExtraLine[0] &&
+            splittedExtraLine[0].toLowerCase() === "citation key"
+          ) {
             dataItem.citationKey = splittedExtraLine[1]
-          } else if (splittedExtraLine.length == 2 && splittedExtraLine[0] && splittedExtraLine[0].toLowerCase() === "fulltext-url" && splittedExtraLine[1] !== "none") {
+          } else if (
+            splittedExtraLine.length == 2 &&
+            splittedExtraLine[0] &&
+            splittedExtraLine[0].toLowerCase() === "fulltext-url" &&
+            splittedExtraLine[1] !== "none"
+          ) {
             dataItem.fulltextLink = splittedExtraLine[1]
             dataItem.isOpenAccess = true
           }
@@ -125,11 +142,14 @@ export const defineThesesCollection = defineCollection({
           dataItem.degree.title = tag.replace("#degree/title/:", "")
         }
         if (tag?.startsWith("#degree/granted-by/:")) {
-          dataItem.degree.grantedBy__organizationsId = tag.replace("#degree/granted-by/:", "")
+          dataItem.degree.grantedBy__organizationsId = tag.replace(
+            "#degree/granted-by/:",
+            "community/",
+          )
         }
 
         if (tag?.startsWith("#has-affiliation/:")) {
-          const organizationId = tag.replace("#has-affiliation/:", "")
+          const organizationId = tag.replace("#has-affiliation/:", "community/")
           dataItem.hasAffiliation__organizationsId.push(organizationId)
         }
         if (tag?.startsWith("#author/gender/:")) {
@@ -139,7 +159,9 @@ export const defineThesesCollection = defineCollection({
           dataItem.isAbout.facility__facilitiesId.push(tag.replace("#is-about/facility/:", ""))
         }
         if (tag?.startsWith("#is-about/acceleration-process/:")) {
-          dataItem.isAbout.accelerationProcess__taxonomyId.push(tag.replace("#is-about/acceleration-process/:", ""))
+          dataItem.isAbout.accelerationProcess__taxonomyId.push(
+            tag.replace("#is-about/acceleration-process/:", ""),
+          )
         }
       })
 

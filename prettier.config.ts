@@ -21,7 +21,7 @@ export default {
   insertPragma: false,
   requirePragma: false,
   embeddedLanguageFormatting: "auto",
-  printWidth: 240,
+  printWidth: 100,
   plugins: ["prettier-plugin-astro", "stylelint-prettier", "prettier-plugin-tailwindcss", "prettier-plugin-packagejson"],
   overrides: [
     {
