@@ -1,40 +1,38 @@
 ---
-import { JSDOM } from "jsdom"
-import { axisBottom, axisLeft, axisRight } from "d3"
+import { JSDOM } from "jsdom";
+import { axisBottom, axisLeft, axisRight } from "d3";
 
-import { format, formatLocale } from "d3"
-import { scaleLinear, scaleLog } from "d3"
-import { select } from "d3"
+import { format, formatLocale } from "d3";
+import { scaleLinear, scaleLog } from "d3";
+import { select } from "d3";
 
-import { curveCardinal, line } from "d3"
+import { curveCardinal, line } from "d3";
 
-import chartMetas from "./ProgressChart.config"
-import type { Fragment } from "astro/jsx-runtime"
+import chartMetas from "./ProgressChart.config";
+import type { Fragment } from "astro/jsx-runtime";
 
 export interface ProgressChart {
-  baselineHeight?: number
-  widthInGridUnits?: number
-  heightInGridUnits?: number
-  dimension?: string
+  baselineHeight?: number;
+  widthInGridUnits?: number;
+  heightInGridUnits?: number;
+  dimension?: string;
 }
 
-export type Data = Datum[]
+export type Data = Datum[];
 
 export interface Datum {
-  year: number
-  value: number
-  value_sum?: number
+  year: number;
+  value: number;
+  value_sum?: number;
 }
 
-const { dimension = "nuclideDiscoveriesPerYear" } =
-  Astro.props
+const { dimension = "nuclideDiscoveriesPerYear" } = Astro.props;
 
-const data = chartMetas[dimension]
+const data = chartMetas[dimension];
 
-if (!data)
-  throw new Error("undefined dimension: " + dimension)
+if (!data) throw new Error("undefined dimension: " + dimension);
 
-const columns = Object.keys(data.data[0])
+const columns = Object.keys(data.data[0]);
 ---
 
 <table class="grid-table not-format">
@@ -48,8 +46,7 @@ const columns = Object.keys(data.data[0])
       data.data.map((d) => (
         <tr>
           {columns.map((key) =>
-            typeof d[key] === "string" &&
-            d[key].startsWith("http") ? (
+            typeof d[key] === "string" && d[key].startsWith("http") ? (
               <td class="url">
                 <a
                   class="truncate text-slate-400 hover:text-teal-400"

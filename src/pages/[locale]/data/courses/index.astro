@@ -3,18 +3,18 @@
 // tableOfContents: false
 // sectionNumber: "E.4.1"
 
-import LayoutSidebar from "@astro/LayoutSidebar.astro"
-import type { GetStaticPaths } from "astro"
-import CoursesExplorer from "@components/dc-explorer/CoursesExplorer.astro"
+import LayoutSidebar from "@astro/LayoutSidebar.astro";
+import type { GetStaticPaths } from "astro";
+import CoursesExplorer from "@components/dc-explorer/CoursesExplorer.astro";
 
 export const getStaticPaths = (async () => {
-  const locales = ["en", "de"]
+  const locales = ["en", "de"];
 
   return locales.map((locale) => ({
     params: { locale },
     props: { locale },
-  }))
-}) satisfies GetStaticPaths
+  }));
+}) satisfies GetStaticPaths;
 ---
 
 <LayoutSidebar>

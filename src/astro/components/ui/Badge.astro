@@ -1,9 +1,9 @@
 ---
-import { type BadgeComponentProps } from "./badge"
+import { type BadgeComponentProps } from "./badge";
 
-import type { HTMLAttributes } from "astro/types"
+import type { HTMLAttributes } from "astro/types";
 
-type Props = BadgeComponentProps & HTMLAttributes<"span">
+type Props = BadgeComponentProps & HTMLAttributes<"span">;
 
 const {
   text,
@@ -12,17 +12,10 @@ const {
   size,
   class: customClass,
   ...attrs
-} = Astro.props
+} = Astro.props;
 ---
 
-<span
-  class:list={[
-    "prefixed-badge",
-    variant,
-    size,
-    customClass,
-  ]}
-  {...attrs}
+<span class:list={["prefixed-badge", variant, size, customClass]} {...attrs}
   ><span class="prefixed-badge__prefix">{prefix}</span>
   <span class="prefixed-badge__text">{text}</span>
 </span>

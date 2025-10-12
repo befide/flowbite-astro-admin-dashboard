@@ -1,16 +1,13 @@
 ---
-import {
-  getLangFromUrl,
-  useTranslations,
-} from "@astro/i18n/utils"
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils";
 
 import {
   rowChartId,
   rowChartTileId,
-} from "@/astro/components/dc-explorer/components"
+} from "@/astro/components/dc-explorer/components";
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const {
   collection,
@@ -19,11 +16,11 @@ const {
   accessorPath,
   dimensionIsLocalized = false,
   dimensionIsArray = false,
-} = Astro.props
+} = Astro.props;
 
-const tileId = rowChartTileId(collection, dimension)
-const chartId = rowChartId(collection, dimension)
-const tileType = "row-chart"
+const tileId = rowChartTileId(collection, dimension);
+const chartId = rowChartId(collection, dimension);
+const tileType = "row-chart";
 ---
 
 <section
@@ -45,10 +42,6 @@ const tileType = "row-chart"
     </div>
   </header>
   <div class="dc-explorer__tile__body">
-    <div
-      id={chartId}
-      class="explorer__chart explorer__chart--row"
-    >
-    </div>
+    <div id={chartId} class="explorer__chart explorer__chart--row"></div>
   </div>
 </section>

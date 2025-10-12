@@ -22,4 +22,4 @@ text .group {
 }
 .link {
   mix-blend-mode: lighten;
-}`
+}`;

@@ -1,20 +1,23 @@
 ---
-import { render, type CollectionEntry } from "astro:content"
+import { render, type CollectionEntry } from "astro:content";
 
 type Props = {
-  section: CollectionEntry<"sections">
-}
+  section: CollectionEntry<"sections">;
+};
 
-const { section } = Astro.props
+const { section } = Astro.props;
 
-const { Content } = await render(section)
+const { Content } = await render(section);
 
-const Element = "h" + (section.data.sectionDepth + 1)
+const Element = "h" + (section.data.sectionDepth + 1);
 ---
 
 <section class="section bg-white dark:bg-gray-900">
   <header>
-    <Element class="tracking-tight text-gray-900 dark:text-white" data-section-number={section.data.sectionNumber}>
+    <Element
+      class="tracking-tight text-gray-900 dark:text-white"
+      data-section-number={section.data.sectionNumber}
+    >
       {section.data.title}
     </Element>
     <p class="description">{section.data.description}</p>

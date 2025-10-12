@@ -1,25 +1,25 @@
-import { taxonomyForAPI } from "@domain/taxonomy/"
-import type { APIRoute, GetStaticPaths, InferGetStaticPropsType } from "astro"
-import { getCollection } from "astro:content"
+import { taxonomyForAPI } from "@domain/taxonomy/";
+import type { APIRoute, GetStaticPaths, InferGetStaticPropsType } from "astro";
+import { getCollection } from "astro:content";
 
 export const getStaticPaths = (async () => {
-  const locales = ["en", "de"]
+  const locales = ["en", "de"];
 
   return locales.map((locale) => ({
     params: { locale },
     props: { locale },
-  }))
-}) satisfies GetStaticPaths
+  }));
+}) satisfies GetStaticPaths;
 
 export const GET: APIRoute = async ({ props }) => {
-  type Props = InferGetStaticPropsType<typeof getStaticPaths>
-  const { locale } = props as Props
+  type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+  const { locale } = props as Props;
 
-  const taxonomy = await taxonomyForAPI(locale)
+  const taxonomy = await taxonomyForAPI(locale);
 
   try {
-    return new Response(JSON.stringify(taxonomy, null, 2))
+    return new Response(JSON.stringify(taxonomy, null, 2));
   } catch (e) {
-    throw new Error("Something went wrong in json-resource.json route: " + e)
+    throw new Error("Something went wrong in json-resource.json route: " + e);
   }
-}
+};

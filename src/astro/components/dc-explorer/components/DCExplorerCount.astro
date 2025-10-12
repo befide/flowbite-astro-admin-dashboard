@@ -1,21 +1,18 @@
 ---
-import {
-  getLangFromUrl,
-  useTranslations,
-} from "@astro/i18n/utils"
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils";
 
 import {
   countChartId,
   countChartTileId,
-} from "@/astro/components/dc-explorer/components"
+} from "@/astro/components/dc-explorer/components";
 
-const { collection, dimension } = Astro.props
+const { collection, dimension } = Astro.props;
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
-const tileId = countChartTileId(collection, dimension)
-const chartId = countChartId(collection, dimension)
-const tileType = "count"
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const tileId = countChartTileId(collection, dimension);
+const chartId = countChartId(collection, dimension);
+const tileType = "count";
 ---
 
 <section
@@ -30,16 +27,11 @@ const tileType = "count"
       {t("dc-explorer.tiles.title.count")}
     </div>
     <div class="dc-explorer__tile__actions">
-      <button class="reset-action"
-        >{t("dc-explorer.actions.reset-all")}</button
-      >
+      <button class="reset-action">{t("dc-explorer.actions.reset-all")}</button>
     </div>
   </header>
   <div class="dc-explorer__tile__body">
-    <div
-      class="explorer__chart explorer__chart--count"
-      id={chartId}
-    >
+    <div class="explorer__chart explorer__chart--count" id={chartId}>
       <!-- <span class="filter-count"></span> selected out of <span
         class="total-count"></span> -->
     </div>

@@ -1,19 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { glob } from "astro/loaders"
-import { defineCollection, z } from "astro:content"
+import { glob } from "astro/loaders";
+import { defineCollection, z } from "astro:content";
 
-import { LocalizedString, NestableDomainObjectZodSchema, NullableLocalizedString, ReviewZodSchema } from "@lib/content.common.ts"
+import {
+  LocalizedString,
+  NestableDomainObjectZodSchema,
+  NullableLocalizedString,
+  ReviewZodSchema,
+} from "@lib/content.common.ts";
 
 export const peopleCountGender = z.object({
   male: z.number().optional().nullable(),
   female: z.number().optional().nullable(),
   nonbinary: z.number().optional().nullable(),
-})
+});
 export const peopleCountDiscipline = z.object({
   physicist: peopleCountGender,
   engineer: peopleCountGender,
   other: peopleCountGender,
-})
+});
 export const peopleCountAcademicCareerLevel = z.object({
   professor: peopleCountDiscipline,
   seniorResearcher: peopleCountDiscipline,
@@ -21,17 +26,32 @@ export const peopleCountAcademicCareerLevel = z.object({
   phdStudent: peopleCountDiscipline,
   masterStudent: peopleCountDiscipline,
   bachelorStudent: peopleCountDiscipline,
-})
+});
 
-export const OrganizationCategories = z.enum(["fraunhofer", "hgf", "hgf-university", "hgf-university-mpg", "international", "mpg", "government", "university", "committee", "funder", "root", "consortium"])
-export const PartOFCommunityDegreeSchema = z.enum(["none", "partial", "full"])
+export const OrganizationCategories = z.enum([
+  "fraunhofer",
+  "hgf",
+  "hgf-university",
+  "hgf-university-mpg",
+  "international",
+  "mpg",
+  "government",
+  "university",
+  "committee",
+  "funder",
+  "root",
+  "consortium",
+]);
+export const PartOFCommunityDegreeSchema = z.enum(["none", "partial", "full"]);
 
 export const OrganizationZodSchema = NestableDomainObjectZodSchema.extend({
   topLevel__id: z.string().nullable(),
   instanceOfs__taxonomyID: z.array(z.string()),
   category: OrganizationCategories,
 
-  partOfCommunityDegree: PartOFCommunityDegreeSchema.describe("Indicates to what degree the unit is part of the community."),
+  partOfCommunityDegree: PartOFCommunityDegreeSchema.describe(
+    "Indicates to what degree the unit is part of the community.",
+  ),
 
   label: z.object({
     fullName: LocalizedString,
@@ -73,21 +93,21 @@ export const OrganizationZodSchema = NestableDomainObjectZodSchema.extend({
   uniquePeopleCountSum: z.object({
     total: z.preprocess((v) => v || 0, z.number()),
     ...peopleCountDiscriminators.reduce((obj: any, value) => {
-      obj[value] = z.preprocess((v) => v || 0, z.number())
-      return obj
+      obj[value] = z.preprocess((v) => v || 0, z.number());
+      return obj;
     }, {}),
   }),
   uniquePeopleCountRecursiveSum: z
     .object({
       total: z.number(),
       ...peopleCountDiscriminators.reduce((obj: any, value) => {
-        obj[value] = z.preprocess((v) => v || 0, z.number())
-        return obj
+        obj[value] = z.preprocess((v) => v || 0, z.number());
+        return obj;
       }, {}),
     })
     .optional(),
   review: ReviewZodSchema,
-})
+});
 
 export const defineOrganizationCollection = defineCollection({
   loader: glob({
@@ -95,9 +115,18 @@ export const defineOrganizationCollection = defineCollection({
     base: "./src/content/domain/organizations",
   }),
   schema: OrganizationZodSchema,
-})
+});
 
-import fastCartesian from "fast-cartesian"
-import { careerLevels, disciplinaryProfessions, genders, peopleCountDiscriminators } from "./index.ts"
+import fastCartesian from "fast-cartesian";
+import {
+  careerLevels,
+  disciplinaryProfessions,
+  genders,
+  peopleCountDiscriminators,
+} from "./index.ts";
 
-const product = fastCartesian([[...careerLevels], [...disciplinaryProfessions], [...genders]])
+const product = fastCartesian([
+  [...careerLevels],
+  [...disciplinaryProfessions],
+  [...genders],
+]);

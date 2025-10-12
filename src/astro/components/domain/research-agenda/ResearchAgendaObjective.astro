@@ -1,16 +1,16 @@
 ---
-import type { ResearchAgenda } from "./research-agenda"
-import _data from "./research-agenda.json"
+import type { ResearchAgenda } from "./research-agenda";
+import _data from "./research-agenda.json";
 
-let data: ResearchAgenda = Object.values(_data)
+let data: ResearchAgenda = Object.values(_data);
 
 export interface Props {
-  filter: string
+  filter: string;
 }
 
-const { filter } = Astro.props
+const { filter } = Astro.props;
 
-const item = data.find((item) => item.path === filter)
+const item = data.find((item) => item.path === filter);
 ---
 
 <figure class="objective">

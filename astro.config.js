@@ -1,19 +1,19 @@
-import { defineConfig } from "astro/config"
-import rehypeRewrite from "rehype-rewrite"
-import remarkSectionize from "remark-sectionize"
+import { defineConfig } from "astro/config";
+import rehypeRewrite from "rehype-rewrite";
+import remarkSectionize from "remark-sectionize";
 
-import pdf from "astro-pdf"
-import spaceCommander from "./src/lib/space-commander"
+import pdf from "astro-pdf";
+import spaceCommander from "./src/lib/space-commander";
 
-import sitemap from "@astrojs/sitemap"
-import tailwindcss from "@tailwindcss/vite"
-import astroD2 from "astro-d2"
-import dsv from "@rollup/plugin-dsv"
+import sitemap from "@astrojs/sitemap";
+import tailwindcss from "@tailwindcss/vite";
+import astroD2 from "astro-d2";
+import dsv from "@rollup/plugin-dsv";
 
-import mdx from "@astrojs/mdx"
-import AstroPWA from "@vite-pwa/astro"
+import mdx from "@astrojs/mdx";
+import AstroPWA from "@vite-pwa/astro";
 
-const DEV_PORT = 4350
+const DEV_PORT = 4350;
 
 // @ts-ignore
 export default defineConfig({
@@ -24,7 +24,9 @@ export default defineConfig({
     defaultLocale: "en",
   }, //process.env.CI ? "/flowbite-astro-admin-dashboard" : "/",
   integrations: [
-    ...(process.env.NODE_ENV === "production" ? [] : [astroD2({ inline: true })]),
+    ...(process.env.NODE_ENV === "production"
+      ? []
+      : [astroD2({ inline: true })]),
     sitemap(),
     mdx(),
     // pdf({
@@ -91,7 +93,7 @@ export default defineConfig({
         {
           rewrite: (node) => {
             if (node.type === "text") {
-              node.value = spaceCommander(node.value)
+              node.value = spaceCommander(node.value);
             }
           },
         },
@@ -103,7 +105,9 @@ export default defineConfig({
     port: DEV_PORT,
   },
 
-  site: process.env.CI ? "https://kfb-inventory.netlify.app" : `http://localhost:${DEV_PORT}`,
+  site: process.env.CI
+    ? "https://kfb-inventory.netlify.app"
+    : `http://localhost:${DEV_PORT}`,
 
   vite: {
     logLevel: "info",
@@ -117,7 +121,7 @@ export default defineConfig({
       tailwindcss(),
     ],
   },
-})
+});
 
 //
 // AstroPWA({

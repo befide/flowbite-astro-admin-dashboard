@@ -1,31 +1,31 @@
 ---
-import { allTheses, allThesesForUniversity } from "@domain/theses"
-import Badge from "../Badge.astro"
-import { getEntry } from "astro:content"
-import type { CollectionEntry } from "astro:content"
+import { allTheses, allThesesForUniversity } from "@domain/theses";
+import Badge from "../Badge.astro";
+import { getEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  universityId?: string
+  universityId?: string;
 }
 
-let { universityId } = Astro.props
+let { universityId } = Astro.props;
 
 const theses = universityId
   ? await allThesesForUniversity(universityId)
-  : await allTheses()
+  : await allTheses();
 
 const engineeringDegreeCount = theses.filter(
-  (d) => d.data.thesisType.indexOf("Dr. Ing.") > -1
-).length
+  (d) => d.data.thesisType.indexOf("Dr. Ing.") > -1,
+).length;
 const naturalScienceDegreeCount = theses.filter(
-  (d) => d.data.thesisType.indexOf("Dr. rer. nat.") > -1
-).length
+  (d) => d.data.thesisType.indexOf("Dr. rer. nat.") > -1,
+).length;
 
 const getUniversity = async (thesis: CollectionEntry<"theses">) => {
-  if (!thesis.data.degree.grantedBy__organizationsId) return null
-  const university = await getEntry(thesis.data.university__organizationsId)
-  return university
-}
+  if (!thesis.data.degree.grantedBy__organizationsId) return null;
+  const university = await getEntry(thesis.data.university__organizationsId);
+  return university;
+};
 ---
 
 <div class="explorer">
@@ -91,7 +91,7 @@ const getUniversity = async (thesis: CollectionEntry<"theses">) => {
                     <li class="reference__link">
                       <a
                         href={encodeURI(
-                          "https://nbn-resolving.de/" + thesis.data.urn
+                          "https://nbn-resolving.de/" + thesis.data.urn,
                         )}
                       >
                         <Badge

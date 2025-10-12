@@ -1,6 +1,6 @@
-import { defineCollection, z } from "astro:content"
-import { DomainObjectZodSchema } from "@lib/content.common.ts"
-import { globWithParser } from "@lib/globWithParser.ts"
+import { defineCollection, z } from "astro:content";
+import { DomainObjectZodSchema } from "@lib/content.common.ts";
+import { globWithParser } from "@lib/globWithParser.ts";
 
 // const INPUT_FILEPATH = path.join("src", "data", "zotero", "kfb_theses.json")
 //
@@ -26,81 +26,77 @@ import { globWithParser } from "@lib/globWithParser.ts"
 //   ":uni-wuppertal",
 // ]
 const cslDatePartsSchema = z.object({
-  "date-parts": z.array(
-    z.array(z.union([z.number(), z.string()])),
-  ),
-})
+  "date-parts": z.array(z.array(z.union([z.number(), z.string()]))),
+});
 
-export const ThesisZodSchema = DomainObjectZodSchema.extend(
-  {
-    id: z.string(),
-    citationKey: z.string(),
-    type: z.string(),
-    title: z.string(),
-    "title-short": z.string().optional(),
-    URL: z.string().optional(),
-    DOI: z.string().optional(),
-    "container-title": z.string().optional(),
-    publisher: z.string().optional(),
-    "publisher-place": z.string().optional(),
-    edition: z.union([z.string(), z.number()]).optional(),
-    volume: z.union([z.string(), z.number()]).optional(),
-    number: z.union([z.string(), z.number()]).optional(),
-    page: z.string().optional(),
-    language: z.string().optional(),
-    abstract: z.string().optional(),
-    issued: cslDatePartsSchema.optional(),
-    year: z.union([z.string(), z.number()]).optional(),
-    month: z.union([z.string(), z.number()]).optional(),
-    day: z.union([z.string(), z.number()]).optional(),
-    author: z
-      .array(
-        z.object({
-          given: z.string().optional(),
-          family: z.string().optional(),
-          literal: z.string().optional(),
-        }),
-      )
-      .optional(),
-    editor: z
-      .array(
-        z.object({
-          given: z.string().optional(),
-          family: z.string().optional(),
-          literal: z.string().optional(),
-        }),
-      )
-      .optional(),
-    translator: z
-      .array(
-        z.object({
-          given: z.string().optional(),
-          family: z.string().optional(),
-          literal: z.string().optional(),
-        }),
-      )
-      .optional(),
-    "container-author": z
-      .array(
-        z.object({
-          given: z.string().optional(),
-          family: z.string().optional(),
-          literal: z.string().optional(),
-        }),
-      )
-      .optional(),
+export const ThesisZodSchema = DomainObjectZodSchema.extend({
+  id: z.string(),
+  citationKey: z.string(),
+  type: z.string(),
+  title: z.string(),
+  "title-short": z.string().optional(),
+  URL: z.string().optional(),
+  DOI: z.string().optional(),
+  "container-title": z.string().optional(),
+  publisher: z.string().optional(),
+  "publisher-place": z.string().optional(),
+  edition: z.union([z.string(), z.number()]).optional(),
+  volume: z.union([z.string(), z.number()]).optional(),
+  number: z.union([z.string(), z.number()]).optional(),
+  page: z.string().optional(),
+  language: z.string().optional(),
+  abstract: z.string().optional(),
+  issued: cslDatePartsSchema.optional(),
+  year: z.union([z.string(), z.number()]).optional(),
+  month: z.union([z.string(), z.number()]).optional(),
+  day: z.union([z.string(), z.number()]).optional(),
+  author: z
+    .array(
+      z.object({
+        given: z.string().optional(),
+        family: z.string().optional(),
+        literal: z.string().optional(),
+      }),
+    )
+    .optional(),
+  editor: z
+    .array(
+      z.object({
+        given: z.string().optional(),
+        family: z.string().optional(),
+        literal: z.string().optional(),
+      }),
+    )
+    .optional(),
+  translator: z
+    .array(
+      z.object({
+        given: z.string().optional(),
+        family: z.string().optional(),
+        literal: z.string().optional(),
+      }),
+    )
+    .optional(),
+  "container-author": z
+    .array(
+      z.object({
+        given: z.string().optional(),
+        family: z.string().optional(),
+        literal: z.string().optional(),
+      }),
+    )
+    .optional(),
 
-    tags: z.array(z.string().optional()),
-    degree: z.string().optional(),
+  tags: z.array(z.string().optional()),
+  degree: z.string().optional(),
 
-    isA_taxonId: z.string().optional(), //reference("taxonomyItems").optional().nullable(),
-    university__organizationsId: z.string().optional(), //reference("organizations").optional().nullable(),
-    organizations__organizationsId: z.array(z.string()), // z.array(reference("organizations").optional().nullable()),
-    facilities__facilityId: z.array(z.string()), //z.array(reference("facilities").optional().nullable()),
-  },
-)
+  isA_taxonId: z.string().optional(), //reference("taxonomyItems").optional().nullable(),
+  university__organizationsId: z.string().optional(), //reference("organizations").optional().nullable(),
+  organizations__organizationsId: z.array(z.string()), // z.array(reference("organizations").optional().nullable()),
+  facilities__facilityId: z.array(z.string()), //z.array(reference("facilities").optional().nullable()),
+});
 
-export type ThesisSchema = z.infer<typeof ThesisZodSchema>
+export type ThesisSchema = z.infer<typeof ThesisZodSchema>;
 
 export const defineThesesCollection = defineCollection({
   loader: globWithParser({
@@ -114,7 +110,7 @@ export const defineThesesCollection = defineCollection({
       //   ;(data as { date?: string }).date = id.match(/^\d{4}-\d{2}-\d{2}/)?.[0]
       // }
 
-      return entry
+      return entry;
     },
   }),
 
@@ -209,4 +205,4 @@ export const defineThesesCollection = defineCollection({
   //   })
   // },
   schema: ThesisZodSchema,
-})
+});

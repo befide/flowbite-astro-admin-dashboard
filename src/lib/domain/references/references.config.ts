@@ -1,19 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import fs from "node:fs"
-import path from "node:path"
+import fs from "node:fs";
+import path from "node:path";
 
-import {
-  defineCollection,
-  reference,
-  z,
-} from "astro:content"
+import { defineCollection, reference, z } from "astro:content";
 
-const INPUT_FILEPATH = path.join(
-  "src",
-  "data",
-  "zotero",
-  "kfb_bf2035.json",
-)
+const INPUT_FILEPATH = path.join("src", "data", "zotero", "kfb_bf2035.json");
 
 export const ReferenceZodSchema = z.object({
   id: z.string(),
@@ -38,23 +29,15 @@ export const ReferenceZodSchema = z.object({
   publisher: z.string().optional(),
   tags: z.array(z.string().optional()),
 
-  organizationRefs: z.array(
-    reference("organizations").optional().nullable(),
-  ),
-  facilityRefs: z.array(
-    reference("facilities").optional().nullable(),
-  ),
-})
+  organizationRefs: z.array(reference("organizations").optional().nullable()),
+  facilityRefs: z.array(reference("facilities").optional().nullable()),
+});
 
-export type ReferenceSchema = z.infer<
-  typeof ReferenceZodSchema
->
+export type ReferenceSchema = z.infer<typeof ReferenceZodSchema>;
 
 export const defineReferencesCollection = defineCollection({
   loader: async () => {
-    const dataRaw = JSON.parse(
-      fs.readFileSync(INPUT_FILEPATH).toString(),
-    )
+    const dataRaw = JSON.parse(fs.readFileSync(INPUT_FILEPATH).toString());
 
     return dataRaw
       .flat()
@@ -70,48 +53,27 @@ export const defineReferencesCollection = defineCollection({
           id: item.key,
           title: item.data.title,
           itemType: item.data.itemType,
-          language:
-            item.data.language !== ""
-              ? item.data.language
-              : undefined,
+          language: item.data.language !== "" ? item.data.language : undefined,
           year: item.data.date
-            ? Number(
-                (item.data.date as string)?.substring(0, 4),
-              )
+            ? Number((item.data.date as string)?.substring(0, 4))
             : undefined,
-          publisher:
-            item.data.publisher || item.data.university,
-          url:
-            item.data.url !== ""
-              ? item.data.url
-              : undefined,
+          publisher: item.data.publisher || item.data.university,
+          url: item.data.url !== "" ? item.data.url : undefined,
           creators: item.data.creators,
-          tags: item.data.tags.map(
-            ({ tag }: { tag: string }) => tag,
-          ),
+          tags: item.data.tags.map(({ tag }: { tag: string }) => tag),
           organizationRefs: [],
           facilityRefs: [],
-        }
+        };
 
         if (item.data.url?.startsWith("https://doi.org/")) {
-          dataItem.doi = item.data.url.replace(
-            "https://doi.org/",
-            "",
-          )
+          dataItem.doi = item.data.url.replace("https://doi.org/", "");
         }
-        if (
-          item.data.url?.startsWith(
-            "https://nbn-resolving.de/",
-          )
-        ) {
-          dataItem.urn = item.data.url.replace(
-            "https://nbn-resolving.de/",
-            "",
-          )
+        if (item.data.url?.startsWith("https://nbn-resolving.de/")) {
+          dataItem.urn = item.data.url.replace("https://nbn-resolving.de/", "");
         }
 
-        return dataItem
-      })
+        return dataItem;
+      });
   },
   schema: ReferenceZodSchema,
-})
+});

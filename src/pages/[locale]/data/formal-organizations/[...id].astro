@@ -1,28 +1,31 @@
 ---
-import { Organization } from "@lib/domain/organizations"
-import LayoutSidebar from "@astro/LayoutSidebar.astro"
-import FormalOrganization from "@components/domain/FormalOrganization.astro"
-import type { GetStaticPaths, InferGetStaticPropsType } from "astro"
-import fastCartesian from "fast-cartesian"
-import { allCommunityTopLevelOrganizations } from "@lib/domain/organizations/organizations.ts"
+import { Organization } from "@lib/domain/organizations";
+import LayoutSidebar from "@astro/LayoutSidebar.astro";
+import FormalOrganization from "@components/domain/FormalOrganization.astro";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import fastCartesian from "fast-cartesian";
+import { allCommunityTopLevelOrganizations } from "@lib/domain/organizations/organizations.ts";
 
 export const getStaticPaths = (async () => {
-  const locales = ["en", "de"]
-  const organizations = await allCommunityTopLevelOrganizations()
+  const locales = ["en", "de"];
+  const organizations = await allCommunityTopLevelOrganizations();
 
-  const product = fastCartesian([locales, organizations])
+  const product = fastCartesian([locales, organizations]);
 
   return product.map(([locale, organization]: any) => ({
     params: { locale, id: organization.id },
     props: { organization, locale },
-  }))
-}) satisfies GetStaticPaths
+  }));
+}) satisfies GetStaticPaths;
 
-type Props = InferGetStaticPropsType<typeof getStaticPaths>
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const { organization, locale } = Astro.props
+const { organization, locale } = Astro.props;
 ---
 
 <LayoutSidebar>
-  <FormalOrganization organization={new Organization(organization.data)} {locale} />
+  <FormalOrganization
+    organization={new Organization(organization.data)}
+    {locale}
+  />
 </LayoutSidebar>

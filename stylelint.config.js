@@ -31,7 +31,13 @@ export default {
         },
         {
           emptyLineBefore: "threshold",
-          properties: ["fill", "fill-opacity", "stroke", "stroke-width", "stroke-dasharray"],
+          properties: [
+            "fill",
+            "fill-opacity",
+            "stroke",
+            "stroke-width",
+            "stroke-dasharray",
+          ],
         },
         {
           emptyLineBefore: "threshold",
@@ -58,7 +64,15 @@ export default {
         },
         {
           emptyLineBefore: "always",
-          properties: ["position", "top", "right", "bottom", "left", "overflow", "transform"],
+          properties: [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "overflow",
+            "transform",
+          ],
         },
       ],
       {
@@ -68,7 +82,7 @@ export default {
       },
     ],
   },
-}
+};
 
 // /** @type {import('stylelint').Config} */
 // export default {

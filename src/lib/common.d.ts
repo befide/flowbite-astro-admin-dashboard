@@ -1,29 +1,29 @@
-import type { ThesisSchema } from "@domain"
+import type { ThesisSchema } from "@domain";
 
 export type DomainObjectSchema = {
-  id: string
-  isSelected?: boolean
-}
+  id: string;
+  isSelected?: boolean;
+};
 
 export type ReviewSchema = {
-  status__id: string
-  reviewer__contactId: string | null
-  log: string | null
-}
+  status__id: string;
+  reviewer__contactId: string | null;
+  log: string | null;
+};
 
 export type NestableDomainObjectSchema = {
-  id: string
-  isSelected?: boolean
-  parent__id: string | null
-}
+  id: string;
+  isSelected?: boolean;
+  parent__id: string | null;
+};
 
 export type OrganizationSchema = NestableDomainObjectSchema & {
   /** Unique identifier for this entry. */
-  id: string
+  id: string;
   /** Identifier of the parent entry, if any. */
-  parent__id: string | null
-  topLevel__id: string | null
-  instanceOfs__taxonomyID: string[]
+  parent__id: string | null;
+  topLevel__id: string | null;
+  instanceOfs__taxonomyID: string[];
   category: (
     | "fraunhofer"
     | "hgf"
@@ -37,392 +37,392 @@ export type OrganizationSchema = NestableDomainObjectSchema & {
     | "funder"
     | "root"
     | "consortium"
-  )[]
-  partOfCommunityDegree: "none" | "full" | "partial"
+  )[];
+  partOfCommunityDegree: "none" | "full" | "partial";
   label: {
     fullName: {
-      de: string
-      en: string
-    }
+      de: string;
+      en: string;
+    };
     short: {
-      de: string | null
-      en: string | null
-    }
-  }
+      de: string | null;
+      en: string | null;
+    };
+  };
   description: {
-    de: string | null
-    en: string | null
-  }
+    de: string | null;
+    en: string | null;
+  };
   tagline: {
-    de?: string | null
-    en: string | null
-  }
+    de?: string | null;
+    en: string | null;
+  };
   links: {
     homepage: {
-      de: string | null
-      en: string | null
-    }
-    rorId?: string | null
-  }
+      de: string | null;
+      en: string | null;
+    };
+    rorId?: string | null;
+  };
   hasHeads: {
-    literal: string[]
-    contact__contactIDs: string[]
-  }
-  isFormalOrganization: boolean
-  isResearchInstitution: boolean
-  isUniversity: boolean
-  isWorkingGroup: boolean
+    literal: string[];
+    contact__contactIDs: string[];
+  };
+  isFormalOrganization: boolean;
+  isResearchInstitution: boolean;
+  isUniversity: boolean;
+  isWorkingGroup: boolean;
   location?: {
     country: {
-      code?: string | null
-    }
+      code?: string | null;
+    };
 
-    city?: string | null
-    lat?: string | null
-    lng?: string | null
-  } | null
+    city?: string | null;
+    lat?: string | null;
+    lng?: string | null;
+  } | null;
 
   uniquePeopleCount: {
     professor: {
       physicist: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       engineer: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       other: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
-    }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
+    };
     seniorResearcher: {
       physicist: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       engineer: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       other: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
-    }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
+    };
     postDoc: {
       physicist: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       engineer: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       other: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
-    }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
+    };
     phdStudent: {
       physicist: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       engineer: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       other: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
-    }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
+    };
     masterStudent: {
       physicist: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       engineer: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       other: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
-    }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
+    };
     bachelorStudent: {
       physicist: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       engineer: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
       other: {
-        male?: number | null
-        female?: number | null
-        nonbinary?: number | null
-      }
-    }
-  }
+        male?: number | null;
+        female?: number | null;
+        nonbinary?: number | null;
+      };
+    };
+  };
   uniquePeopleCountSum: {
-    total: number
-    professor: number
-    seniorResearcher: number
-    postDoc: number
-    phdStudent: number
-    masterStudent: number
-    bachelorStudent: number
-    physicist: number
-    engineer: number
-    other: number
-    female: number
-    male: number
-    nonbinary: number
-  }
+    total: number;
+    professor: number;
+    seniorResearcher: number;
+    postDoc: number;
+    phdStudent: number;
+    masterStudent: number;
+    bachelorStudent: number;
+    physicist: number;
+    engineer: number;
+    other: number;
+    female: number;
+    male: number;
+    nonbinary: number;
+  };
   uniquePeopleCountRecursiveSum?: {
-    total: number
-    professor: number
-    seniorResearcher: number
-    postDoc: number
-    phdStudent: number
-    masterStudent: number
-    bachelorStudent: number
-    physicist: number
-    engineer: number
-    other: number
-    female: number
-    male: number
-    nonbinary: number
-  }
-  review: ReviewSchema
-}
+    total: number;
+    professor: number;
+    seniorResearcher: number;
+    postDoc: number;
+    phdStudent: number;
+    masterStudent: number;
+    bachelorStudent: number;
+    physicist: number;
+    engineer: number;
+    other: number;
+    female: number;
+    male: number;
+    nonbinary: number;
+  };
+  review: ReviewSchema;
+};
 
 export type OrganizationDto = Pick<
   OrganizationSchema,
   "uniquePeopleCount" | "uniquePeopleCountRecursiveSum"
 > & {
-  id: string
-  category: OrganizationCategories
-  parent__id: string | null
-  instanceOfs__term: string[]
-  label__fullName: string
-  label__short: string
-  location__country: string
-  location__city: string
-  theses_count: number
-  with_theses: boolean
-  facilities_count: number
-  with_facilities: boolean
-  userFacilities_count: number
-  with_userFacilities: boolean
-  teachingEvents_count: number
-  weeklySemesterHours_count: number
-  with_teachingEvents: boolean
-  people_count: number
-}
+  id: string;
+  category: OrganizationCategories;
+  parent__id: string | null;
+  instanceOfs__term: string[];
+  label__fullName: string;
+  label__short: string;
+  location__country: string;
+  location__city: string;
+  theses_count: number;
+  with_theses: boolean;
+  facilities_count: number;
+  with_facilities: boolean;
+  userFacilities_count: number;
+  with_userFacilities: boolean;
+  teachingEvents_count: number;
+  weeklySemesterHours_count: number;
+  with_teachingEvents: boolean;
+  people_count: number;
+};
 
 export type CourseSchema = DomainObjectSchema & {
   /** Unique identifier for this entry. */
   // id: string;
   title: {
-    de: string | null
-    en: string | null
-  }
-  teachingEvent__taxonomyId: string
-  university__organizationsId: string
-  semesters: string[]
-  studyLevels__taxonomyId: string[]
-  partOfProgrammesOfStudy: string[]
-  languages: string[]
+    de: string | null;
+    en: string | null;
+  };
+  teachingEvent__taxonomyId: string;
+  university__organizationsId: string;
+  semesters: string[];
+  studyLevels__taxonomyId: string[];
+  partOfProgrammesOfStudy: string[];
+  languages: string[];
   objectives: {
-    de: string | null
-    en: string | null
-  }
+    de: string | null;
+    en: string | null;
+  };
   contents: {
-    de: string | null
-    en: string | null
-  }
-  weeklySemesterHours: number
+    de: string | null;
+    en: string | null;
+  };
+  weeklySemesterHours: number;
   links: {
     homepage: {
-      de: string | null
-      en: string | null
-    }
-  }
-  review: ReviewSchema
-}
+      de: string | null;
+      en: string | null;
+    };
+  };
+  review: ReviewSchema;
+};
 
 export type CourseDto = Pick<CourseSchema, "id" | "weeklySemesterHours"> & {
-  title: string
-  teachingEvent__term: string
-  university__label_short: string
-  languages: string[]
-  semesters: string[]
-  link: string
-  studyLevels__term: string[]
-  partOfProgrammesOfStudy: string[]
-}
+  title: string;
+  teachingEvent__term: string;
+  university__label_short: string;
+  languages: string[];
+  semesters: string[];
+  link: string;
+  studyLevels__term: string[];
+  partOfProgrammesOfStudy: string[];
+};
 
 export type FacilitySchema = NestableDomainObjectSchema & {
   /** Unique identifier for this entry. */
   // id: string;
   /** Identifier of the parent entry, if any. */
   // parent__id: string | null;
-  partOf__id: string | null
-  successorOf__id: string | null
-  host__organizationsId: string | null
+  partOf__id: string | null;
+  successorOf__id: string | null;
+  host__organizationsId: string | null;
   label: {
-    de: string
-    en: string
-  }
+    de: string;
+    en: string;
+  };
   tagLine: {
-    de: string | null
-    en: string | null
-  }
+    de: string | null;
+    en: string | null;
+  };
   definition: {
-    de: string | null
-    en: string | null
-  }
-  isBMBF_FIS: boolean
-  isUserFacility: boolean
-  instanceOf__taxonomyId: string
+    de: string | null;
+    en: string | null;
+  };
+  isBMBF_FIS: boolean;
+  isUserFacility: boolean;
+  instanceOf__taxonomyId: string;
   lifeCycle: {
-    currentStatus__taxonomyId: string
+    currentStatus__taxonomyId: string;
     design: {
-      startYear: number | null
-    }
+      startYear: number | null;
+    };
     realization: {
-      startYear: number | null
-    }
+      startYear: number | null;
+    };
     operation: {
-      startYear: number | null
-      endYear: number | null
-    }
-  }
-  primaryApplications__taxonomyId: string[]
-  secondaryApplications__taxonomyId: string[]
+      startYear: number | null;
+      endYear: number | null;
+    };
+  };
+  primaryApplications__taxonomyId: string[];
+  secondaryApplications__taxonomyId: string[];
   parameters: {
-    primaryBeamParticles: string[]
-    secondaryBeamParticles: string[]
-    length__m: number | null
-    E0__eV: number | null
-    E1__eV: number | null
-    emittance__mrad: number | null
-    powerConsumption__W: number | null
-    srPowerLoss__W: number | null
-  }
+    primaryBeamParticles: string[];
+    secondaryBeamParticles: string[];
+    length__m: number | null;
+    E0__eV: number | null;
+    E1__eV: number | null;
+    emittance__mrad: number | null;
+    powerConsumption__W: number | null;
+    srPowerLoss__W: number | null;
+  };
   links: {
     homepage: {
-      de: string | null
-      en: string | null
-    }
-  }
-  references: string[]
-  review: ReviewSchema
-}
+      de: string | null;
+      en: string | null;
+    };
+  };
+  references: string[];
+  review: ReviewSchema;
+};
 
 export type FacilityDto = Pick<FacilitySchema, "id"> & {
-  label: string
-  tagLine: string
-  host__label_short: string
-  parent__id: string | null
-  instanceOf__term: string
-  currentStatus__term: string
-  operation_startYear: number | null
-  operation_endYear: number | null
-  isUserFacility: boolean
-  isBMBF_FIS: boolean
-  primaryBeamParticles: string[]
-  secondaryBeamParticles: string[]
-  length__m: number | null
-}
+  label: string;
+  tagLine: string;
+  host__label_short: string;
+  parent__id: string | null;
+  instanceOf__term: string;
+  currentStatus__term: string;
+  operation_startYear: number | null;
+  operation_endYear: number | null;
+  isUserFacility: boolean;
+  isBMBF_FIS: boolean;
+  primaryBeamParticles: string[];
+  secondaryBeamParticles: string[];
+  length__m: number | null;
+};
 
 export type TaxonomyItemSchema = {
   /** Unique identifier for this entry. */
-  id: string
+  id: string;
   /** Identifier of the parent entry, if any. */
-  parent__id: string | null
-  taxonomyURI: string
+  parent__id: string | null;
+  taxonomyURI: string;
   term: {
-    de: string
-    en: string
-  }
+    de: string;
+    en: string;
+  };
   definition: {
-    de: string | null
-    en: string | null
-  }
-  abbreviations: Record<string, string[]>
-  synonyms: Record<string, string[]>
-  iris: string[]
-  review: ReviewSchema
-}
+    de: string | null;
+    en: string | null;
+  };
+  abbreviations: Record<string, string[]>;
+  synonyms: Record<string, string[]>;
+  iris: string[];
+  review: ReviewSchema;
+};
 
 export type TaxonomyItemDto = NestableDomainObjectSchema & {
-  id: string
-  parent__id: string | null
-  term: string
-  definition: string
-  abbreviations: string[]
-  synonyms: string[]
-  taxonomyURI: string
-}
+  id: string;
+  parent__id: string | null;
+  term: string;
+  definition: string;
+  abbreviations: string[];
+  synonyms: string[];
+  taxonomyURI: string;
+};
 
 type ThesisSchema = {
-  id: string
-  citationKey: string
+  id: string;
+  citationKey: string;
   author: {
-    familyName: string
-    givenName: string
-    gender?: string | null
-  }
-  year: number
-  title: string
-  language: "en" | "de"
-  url?: string | undefined
-  thesisType: string
-  isOpenAccess: boolean
-  fulltextLink?: string | undefined
-  doi?: string | undefined
-  urn?: string | undefined
-  isbn?: string | undefined
-  abstract?: string | null
-  publisher: string
-  tags: (string | undefined)[]
+    familyName: string;
+    givenName: string;
+    gender?: string | null;
+  };
+  year: number;
+  title: string;
+  language: "en" | "de";
+  url?: string | undefined;
+  thesisType: string;
+  isOpenAccess: boolean;
+  fulltextLink?: string | undefined;
+  doi?: string | undefined;
+  urn?: string | undefined;
+  isbn?: string | undefined;
+  abstract?: string | null;
+  publisher: string;
+  tags: (string | undefined)[];
   degree: {
-    title: string
-    level: string
-    grantedBy__organizationsId?: string | undefined
-  }
-  employsMethod?: string | undefined
-  hasAffiliation__organizationsId: string[]
+    title: string;
+    level: string;
+    grantedBy__organizationsId?: string | undefined;
+  };
+  employsMethod?: string | undefined;
+  hasAffiliation__organizationsId: string[];
   isAbout: {
-    facility__facilitiesId: string[]
-    accelerationProcess__taxonomyId: (string | undefined)[]
-  }
-  review: ReviewSchema
-}
+    facility__facilitiesId: string[];
+    accelerationProcess__taxonomyId: (string | undefined)[];
+  };
+  review: ReviewSchema;
+};
 
 export type ThesisDto = Pick<
   ThesisSchema,
@@ -437,8 +437,8 @@ export type ThesisDto = Pick<
   | "language"
   | "isOpenAccess"
 > & {
-  university__label_short: string
-  affiliations__label_short: string[]
-  facilities__label_short: string[]
-  degreeTitle: string
-}
+  university__label_short: string;
+  affiliations__label_short: string[];
+  facilities__label_short: string[];
+  degreeTitle: string;
+};

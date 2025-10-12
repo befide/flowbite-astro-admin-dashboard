@@ -1,27 +1,30 @@
 import type {
   FacilitySchema,
   TaxonomyItemSchema,
-  NestableDomainObjectSchema,
   OrganizationSchema,
   FacilityDto,
-} from "@lib/common.d.ts"
+} from "@lib/common.d.ts";
 
-type TreeSchema = OrganizationSchema | FacilitySchema | FacilityDto | TaxonomyItemSchema
+export type TreeItemSchema =
+  | OrganizationSchema
+  | FacilitySchema
+  | FacilityDto
+  | TaxonomyItemSchema;
 
-export type TreeNode<Datum extends TreeSchema> = {
-  id: string
-  parent__id: string | null
-  depth: number
-  isSelected: boolean
-  childIndex: number | null
-  children: TreeNode<Datum>[]
-  data: Datum
-}
+export type TreeNode<Datum extends TreeItemSchema> = {
+  id: string;
+  parent__id: string | null;
+  depth: number;
+  isSelected: boolean;
+  childIndex: number | null;
+  children: TreeNode<Datum>[];
+  data: Datum;
+};
 
-export function getRoots<Datum extends TreeSchema>(
+export function getRoots<Datum extends TreeItemSchema>(
   items: Array<Datum>, //, id: IdOperator =( p => p.id), parentId = p => p.parentId
 ): TreeNode<Datum>[] {
-  const roots: TreeNode<Datum>[] = []
+  const roots: TreeNode<Datum>[] = [];
 
   const flatTreeNodes: TreeNode<Datum>[] = items.map((item) => ({
     id: item.id,
@@ -31,42 +34,44 @@ export function getRoots<Datum extends TreeSchema>(
     childIndex: null,
     children: [],
     depth: 0,
-  }))
+  }));
 
   const flatTreeNodeMap: {
-    [key: string]: TreeNode<Datum>
-  } = {}
+    [key: string]: TreeNode<Datum>;
+  } = {};
 
   flatTreeNodes.forEach((node) => {
-    flatTreeNodeMap[node.id] = { ...node, children: [] }
-  })
+    flatTreeNodeMap[node.id] = { ...node, children: [] };
+  });
 
   flatTreeNodes.forEach((item) => {
     if (item.parent__id === null) {
       if (flatTreeNodeMap[item.id] !== undefined) {
-        roots.push(flatTreeNodeMap[item.id]!)
+        roots.push(flatTreeNodeMap[item.id]!);
       }
     } else {
-      const parent = flatTreeNodeMap[item.parent__id]
+      const parent = flatTreeNodeMap[item.parent__id];
       if (parent) {
-        flatTreeNodeMap[item.id]!.depth = parent.depth + 1
-        flatTreeNodeMap[item.id]!.childIndex = parent.children.length
-        parent.children.push(flatTreeNodeMap[item.id]!)
+        flatTreeNodeMap[item.id]!.depth = parent.depth + 1;
+        flatTreeNodeMap[item.id]!.childIndex = parent.children.length;
+        parent.children.push(flatTreeNodeMap[item.id]!);
       }
     }
-  })
+  });
 
-  return roots
+  return roots;
 }
 
-export function flattenTreeNode<Datum extends NestableDomainObjectSchema>(
+export function flattenTreeNode<Datum extends TreeItemSchema>(
   node: TreeNode<Datum>,
 ): TreeNode<Datum>[] {
-  return node.children.length > 0 ? [node, ...node.children.flatMap(flattenTreeNode)] : [node]
+  return node.children.length > 0
+    ? [node, ...node.children.flatMap(flattenTreeNode)]
+    : [node];
 }
 
-export function flattenTreeNodes<Datum extends NestableDomainObjectSchema>(
+export function flattenTreeNodes<Datum extends TreeItemSchema>(
   nodes: TreeNode<Datum>[],
 ) {
-  return nodes.flatMap(flattenTreeNode)
+  return nodes.flatMap(flattenTreeNode);
 }

@@ -1,18 +1,31 @@
 ---
-import { asset } from "../../src/lib/data.js"
+import { asset } from "../../src/lib/data.js";
 ---
 
-<div class="pt:mt-0 mx-auto flex w-full flex-col items-center justify-center px-6 pt-8 dark:bg-gray-900">
-  <a href="#" class="mb-8 flex items-center justify-center text-2xl font-semibold lg:mb-10 dark:text-white">
+<div
+  class="pt:mt-0 mx-auto flex w-full flex-col items-center justify-center px-6 pt-8 dark:bg-gray-900"
+>
+  <a
+    href="#"
+    class="mb-8 flex items-center justify-center text-2xl font-semibold lg:mb-10 dark:text-white"
+  >
     <img src={asset("images/logo.svg")} alt="FlowBite Logo" class="mr-4 h-11" />
     <span>Flowbite</span>
   </a>
   <!-- Card -->
-  <div class="w-full max-w-xl space-y-8 rounded-lg bg-white p-6 shadow sm:p-8 dark:bg-gray-800">
-    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Create a Free Account</h2>
+  <div
+    class="w-full max-w-xl space-y-8 rounded-lg bg-white p-6 shadow sm:p-8 dark:bg-gray-800"
+  >
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+      Create a Free Account
+    </h2>
     <form class="mt-8 space-y-6" action="/api/auth/register" method="post">
       <div>
-        <label for="email" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+        <label
+          for="email"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >Your email</label
+        >
         <input
           type="email"
           name="email"
@@ -23,7 +36,11 @@ import { asset } from "../../src/lib/data.js"
         />
       </div>
       <div>
-        <label for="password" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Your password</label>
+        <label
+          for="password"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >Your password</label
+        >
         <input
           type="password"
           name="password"
@@ -34,7 +51,11 @@ import { asset } from "../../src/lib/data.js"
         />
       </div>
       <div>
-        <label for="confirm-password" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Confirm password</label>
+        <label
+          for="confirm-password"
+          class="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+          >Confirm password</label
+        >
         <input
           type="password"
           name="confirm-password"
@@ -56,7 +77,15 @@ import { asset } from "../../src/lib/data.js"
           />
         </div>
         <div class="ml-3 text-sm">
-          <label for="remember" class="font-medium text-gray-900 dark:text-white">I accept the <a href="#" class="text-primary-700 dark:text-primary-500 hover:underline">Terms and Conditions</a></label>
+          <label
+            for="remember"
+            class="font-medium text-gray-900 dark:text-white"
+            >I accept the <a
+              href="#"
+              class="text-primary-700 dark:text-primary-500 hover:underline"
+              >Terms and Conditions</a
+            ></label
+          >
         </div>
       </div>
       <button
@@ -65,7 +94,11 @@ import { asset } from "../../src/lib/data.js"
         >Create account</button
       >
       <div class="text-sm font-medium text-gray-500 dark:text-gray-400">
-        Already have an account? <a href="#" class="text-primary-700 dark:text-primary-500 hover:underline">Login here</a>
+        Already have an account? <a
+          href="#"
+          class="text-primary-700 dark:text-primary-500 hover:underline"
+          >Login here</a
+        >
       </div>
     </form>
   </div>

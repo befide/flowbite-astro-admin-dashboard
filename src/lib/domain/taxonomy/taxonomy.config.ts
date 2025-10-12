@@ -1,7 +1,12 @@
-import { defineCollection, z } from "astro:content"
-import { glob } from "astro/loaders"
-import { Locales, LocalizedString, NullableLocalizedString, ReviewZodSchema } from "@lib/content.common.ts"
-import { NestableDomainObjectZodSchema } from "@lib/content.common.ts"
+import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
+import {
+  Locales,
+  LocalizedString,
+  NullableLocalizedString,
+  ReviewZodSchema,
+} from "@lib/content.common.ts";
+import { NestableDomainObjectZodSchema } from "@lib/content.common.ts";
 
 const TaxonomyItemZodSchema = NestableDomainObjectZodSchema.extend({
   taxonomyURI: z.string().nullable(),
@@ -11,9 +16,9 @@ const TaxonomyItemZodSchema = NestableDomainObjectZodSchema.extend({
   synonyms: z.record(Locales, z.array(z.string())),
   iris: z.array(z.string()),
   review: ReviewZodSchema,
-})
+});
 
-export type TaxonomyItemSchema = z.infer<typeof TaxonomyItemZodSchema>
+export type TaxonomyItemSchema = z.infer<typeof TaxonomyItemZodSchema>;
 
 export const defineTaxonomyItemsCollection = defineCollection({
   loader: glob({
@@ -22,4 +27,4 @@ export const defineTaxonomyItemsCollection = defineCollection({
   }),
 
   schema: TaxonomyItemZodSchema,
-})
+});

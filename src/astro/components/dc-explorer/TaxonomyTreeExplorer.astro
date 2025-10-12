@@ -1,13 +1,13 @@
 ---
-import DCExplorerCount from "./components/DCExplorerCount.astro"
-import DCExplorer from "./components/DCExplorer.astro"
-import DCExplorerTreeDataSections from "./components/DCExplorerTreeDataSections.astro"
+import DCExplorerCount from "./components/DCExplorerCount.astro";
+import DCExplorer from "./components/DCExplorer.astro";
+import DCExplorerTreeDataSections from "./components/DCExplorerTreeDataSections.astro";
 
 interface Props {
-  collection: string
+  collection: string;
 }
 
-const { collection } = Astro.props
+const { collection } = Astro.props;
 ---
 
 <DCExplorer {collection}>

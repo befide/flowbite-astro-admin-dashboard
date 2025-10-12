@@ -1,46 +1,43 @@
-import type { ThesisDto } from "@/lib/common"
-import { getValueTranslation, type ThesisSchema } from ".."
+import type { ThesisDto } from "@/lib/common";
+import { getValueTranslation, type ThesisSchema } from "..";
 
 import {
   getFacilitiesReferencesLabel,
   getOrganizationsReferencesShortLabel,
-} from "@lib/content.ts"
-
+} from "@lib/content.ts";
 
 export interface Author {
-  familyName: string
-  givenName: string
-  gender: string
+  familyName: string;
+  givenName: string;
+  gender: string;
 }
 
 export class Thesis {
-  _data: ThesisSchema
+  _data: ThesisSchema;
   constructor(data: ThesisSchema) {
-    this._data = data
+    this._data = data;
   }
 
   async getDto(locale: string): Promise<ThesisDto> {
-    const university__label_short = this._data.degree
-      .grantedBy__organizationsId
+    const university__label_short = this._data.degree.grantedBy__organizationsId
       ? (
           await getOrganizationsReferencesShortLabel(
             [this._data.degree.grantedBy__organizationsId],
             locale,
           )
         )[0]
-      : getValueTranslation(this._data.publisher, locale)
+      : getValueTranslation(this._data.publisher, locale);
 
     const organizations__label_short =
       await getOrganizationsReferencesShortLabel(
         this._data.hasAffiliation__organizationsId,
         locale,
-      )
+      );
 
-    const facilities__label_short =
-      await getFacilitiesReferencesLabel(
-        this._data.isAbout.facility__facilitiesId,
-        locale,
-      )
+    const facilities__label_short = await getFacilitiesReferencesLabel(
+      this._data.isAbout.facility__facilitiesId,
+      locale,
+    );
 
     return {
       id: this._data.id,
@@ -54,10 +51,7 @@ export class Thesis {
         givenName: this._data.author.givenName,
         gender:
           this._data.author.gender &&
-          getValueTranslation(
-            this._data.author.gender,
-            locale,
-          ),
+          getValueTranslation(this._data.author.gender, locale),
       },
       language: this._data.language,
       year: this._data.year,
@@ -68,6 +62,6 @@ export class Thesis {
       degreeTitle: this._data.degree.title
         .replaceAll("dr.rer.nat.", "Dr. rer. nat.")
         .replaceAll("dr.-ing.", "Dr.-Ing."),
-    }
+    };
   }
 }

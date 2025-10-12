@@ -1,8 +1,8 @@
-import { defineCollection, z } from "astro:content"
-import { globWithParser } from "@/lib/globWithParser.ts"
+import { defineCollection, z } from "astro:content";
+import { globWithParser } from "@/lib/globWithParser.ts";
 
-import spaceCommander from "@/lib/space-commander.ts"
-import { mergeDeep } from "../mergeDeep"
+import spaceCommander from "@/lib/space-commander.ts";
+import { mergeDeep } from "../mergeDeep";
 
 const SectionZodSchema = z.object({
   title: z.string().max(60),
@@ -18,9 +18,9 @@ const SectionZodSchema = z.object({
   // publishDate: z.coerce.date().optional(),
   // updatedDate: z.coerce.date().optional(),
   // tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
-})
+});
 
-export type SectionSchema = z.infer<typeof SectionZodSchema>
+export type SectionSchema = z.infer<typeof SectionZodSchema>;
 
 // Define docs collection
 
@@ -30,18 +30,20 @@ export const defineSectionCollection = defineCollection({
     base: "./src/content/docs",
     // @ts-ignore
     parser: (entry) => {
-      const sectionNumbers = entry.data.sectionNumber ? (entry.data.sectionNumber as string).split(".") : []
-      const sectionDepth = sectionNumbers.length
+      const sectionNumbers = entry.data.sectionNumber
+        ? (entry.data.sectionNumber as string).split(".")
+        : [];
+      const sectionDepth = sectionNumbers.length;
 
       const computedData = {
         sectionNumbers,
         sectionDepth,
         // slug,
-      }
+      };
       // console.log(computedData)
-      return mergeDeep(entry, { data: computedData })
+      return mergeDeep(entry, { data: computedData });
     },
   }),
 
   schema: SectionZodSchema,
-})
+});

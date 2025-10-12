@@ -1,7 +1,7 @@
 import {
   defineConfig,
   minimal2023Preset,
-} from "@vite-pwa/assets-generator/config"
+} from "@vite-pwa/assets-generator/config";
 
 export default defineConfig({
   headLinkOptions: {
@@ -11,4 +11,4 @@ export default defineConfig({
     ...minimal2023Preset,
   },
   images: "public/app-icon.svg",
-})
+});

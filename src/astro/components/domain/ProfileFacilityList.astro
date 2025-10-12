@@ -1,43 +1,61 @@
 ---
-import { getEntry } from "astro:content"
-import type { FacilitySchema } from "../../../lib/common"
-import { getReferenceLocalizedValue, getTaxonomyReferenceTerm } from "../../../lib/content"
-import { getFacilityRoots } from "../../../lib/domain"
-import { flattenTreeNodes } from "../../../lib/content.tree"
-import Badge from "../ui/Badge.astro"
+import { getEntry } from "astro:content";
+import type { FacilitySchema } from "../../../lib/common";
+import {
+  getReferenceLocalizedValue,
+  getTaxonomyReferencesTerm,
+  getTaxonomyReferenceTerm,
+} from "../../../lib/content";
+import { getFacilityRoots } from "../../../lib/domain";
+import { flattenTreeNodes } from "../../../lib/content.tree";
+import Badge from "../ui/Badge.astro";
 
 interface Props {
-  facilities: FacilitySchema[]
+  facilities: FacilitySchema[];
 }
-let { facilities } = Astro.props
+let { facilities } = Astro.props;
 
-// console.log(facilities)
-
-const facilityRoots = getFacilityRoots(facilities)
+const locale = Astro.currentLocale || "de";
+const facilityRoots = getFacilityRoots(facilities);
 const list = facilities; //flattenTreeNodes(facilityRoots)
 ---
 
 <ol class="">
   {
     list.map(async (facility) => (
-      <li >
+      <li>
         <div class="name">{facility.label.en}</div>
         <table class="property-table not-format">
           <tbody>
             <tr>
               <th>Type</th>
               <th>en</th>
-              <td>{await getTaxonomyReferenceTerm(facility.instanceOf__taxonomyId, "en")}</td>
+              <td>
+                {await getTaxonomyReferenceTerm(
+                  facility.instanceOf__taxonomyId,
+                  "en",
+                )}
+              </td>
             </tr>
             <tr>
               <th />
               <th>de</th>
-              <td>{await getTaxonomyReferenceTerm(facility.instanceOf__taxonomyId, "de")}</td>
+              <td>
+                {await getTaxonomyReferenceTerm(
+                  facility.instanceOf__taxonomyId,
+                  "de",
+                )}
+              </td>
             </tr>
             <tr>
               <th>current life cycle</th>
               <th>en</th>
-              <td>{await getTaxonomyReferenceTerm(facility.lifeCycle.currentStatus__taxonomyId, "en")}</td>
+              <td>
+                {await getTaxonomyReferenceTerm(
+                  facility.lifeCycle.currentStatus__taxonomyId,
+                  "en",
+                )}
+              </td>
             </tr>
 
             <tr>
@@ -60,7 +78,6 @@ const list = facilities; //flattenTreeNodes(facilityRoots)
               <th>de</th>
               <td>{facility.tagLine.de}</td>
             </tr>
-
             <tr>
               <th>description</th>
               <th>en</th>
@@ -72,21 +89,41 @@ const list = facilities; //flattenTreeNodes(facilityRoots)
               <td>{facility.definition.de}</td>
             </tr>
             {false && (
-              <td>
-                <div class="nowrap">
-                  {facility.primaryBeamParticles?.map((entry: string) => (
-                    <Badge size="small" text={entry} />
-                  ))}
-                </div>
-              </td>
-              <td>
-                <div class="">{facility.primaryApplications?.map((entry) => getEntry(entry).then((application) => application && <Badge size="small" text={application.data?.term?.en} />))}</div>
-              </td>
-              <td>
-                <div class="nowrap">{facility.lifeCycle?.currentStatus && getEntry(facility.data.lifeCycle.currentStatus).then((d) => d && d.data.term.en)}</div>
-              </td>
-            )
-            }
+              <>
+                <td>
+                  <div class="nowrap">
+                    {facility.parameters.primaryBeamParticles?.map(
+                      (entry: string) => (
+                        <Badge size="small" text={entry} />
+                      ),
+                    )}
+                  </div>
+                </td>
+                <td>
+                  <div class="">
+                    {(
+                      await getTaxonomyReferencesTerm(
+                        facility.primaryApplications__taxonomyId,
+                        locale,
+                      )
+                    ).map(
+                      (application) =>
+                        application && (
+                          <Badge size="small" text={application} />
+                        ),
+                    )}
+                  </div>
+                </td>
+                <td>
+                  <div class="nowrap">
+                    {await getTaxonomyReferenceTerm(
+                      facility.lifeCycle?.currentStatus__taxonomyId,
+                      locale,
+                    )}
+                  </div>
+                </td>
+              </>
+            )}
           </tbody>
         </table>
       </li>
@@ -96,7 +133,6 @@ const list = facilities; //flattenTreeNodes(facilityRoots)
 
 <style>
   li {
-
   }
   li[data-depth="1"] {
     padding-left: 0.5rem;

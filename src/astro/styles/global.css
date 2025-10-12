@@ -30,16 +30,18 @@
   --kfb__gray--dark: #666;
 
   --font-sans:
-    "Barlow Semi Condensed", "ui-sans-serif", "system-ui", "-apple-system", "system-ui", "Segoe UI",
-    "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "Barlow Semi Condensed", "ui-sans-serif", "system-ui", "-apple-system",
+    "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans",
+    "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
   --font-body:
-    "Barlow Semi Condensed", "ui-sans-serif", "system-ui", "-apple-system", "system-ui", "Segoe UI",
-    "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "sans-serif", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "Barlow Semi Condensed", "ui-sans-serif", "system-ui", "-apple-system",
+    "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans",
+    "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
   --font-mono:
-    "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono",
-    "Courier New", "monospace";
+    "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
+    "Liberation Mono", "Courier New", "monospace";
 
   --line-height: 16px;
   --breakpoint-xs: 22.5rem;

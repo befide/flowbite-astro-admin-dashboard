@@ -2,13 +2,13 @@
 import {
   treeDataSectionsId,
   treeDataSectionsTileId,
-} from "@/astro/components/dc-explorer/components/index"
+} from "@/astro/components/dc-explorer/components/index";
 
-const { collection, dimension, title } = Astro.props
+const { collection, dimension, title } = Astro.props;
 
-const tileId = treeDataSectionsTileId(collection, dimension)
-const chartId = treeDataSectionsId(collection, dimension)
-const tileType = "tree-data-sections"
+const tileId = treeDataSectionsTileId(collection, dimension);
+const chartId = treeDataSectionsId(collection, dimension);
+const tileType = "tree-data-sections";
 ---
 
 <section

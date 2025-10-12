@@ -97,9 +97,7 @@
           "tag": "#is-about/topic/:magnet-technology"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-09-03T04:00:57Z"
@@ -193,9 +191,7 @@
           "tag": "#is-about/facility/:fcc/fcc-hh"
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:59:51Z"
@@ -283,9 +279,7 @@
           "tag": "#is-about/facility/:cac/lhc"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:59:40Z"
@@ -379,9 +373,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:59:40Z"
@@ -469,9 +461,7 @@
           "tag": "#is-about/facility/:cac/lhc"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:59:40Z"
@@ -562,9 +552,7 @@
           "tag": "#is-about/facility/:cac/lhc"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:59:12Z"
@@ -655,9 +643,7 @@
           "tag": "#is-about/facility/:cac/lhc"
         }
       ],
-      "collections": [
-        "CL8GN9SF"
-      ],
+      "collections": ["CL8GN9SF"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:58:41Z"
@@ -748,9 +734,7 @@
           "tag": "#is-about/facility/:bessy-2"
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:57:03Z"
@@ -841,9 +825,7 @@
           "tag": "#is-about/facility/:bessy-2"
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:57:03Z"
@@ -934,9 +916,7 @@
           "tag": "#is-about/facility/:bessy-2"
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:57:03Z"
@@ -1027,9 +1007,7 @@
           "tag": "#is-about/facility/:bessy-2"
         }
       ],
-      "collections": [
-        "WKUG6IJ9"
-      ],
+      "collections": ["WKUG6IJ9"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:57:03Z"
@@ -1120,9 +1098,7 @@
           "tag": "#is-about/facility/:bessy-2"
         }
       ],
-      "collections": [
-        "WKUG6IJ9"
-      ],
+      "collections": ["WKUG6IJ9"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:57:03Z"
@@ -1213,9 +1189,7 @@
           "tag": "#is-about/facility/:bessy-2"
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:59Z"
@@ -1400,9 +1374,7 @@
           "tag": "#is-about/facility/:flash"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:33Z"
@@ -1493,9 +1465,7 @@
           "tag": "#is-about/facility/:flash"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:56:33Z"
@@ -1586,9 +1556,7 @@
           "tag": "#is-about/facility/:flash"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:56:33Z"
@@ -1679,9 +1647,7 @@
           "tag": "#is-about/facility/:flash"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:56:33Z"
@@ -1772,9 +1738,7 @@
           "tag": "#is-about/facility/:flash"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:56:33Z"
@@ -1865,9 +1829,7 @@
           "tag": "#is-about/facility/:flash"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:56:30Z"
@@ -1961,9 +1923,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2054,9 +2014,7 @@
           "tag": "#is-about/facility/:fair/unilac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2147,9 +2105,7 @@
           "tag": "#is-about/facility/:fair/unilac"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2240,9 +2196,7 @@
           "tag": "#is-about/facility/:fair/cryring@esr"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2336,9 +2290,7 @@
           "tag": "#is-about/facility/:fair/unilac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2429,9 +2381,7 @@
           "tag": "#is-about/facility/:fair/unilac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2522,9 +2472,7 @@
           "tag": "#is-about/facility/:fair/sis18"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2612,9 +2560,7 @@
           "tag": "#has-affiliation/:fair"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2702,9 +2648,7 @@
           "tag": "#has-affiliation/:fair"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2792,9 +2736,7 @@
           "tag": "#has-affiliation/:fair"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2894,9 +2836,7 @@
           "tag": "#is-about/facility/:fair"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -2987,9 +2927,7 @@
           "tag": "#is-about/facility/:fair/super-frs"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3083,9 +3021,7 @@
           "tag": "#is-about/facility/:cac/lhc"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3176,9 +3112,7 @@
           "tag": "#is-about/facility/:fair/sis18"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3266,9 +3200,7 @@
           "tag": "#has-affiliation/:fair"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3359,9 +3291,7 @@
           "tag": "#is-about/facility/:fair/unilac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3449,9 +3379,7 @@
           "tag": "#has-affiliation/:fair"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3542,9 +3470,7 @@
           "tag": "#is-about/facility/:fair/sis100"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3635,9 +3561,7 @@
           "tag": "#is-about/facility/:fair/p-linac"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3725,9 +3649,7 @@
           "tag": "#has-affiliation/:fair"
         }
       ],
-      "collections": [
-        "CL8GN9SF"
-      ],
+      "collections": ["CL8GN9SF"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3815,9 +3737,7 @@
           "tag": "#has-affiliation/:fair"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:26Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -3908,9 +3828,7 @@
           "tag": "#is-about/facility/:fair"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -4001,9 +3919,7 @@
           "tag": "#is-about/facility/:fair/unilac"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -4097,9 +4013,7 @@
           "tag": "#is-about/facility/:mesa"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -4190,9 +4104,7 @@
           "tag": "#is-about/facility/:cosy"
         }
       ],
-      "collections": [
-        "CL8GN9SF"
-      ],
+      "collections": ["CL8GN9SF"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -4283,9 +4195,7 @@
           "tag": "#is-about/facility/:fair/sis18"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:56:03Z"
@@ -4373,9 +4283,7 @@
           "tag": "#has-affiliation/:fair"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:55:34Z"
@@ -4463,9 +4371,7 @@
           "tag": "#is-about/facility/:eu-xfel"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:54:09Z"
@@ -4556,9 +4462,7 @@
           "tag": "#is-about/facility/:cac/lhc"
         }
       ],
-      "collections": [
-        "WKUG6IJ9"
-      ],
+      "collections": ["WKUG6IJ9"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:53:40Z"
@@ -4649,9 +4553,7 @@
           "tag": "#is-about/facility/:cac/lhc"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:53:40Z"
@@ -4742,9 +4644,7 @@
           "tag": "#is-about/facility/:cac/lhc"
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:53:40Z"
@@ -4835,9 +4735,7 @@
           "tag": "#is-about/facility/:elbe"
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-09-03T03:51:51Z"
@@ -4934,9 +4832,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:51:51Z"
@@ -5027,9 +4923,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-09-03T03:51:51Z"
@@ -5114,9 +5008,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -5217,9 +5109,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -5320,9 +5210,7 @@
           "tag": "#is-about/topic/:cryogenic-engineering"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -5410,9 +5298,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -5512,9 +5398,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -5615,9 +5499,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -5705,9 +5587,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -5795,9 +5675,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -5885,9 +5763,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -5975,9 +5851,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:29Z",
       "dateModified": "2025-06-13T13:27:29Z"
@@ -6065,9 +5939,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6155,9 +6027,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6245,9 +6115,7 @@
           "tag": "#is-about/accelerator-type/erl"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6335,9 +6203,7 @@
           "tag": "#is-about/accelerator-type/erl"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6425,9 +6291,7 @@
           "tag": "#is-about/accelerator-type/erl"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6515,9 +6379,7 @@
           "tag": "#is-about/accelerator-type/erl"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6602,9 +6464,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6689,9 +6549,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6779,9 +6637,7 @@
           "tag": "#is-about/facility/:light@gsi"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6869,9 +6725,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -6959,9 +6813,7 @@
           "tag": "#is-about/acceleration-process/:plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "GC8T9946"
-      ],
+      "collections": ["GC8T9946"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7046,9 +6898,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7133,9 +6983,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "RN97Q7UE"
-      ],
+      "collections": ["RN97Q7UE"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7220,9 +7068,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7307,9 +7153,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7400,9 +7244,7 @@
           "tag": "#is-about/facility/:mesa"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7487,9 +7329,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7574,9 +7414,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7661,9 +7499,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7748,9 +7584,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7835,9 +7669,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -7922,9 +7754,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8009,9 +7839,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8096,9 +7924,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8186,9 +8012,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8273,9 +8097,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8360,9 +8182,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8447,9 +8267,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8534,9 +8352,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8621,9 +8437,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8708,9 +8522,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8795,9 +8607,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8882,9 +8692,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -8969,9 +8777,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9056,9 +8862,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9143,9 +8947,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9230,9 +9032,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9317,9 +9117,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9404,9 +9202,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9491,9 +9287,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9578,9 +9372,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9665,9 +9457,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9752,9 +9542,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9839,9 +9627,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -9926,9 +9712,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10013,9 +9797,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10100,9 +9882,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10187,9 +9967,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10277,9 +10055,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10364,9 +10140,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10451,9 +10225,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10538,9 +10310,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10628,9 +10398,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10718,9 +10486,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10808,9 +10574,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10898,9 +10662,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -10985,9 +10747,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11075,9 +10835,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11162,9 +10920,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11249,9 +11005,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11339,9 +11093,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11429,9 +11181,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11519,9 +11269,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11609,9 +11357,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11699,9 +11445,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11789,9 +11533,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11879,9 +11621,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -11972,9 +11712,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12059,9 +11797,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12146,9 +11882,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "RCQ79AY6"
-      ],
+      "collections": ["RCQ79AY6"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12236,9 +11970,7 @@
           "tag": "#is-about/facility/:franz"
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12326,9 +12058,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12413,9 +12143,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12500,9 +12228,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12587,9 +12313,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12674,9 +12398,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12761,9 +12483,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12848,9 +12568,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -12935,9 +12653,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13025,9 +12741,7 @@
           "tag": "#is-about/accelerator-type/erl"
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13112,9 +12826,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13199,9 +12911,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "TARDSEEC"
-      ],
+      "collections": ["TARDSEEC"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13289,9 +12999,7 @@
           "tag": "#is-about/accelerator-type/erl"
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13376,9 +13084,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13463,9 +13169,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13550,9 +13254,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13640,9 +13342,7 @@
           "tag": "#is-about/accelerator-type/erl"
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13730,9 +13430,7 @@
           "tag": "#is-about/accelerator-type/erl"
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:28Z",
       "dateModified": "2025-06-13T13:27:28Z"
@@ -13817,9 +13515,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -13910,9 +13606,7 @@
           "tag": "#is-about/facility/:mesa"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -13997,9 +13691,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14084,9 +13776,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14171,9 +13861,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "AL5YAXXP"
-      ],
+      "collections": ["AL5YAXXP"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14258,9 +13946,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14345,9 +14031,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14438,9 +14122,7 @@
           "tag": "#is-about/facility/:mesa"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14531,9 +14213,7 @@
           "tag": "#is-about/facility/:mesa"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14624,9 +14304,7 @@
           "tag": "#is-about/facility/:mesa"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14714,9 +14392,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14807,9 +14483,7 @@
           "tag": "#is-about/facility/:mesa"
         }
       ],
-      "collections": [
-        "8IX4DGLG"
-      ],
+      "collections": ["8IX4DGLG"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14897,9 +14571,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -14987,9 +14659,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15077,9 +14747,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15170,9 +14838,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15260,9 +14926,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15350,9 +15014,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15443,9 +15105,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15536,9 +15196,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15626,9 +15284,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15722,9 +15378,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15812,9 +15466,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15902,9 +15554,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -15992,9 +15642,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16082,9 +15730,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16169,9 +15815,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "CL8GN9SF"
-      ],
+      "collections": ["CL8GN9SF"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16259,9 +15903,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16349,9 +15991,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16439,9 +16079,7 @@
           "tag": "#is-about/topic/:beam-dynamics"
         }
       ],
-      "collections": [
-        "C46DVD39"
-      ],
+      "collections": ["C46DVD39"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16526,9 +16164,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "CL8GN9SF"
-      ],
+      "collections": ["CL8GN9SF"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16613,9 +16249,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "CL8GN9SF"
-      ],
+      "collections": ["CL8GN9SF"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16700,9 +16334,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "CL8GN9SF"
-      ],
+      "collections": ["CL8GN9SF"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16790,9 +16422,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16880,9 +16510,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -16970,9 +16598,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17057,9 +16683,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17147,9 +16771,7 @@
           "tag": "#is-about/facility/:cosy"
         }
       ],
-      "collections": [
-        "CL8GN9SF"
-      ],
+      "collections": ["CL8GN9SF"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17234,9 +16856,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17321,9 +16941,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17411,9 +17029,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17501,9 +17117,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17588,9 +17202,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17675,9 +17287,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17762,9 +17372,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17849,9 +17457,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -17936,9 +17542,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18023,9 +17627,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18110,9 +17712,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18197,9 +17797,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18287,9 +17885,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18374,9 +17970,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18461,9 +18055,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18548,9 +18140,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18638,9 +18228,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18728,9 +18316,7 @@
           "tag": "#is-about/facility/:s-dalinac"
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18815,9 +18401,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "DPHDN9JI"
-      ],
+      "collections": ["DPHDN9JI"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18902,9 +18486,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "WKUG6IJ9"
-      ],
+      "collections": ["WKUG6IJ9"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -18989,9 +18571,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "WKUG6IJ9"
-      ],
+      "collections": ["WKUG6IJ9"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19076,9 +18656,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "WKUG6IJ9"
-      ],
+      "collections": ["WKUG6IJ9"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19163,9 +18741,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "RN97Q7UE"
-      ],
+      "collections": ["RN97Q7UE"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19250,9 +18826,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19337,9 +18911,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "WKUG6IJ9"
-      ],
+      "collections": ["WKUG6IJ9"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19424,9 +18996,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "WKUG6IJ9"
-      ],
+      "collections": ["WKUG6IJ9"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19514,9 +19084,7 @@
           "tag": "#is-about/accelerator-type/erl"
         }
       ],
-      "collections": [
-        "RN97Q7UE"
-      ],
+      "collections": ["RN97Q7UE"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19604,9 +19172,7 @@
           "tag": "#is-about/facility/:elsa"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19694,9 +19260,7 @@
           "tag": "#is-about/facility/:elsa"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19784,9 +19348,7 @@
           "tag": "#is-about/facility/:elsa"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19874,9 +19436,7 @@
           "tag": "#is-about/facility/:elsa"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -19964,9 +19524,7 @@
           "tag": "#is-about/facility/:elsa"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20054,9 +19612,7 @@
           "tag": "#is-about/facility/:elsa"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20144,9 +19700,7 @@
           "tag": "#is-about/facility/:elsa"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20234,9 +19788,7 @@
           "tag": "#is-about/facility/:elsa"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20324,9 +19876,7 @@
           "tag": "#is-about/facility/:elsa"
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20411,9 +19961,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "PC7R3RQH"
-      ],
+      "collections": ["PC7R3RQH"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20498,9 +20046,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20585,9 +20131,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20672,9 +20216,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20759,9 +20301,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20846,9 +20386,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -20933,9 +20471,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21020,9 +20556,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21107,9 +20641,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21194,9 +20726,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21281,9 +20811,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21368,9 +20896,7 @@
           "tag": "#degree/title/:dr.rer.nat."
         }
       ],
-      "collections": [
-        "NXWHUPJR"
-      ],
+      "collections": ["NXWHUPJR"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21455,9 +20981,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21542,9 +21066,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21629,9 +21151,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21716,9 +21236,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21806,9 +21324,7 @@
           "tag": "#is-about/facility/:cac/sps"
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21893,9 +21409,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -21986,9 +21500,7 @@
           "tag": "#is-about/acceleration-process/:cavity-based_radiofrequency-driven_acceleration/"
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -22073,9 +21585,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"
@@ -22160,9 +21670,7 @@
           "tag": "#degree/title/:dr.-ing."
         }
       ],
-      "collections": [
-        "EJDJYJPB"
-      ],
+      "collections": ["EJDJYJPB"],
       "relations": {},
       "dateAdded": "2025-06-13T13:27:27Z",
       "dateModified": "2025-06-13T13:27:27Z"

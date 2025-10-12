@@ -1,35 +1,52 @@
 ---
-import { Thesis } from "@domain/theses"
-import type { Course } from "@lib/domain"
-import { getLangFromUrl, useTranslations } from "@astro/i18n/utils"
+import { Thesis } from "@domain/theses";
+import type { Course } from "@lib/domain";
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils";
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
-  theses: Thesis[]
-  locale?: string
+  theses: Thesis[];
+  locale?: string;
 }
 
-let { theses, locale = "en" } = Astro.props
+let { theses, locale = "en" } = Astro.props;
 
-const thesisDtos = await Promise.all(theses.map(async (d) => await d.getDto(locale)))
+const thesisDtos = await Promise.all(
+  theses.map(async (d) => await d.getDto(locale)),
+);
 
-const engineeringDegreeCount = thesisDtos.filter((d) => d.degreeTitle.indexOf("Dr.-Ing.") > -1).length
-const naturalScienceDegreeCount = thesisDtos.filter((d) => d.degreeTitle.indexOf("Dr. rer. nat.") > -1).length
-const femaleCount = thesisDtos.filter((d) => d.author.gender === "female").length
-const maleCount = thesisDtos.filter((d) => d.author.gender === "male").length
+const engineeringDegreeCount = thesisDtos.filter(
+  (d) => d.degreeTitle.indexOf("Dr.-Ing.") > -1,
+).length;
+const naturalScienceDegreeCount = thesisDtos.filter(
+  (d) => d.degreeTitle.indexOf("Dr. rer. nat.") > -1,
+).length;
+const femaleCount = thesisDtos.filter(
+  (d) => d.author.gender === "female",
+).length;
+const maleCount = thesisDtos.filter((d) => d.author.gender === "male").length;
 ---
 
 <section class="format">
   <h4>Doctoral Theses</h4>
   {
     thesisDtos.length == 0 ? (
-      <p>Doctoral theses are currently displayed for universities only. However, the data model provides for the specification of organizations involved in doctoral studies, so that entries marked accordingly could be displayed here.</p>
+      <p>
+        Doctoral theses are currently displayed for universities only. However,
+        the data model provides for the specification of organizations involved
+        in doctoral studies, so that entries marked accordingly could be
+        displayed here.
+      </p>
     ) : (
       <p>
-        From 2010 onwards, a total of {theses.length} doctoral theses have been published in the field of accelerator research at {thesisDtos[1]?.university__label_short}. Of these, {naturalScienceDegreeCount} led to science degrees and{" "}
-        {engineeringDegreeCount ? engineeringDegreeCount : "none"} to engineering degrees. {femaleCount} were written by women and {maleCount}
+        From 2010 onwards, a total of {theses.length} doctoral theses have been
+        published in the field of accelerator research at{" "}
+        {thesisDtos[1]?.university__label_short}. Of these,{" "}
+        {naturalScienceDegreeCount} led to science degrees and{" "}
+        {engineeringDegreeCount ? engineeringDegreeCount : "none"} to
+        engineering degrees. {femaleCount} were written by women and {maleCount}
         by men.
       </p>
     )
@@ -41,8 +58,12 @@ const maleCount = thesisDtos.filter((d) => d.author.gender === "male").length
         <li>
           <div class="reference__author-and-year">
             <span class="reference__author">
-              <span class="reference__author-given-name">{thesis.author.givenName}</span>
-              <span class="reference__author-family-name font-bold">{thesis.author.familyName}</span>
+              <span class="reference__author-given-name">
+                {thesis.author.givenName}
+              </span>
+              <span class="reference__author-family-name font-bold">
+                {thesis.author.familyName}
+              </span>
               <span class="reference__year">({thesis.year})</span>
             </span>
           </div>
@@ -85,7 +106,9 @@ const maleCount = thesisDtos.filter((d) => d.author.gender === "male").length
                 <tr>
                   <th>doi</th>
                   <td>
-                    <a href={encodeURI("https://doi.org/" + thesis.doi)}>{thesis.doi}</a>
+                    <a href={encodeURI("https://doi.org/" + thesis.doi)}>
+                      {thesis.doi}
+                    </a>
                   </td>
                 </tr>
               )}
@@ -99,8 +122,11 @@ const maleCount = thesisDtos.filter((d) => d.author.gender === "male").length
                 <tr>
                   <th>urn</th>
                   <td>
-
-                    <a href={encodeURI("https://nbn-resolving.de/" + thesis.urn)}>{thesis.urn}</a>
+                    <a
+                      href={encodeURI("https://nbn-resolving.de/" + thesis.urn)}
+                    >
+                      {thesis.urn}
+                    </a>
                   </td>
                 </tr>
               )}
@@ -108,11 +134,15 @@ const maleCount = thesisDtos.filter((d) => d.author.gender === "male").length
                 <tr>
                   <th>fulltext link</th>
                   <td>
-                    <a href={thesis.fulltextLink} style="overflow: hidden; text-overflow: ellipsis;">{thesis.fulltextLink}</a>
+                    <a
+                      href={thesis.fulltextLink}
+                      style="overflow: hidden; text-overflow: ellipsis;"
+                    >
+                      {thesis.fulltextLink}
+                    </a>
                   </td>
                 </tr>
               )}
-              {(
               <tr>
                 <th>{t("ontology.relationship.is-about-facility")}</th>
                 <td>{thesis.facilities__label_short}</td>
@@ -120,7 +150,7 @@ const maleCount = thesisDtos.filter((d) => d.author.gender === "male").length
               <tr>
                 <th>{t("ontology.relationship.has-affiliation")}</th>
                 <td>{thesis.affiliations__label_short}</td>
-              </tr>)}
+              </tr>
             </tbody>
           </table>
         </li>

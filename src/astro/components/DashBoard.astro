@@ -1,19 +1,24 @@
 ---
-import { allCommunityGroups, allCommunityTopLevelOrganizations } from "@domain/organizations"
-import KnowledgeMap from "./domain/KnowledgeMap.astro"
-import { getTestFacilities, getUserFacilities } from "@/lib/domain"
+import {
+  allCommunityGroups,
+  allCommunityTopLevelOrganizations,
+} from "@domain/organizations";
+import KnowledgeMap from "./domain/KnowledgeMap.astro";
+import { getTestFacilities, getUserFacilities } from "@/lib/domain";
 
-const formalOrganizations = await allCommunityTopLevelOrganizations()
-const formalOrganizationsCount = formalOrganizations ? formalOrganizations.length : 0
+const formalOrganizations = await allCommunityTopLevelOrganizations();
+const formalOrganizationsCount = formalOrganizations
+  ? formalOrganizations.length
+  : 0;
 
-const groups = await allCommunityGroups()
-const groupsCount = groups ? groups.length : 0
+const groups = await allCommunityGroups();
+const groupsCount = groups ? groups.length : 0;
 
-const testFacilities = await getTestFacilities()
-const testFacilitiesCount = testFacilities ? testFacilities.length : 0
+const testFacilities = await getTestFacilities();
+const testFacilitiesCount = testFacilities ? testFacilities.length : 0;
 
-const userFacilities = await getUserFacilities()
-const userFacilitiesCount = userFacilities ? userFacilities.length : 0
+const userFacilities = await getUserFacilities();
+const userFacilitiesCount = userFacilities ? userFacilities.length : 0;
 ---
 
 <div class="px-4 pt-6">
@@ -22,9 +27,12 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
       <div
         class="w-full flex-col rounded-lg border border-gray-200 bg-white shadow-sm sm:flex sm:p-6 dark:border-gray-700 dark:bg-gray-800"
       >
-        <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">Formal Organization</h3>
+        <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">
+          Formal Organization
+        </h3>
         <p>
-          <span class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
+          <span
+            class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
             >{formalOrganizationsCount}</span
           > organizations
         </p>
@@ -32,9 +40,12 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
       <div
         class="w-full flex-col rounded-lg border border-gray-200 bg-white shadow-sm sm:flex sm:p-6 dark:border-gray-700 dark:bg-gray-800"
       >
-        <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">Research / Work groups</h3>
+        <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">
+          Research / Work groups
+        </h3>
         <p>
-          <span class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
+          <span
+            class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
             >{groupsCount}</span
           > groups
         </p>
@@ -42,9 +53,12 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
       <div
         class="w-full flex-col rounded-lg border border-gray-200 bg-white shadow-sm sm:flex sm:p-6 dark:border-gray-700 dark:bg-gray-800"
       >
-        <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">Potential Members</h3>
+        <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">
+          Potential Members
+        </h3>
         <p>
-          <span class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
+          <span
+            class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
             >950</span
           > people
         </p>
@@ -62,9 +76,12 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
       <div
         class="flex-col rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:flex sm:p-6 dark:border-gray-700 dark:bg-gray-800"
       >
-        <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">Test Facilities</h3>
+        <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">
+          Test Facilities
+        </h3>
         <p>
-          <span class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
+          <span
+            class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
             >{testFacilitiesCount}</span
           > facilities
         </p>
@@ -74,9 +91,12 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
       <div
         class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6 dark:border-gray-700 dark:bg-gray-800"
       >
-        <h3 class="mb-2 text-xl font-normal text-gray-500 dark:text-gray-400">User Facilities</h3>
+        <h3 class="mb-2 text-xl font-normal text-gray-500 dark:text-gray-400">
+          User Facilities
+        </h3>
         <p>
-          <span class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
+          <span
+            class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
             >{userFacilitiesCount}</span
           > user facilities
         </p>
@@ -84,33 +104,55 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
       <div
         class="w-full rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6 dark:border-gray-700 dark:bg-gray-800"
       >
-        <h3 class="mb-2 text-xl font-normal text-gray-500 dark:text-gray-400">by application</h3>
+        <h3 class="mb-2 text-xl font-normal text-gray-500 dark:text-gray-400">
+          by application
+        </h3>
         <div class="mb-2 flex items-center">
-          <div class="w-32 text-sm font-medium dark:text-white">particle physics</div>
+          <div class="w-32 text-sm font-medium dark:text-white">
+            particle physics
+          </div>
           <div class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-            <div class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full" style="width: 33%">
+            <div
+              class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full"
+              style="width: 33%"
+            >
             </div>
           </div>
         </div>
 
         <div class="mb-2 flex items-center">
-          <div class="w-32 text-sm font-medium dark:text-white">nuclear physics</div>
+          <div class="w-32 text-sm font-medium dark:text-white">
+            nuclear physics
+          </div>
           <div class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-            <div class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full" style="width: 10%">
+            <div
+              class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full"
+              style="width: 10%"
+            >
             </div>
           </div>
         </div>
         <div class="mb-2 flex items-center">
-          <div class="w-32 text-sm font-medium dark:text-white">photon science</div>
+          <div class="w-32 text-sm font-medium dark:text-white">
+            photon science
+          </div>
           <div class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-            <div class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full" style="width: 13%">
+            <div
+              class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full"
+              style="width: 13%"
+            >
             </div>
           </div>
         </div>
         <div class="mb-2 flex items-center">
-          <div class="w-32 text-sm font-medium dark:text-white">neutron science</div>
+          <div class="w-32 text-sm font-medium dark:text-white">
+            neutron science
+          </div>
           <div class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-            <div class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full" style="width: 40%">
+            <div
+              class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full"
+              style="width: 40%"
+            >
             </div>
           </div>
         </div>
@@ -125,7 +167,9 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
       class="mb-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6 xl:mb-0 dark:border-gray-700 dark:bg-gray-800"
     >
       <div class="mb-4 flex items-center justify-between">
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Latest Activity</h3>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+          Latest Activity
+        </h3>
         <a
           href="#"
           class="text-primary-700 dark:text-primary-500 inline-flex items-center rounded-lg p-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -139,17 +183,21 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
             class="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-800 dark:bg-gray-700"
           >
           </div>
-          <time class="mb-1 text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
+          <time
+            class="mb-1 text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
             >September 10, 2025
           </time>
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
             Getting the community involved in the review process
           </h3>
-          <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-            To make sure the data collected in the inventory is as complete and accurate as
-            possible, we've set up a review process that delegates the checking of the prepared data
-            to designated people in charge. As a key step, all reviewers were emailed today and
-            asked to respond by September 22.
+          <p
+            class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
+          >
+            To make sure the data collected in the inventory is as complete and
+            accurate as possible, we've set up a review process that delegates
+            the checking of the prepared data to designated people in charge. As
+            a key step, all reviewers were emailed today and asked to respond by
+            September 22.
           </p>
         </li>
         <li class="mb-10 ml-4">
@@ -157,15 +205,18 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
             class="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-800 dark:bg-gray-700"
           >
           </div>
-          <time class="mb-1 text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
+          <time
+            class="mb-1 text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
             >September 7, 2025
           </time>
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
             Inventory hub goes online
           </h3>
-          <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-            Get started with dozens of web components and interactive elements built on top of
-            Tailwind CSS.
+          <p
+            class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
+          >
+            Get started with dozens of web components and interactive elements
+            built on top of Tailwind CSS.
           </p>
         </li>
         <li class="mb-10 ml-4">
@@ -173,15 +224,17 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
             class="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-800 dark:bg-gray-700"
           >
           </div>
-          <time class="mb-1 text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
+          <time
+            class="mb-1 text-sm leading-none font-normal text-gray-400 dark:text-gray-500"
             >September 5, 2025
           </time>
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
             KfB approves Inventory Project
           </h3>
           <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-            At its meeting on September 5, the KfB approves the Inventory Project as a cornerstone
-            for data-based continuous strategy development.
+            At its meeting on September 5, the KfB approves the Inventory
+            Project as a cornerstone for data-based continuous strategy
+            development.
           </p>
         </li>
       </ol>
@@ -192,8 +245,13 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
     >
       <div id="carousel" class="relative" data-carousel="">
         <div class="relative mx-auto h-[36rem] overflow-hidden lg:h-[24rem]">
-          <div class="hidden bg-white duration-700 ease-in-out dark:bg-gray-800" data-carousel-item>
-            <div class="text-primary-600 mb-4 flex items-center text-lg font-medium">
+          <div
+            class="hidden bg-white duration-700 ease-in-out dark:bg-gray-800"
+            data-carousel-item
+          >
+            <div
+              class="text-primary-600 mb-4 flex items-center text-lg font-medium"
+            >
               <svg
                 class="mr-2 h-6 w-6"
                 fill="currentColor"
@@ -209,23 +267,39 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
               </svg>
               Insights
             </div>
-            <h3 class="mb-4 text-2xl font-medium text-gray-900 dark:text-white">Diversity</h3>
-            <h4 class="mb-4 text-2xl font-medium text-gray-900 dark:text-white">Doctoral Theses</h4>
+            <h3 class="mb-4 text-2xl font-medium text-gray-900 dark:text-white">
+              Diversity
+            </h3>
+            <h4 class="mb-4 text-2xl font-medium text-gray-900 dark:text-white">
+              Doctoral Theses
+            </h4>
             <p class="mb-4 text-gray-500 dark:text-gray-400">
-              - 201 (Dr. rer. nat) / 46 (Dr.-Ing) - Dr.-Ing. at KIT, TU Darmstadt, Uni Rostock
+              - 201 (Dr. rer. nat) / 46 (Dr.-Ing) - Dr.-Ing. at KIT, TU
+              Darmstadt, Uni Rostock
             </p>
             <p class="mb-4 text-gray-500 dark:text-gray-400"></p>
-            <p class="mb-2 text-lg font-medium text-gray-900 dark:text-white">Key Takeaways:</p>
-            <ul class="mb-4 list-disc space-y-3 pl-4 text-gray-500 dark:text-gray-400">
+            <p class="mb-2 text-lg font-medium text-gray-900 dark:text-white">
+              Key Takeaways:
+            </p>
+            <ul
+              class="mb-4 list-disc space-y-3 pl-4 text-gray-500 dark:text-gray-400"
+            >
               <li>
-                What are the new challenges in the delivery industry due to new consumer
-                expectations.
+                What are the new challenges in the delivery industry due to new
+                consumer expectations.
               </li>
-              <li>How the online delivery business model is diversifying to meet new demands.</li>
               <li>
-                Which new technology requirements must be met to ensure true retail experiences.
+                How the online delivery business model is diversifying to meet
+                new demands.
               </li>
-              <li>How a headless commerce architecture solves challenges in the industry.</li>
+              <li>
+                Which new technology requirements must be met to ensure true
+                retail experiences.
+              </li>
+              <li>
+                How a headless commerce architecture solves challenges in the
+                industry.
+              </li>
             </ul>
             <a
               href="#"
@@ -247,8 +321,13 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
               </svg>
             </a>
           </div>
-          <div class="hidden bg-white duration-700 ease-in-out dark:bg-gray-800" data-carousel-item>
-            <div class="mb-4 flex items-center text-lg font-medium text-teal-500">
+          <div
+            class="hidden bg-white duration-700 ease-in-out dark:bg-gray-800"
+            data-carousel-item
+          >
+            <div
+              class="mb-4 flex items-center text-lg font-medium text-teal-500"
+            >
               <svg
                 class="mr-2 h-6 w-6"
                 fill="currentColor"
@@ -270,11 +349,16 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
               Tips to grow
             </div>
             <p class="mb-4 text-gray-500 dark:text-gray-400">
-              Marketing, sales & business growth for small business. Improve your marketing &
-              promotion results - and grow your sales!
+              Marketing, sales & business growth for small business. Improve
+              your marketing & promotion results - and grow your sales!
             </p>
-            <p class="mb-4 text-lg font-medium text-gray-900 dark:text-white">What you'll learn:</p>
-            <ul role="list" class="mb-4 list-disc space-y-3 pl-2 text-gray-500 dark:text-gray-400">
+            <p class="mb-4 text-lg font-medium text-gray-900 dark:text-white">
+              What you'll learn:
+            </p>
+            <ul
+              role="list"
+              class="mb-4 list-disc space-y-3 pl-2 text-gray-500 dark:text-gray-400"
+            >
               <li class="flex space-x-2">
                 <!-- Icon -->
                 <svg
@@ -290,7 +374,8 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
                     d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
                   ></path>
                 </svg>
-                <span class="leading-tight">Dynamic reports and dashboards</span>
+                <span class="leading-tight">Dynamic reports and dashboards</span
+                >
               </li>
               <li class="flex space-x-2">
                 <!-- Icon -->
@@ -326,7 +411,9 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
                     d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
                   ></path>
                 </svg>
-                <span class="leading-tight">Take their business to the next level</span>
+                <span class="leading-tight"
+                  >Take their business to the next level</span
+                >
               </li>
               <li class="flex space-x-2">
                 <!-- Icon -->
@@ -379,7 +466,9 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
                     d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
                   ></path>
                 </svg>
-                <span class="leading-tight">Make their customers feel loved and apprecaited</span>
+                <span class="leading-tight"
+                  >Make their customers feel loved and apprecaited</span
+                >
               </li>
             </ul>
             <a
@@ -402,8 +491,13 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
               </svg>
             </a>
           </div>
-          <div class="hidden bg-white duration-700 ease-in-out dark:bg-gray-800" data-carousel-item>
-            <div class="mb-4 flex items-center text-lg font-medium text-purple-600">
+          <div
+            class="hidden bg-white duration-700 ease-in-out dark:bg-gray-800"
+            data-carousel-item
+          >
+            <div
+              class="mb-4 flex items-center text-lg font-medium text-purple-600"
+            >
               <svg
                 class="mr-2 h-6 w-6"
                 fill="currentColor"
@@ -423,9 +517,9 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
               Go next level with Flowbite
             </h3>
             <p class="text-gray-500 dark:text-gray-400">
-              Deliver great service experiences fast - without the complexity of traditional ITSM
-              solutions.Accelerate critical development work, eliminate toil, and deploy changes
-              with ease.
+              Deliver great service experiences fast - without the complexity of
+              traditional ITSM solutions.Accelerate critical development work,
+              eliminate toil, and deploy changes with ease.
             </p>
             <!-- List -->
             <ul
@@ -445,7 +539,8 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                     clip-rule="evenodd"></path>
                 </svg>
-                <span class="leading-tight">Dynamic reports and dashboards</span>
+                <span class="leading-tight">Dynamic reports and dashboards</span
+                >
               </li>
               <li class="flex space-x-3">
                 <!-- Icon -->
@@ -564,13 +659,18 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
   <div
     class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6 dark:border-gray-700 dark:bg-gray-800"
   >
-    <div class="mt-4 grid w-full grid-cols-1 gap-4 xl:grid-cols-2 2xl:grid-cols-3">
+    <div
+      class="mt-4 grid w-full grid-cols-1 gap-4 xl:grid-cols-2 2xl:grid-cols-3"
+    >
       <div
         class="items-center justify-between rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:flex sm:p-6 dark:border-gray-700 dark:bg-gray-800"
       >
         <div class="w-full">
-          <h3 class="text-xl font-normal text-gray-500 dark:text-gray-400">Members</h3>
-          <span class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
+          <h3 class="text-xl font-normal text-gray-500 dark:text-gray-400">
+            Members
+          </h3>
+          <span
+            class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white"
             >300</span
           >
         </div>
@@ -584,30 +684,48 @@ const userFacilitiesCount = userFacilities ? userFacilities.length : 0
             Members by electoral group
           </h3>
           <div class="mb-2 flex items-center">
-            <div class="w-32 text-sm font-medium dark:text-white">universities</div>
+            <div class="w-32 text-sm font-medium dark:text-white">
+              universities
+            </div>
             <div class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-              <div class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full" style="width: 33%">
+              <div
+                class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full"
+                style="width: 33%"
+              >
               </div>
             </div>
           </div>
           <div class="mb-2 flex items-center">
-            <div class="w-32 text-sm font-medium dark:text-white">Helmholtz</div>
+            <div class="w-32 text-sm font-medium dark:text-white">
+              Helmholtz
+            </div>
             <div class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-              <div class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full" style="width: 40%">
+              <div
+                class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full"
+                style="width: 40%"
+              >
               </div>
             </div>
           </div>
           <div class="mb-2 flex items-center">
-            <div class="w-32 text-sm font-medium dark:text-white">international</div>
+            <div class="w-32 text-sm font-medium dark:text-white">
+              international
+            </div>
             <div class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-              <div class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full" style="width: 10%">
+              <div
+                class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full"
+                style="width: 10%"
+              >
               </div>
             </div>
           </div>
           <div class="mb-2 flex items-center">
             <div class="w-32 text-sm font-medium dark:text-white">other</div>
             <div class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-              <div class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full" style="width: 13%">
+              <div
+                class="bg-primary-600 dark:bg-primary-500 h-2.5 rounded-full"
+                style="width: 13%"
+              >
               </div>
             </div>
           </div>

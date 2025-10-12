@@ -1,33 +1,41 @@
 ---
-import { getLangFromUrl, useTranslations } from "@astro/i18n/utils"
-import { sum } from "d3"
-import { getEntry } from "astro:content"
-import { Course, Organization } from "../../../lib/domain"
-import { type CourseSchema } from "../../../lib/common"
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils";
+import { sum } from "d3";
+import { getEntry } from "astro:content";
+import { Course, Organization } from "../../../lib/domain";
+import { type CourseSchema } from "../../../lib/common";
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
-  organization: Organization
-  teachingOffers: CourseSchema[]
-  locale?: string
+  organization: Organization;
+  teachingOffers: CourseSchema[];
+  locale?: string;
 }
 
-let { organization, teachingOffers, locale = "en" } = Astro.props
+let { organization, teachingOffers, locale = "en" } = Astro.props;
 
 //
 
-const teachingOffersInstances = teachingOffers.map((d) => new Course(d))
-const teachingOffersDtos = await Promise.all(teachingOffersInstances.map(async (d) => await d.getDto(locale)))
+const teachingOffersInstances = teachingOffers.map((d) => new Course(d));
+const teachingOffersDtos = await Promise.all(
+  teachingOffersInstances.map(async (d) => await d.getDto(locale)),
+);
 
-const bachelorCourses = teachingOffers.filter((to) => to.studyLevels__taxonomyId.indexOf("bachelor") > -1)
-const masterCourses = teachingOffers.filter((to) => to.studyLevels__taxonomyId.indexOf("master") > -1)
-const universityLabel = (await organization.getDto(lang)).label__short
+const bachelorCourses = teachingOffers.filter(
+  (to) => to.studyLevels__taxonomyId.indexOf("bachelor") > -1,
+);
+const masterCourses = teachingOffers.filter(
+  (to) => to.studyLevels__taxonomyId.indexOf("master") > -1,
+);
+const universityLabel = (await organization.getDto(lang)).label__short;
 
 // const coursesGroupedBySemester = groups(courses, (d) => d.data.semester)
 
-const weeklySemesterHours_total = sum(teachingOffers.map((d) => d.weeklySemesterHours))
+const weeklySemesterHours_total = sum(
+  teachingOffers.map((d) => d.weeklySemesterHours),
+);
 
 // const engineeringDegreeCount = courseDtos.filter(
 //   (d) => d..indexOf("Dr.-Ing.") > -1,
@@ -48,13 +56,21 @@ const weeklySemesterHours_total = sum(teachingOffers.map((d) => d.weeklySemester
   {
     teachingOffersInstances.length > 0 ? (
       <p>
-        In academic year 2024/25, {universityLabel} offered {teachingOffers.length} courses related to accelerator research of which
-        {!bachelorCourses.length && <span>all addresses bachelor students.</span>}
+        In academic year 2024/25, {universityLabel} offered{" "}
+        {teachingOffers.length} courses related to accelerator research of which
+        {!bachelorCourses.length && (
+          <span>all addresses bachelor students.</span>
+        )}
         and
-        {!masterCourses.length && <span>all addresses master students.</span>}. The combined weekly semester hours was {weeklySemesterHours_total}.
+        {!masterCourses.length && <span>all addresses master students.</span>}.
+        The combined weekly semester hours was {weeklySemesterHours_total}.
       </p>
     ) : (
-      <p>Currently, only courses offered by universities are listed. However, the data model provides for the inclusion of affiliated organizations and summer schools, so that corresponding entries could be displayed here.</p>
+      <p>
+        Currently, only courses offered by universities are listed. However, the
+        data model provides for the inclusion of affiliated organizations and
+        summer schools, so that corresponding entries could be displayed here.
+      </p>
     )
   }
 
@@ -96,7 +112,9 @@ const weeklySemesterHours_total = sum(teachingOffers.map((d) => d.weeklySemester
                   <th>Link</th>
                   <td>
                     <div style="white-space: nowrap;">
-                      <div style="overflow: hidden; text-overflow: ellipsis;">{teachingOffer.link}</div>
+                      <div style="overflow: hidden; text-overflow: ellipsis;">
+                        {teachingOffer.link}
+                      </div>
                     </div>
                   </td>
                 </tr>

@@ -2,9 +2,13 @@
 @import "./baseline.css";
 
 @theme {
-  --font-sans: "Barlow Semi Condensed", ui-monospace, sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans:
+    "Barlow Semi Condensed", ui-monospace, sfmono-regular, menlo, monaco,
+    consolas, "Liberation Mono", "Courier New", monospace;
   --font-serif: ui-serif, georgia, cambria, "Times New Roman", times, serif;
-  --font-mono: ui-monospace, sfmono-regular, menlo, monaco, consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono:
+    ui-monospace, sfmono-regular, menlo, monaco, consolas, "Liberation Mono",
+    "Courier New", monospace;
   --text-xl: 24px;
   --text-lg: 18px;
   --text-base: 16px;

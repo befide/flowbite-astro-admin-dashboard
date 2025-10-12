@@ -1,8 +1,13 @@
-import { glob } from "astro/loaders"
+import { glob } from "astro/loaders";
 
-import { defineCollection, z } from "astro:content"
+import { defineCollection, z } from "astro:content";
 
-import { LocalizedString, NestableDomainObjectZodSchema, NullableLocalizedString, ReviewZodSchema } from "@lib/content.common"
+import {
+  LocalizedString,
+  NestableDomainObjectZodSchema,
+  NullableLocalizedString,
+  ReviewZodSchema,
+} from "@lib/content.common";
 
 export const FacilityZodSchema = NestableDomainObjectZodSchema.extend({
   partOf__id: z.string().nullable(),
@@ -50,7 +55,7 @@ export const FacilityZodSchema = NestableDomainObjectZodSchema.extend({
   }),
   references: z.array(z.string()),
   review: ReviewZodSchema,
-})
+});
 
 export const defineFacilityCollection = defineCollection({
   loader: glob({
@@ -58,4 +63,4 @@ export const defineFacilityCollection = defineCollection({
     base: "./src/content/domain/facilities",
   }),
   schema: FacilityZodSchema,
-})
+});

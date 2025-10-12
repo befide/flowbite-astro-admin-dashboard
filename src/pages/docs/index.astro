@@ -1,23 +1,17 @@
 ---
-import {
-  getCollection,
-  type CollectionEntry,
-} from "astro:content"
-import LayoutSidebar from "@astro/LayoutSidebar.astro"
-import { ascending } from "d3"
+import { getCollection, type CollectionEntry } from "astro:content";
+import LayoutSidebar from "@astro/LayoutSidebar.astro";
+import { ascending } from "d3";
 
-const sections = await getCollection("sections")
-sections.sort((a, b) =>
-  ascending(a.data.sectionNumber, b.data.sectionNumber),
-)
+const sections = await getCollection("sections");
+sections.sort((a, b) => ascending(a.data.sectionNumber, b.data.sectionNumber));
 
 const docsByChapter = Object.values(
   Object.groupBy(
     sections,
-    (d: CollectionEntry<"sections">) =>
-      d.data.sectionNumbers[0],
+    (d: CollectionEntry<"sections">) => d.data.sectionNumbers[0],
   ),
-)
+);
 ---
 
 <LayoutSidebar>
@@ -31,9 +25,7 @@ const docsByChapter = Object.values(
               class="block rounded-lg border border-gray-200 bg-white p-2 shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
             >
               <h5 class="">
-                <span class="section-number">
-                  {d.data.sectionNumber}
-                </span>
+                <span class="section-number">{d.data.sectionNumber}</span>
                 {d.data.title}
               </h5>
               <p class="text-base font-normal text-gray-700 dark:text-gray-400" />

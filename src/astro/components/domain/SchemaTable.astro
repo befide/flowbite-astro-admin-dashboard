@@ -1,17 +1,17 @@
 ---
 interface Entry {
-  name: string
-  required: boolean
-  description: string
-  type: string
+  name: string;
+  required: boolean;
+  description: string;
+  type: string;
 }
 
 interface Props {
-  entries: Entry[]
-  ident?: boolean
+  entries: Entry[];
+  ident?: boolean;
 }
 
-const { entries, ident = true } = Astro.props
+const { entries, ident = true } = Astro.props;
 ---
 
 <table class="schema-table not-format table" data-ident={ident}>

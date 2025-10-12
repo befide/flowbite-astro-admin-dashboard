@@ -58,7 +58,9 @@
   }
 
   .pagedjs_left_page {
-    width: calc(var(--pagedjs-bleed-left) + var(--pagedjs-pagebox-width)) !important;
+    width: calc(
+      var(--pagedjs-bleed-left) + var(--pagedjs-pagebox-width)
+    ) !important;
     z-index: 20;
   }
 

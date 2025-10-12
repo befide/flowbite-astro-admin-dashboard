@@ -58,9 +58,7 @@
       "md5": "b695875b7571a2ea398bb5df6d559f2c",
       "mtime": 1756607456812,
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2025-08-31T02:30:56Z",
       "dateModified": "2025-08-31T02:30:56Z"
@@ -125,9 +123,7 @@
       "md5": "254ddc51470ced3bd88a427fca360438",
       "mtime": 1756607294199,
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2025-08-31T02:28:14Z",
       "dateModified": "2025-08-31T02:28:14Z"
@@ -192,9 +188,7 @@
       "md5": "941f7a08e3e68831f8b01d4d5afb7a93",
       "mtime": 1753994954063,
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2025-07-31T20:49:14Z",
       "dateModified": "2025-07-31T20:49:14Z"
@@ -263,9 +257,7 @@
           "tag": "#bf2035/issue/community-management"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2025-07-31T20:43:43Z",
       "dateModified": "2025-07-31T20:46:35Z"
@@ -360,9 +352,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-02T07:03:16Z",
       "dateModified": "2025-06-23T08:39:55Z"
@@ -454,10 +444,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "T8IVXSZV",
-        "2JL82FX5"
-      ],
+      "collections": ["T8IVXSZV", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-02-25T23:24:05Z",
       "dateModified": "2025-06-23T08:38:49Z"
@@ -586,10 +573,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "T8IVXSZV",
-        "2JL82FX5"
-      ],
+      "collections": ["T8IVXSZV", "2JL82FX5"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/LR95VA3L"
       },
@@ -684,10 +668,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "2JL82FX5"
-      ],
+      "collections": ["I45CUZNP", "2JL82FX5"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/IQPRLJ8L"
       },
@@ -793,10 +774,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "EDIH5ZM5",
-        "2JL82FX5"
-      ],
+      "collections": ["EDIH5ZM5", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-09-19T19:01:48Z",
       "dateModified": "2025-06-23T08:37:31Z"
@@ -874,9 +852,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "2JL82FX5"
-      ],
+      "collections": ["2JL82FX5"],
       "relations": {},
       "dateAdded": "2025-06-23T08:36:55Z",
       "dateModified": "2025-06-23T08:37:06Z"
@@ -1205,11 +1181,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "G2FGQSVN",
-        "T8IVXSZV",
-        "2JL82FX5"
-      ],
+      "collections": ["G2FGQSVN", "T8IVXSZV", "2JL82FX5"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/CI4SP4SZ"
       },
@@ -1322,10 +1294,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "GFTSJJSB",
-        "2JL82FX5"
-      ],
+      "collections": ["GFTSJJSB", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2025-05-23T18:15:17Z",
       "dateModified": "2025-06-23T08:36:12Z"
@@ -1414,10 +1383,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "GNRTFGXD",
-        "2JL82FX5"
-      ],
+      "collections": ["GNRTFGXD", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-03-17T10:49:40Z",
       "dateModified": "2025-06-23T08:36:05Z"
@@ -1512,10 +1478,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "2JL82FX5"
-      ],
+      "collections": ["I45CUZNP", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-03-17T10:49:21Z",
       "dateModified": "2025-06-23T08:36:01Z"
@@ -1633,10 +1596,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "EDIH5ZM5",
-        "2JL82FX5"
-      ],
+      "collections": ["EDIH5ZM5", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-10-02T08:20:05Z",
       "dateModified": "2025-06-23T08:35:05Z"
@@ -1728,10 +1688,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "2JL82FX5"
-      ],
+      "collections": ["I45CUZNP", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-10-10T13:21:55Z",
       "dateModified": "2025-06-23T08:34:40Z"
@@ -1823,10 +1780,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "2JL82FX5"
-      ],
+      "collections": ["I45CUZNP", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-10-10T13:14:47Z",
       "dateModified": "2025-06-23T08:34:33Z"
@@ -1924,10 +1878,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "EDIH5ZM5",
-        "2JL82FX5"
-      ],
+      "collections": ["EDIH5ZM5", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-10-02T07:59:44Z",
       "dateModified": "2025-06-23T08:33:36Z"
@@ -2020,10 +1971,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "MNL37NPL",
-        "2JL82FX5"
-      ],
+      "collections": ["MNL37NPL", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-11-26T15:26:52Z",
       "dateModified": "2025-06-23T08:32:28Z"
@@ -2115,10 +2063,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "F9F9SFJI",
-        "2JL82FX5"
-      ],
+      "collections": ["F9F9SFJI", "2JL82FX5"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/MI6T5XLX"
       },
@@ -2212,10 +2157,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "2JL82FX5"
-      ],
+      "collections": ["I45CUZNP", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-10-15T05:18:56Z",
       "dateModified": "2025-06-23T08:28:06Z"
@@ -2296,10 +2238,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "2JL82FX5"
-      ],
+      "collections": ["I45CUZNP", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-07-24T08:33:48Z",
       "dateModified": "2025-06-23T08:21:27Z"
@@ -2380,9 +2319,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "2JL82FX5"
-      ],
+      "collections": ["2JL82FX5"],
       "relations": {},
       "dateAdded": "2025-06-23T08:20:18Z",
       "dateModified": "2025-06-23T08:20:57Z"
@@ -2464,10 +2401,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "XZ9CDZN3",
-        "2JL82FX5"
-      ],
+      "collections": ["XZ9CDZN3", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-10-12T03:07:34Z",
       "dateModified": "2025-06-23T08:19:43Z"
@@ -2547,9 +2481,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "2JL82FX5"
-      ],
+      "collections": ["2JL82FX5"],
       "relations": {},
       "dateAdded": "2025-06-23T08:16:53Z",
       "dateModified": "2025-06-23T08:19:02Z"
@@ -2659,10 +2591,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "2JL82FX5"
-      ],
+      "collections": ["I45CUZNP", "2JL82FX5"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/JRFW65WJ"
       },
@@ -3440,10 +3369,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "MNL37NPL",
-        "2JL82FX5"
-      ],
+      "collections": ["MNL37NPL", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-12-31T06:22:22Z",
       "dateModified": "2025-06-23T08:12:45Z"
@@ -3530,10 +3456,7 @@
           "tag": "⭐⭐⭐⭐⭐"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "2JL82FX5"
-      ],
+      "collections": ["I45CUZNP", "2JL82FX5"],
       "relations": {},
       "dateAdded": "2024-11-24T23:00:00Z",
       "dateModified": "2025-06-23T08:12:06Z"
@@ -3674,9 +3597,7 @@
           "tag": "#befide/facilty/:desy-2-test-beam-facility"
         }
       ],
-      "collections": [
-        "9LMA7M95"
-      ],
+      "collections": ["9LMA7M95"],
       "relations": {},
       "dateAdded": "2025-06-07T09:04:35Z",
       "dateModified": "2025-06-07T09:06:28Z"
@@ -3817,9 +3738,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "ZFE9B4XZ"
-      ],
+      "collections": ["ZFE9B4XZ"],
       "relations": {},
       "dateAdded": "2025-04-05T09:12:17Z",
       "dateModified": "2025-05-25T14:55:43Z"
@@ -3929,9 +3848,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "ZFE9B4XZ"
-      ],
+      "collections": ["ZFE9B4XZ"],
       "relations": {},
       "dateAdded": "2025-03-16T10:08:46Z",
       "dateModified": "2025-05-25T14:55:43Z"
@@ -4013,9 +3930,7 @@
       "accessDate": "2025-03-16T09:44:13Z",
       "extra": "original-date: 2017-11-29T14:49:58Z\nCitation Key: aps__2025__physhorg",
       "tags": [],
-      "collections": [
-        "D2NYM7EI"
-      ],
+      "collections": ["D2NYM7EI"],
       "relations": {},
       "dateAdded": "2025-03-16T09:44:13Z",
       "dateModified": "2025-05-25T14:55:43Z"
@@ -4088,9 +4003,7 @@
       "rights": "",
       "extra": "Citation Key: ecfa__2025__european",
       "tags": [],
-      "collections": [
-        "8QDN6RGB"
-      ],
+      "collections": ["8QDN6RGB"],
       "relations": {},
       "dateAdded": "2025-02-02T04:48:42Z",
       "dateModified": "2025-05-25T14:55:43Z"
@@ -4163,9 +4076,7 @@
       "rights": "",
       "extra": "Citation Key: icfa__2025__international",
       "tags": [],
-      "collections": [
-        "8QDN6RGB"
-      ],
+      "collections": ["8QDN6RGB"],
       "relations": {},
       "dateAdded": "2025-02-02T04:48:51Z",
       "dateModified": "2025-05-25T14:55:43Z"
@@ -4249,9 +4160,7 @@
       "rights": "Creative Commons Attribution 4.0 International",
       "extra": "Citation Key: cernyellowreports:schoolproceedings__2024__cern",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-12-12T10:41:37Z",
       "dateModified": "2025-05-25T14:55:43Z"
@@ -4363,10 +4272,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "GNRTFGXD",
-        "ZFE9B4XZ"
-      ],
+      "collections": ["GNRTFGXD", "ZFE9B4XZ"],
       "relations": {},
       "dateAdded": "2024-10-30T19:07:33Z",
       "dateModified": "2025-05-25T14:55:42Z"
@@ -4475,9 +4381,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "YSEC8WZM"
-      ],
+      "collections": ["YSEC8WZM"],
       "relations": {},
       "dateAdded": "2024-10-30T19:06:01Z",
       "dateModified": "2025-05-25T14:55:42Z"
@@ -4592,11 +4496,7 @@
           "tag": "#bf2035/issue/collaboration/ontology/bfo"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "GNRTFGXD",
-        "ZFE9B4XZ"
-      ],
+      "collections": ["I45CUZNP", "GNRTFGXD", "ZFE9B4XZ"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/ZRL7CK54"
       },
@@ -4682,10 +4582,7 @@
       "rights": "",
       "extra": "Citation Key: elsevier__2024__digital",
       "tags": [],
-      "collections": [
-        "HHPXJPM4",
-        "D2NYM7EI"
-      ],
+      "collections": ["HHPXJPM4", "D2NYM7EI"],
       "relations": {},
       "dateAdded": "2025-03-16T09:29:27Z",
       "dateModified": "2025-05-25T14:55:42Z"
@@ -4763,9 +4660,7 @@
       "rights": "",
       "extra": "Citation Key: hess__2024__banz",
       "tags": [],
-      "collections": [
-        "XWVM9C28"
-      ],
+      "collections": ["XWVM9C28"],
       "relations": {},
       "dateAdded": "2025-01-01T18:47:23Z",
       "dateModified": "2025-05-25T14:55:42Z"
@@ -4871,9 +4766,7 @@
       "rights": "",
       "extra": "Publisher: Zenodo\nCitation Key: rossenova_shigapov_schubotz_etal__2024__kgi4nfdi",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/FU3EMSFB"
       },
@@ -4975,9 +4868,7 @@
       "rights": "",
       "extra": "DOI: 10.5281/zenodo.13846878\nCitation Key: baum_bouazzouni_fillies_etal__2024__ts4nfdi",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/XP7SGF3Z"
       },
@@ -5283,11 +5174,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "HHPXJPM4",
-        "GPX8RBVH",
-        "D2NYM7EI"
-      ],
+      "collections": ["HHPXJPM4", "GPX8RBVH", "D2NYM7EI"],
       "relations": {},
       "dateAdded": "2024-10-24T08:41:39Z",
       "dateModified": "2025-05-25T14:55:41Z"
@@ -5444,10 +5331,7 @@
           "tag": "#bf2035/issue/digital-transformation/fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI",
-        "I45CUZNP"
-      ],
+      "collections": ["SMHHXUJI", "I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-15T05:15:02Z",
       "dateModified": "2025-05-25T14:55:41Z"
@@ -5548,9 +5432,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-10-06T15:49:59Z",
       "dateModified": "2025-05-25T14:55:41Z"
@@ -5635,9 +5517,7 @@
           "tag": "#bf2035/issue/green-transformation"
         }
       ],
-      "collections": [
-        "R8TFVA9I"
-      ],
+      "collections": ["R8TFVA9I"],
       "relations": {},
       "dateAdded": "2024-10-05T15:20:15Z",
       "dateModified": "2025-05-25T14:55:41Z"
@@ -5753,9 +5633,7 @@
           "tag": "#bf2035/issue/collaboration"
         }
       ],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-06-26T12:37:33Z",
       "dateModified": "2025-05-25T14:55:41Z"
@@ -5874,10 +5752,7 @@
           "tag": "#bf2035/issue/green-transformation"
         }
       ],
-      "collections": [
-        "R8TFVA9I",
-        "87VH2RP7"
-      ],
+      "collections": ["R8TFVA9I", "87VH2RP7"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/WEN8IKZF"
       },
@@ -5965,9 +5840,7 @@
           "tag": "#bf2035/issue/technology-transfer"
         }
       ],
-      "collections": [
-        "2LH6JDMY"
-      ],
+      "collections": ["2LH6JDMY"],
       "relations": {},
       "dateAdded": "2024-06-20T06:23:29Z",
       "dateModified": "2025-05-25T14:55:41Z"
@@ -6059,9 +5932,7 @@
           "tag": "#bf2035/issue/technology-transfer"
         }
       ],
-      "collections": [
-        "2LH6JDMY"
-      ],
+      "collections": ["2LH6JDMY"],
       "relations": {},
       "dateAdded": "2024-06-06T12:54:07Z",
       "dateModified": "2025-05-25T14:55:41Z"
@@ -6146,10 +6017,7 @@
       "rights": "",
       "extra": "Read_Status: To Read\nRead_Status_Date: 2025-02-23T07:50:32.967Z\nCitation Key: ziemann__2024__german",
       "tags": [],
-      "collections": [
-        "I45CUZNP",
-        "CXCB8QVS"
-      ],
+      "collections": ["I45CUZNP", "CXCB8QVS"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/2R93A6I3"
       },
@@ -6238,9 +6106,7 @@
       "rights": "",
       "extra": "Citation Key: shinde__2024__experimental",
       "tags": [],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/YJ8I78HC"
       },
@@ -6338,9 +6204,7 @@
       "rights": "",
       "extra": "Citation Key: haseyama_shimabukuro_kirst_etal__2024__questionnaire",
       "tags": [],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-06-26T12:41:39Z",
       "dateModified": "2025-05-25T14:55:41Z"
@@ -6408,9 +6272,7 @@
       "rights": "",
       "extra": "Citation Key: jacowcollaboration__2024__conference",
       "tags": [],
-      "collections": [
-        "HHPXJPM4"
-      ],
+      "collections": ["HHPXJPM4"],
       "relations": {},
       "dateAdded": "2022-07-13T04:35:11Z",
       "dateModified": "2025-05-25T14:55:41Z"
@@ -6539,10 +6401,7 @@
           "tag": "#bf2035/issue/open-science/fair-principles"
         }
       ],
-      "collections": [
-        "SMHHXUJI",
-        "I45CUZNP"
-      ],
+      "collections": ["SMHHXUJI", "I45CUZNP"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/AEF4ZP9S"
       },
@@ -6619,9 +6478,7 @@
           "tag": "#bf2035/item-type/homepage"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-13T09:22:24Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -6693,9 +6550,7 @@
           "tag": "#bf2035/item-type/database"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-13T09:07:30Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -6774,9 +6629,7 @@
           "tag": "#bf2035/item-type/database"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-29T02:40:31Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -6848,9 +6701,7 @@
           "tag": "#bf2035/item-type/database"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-11T05:42:31Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -6941,9 +6792,7 @@
           "tag": "#bf2035/issue/community-management"
         }
       ],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-06-26T13:02:13Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7029,9 +6878,7 @@
           "tag": "#bf2035/issue/digital-transformation"
         }
       ],
-      "collections": [
-        "2LH6JDMY"
-      ],
+      "collections": ["2LH6JDMY"],
       "relations": {},
       "dateAdded": "2024-06-20T05:31:29Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7117,9 +6964,7 @@
           "tag": "#bf2035/issue/strategy/third-mission"
         }
       ],
-      "collections": [
-        "JBML3GAF"
-      ],
+      "collections": ["JBML3GAF"],
       "relations": {},
       "dateAdded": "2024-06-13T14:54:16Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7271,9 +7116,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2024-06-11T18:16:58Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7369,9 +7212,7 @@
           "tag": "#bf2035/issue/excellence"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/47KT4TWN"
       },
@@ -7451,9 +7292,7 @@
           "tag": "#bf2035/issue/technology-transfer"
         }
       ],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-06T12:59:00Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7549,10 +7388,7 @@
           "tag": "#bf2035/item-type/annual-report"
         }
       ],
-      "collections": [
-        "SMHHXUJI",
-        "I45CUZNP"
-      ],
+      "collections": ["SMHHXUJI", "I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-06-04T18:51:19Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7629,9 +7465,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-06-02T09:40:09Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7718,10 +7552,7 @@
           "tag": "#bf2035/issue/teaching/summer-schools"
         }
       ],
-      "collections": [
-        "SMHHXUJI",
-        "KFB55SS8"
-      ],
+      "collections": ["SMHHXUJI", "KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-05-29T02:02:11Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7801,9 +7632,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-04-27T21:49:36Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7881,9 +7710,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2024-04-02T04:49:31Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -7993,9 +7820,7 @@
           "tag": "#befidesh/accelerating-process/electrodynamic-acceleration/nanophotonic-acceleration"
         }
       ],
-      "collections": [
-        "A9G5QU38"
-      ],
+      "collections": ["A9G5QU38"],
       "relations": {},
       "dateAdded": "2024-04-01T20:44:58Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -8075,9 +7900,7 @@
           "tag": "#befidesh/organization/:lens"
         }
       ],
-      "collections": [
-        "F9F9SFJI"
-      ],
+      "collections": ["F9F9SFJI"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/3AKUQB75"
       },
@@ -8161,10 +7984,7 @@
           "tag": "#befidesh/accelerator-application/science-application/nuclear-physics"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "GGRX39NP"
-      ],
+      "collections": ["I45CUZNP", "GGRX39NP"],
       "relations": {},
       "dateAdded": "2024-03-19T12:21:37Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -8239,9 +8059,7 @@
           "tag": "#befidesh/accelerator-based-facility/:lhc"
         }
       ],
-      "collections": [
-        "NMMQSXGA"
-      ],
+      "collections": ["NMMQSXGA"],
       "relations": {},
       "dateAdded": "2022-01-27T04:08:25Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -8321,9 +8139,7 @@
       "rights": "https://www.springernature.com/gp/researchers/text-and-data-mining",
       "extra": "DOI: 10.1007/978-3-031-51852-2\nCitation Key: ziemann__2024__beams",
       "tags": [],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2024-12-09T21:53:26Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -8406,9 +8222,7 @@
       "rights": "",
       "extra": "Citation Key: bundesregierung__2023__mit",
       "tags": [],
-      "collections": [
-        "9TYH3AUS"
-      ],
+      "collections": ["9TYH3AUS"],
       "relations": {},
       "dateAdded": "2023-10-18T11:04:47Z",
       "dateModified": "2025-05-25T14:55:40Z"
@@ -8516,9 +8330,7 @@
           "tag": "#befidesh/accelerator-based-facility/:bessy-3"
         }
       ],
-      "collections": [
-        "GFTSJJSB"
-      ],
+      "collections": ["GFTSJJSB"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/BWAZF429"
       },
@@ -8629,9 +8441,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "GPX8RBVH"
-      ],
+      "collections": ["GPX8RBVH"],
       "relations": {},
       "dateAdded": "2025-04-05T08:15:31Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -8716,9 +8526,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2024-11-26T15:46:42Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -8820,9 +8628,7 @@
           "tag": "#bf2035/issue/digital-transformation/digital-twin"
         }
       ],
-      "collections": [
-        "XZ9CDZN3"
-      ],
+      "collections": ["XZ9CDZN3"],
       "relations": {},
       "dateAdded": "2024-10-05T12:30:26Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -8973,9 +8779,7 @@
           "tag": "#bf2035/issue/community-management"
         }
       ],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-06-27T06:15:02Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9155,9 +8959,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2024-06-26T15:30:57Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9268,9 +9070,7 @@
           "tag": "#bf2035/issue/strategy/third-mission"
         }
       ],
-      "collections": [
-        "JBML3GAF"
-      ],
+      "collections": ["JBML3GAF"],
       "relations": {},
       "dateAdded": "2024-06-13T14:30:34Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9351,9 +9151,7 @@
           "tag": "#befidesh/accelerator-based-facility/:awake"
         }
       ],
-      "collections": [
-        "TY6HWNUB"
-      ],
+      "collections": ["TY6HWNUB"],
       "relations": {},
       "dateAdded": "2024-03-24T09:20:54Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9439,9 +9237,7 @@
           "tag": "#bf2035/stakeholder/funder/doe"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-05-01T07:41:34Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9519,9 +9315,7 @@
           "tag": "#bf2035/issue/diversity"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2023-07-13T08:00:11Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9612,11 +9406,7 @@
           "tag": "#bf2035/issue/technology-transfer"
         }
       ],
-      "collections": [
-        "RHPVAKEC",
-        "I45CUZNP",
-        "2LH6JDMY"
-      ],
+      "collections": ["RHPVAKEC", "I45CUZNP", "2LH6JDMY"],
       "relations": {},
       "dateAdded": "2023-05-06T06:47:49Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9697,9 +9487,7 @@
       "rights": "",
       "extra": "Citation Key: kutschera__2023__overview",
       "tags": [],
-      "collections": [
-        "G47E3M7X"
-      ],
+      "collections": ["G47E3M7X"],
       "relations": {},
       "dateAdded": "2025-05-23T10:19:51Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9766,9 +9554,7 @@
       "rights": "",
       "extra": "Citation Key: __2023__teilchenbeschleuniger",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-07-10T08:27:34Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9865,9 +9651,7 @@
       "rights": "",
       "extra": "Citation Key: desai_mehta_rana__2023__exploratory",
       "tags": [],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-06-23T14:18:58Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -9965,9 +9749,7 @@
       "rights": "",
       "extra": "Read_Status: To Read\nRead_Status_Date: 2024-03-18T03:55:47.697Z\nCitation Key: frietsch_gruber_blind_etal__2023__erfassung",
       "tags": [],
-      "collections": [
-        "HHPXJPM4"
-      ],
+      "collections": ["HHPXJPM4"],
       "relations": {},
       "dateAdded": "2024-03-18T03:52:19Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -10049,9 +9831,7 @@
       "rights": "Creative Commons Attribution 4.0 International, Open Access",
       "extra": "doi: 10.5281/ZENODO.8348103\nCitation Key: ifastwp12members__2023__strategy",
       "tags": [],
-      "collections": [
-        "H95NTXKN"
-      ],
+      "collections": ["H95NTXKN"],
       "relations": {},
       "dateAdded": "2024-03-17T10:45:22Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -10133,9 +9913,7 @@
       "rights": "",
       "extra": "Citation Key: destatis__2023__nachhaltige",
       "tags": [],
-      "collections": [
-        "9TYH3AUS"
-      ],
+      "collections": ["9TYH3AUS"],
       "relations": {},
       "dateAdded": "2023-10-18T12:18:49Z",
       "dateModified": "2025-05-25T14:55:39Z"
@@ -10224,10 +10002,7 @@
           "tag": "#bf2035/issue/open-science/fair-principles"
         }
       ],
-      "collections": [
-        "SMHHXUJI",
-        "I45CUZNP"
-      ],
+      "collections": ["SMHHXUJI", "I45CUZNP"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/EZMBVGD7"
       },
@@ -10304,9 +10079,7 @@
           "tag": "#generic/funding-program/eu/:horizon-europe"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-03T18:14:44Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -10450,9 +10223,7 @@
           "tag": "#befidesh/accelerator/linac"
         }
       ],
-      "collections": [
-        "EDIH5ZM5"
-      ],
+      "collections": ["EDIH5ZM5"],
       "relations": {},
       "dateAdded": "2024-10-02T04:51:07Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -10540,9 +10311,7 @@
           "tag": "#bf2035/issue/community-management"
         }
       ],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-06-23T14:15:56Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -10631,9 +10400,7 @@
           "tag": "#bf2035/item-type/annual-report"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-06-04T19:19:28Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -10729,10 +10496,7 @@
           "tag": "#bf2035/item-type/annual-report"
         }
       ],
-      "collections": [
-        "SMHHXUJI",
-        "I45CUZNP"
-      ],
+      "collections": ["SMHHXUJI", "I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-06-04T18:51:33Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -10812,9 +10576,7 @@
           "tag": "#bf2035/issue/teaching/summer-schools"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-05-29T01:56:17Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -10896,9 +10658,7 @@
           "tag": "#befidesh/accelerating-process/plasma-based-acceleration/"
         }
       ],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2024-03-24T09:06:10Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11028,9 +10788,7 @@
           "tag": "#befidesh/accelerator/erl"
         }
       ],
-      "collections": [
-        "S8BMRKXK"
-      ],
+      "collections": ["S8BMRKXK"],
       "relations": {},
       "dateAdded": "2024-03-24T07:37:59Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11102,9 +10860,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-03-17T11:11:30Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11209,9 +10965,7 @@
           "tag": "#bf2035/item-type/annual-report"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-03-17T10:01:35Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11297,9 +11051,7 @@
           "tag": "#bf2035/issue/participation"
         }
       ],
-      "collections": [
-        "RNXGIY6E"
-      ],
+      "collections": ["RNXGIY6E"],
       "relations": {},
       "dateAdded": "2023-07-02T09:13:38Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11376,9 +11128,7 @@
           "tag": "#bf2035/stakeholder/german-government"
         }
       ],
-      "collections": [
-        "8QDN6RGB"
-      ],
+      "collections": ["8QDN6RGB"],
       "relations": {},
       "dateAdded": "2023-01-22T15:32:23Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11479,9 +11229,7 @@
       "rights": "",
       "extra": "DOI: 10.3389/978-2-8325-2202-8\nCitation Key: tricoli_azzi_merkel_etal__2023__novel",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2025-04-18T17:36:42Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11656,9 +11404,7 @@
       "rights": "",
       "extra": "Citation Key: butler_chivukula_degouvea_etal__2023__report",
       "tags": [],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-06-26T12:59:28Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11750,9 +11496,7 @@
       "rights": "",
       "extra": "DOI: 10.1007/978-981-19-9454-8_1\nCitation Key: kikkawa__2023__introduction",
       "tags": [],
-      "collections": [
-        "T2GW45NC"
-      ],
+      "collections": ["T2GW45NC"],
       "relations": {},
       "dateAdded": "2023-05-22T07:48:02Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11828,10 +11572,7 @@
       "rights": "",
       "extra": "Citation Key: kfb__2023__mitgliederbefragung",
       "tags": [],
-      "collections": [
-        "YNDTZCNT",
-        "CXNGSTAH"
-      ],
+      "collections": ["YNDTZCNT", "CXNGSTAH"],
       "relations": {},
       "dateAdded": "2022-07-15T04:57:05Z",
       "dateModified": "2025-05-25T14:55:38Z"
@@ -11911,9 +11652,7 @@
           "tag": "#bf2035/issue/green-transformation"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-26T15:30:24Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12012,9 +11751,7 @@
           "tag": "#bf2035/issue/green-transformation"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2024-11-03T17:35:08Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12109,9 +11846,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2024-06-26T13:02:52Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12189,9 +11924,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2024-04-02T04:49:20Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12288,9 +12021,7 @@
           "tag": "#generic/funding-program/eu/:horizon-2020"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/IZDZBPQE",
         "owl:sameAs": "http://zotero.org/groups/5708775/items/CP9AFQV8"
@@ -12385,9 +12116,7 @@
           "tag": "#generic/funding-program/eu/:horizon-2020"
         }
       ],
-      "collections": [
-        "R8TFVA9I"
-      ],
+      "collections": ["R8TFVA9I"],
       "relations": {},
       "dateAdded": "2024-03-17T10:50:40Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12477,9 +12206,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "R8TFVA9I"
-      ],
+      "collections": ["R8TFVA9I"],
       "relations": {},
       "dateAdded": "2024-03-17T10:53:34Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12596,9 +12323,7 @@
           "tag": "#bf2035/research-topic/plasma-acceleration"
         }
       ],
-      "collections": [
-        "T8IVXSZV"
-      ],
+      "collections": ["T8IVXSZV"],
       "relations": {},
       "dateAdded": "2024-03-17T09:41:38Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12687,9 +12412,7 @@
           "tag": "#bf2035/issue/diversity"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-01-31T08:19:54Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12775,9 +12498,7 @@
           "tag": "#befidesh/organization/:bmbf"
         }
       ],
-      "collections": [
-        "HHPXJPM4"
-      ],
+      "collections": ["HHPXJPM4"],
       "relations": {},
       "dateAdded": "2024-01-04T09:21:19Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12866,9 +12587,7 @@
           "tag": "#bf2035/issue/technology-transfer/innovation"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2023-11-29T07:10:26Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -12950,9 +12669,7 @@
           "tag": "#bf2035/issue/excellence"
         }
       ],
-      "collections": [
-        "HHPXJPM4"
-      ],
+      "collections": ["HHPXJPM4"],
       "relations": {},
       "dateAdded": "2022-07-13T04:12:59Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -13037,9 +12754,7 @@
       "rights": "",
       "extra": "arXiv:2206.08834 [physics]\nCitation Key: resta-lopez__2022__longterm",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-06T18:26:10Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -13139,9 +12854,7 @@
       "rights": "",
       "extra": "Citation Key: bitter_hansen_kravitz_etal__2022__transforming",
       "tags": [],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-06-26T12:48:05Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -13216,9 +12929,7 @@
       "rights": "",
       "extra": "Citation Key: bettinastark-watzinger__2022__rede",
       "tags": [],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2022-07-16T05:16:38Z",
       "dateModified": "2025-05-25T14:55:37Z"
@@ -13334,9 +13045,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "YSEC8WZM"
-      ],
+      "collections": ["YSEC8WZM"],
       "relations": {},
       "dateAdded": "2025-04-05T08:27:10Z",
       "dateModified": "2025-05-25T14:55:36Z"
@@ -13470,10 +13179,7 @@
           "tag": "#bf2035/issue/open-science/fair-principles"
         }
       ],
-      "collections": [
-        "SMHHXUJI",
-        "I45CUZNP"
-      ],
+      "collections": ["SMHHXUJI", "I45CUZNP"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/5LLQYPNS"
       },
@@ -13565,9 +13271,7 @@
           "tag": "#bf2035/issue/green-transformation"
         }
       ],
-      "collections": [
-        "R8TFVA9I"
-      ],
+      "collections": ["R8TFVA9I"],
       "relations": {},
       "dateAdded": "2024-10-06T04:38:20Z",
       "dateModified": "2025-05-25T14:55:36Z"
@@ -13656,9 +13360,7 @@
           "tag": "#bf2035/projects/european-strategy-for-particle-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {
         "dc:replaces": [
           "http://zotero.org/groups/2427654/items/E4FMSAJW",
@@ -13748,9 +13450,7 @@
           "tag": "#befidesh/accelerator-based-facility/particle-collider/higgs-factory"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2022-08-20T06:29:17Z",
       "dateModified": "2025-05-25T14:55:36Z"
@@ -13925,9 +13625,7 @@
       "rights": "",
       "extra": "Citation Key: biedron_brouwer_bruhwiler_etal__2022__snowmass21",
       "tags": [],
-      "collections": [
-        "GNRTFGXD"
-      ],
+      "collections": ["GNRTFGXD"],
       "relations": {},
       "dateAdded": "2024-06-26T13:04:32Z",
       "dateModified": "2025-05-25T14:55:36Z"
@@ -14033,9 +13731,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-11-01T20:29:29Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -14116,9 +13812,7 @@
           "tag": "#bf2035/issue/technology-transfer"
         }
       ],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-06T12:47:26Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -14213,9 +13907,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2023-11-18T05:59:31Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -14310,9 +14002,7 @@
           "tag": "#bf2035/item-type/annual-report"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2022-11-23T08:12:52Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -14486,9 +14176,7 @@
           "tag": "#befidesh/organization/:kit"
         }
       ],
-      "collections": [
-        "9WCYRZ9F"
-      ],
+      "collections": ["9WCYRZ9F"],
       "relations": {},
       "dateAdded": "2022-11-16T03:08:35Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -14622,9 +14310,7 @@
           "tag": "#befidesh/organization/:kit"
         }
       ],
-      "collections": [
-        "94AAERI6"
-      ],
+      "collections": ["94AAERI6"],
       "relations": {},
       "dateAdded": "2022-08-30T04:49:12Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -14692,9 +14378,7 @@
       "rights": "",
       "extra": "Citation Key: __2022__wayback",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-09-17T21:16:51Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -14814,9 +14498,7 @@
       "rights": "",
       "extra": "Citation Key: agarwal_barrow_carneiro_etal__2022__snowmass",
       "tags": [],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-06-26T12:49:10Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -14908,9 +14590,7 @@
       "rights": "",
       "extra": "2 citations (Crossref/DOI) [2024-03-17]\n7 citations (INSPIRE 2024/3/17)\n3 citations w/o self (INSPIRE 2024/3/17)\narXiv:2106.02048 [hep-ex]\nCitation Key: beacham_zimmermann__2022__very",
       "tags": [],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2024-03-17T10:51:12Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -14992,9 +14672,7 @@
       "rights": "",
       "extra": "Read_Status: To Read\nRead_Status_Date: 2024-03-17T10:08:32.700Z\nCitation Key: amicicollaboration__2022__amici",
       "tags": [],
-      "collections": [
-        "HQGH7874"
-      ],
+      "collections": ["HQGH7874"],
       "relations": {},
       "dateAdded": "2022-11-23T08:17:01Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -15067,10 +14745,7 @@
       "rights": "",
       "extra": "Citation Key: projekttragerdesy__2022__infrastrukturen",
       "tags": [],
-      "collections": [
-        "RHPVAKEC",
-        "CXNGSTAH"
-      ],
+      "collections": ["RHPVAKEC", "CXNGSTAH"],
       "relations": {},
       "dateAdded": "2022-07-16T05:27:05Z",
       "dateModified": "2025-05-25T14:55:35Z"
@@ -15206,9 +14881,7 @@
           "tag": "#befidesh/accelerator-based-facility/:bessy-3"
         }
       ],
-      "collections": [
-        "GFTSJJSB"
-      ],
+      "collections": ["GFTSJJSB"],
       "relations": {},
       "dateAdded": "2024-11-05T17:28:50Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -15283,9 +14956,7 @@
           "tag": "#generic/funding-program/eu/:horizon-2020"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-03T18:04:58Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -15374,9 +15045,7 @@
           "tag": "#bf2035/item-type/annual-report"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-06-04T19:24:41Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -15508,9 +15177,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "F3IP4PDR"
-      ],
+      "collections": ["F3IP4PDR"],
       "relations": {},
       "dateAdded": "2024-03-22T09:10:41Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -15599,9 +15266,7 @@
           "tag": "#bf2035/issue/technology-transfer/innovation"
         }
       ],
-      "collections": [
-        "2LH6JDMY"
-      ],
+      "collections": ["2LH6JDMY"],
       "relations": {},
       "dateAdded": "2023-11-29T07:03:51Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -15731,9 +15396,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-03-17T08:05:37Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -15805,10 +15468,7 @@
           "tag": "#befidesh/organization/:kfb"
         }
       ],
-      "collections": [
-        "YNDTZCNT",
-        "KFB55SS8"
-      ],
+      "collections": ["YNDTZCNT", "KFB55SS8"],
       "relations": {},
       "dateAdded": "2022-07-15T04:44:57Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -15897,12 +15557,7 @@
           "tag": "#bf2035/issue/digital-transformation"
         }
       ],
-      "collections": [
-        "RHPVAKEC",
-        "I45CUZNP",
-        "GNRTFGXD",
-        "XWVM9C28"
-      ],
+      "collections": ["RHPVAKEC", "I45CUZNP", "GNRTFGXD", "XWVM9C28"],
       "relations": {},
       "dateAdded": "2022-05-04T04:31:30Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -15994,11 +15649,7 @@
           "tag": "#bf2035/issue/verbundforschung"
         }
       ],
-      "collections": [
-        "RHPVAKEC",
-        "I45CUZNP",
-        "CXNGSTAH"
-      ],
+      "collections": ["RHPVAKEC", "I45CUZNP", "CXNGSTAH"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -16090,11 +15741,7 @@
           "tag": "#bf2035/issue/verbundforschung"
         }
       ],
-      "collections": [
-        "RHPVAKEC",
-        "I45CUZNP",
-        "8QDN6RGB"
-      ],
+      "collections": ["RHPVAKEC", "I45CUZNP", "8QDN6RGB"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -16215,9 +15862,7 @@
       "rights": "Creative Commons Attribution 4.0 International",
       "extra": "Artwork Size: 4 pages, 5.954 MB\nISBN: 9783954502271\nMedium: application/pdf\nPublisher: JACoW Publishing, Geneva, Switzerland\nCitation Key: jansson__2022__status",
       "tags": [],
-      "collections": [
-        "F9F9SFJI"
-      ],
+      "collections": ["F9F9SFJI"],
       "relations": {},
       "dateAdded": "2024-12-30T02:43:37Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -16303,9 +15948,7 @@
       "rights": "",
       "extra": "Series Title: Graduate Texts in Physics\nDOI: 10.1007/978-3-031-07662-6_2\nCitation Key: dimitri__2022__low",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-02T07:40:36Z",
       "dateModified": "2025-05-25T14:55:33Z"
@@ -16389,9 +16032,7 @@
           "tag": "#bf2035/projects/aries"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-26T15:33:17Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -16468,9 +16109,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-05-22T07:51:58Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -16610,9 +16249,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "TBES545E"
-      ],
+      "collections": ["TBES545E"],
       "relations": {},
       "dateAdded": "2024-03-17T12:51:17Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -16699,9 +16336,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-03-17T10:55:49Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -16798,9 +16433,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-02-23T06:18:41Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -16939,9 +16572,7 @@
           "tag": "#befidesh/organization/:ersf"
         }
       ],
-      "collections": [
-        "G2FGQSVN"
-      ],
+      "collections": ["G2FGQSVN"],
       "relations": {},
       "dateAdded": "2021-11-13T12:46:30Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -17032,9 +16663,7 @@
           "tag": "#befidesh/accelerator-based-facility/photon-source/synchrotron-light-source/4th-generation"
         }
       ],
-      "collections": [
-        "N3NPSQBJ"
-      ],
+      "collections": ["N3NPSQBJ"],
       "relations": {},
       "dateAdded": "2022-05-14T07:57:14Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -17117,9 +16746,7 @@
       "rights": "",
       "extra": "DOI: 10.3289/HMC_publ_05\nCitation Key: arndt__2022__survey",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/JABG7QSN"
       },
@@ -17242,9 +16869,7 @@
       "rights": "",
       "extra": "TLDR: The first results on the common interface are presented and its application to beam focusing in ARES, and the idea of laser shaping with spatial light modulators at FLUTE.\nCitation Key: eichler_burkart_kaiser_etal__2021__first",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/RI58K5E7"
       },
@@ -17331,10 +16956,7 @@
       "rights": "",
       "extra": "DOI: 10.5281/zenodo.5735196\nCitation Key: sure-vetter_lubke_kraft_etal__2021__nationale",
       "tags": [],
-      "collections": [
-        "I45CUZNP",
-        "GNRTFGXD"
-      ],
+      "collections": ["I45CUZNP", "GNRTFGXD"],
       "relations": {},
       "dateAdded": "2024-10-10T12:51:37Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -17461,9 +17083,7 @@
       "rights": "",
       "extra": "Publisher: IOP Publishing\nTLDR: The current status and future needs of AAC systems are summarized and several key aspects of high-performance computing, including performance, portability, scalability, advanced algorithms, scalable I/Os and In-Situ analysis are reported on.\nCitation Key: vay_huebl_lehe_etal__2021__modeling",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-06T18:18:18Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -17575,9 +17195,7 @@
       "rights": "",
       "extra": "Citation Key: medenwald_fietkau_klautke_etal__2021__trends",
       "tags": [],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-21T07:11:06Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -17663,9 +17281,7 @@
       "rights": "",
       "extra": "Citation Key: colby_carlsten_white__2021__review",
       "tags": [],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2021-11-11T10:40:14Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -17746,9 +17362,7 @@
       "rights": "",
       "extra": "Citation Key: demaria_iadarola__2021__xsuite",
       "tags": [],
-      "collections": [
-        "GNRTFGXD"
-      ],
+      "collections": ["GNRTFGXD"],
       "relations": {},
       "dateAdded": "2022-03-04T18:32:33Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -17821,9 +17435,7 @@
       "rights": "",
       "extra": "Citation Key: michaelbaumann__2021__weckruf",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2021-12-08T07:11:33Z",
       "dateModified": "2025-05-25T14:55:32Z"
@@ -17912,9 +17524,7 @@
           "tag": "#generic/funding-program/eu/:horizon-2020"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-03-17T12:46:47Z",
       "dateModified": "2025-05-25T14:55:31Z"
@@ -18007,9 +17617,7 @@
           "tag": "#befidesh/accelerator/erl"
         }
       ],
-      "collections": [
-        "4SITRTVW"
-      ],
+      "collections": ["4SITRTVW"],
       "relations": {},
       "dateAdded": "2024-03-17T10:20:28Z",
       "dateModified": "2025-05-25T14:55:31Z"
@@ -18120,9 +17728,7 @@
           "tag": "#befidesh/accelerator-application/science-application/nuclear-physics"
         }
       ],
-      "collections": [
-        "P69D5WSA"
-      ],
+      "collections": ["P69D5WSA"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/FCUPC2IY"
       },
@@ -18230,9 +17836,7 @@
           "tag": "#befidesh/organization/:cern"
         }
       ],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2021-11-10T18:36:12Z",
       "dateModified": "2025-05-25T14:55:31Z"
@@ -18318,9 +17922,7 @@
       "rights": "",
       "extra": "DOI: 10.48550/arXiv.2103.16500\nCitation Key: alesini__2021__linac",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-06T18:30:39Z",
       "dateModified": "2025-05-25T14:55:31Z"
@@ -18405,9 +18007,7 @@
       "rights": "",
       "extra": "arXiv:2107.06109 [physics]\nCitation Key: li__2021__collective",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-06T18:24:56Z",
       "dateModified": "2025-05-25T14:55:31Z"
@@ -18483,9 +18083,7 @@
       "rights": "",
       "extra": "Citation Key: williams__2021__industrial",
       "tags": [],
-      "collections": [
-        "4SITRTVW"
-      ],
+      "collections": ["4SITRTVW"],
       "relations": {},
       "dateAdded": "2024-03-19T00:39:52Z",
       "dateModified": "2025-05-25T14:55:31Z"
@@ -18577,9 +18175,7 @@
       "rights": "",
       "extra": "https://web.archive.org/web/20210303232039/https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.93.015006\nCitation Key: shiltsev_zimmermann__2021__modern",
       "tags": [],
-      "collections": [
-        "9LMA7M95"
-      ],
+      "collections": ["9LMA7M95"],
       "relations": {},
       "dateAdded": "2021-11-23T16:29:45Z",
       "dateModified": "2025-05-25T14:55:31Z"
@@ -18674,9 +18270,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2023-11-18T05:59:49Z",
       "dateModified": "2025-05-25T14:55:30Z"
@@ -18765,9 +18359,7 @@
           "tag": "#bf2035/stakeholder/funder/german-goverment"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2022-04-13T11:11:19Z",
       "dateModified": "2025-05-25T14:55:30Z"
@@ -18856,9 +18448,7 @@
           "tag": "#bf2035/issue/diversity"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2022-04-29T10:46:20Z",
       "dateModified": "2025-05-25T14:55:30Z"
@@ -18929,9 +18519,7 @@
       "rights": "",
       "extra": "Citation Key: __2021__digum",
       "tags": [],
-      "collections": [
-        "XWVM9C28"
-      ],
+      "collections": ["XWVM9C28"],
       "relations": {},
       "dateAdded": "2025-01-02T10:09:27Z",
       "dateModified": "2025-05-25T14:55:30Z"
@@ -19044,9 +18632,7 @@
       "rights": "",
       "extra": "DOI: 10.2172/1764152\nCitation Key: nagaitsev_huang_power_etal__2021__accelerator",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-04-27T21:36:52Z",
       "dateModified": "2025-05-25T14:55:30Z"
@@ -19153,9 +18739,7 @@
       "rights": "",
       "extra": "Citation Key: simonbohlen_theresabrummer_floriangruner_etal__2021__plasmed",
       "tags": [],
-      "collections": [
-        "96EU578A"
-      ],
+      "collections": ["96EU578A"],
       "relations": {},
       "dateAdded": "2022-09-26T08:11:51Z",
       "dateModified": "2025-05-25T14:55:30Z"
@@ -19231,10 +18815,7 @@
       "rights": "",
       "extra": "Read_Status: To Read\nRead_Status_Date: 2024-03-17T08:07:19.544Z\nCitation Key: zimmermann__2021__accelerator",
       "tags": [],
-      "collections": [
-        "I45CUZNP",
-        "EUSGLXHE"
-      ],
+      "collections": ["I45CUZNP", "EUSGLXHE"],
       "relations": {},
       "dateAdded": "2022-11-16T03:11:04Z",
       "dateModified": "2025-05-25T14:55:30Z"
@@ -19307,9 +18888,7 @@
       "rights": "",
       "extra": "Citation Key: hermann_lisaleander__2021__wie",
       "tags": [],
-      "collections": [
-        "G47E3M7X"
-      ],
+      "collections": ["G47E3M7X"],
       "relations": {},
       "dateAdded": "2021-08-06T08:29:59Z",
       "dateModified": "2025-05-25T14:55:30Z"
@@ -19401,9 +18980,7 @@
       "rights": "",
       "extra": "https://web.archive.org/web/20220206093607/https://www.mdpi.com/2410-390X/5/1/8\nCitation Key: rossi_senatore__2021__hts",
       "tags": [],
-      "collections": [
-        "HQGH7874"
-      ],
+      "collections": ["HQGH7874"],
       "relations": {},
       "dateAdded": "2022-02-06T09:36:04Z",
       "dateModified": "2025-05-25T14:55:30Z"
@@ -19499,10 +19076,7 @@
           "tag": "#bf2035/item-type/annual-report"
         }
       ],
-      "collections": [
-        "SMHHXUJI",
-        "I45CUZNP"
-      ],
+      "collections": ["SMHHXUJI", "I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-06-04T18:57:06Z",
       "dateModified": "2025-05-25T14:55:29Z"
@@ -19607,9 +19181,7 @@
           "tag": "#bf2035/item-type/annual-report"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-03-17T10:02:49Z",
       "dateModified": "2025-05-25T14:55:29Z"
@@ -19701,9 +19273,7 @@
           "tag": "#befidesh/accelerator-based-facility/neutron-source/compact-accelerator-based-neutron-source"
         }
       ],
-      "collections": [
-        "EDIH5ZM5"
-      ],
+      "collections": ["EDIH5ZM5"],
       "relations": {},
       "dateAdded": "2023-01-31T12:47:46Z",
       "dateModified": "2025-05-25T14:55:29Z"
@@ -19800,9 +19370,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:09:14Z",
       "dateModified": "2025-05-25T14:55:29Z"
@@ -19888,9 +19456,7 @@
       "rights": "https://creativecommons.org/licenses/by/4.0",
       "extra": "DOI: 10.1007/978-3-030-57031-6\nCitation Key: otto__2021__safety",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-12T04:33:46Z",
       "dateModified": "2025-05-25T14:55:29Z"
@@ -19958,9 +19524,7 @@
       "rights": "",
       "extra": "Citation Key: internationalatomicenergyagency__2021__accelerator",
       "tags": [],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2021-08-11T05:21:39Z",
       "dateModified": "2025-05-25T14:55:29Z"
@@ -20051,9 +19615,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2025-01-14T04:35:27Z",
       "dateModified": "2025-05-25T14:55:28Z"
@@ -20128,9 +19690,7 @@
           "tag": "#generic/funding-program/eu/:horizon-2020"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-03T17:44:21Z",
       "dateModified": "2025-05-25T14:55:28Z"
@@ -20205,10 +19765,7 @@
           "tag": "#generic/funding-program/eu/:horizon-2020"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "MNL37NPL"
-      ],
+      "collections": ["I45CUZNP", "MNL37NPL"],
       "relations": {},
       "dateAdded": "2024-11-03T17:38:19Z",
       "dateModified": "2025-05-25T14:55:28Z"
@@ -21517,9 +21074,7 @@
           "tag": "#befidesh/accelerator-based-facility/:eupraxia"
         }
       ],
-      "collections": [
-        "22PEWIQW"
-      ],
+      "collections": ["22PEWIQW"],
       "relations": {},
       "dateAdded": "2024-10-02T07:18:32Z",
       "dateModified": "2025-05-25T14:55:28Z"
@@ -21620,9 +21175,7 @@
           "tag": "#bf2035/issue/excellence"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2024-09-10T16:49:17Z",
       "dateModified": "2025-05-25T14:55:28Z"
@@ -21708,10 +21261,7 @@
           "tag": "#bf2035/stakeholder/german-government"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "9TYH3AUS"
-      ],
+      "collections": ["I45CUZNP", "9TYH3AUS"],
       "relations": {},
       "dateAdded": "2023-10-18T10:12:50Z",
       "dateModified": "2025-05-25T14:55:28Z"
@@ -21821,9 +21371,7 @@
           "tag": "#befidesh/organization/:helmholtz-association"
         }
       ],
-      "collections": [
-        "T8IVXSZV"
-      ],
+      "collections": ["T8IVXSZV"],
       "relations": {},
       "dateAdded": "2024-03-17T21:53:03Z",
       "dateModified": "2025-05-25T14:55:28Z"
@@ -21915,9 +21463,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-03-24T18:41:52Z",
       "dateModified": "2025-05-25T14:55:28Z"
@@ -22006,9 +21552,7 @@
           "tag": "#befidesh/accelerating-process/electrodynamic-acceleration/cavity-based-acceleration/cavity-based_radiofrequency-driven_acceleration/superconducting"
         }
       ],
-      "collections": [
-        "59A6DF5Z"
-      ],
+      "collections": ["59A6DF5Z"],
       "relations": {},
       "dateAdded": "2022-02-06T08:39:46Z",
       "dateModified": "2025-05-25T14:55:28Z"
@@ -22099,9 +21643,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-10-10T14:04:33Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -22218,9 +21760,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-10-12T03:07:33Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -22301,10 +21841,7 @@
           "tag": "#befidesh/organization/:nfdi"
         }
       ],
-      "collections": [
-        "GNRTFGXD",
-        "69C3ASTT"
-      ],
+      "collections": ["GNRTFGXD", "69C3ASTT"],
       "relations": {},
       "dateAdded": "2024-10-12T03:07:35Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -22481,9 +22018,7 @@
           "tag": "#befidesh/accelerator-based-facility/neutron-source/compact-accelerator-based-neutron-source"
         }
       ],
-      "collections": [
-        "EDIH5ZM5"
-      ],
+      "collections": ["EDIH5ZM5"],
       "relations": {
         "dc:replaces": [
           "http://zotero.org/groups/2427654/items/WLUBRKGN",
@@ -22577,9 +22112,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-03-17T21:53:41Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -22665,9 +22198,7 @@
           "tag": "#befidesh/organization/:helmholtz-association"
         }
       ],
-      "collections": [
-        "8QDN6RGB"
-      ],
+      "collections": ["8QDN6RGB"],
       "relations": {},
       "dateAdded": "2023-10-13T07:10:57Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -22739,9 +22270,7 @@
           "tag": "#befidesh/accelerator-application/science-application/nuclear-physics"
         }
       ],
-      "collections": [
-        "P69D5WSA"
-      ],
+      "collections": ["P69D5WSA"],
       "relations": {},
       "dateAdded": "2021-08-11T05:37:33Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -22827,9 +22356,7 @@
           "tag": "#bf2035/issue/diversity"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2022-04-29T11:06:21Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -22919,9 +22446,7 @@
           "tag": "#befidesh/accelerator-based-facility/:lhc"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-30T14:31:23Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -22999,9 +22524,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-30T14:26:19Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -23086,9 +22609,7 @@
       "rights": "",
       "extra": "arXiv:2005.08389 [physics]\nCitation Key: kube__2020__beam",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-06T18:31:12Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -23173,9 +22694,7 @@
       "rights": "",
       "extra": "Citation Key: fredericchautard__2020__particle",
       "tags": [],
-      "collections": [
-        "9LMA7M95"
-      ],
+      "collections": ["9LMA7M95"],
       "relations": {},
       "dateAdded": "2020-07-16T07:52:22Z",
       "dateModified": "2025-05-25T14:55:27Z"
@@ -23339,9 +22858,7 @@
           "tag": "#befidesh/accelerator-based-facility/neutron-source/compact-accelerator-based-neutron-source"
         }
       ],
-      "collections": [
-        "EDIH5ZM5"
-      ],
+      "collections": ["EDIH5ZM5"],
       "relations": {},
       "dateAdded": "2024-10-02T04:57:11Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -23452,9 +22969,7 @@
           "tag": "#bf2035/issue/open-science"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-06-27T06:43:45Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -23588,10 +23103,7 @@
           "tag": "#bf2035/issue/technology-transfer/entrepreneurship"
         }
       ],
-      "collections": [
-        "N8QHY7SM",
-        "9ZB4SZ6E"
-      ],
+      "collections": ["N8QHY7SM", "9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-11T16:14:42Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -23672,9 +23184,7 @@
           "tag": "#bf2035/issue/technology-transfer"
         }
       ],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-06T12:50:47Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -23765,9 +23275,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/C35CVYVZ"
       },
@@ -23905,9 +23413,7 @@
           "tag": "#bf2035/issue/strategy/goals"
         }
       ],
-      "collections": [
-        "JBML3GAF"
-      ],
+      "collections": ["JBML3GAF"],
       "relations": {},
       "dateAdded": "2021-08-05T08:09:25Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -24014,10 +23520,7 @@
           "tag": "#befidesh/accelerator-based-facility/neutron-source/spallation-neutron-source"
         }
       ],
-      "collections": [
-        "HT522VV8",
-        "F9F9SFJI"
-      ],
+      "collections": ["HT522VV8", "F9F9SFJI"],
       "relations": {},
       "dateAdded": "2021-11-22T09:48:08Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -24108,10 +23611,7 @@
           "tag": "#befidesh/accelerator-application/science"
         }
       ],
-      "collections": [
-        "HT522VV8",
-        "H95NTXKN"
-      ],
+      "collections": ["HT522VV8", "H95NTXKN"],
       "relations": {},
       "dateAdded": "2020-04-27T07:37:39Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -24232,9 +23732,7 @@
           "tag": "#befidesh/accelerator/erl"
         }
       ],
-      "collections": [
-        "S8BMRKXK"
-      ],
+      "collections": ["S8BMRKXK"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/EUD62BSP"
       },
@@ -24313,10 +23811,7 @@
           "tag": "#befidesh/accelerator-application/medical-application/"
         }
       ],
-      "collections": [
-        "A9C2UETT",
-        "H95NTXKN"
-      ],
+      "collections": ["A9C2UETT", "H95NTXKN"],
       "relations": {},
       "dateAdded": "2020-02-21T09:46:39Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -24418,9 +23913,7 @@
       "rights": "",
       "extra": "DOI: 10.1007/978-3-030-34245-6_2\nCitation Key: wilson_holzer__2020__beam",
       "tags": [],
-      "collections": [
-        "KGXKWK9R"
-      ],
+      "collections": ["KGXKWK9R"],
       "relations": {},
       "dateAdded": "2024-11-04T17:27:20Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -24537,9 +24030,7 @@
       "rights": "https://creativecommons.org/licenses/by/4.0",
       "extra": "Citation Key: buscher_adam_tusche_etal__2020__jusparc",
       "tags": [],
-      "collections": [
-        "H3GFUSDA"
-      ],
+      "collections": ["H3GFUSDA"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/SMBQI6CQ"
       },
@@ -24614,9 +24105,7 @@
       "rights": "",
       "extra": "Citation Key: andreasvonwestphalen__2020__konkurrenz",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2023-10-10T11:49:46Z",
       "dateModified": "2025-05-25T14:55:26Z"
@@ -24758,9 +24247,7 @@
       "rights": "",
       "extra": "tex.ids: sapra_etal__2020__onchip\nCitation Key: sapra_yang_vercruysse_etal__2020__onchip",
       "tags": [],
-      "collections": [
-        "A9G5QU38"
-      ],
+      "collections": ["A9G5QU38"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/NNI8GWR8"
       },
@@ -24863,9 +24350,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "GPX8RBVH"
-      ],
+      "collections": ["GPX8RBVH"],
       "relations": {},
       "dateAdded": "2024-11-01T13:36:29Z",
       "dateModified": "2025-05-25T14:55:25Z"
@@ -24954,9 +24439,7 @@
           "tag": "#bf2035/item-type/annual-report"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-06-04T19:22:57Z",
       "dateModified": "2025-05-25T14:55:25Z"
@@ -25043,9 +24526,7 @@
           "tag": "#befidesh/organization/:cern"
         }
       ],
-      "collections": [
-        "PVNZ5YYM"
-      ],
+      "collections": ["PVNZ5YYM"],
       "relations": {},
       "dateAdded": "2024-05-22T05:45:06Z",
       "dateModified": "2025-05-25T14:55:25Z"
@@ -25137,9 +24618,7 @@
           "tag": "#bf2035/issue/technology-transfer/innovation"
         }
       ],
-      "collections": [
-        "HHPXJPM4"
-      ],
+      "collections": ["HHPXJPM4"],
       "relations": {},
       "dateAdded": "2024-01-04T09:20:45Z",
       "dateModified": "2025-05-25T14:55:25Z"
@@ -25226,9 +24705,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2023-06-13T09:18:21Z",
       "dateModified": "2025-05-25T14:55:25Z"
@@ -25317,9 +24794,7 @@
           "tag": "#bf2035/projects/european-strategy-for-particle-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2022-08-24T20:53:36Z",
       "dateModified": "2025-05-25T14:55:25Z"
@@ -25465,9 +24940,7 @@
           "tag": "#befidesh/accelerator-based-facility/:lhc"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/6F8L7DQG"
       },
@@ -25638,9 +25111,7 @@
           "tag": "#befidesh/accelerator/linac"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/VL7NELKS"
       },
@@ -25796,9 +25267,7 @@
           "tag": "#befidesh/accelerator/synchrotron"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/J9MP4E8J"
       },
@@ -25895,9 +25364,7 @@
           "tag": "#befidesh/accelerator-based-facility/:lhc"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": [
           "http://zotero.org/groups/2427654/items/2JV98GH8",
@@ -26004,9 +25471,7 @@
       "rights": "",
       "extra": "0 citations (INSPIRE 2024/3/17)\n0 citations w/o self (INSPIRE 2024/3/17)\nDOI: 10.1007/978-3-030-34245-6_1\nCitation Key: myers_schopper__2020__accelerators",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": [
           "http://zotero.org/groups/2427654/items/SSBWK3ZY",
@@ -26148,9 +25613,7 @@
       "rights": "",
       "extra": "DOI: 10.1007/978-3-030-34245-6_9\nCitation Key: myers_schopper__2020__acceleratora",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/8L5AMQS3"
       },
@@ -26259,9 +25722,7 @@
       "rights": "",
       "extra": "DOI: 10.1007/978-3-030-34245-6_4\nCitation Key: myers_schopper__2020__impedance",
       "tags": [],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/T4ARWWQS"
       },
@@ -26365,9 +25826,7 @@
       "rights": "",
       "extra": "DOI: 10.1007/978-3-030-34245-6_13\nCitation Key: hofmann_hinton__2020__cosmic",
       "tags": [],
-      "collections": [
-        "KGXKWK9R"
-      ],
+      "collections": ["KGXKWK9R"],
       "relations": {},
       "dateAdded": "2024-11-04T17:27:20Z",
       "dateModified": "2025-05-25T14:55:25Z"
@@ -26484,9 +25943,7 @@
       "rights": "",
       "extra": "DOI: 10.1007/978-3-030-34245-6_12\nCitation Key: myers_schopper__2020__outlook",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/KVQQJNNS"
       },
@@ -26590,9 +26047,7 @@
       "rights": "",
       "extra": "DOI: 10.1007/978-3-030-34245-6_3\nCitation Key: myers_schopper__2020__nonlinear",
       "tags": [],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/HFKRH5ER"
       },
@@ -26669,9 +26124,7 @@
           "tag": "#generic/funding-program/eu/:horizon-2020"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-03T18:06:58Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -26766,10 +26219,7 @@
           "tag": "#bf2035/issue/technology-transfer/innovation"
         }
       ],
-      "collections": [
-        "SMHHXUJI",
-        "I45CUZNP"
-      ],
+      "collections": ["SMHHXUJI", "I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-09-10T11:30:52Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -26873,9 +26323,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2024-06-11T16:08:21Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -26990,9 +26438,7 @@
           "tag": "#befidesh/accelerator-based-facility/particle-collider/circular-particle-collider"
         }
       ],
-      "collections": [
-        "NMMQSXGA"
-      ],
+      "collections": ["NMMQSXGA"],
       "relations": {},
       "dateAdded": "2024-03-24T18:03:38Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -27073,9 +26519,7 @@
           "tag": "#bf2035/issue/participation"
         }
       ],
-      "collections": [
-        "RNXGIY6E"
-      ],
+      "collections": ["RNXGIY6E"],
       "relations": {},
       "dateAdded": "2023-07-02T09:26:54Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -29770,9 +29214,7 @@
           "tag": "#befidesh/accelerator-based-facility/particle-collider/circular-particle-collider"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/4UB43TCJ"
       },
@@ -29927,9 +29369,7 @@
           "tag": "#befidesh/accelerator-based-facility/photon-source/free-electron-laser/seeded"
         }
       ],
-      "collections": [
-        "TBES545E"
-      ],
+      "collections": ["TBES545E"],
       "relations": {},
       "dateAdded": "2022-08-10T01:02:43Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -30155,9 +29595,7 @@
           "tag": "#befidesh/accelerator-research-subfield/vacuum-technology"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/Q2SD3CKI"
       },
@@ -30246,9 +29684,7 @@
       "rights": "",
       "extra": "Publisher: Zenodo\nCitation Key: members__2019__evaluation",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-26T15:31:26Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -30330,9 +29766,7 @@
       "rights": "",
       "extra": "Citation Key: bilfingernoell__2020__magnet",
       "tags": [],
-      "collections": [
-        "2LH6JDMY"
-      ],
+      "collections": ["2LH6JDMY"],
       "relations": {},
       "dateAdded": "2024-09-08T23:46:29Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -30449,9 +29883,7 @@
       "rights": "",
       "extra": "DOI: 10.1007/978-3-030-34245-6_5\nCitation Key: myers_schopper__2020__interactions",
       "tags": [],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/8ME7NXXW"
       },
@@ -30605,9 +30037,7 @@
       "rights": "",
       "extra": "DOI: 10.1007/978-3-030-34245-6_11\nCitation Key: myers_schopper__2020__application",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:replaces": [
           "http://zotero.org/groups/2427654/items/GJZSTAJN",
@@ -30685,10 +30115,7 @@
       "rights": "",
       "extra": "Citation Key: elsa__2020__particle",
       "tags": [],
-      "collections": [
-        "HT522VV8",
-        "I45CUZNP"
-      ],
+      "collections": ["HT522VV8", "I45CUZNP"],
       "relations": {},
       "dateAdded": "2022-06-19T12:26:07Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -30758,9 +30185,7 @@
       "rights": "",
       "extra": "Citation Key: muller__2019__verbundprojekte",
       "tags": [],
-      "collections": [
-        "YNDTZCNT"
-      ],
+      "collections": ["YNDTZCNT"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:24Z",
       "dateModified": "2025-05-25T14:55:24Z"
@@ -30849,9 +30274,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-02-23T06:12:11Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -30931,9 +30354,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:26:18Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31013,9 +30434,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:45:46Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31095,9 +30514,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:31:33Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31182,9 +30599,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:36:45Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31264,9 +30679,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:48:19Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31346,9 +30759,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:47:01Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31428,9 +30839,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:32:50Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31510,9 +30919,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T09:00:23Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31592,9 +30999,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:48:19Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31674,9 +31079,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:39:56Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -31756,9 +31159,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:43:55Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -32413,9 +31814,7 @@
           "tag": "#bf2035/projects/european-strategy-for-particle-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-10T06:54:26Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -32515,9 +31914,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "dc:relation": "http://zotero.org/groups/2427654/items/2D9QH5N4"
       },
@@ -32603,9 +32000,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:35Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -32685,9 +32080,7 @@
       "rights": "Creative Commons Attribution 4.0 International, Open Access",
       "extra": "Publisher: Zenodo\nCitation Key: arieswp3members__2019__evaluation",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-26T15:32:07Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -32760,9 +32153,7 @@
       "rights": "",
       "extra": "Citation Key: leahhesla__2019__fermilab",
       "tags": [],
-      "collections": [
-        "ZGCNF4GB"
-      ],
+      "collections": ["ZGCNF4GB"],
       "relations": {},
       "dateAdded": "2022-03-04T18:38:22Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -32836,9 +32227,7 @@
       "rights": "",
       "extra": "Citation Key: lucabottura__2019__accelerating",
       "tags": [],
-      "collections": [
-        "ZGCNF4GB"
-      ],
+      "collections": ["ZGCNF4GB"],
       "relations": {},
       "dateAdded": "2022-02-04T12:30:23Z",
       "dateModified": "2025-05-25T14:55:23Z"
@@ -32936,9 +32325,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2023-11-18T06:03:24Z",
       "dateModified": "2025-05-25T14:55:22Z"
@@ -33025,9 +32412,7 @@
           "tag": "#befidesh/organization/:bmbf"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:22Z"
@@ -33198,9 +32583,7 @@
           "tag": "#befidesh/accelerator-research-subfield/instrumentation-and-diagnostics"
         }
       ],
-      "collections": [
-        "8QDN6RGB"
-      ],
+      "collections": ["8QDN6RGB"],
       "relations": {},
       "dateAdded": "2022-03-02T08:47:42Z",
       "dateModified": "2025-05-25T14:55:22Z"
@@ -33285,9 +32668,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-04-27T08:12:37Z",
       "dateModified": "2025-05-25T14:55:22Z"
@@ -33367,9 +32748,7 @@
           "tag": "#bf2035/item-type/strategy-workshop-contributions"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:24Z",
       "dateModified": "2025-05-25T14:55:22Z"
@@ -33453,9 +32832,7 @@
           "tag": "#befidesh/accelerator-application/security"
         }
       ],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2020-01-11T15:10:48Z",
       "dateModified": "2025-05-25T14:55:22Z"
@@ -33544,9 +32921,7 @@
           "tag": "#bf2035/projects/european-strategy-for-particle-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-10T06:52:25Z",
       "dateModified": "2025-05-25T14:55:22Z"
@@ -33671,9 +33046,7 @@
           "tag": "#befidesh/accelerator-based-facility/:myrrha"
         }
       ],
-      "collections": [
-        "QPJPGTER"
-      ],
+      "collections": ["QPJPGTER"],
       "relations": {},
       "dateAdded": "2024-06-13T14:00:38Z",
       "dateModified": "2025-05-25T14:55:21Z"
@@ -33760,9 +33133,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-01-31T06:54:41Z",
       "dateModified": "2025-05-25T14:55:21Z"
@@ -40673,9 +40044,7 @@
           "tag": "#bf2035/projects/european-strategy-for-particle-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2022-08-25T05:50:09Z",
       "dateModified": "2025-05-25T14:55:21Z"
@@ -40779,10 +40148,7 @@
           "tag": "#bf2035/issue/technology-transfer"
         }
       ],
-      "collections": [
-        "H95NTXKN",
-        "2LH6JDMY"
-      ],
+      "collections": ["H95NTXKN", "2LH6JDMY"],
       "relations": {},
       "dateAdded": "2021-08-06T09:43:33Z",
       "dateModified": "2025-05-25T14:55:21Z"
@@ -47691,10 +47057,7 @@
           "tag": "#befidesh/organization/:cern"
         }
       ],
-      "collections": [
-        "MNL37NPL",
-        "B6PZ27FB"
-      ],
+      "collections": ["MNL37NPL", "B6PZ27FB"],
       "relations": {},
       "dateAdded": "2020-03-05T07:30:15Z",
       "dateModified": "2025-05-25T14:55:21Z"
@@ -54608,10 +53971,7 @@
           "tag": "#befidesh/organization/:cern"
         }
       ],
-      "collections": [
-        "MNL37NPL",
-        "B6PZ27FB"
-      ],
+      "collections": ["MNL37NPL", "B6PZ27FB"],
       "relations": {},
       "dateAdded": "2020-03-05T07:28:24Z",
       "dateModified": "2025-05-25T14:55:21Z"
@@ -61525,10 +60885,7 @@
           "tag": "#befidesh/organization/:cern"
         }
       ],
-      "collections": [
-        "MNL37NPL",
-        "B6PZ27FB"
-      ],
+      "collections": ["MNL37NPL", "B6PZ27FB"],
       "relations": {},
       "dateAdded": "2020-03-05T07:30:39Z",
       "dateModified": "2025-05-25T14:55:21Z"
@@ -61735,9 +61092,7 @@
       "rights": "http://creativecommons.org/licenses/by/4.0/",
       "extra": "Citation Key: conlon_woods_triggs_etal__2019__vivo",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-26T15:53:31Z",
       "dateModified": "2025-05-25T14:55:21Z"
@@ -61807,9 +61162,7 @@
       "rights": "",
       "extra": "Citation Key: turner__2019__office",
       "tags": [],
-      "collections": [
-        "XNVHTZXA"
-      ],
+      "collections": ["XNVHTZXA"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:06Z",
       "dateModified": "2025-05-25T14:55:21Z"
@@ -61950,9 +61303,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-10-30T09:49:59Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62098,10 +61449,7 @@
           "tag": "#befidesh/accelerating-process/plasma-based-acceleration/"
         }
       ],
-      "collections": [
-        "XNVHTZXA",
-        "SAQ4Z9XW"
-      ],
+      "collections": ["XNVHTZXA", "SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2020-02-25T08:40:16Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62191,9 +61539,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-10T05:01:00Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62289,9 +61635,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "NMMQSXGA"
-      ],
+      "collections": ["NMMQSXGA"],
       "relations": {},
       "dateAdded": "2020-06-10T05:00:57Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62387,9 +61731,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2020-06-10T05:00:56Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62475,9 +61817,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:35Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62564,10 +61904,7 @@
           "tag": "#bf2035/issue/digital-transformation"
         }
       ],
-      "collections": [
-        "RHPVAKEC",
-        "CXNGSTAH"
-      ],
+      "collections": ["RHPVAKEC", "CXNGSTAH"],
       "relations": {},
       "dateAdded": "2020-09-23T11:24:08Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62647,9 +61984,7 @@
           "tag": "#befidesh/organization/:bmbf"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62716,9 +62051,7 @@
       "rights": "",
       "extra": "Citation Key: __2019__world",
       "tags": [],
-      "collections": [
-        "9LMA7M95"
-      ],
+      "collections": ["9LMA7M95"],
       "relations": {},
       "dateAdded": "2025-05-23T16:47:57Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62795,9 +62128,7 @@
       "rights": "",
       "extra": "Citation Key: martinerdmann__2019__challenges",
       "tags": [],
-      "collections": [
-        "XWVM9C28"
-      ],
+      "collections": ["XWVM9C28"],
       "relations": {},
       "dateAdded": "2025-01-02T10:16:06Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62866,9 +62197,7 @@
       "rights": "",
       "extra": "Citation Key: ramian__2019__world",
       "tags": [],
-      "collections": [
-        "9LMA7M95"
-      ],
+      "collections": ["9LMA7M95"],
       "relations": {},
       "dateAdded": "2021-11-01T05:03:19Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -62941,9 +62270,7 @@
       "rights": "",
       "extra": "Section: Continuity of progress\nCitation Key: aiimpacts__2019__historic",
       "tags": [],
-      "collections": [
-        "59A6DF5Z"
-      ],
+      "collections": ["59A6DF5Z"],
       "relations": {},
       "dateAdded": "2021-02-22T08:49:51Z",
       "dateModified": "2025-05-25T14:55:20Z"
@@ -63034,9 +62361,7 @@
           "tag": "#bf2035/projects/aries"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-26T15:30:09Z",
       "dateModified": "2025-05-25T14:55:19Z"
@@ -63127,9 +62452,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "GPX8RBVH"
-      ],
+      "collections": ["GPX8RBVH"],
       "relations": {},
       "dateAdded": "2024-11-01T07:46:31Z",
       "dateModified": "2025-05-25T14:55:19Z"
@@ -63252,10 +62575,7 @@
           "tag": "#befidesh/organization/:desy"
         }
       ],
-      "collections": [
-        "JQS5U395",
-        "T8IVXSZV"
-      ],
+      "collections": ["JQS5U395", "T8IVXSZV"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/6G9GQBCK"
       },
@@ -63340,9 +62660,7 @@
           "tag": "#bf2035/issue/digital-transformation"
         }
       ],
-      "collections": [
-        "GNRTFGXD"
-      ],
+      "collections": ["GNRTFGXD"],
       "relations": {},
       "dateAdded": "2023-11-12T06:54:04Z",
       "dateModified": "2025-05-25T14:55:19Z"
@@ -63431,9 +62749,7 @@
           "tag": "#befidesh/accelerator-based-facility/particle-collider/linear-particle-collider"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-01-23T20:03:44Z",
       "dateModified": "2025-05-25T14:55:19Z"
@@ -63524,9 +62840,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "CAGZPHJ8"
-      ],
+      "collections": ["CAGZPHJ8"],
       "relations": {},
       "dateAdded": "2020-06-10T05:00:59Z",
       "dateModified": "2025-05-25T14:55:19Z"
@@ -63625,9 +62939,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fcc"
         }
       ],
-      "collections": [
-        "B6PZ27FB"
-      ],
+      "collections": ["B6PZ27FB"],
       "relations": {},
       "dateAdded": "2020-06-10T05:00:54Z",
       "dateModified": "2025-05-25T14:55:19Z"
@@ -63718,9 +63030,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-10T05:00:52Z",
       "dateModified": "2025-05-25T14:55:19Z"
@@ -63811,9 +63121,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "GYKKNSRE"
-      ],
+      "collections": ["GYKKNSRE"],
       "relations": {},
       "dateAdded": "2020-06-10T05:00:51Z",
       "dateModified": "2025-05-25T14:55:19Z"
@@ -63894,9 +63202,7 @@
           "tag": "#bf2035/issue/technology-transfer"
         }
       ],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-06T12:45:19Z",
       "dateModified": "2025-05-25T14:55:18Z"
@@ -63996,9 +63302,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2023-11-17T05:48:28Z",
       "dateModified": "2025-05-25T14:55:18Z"
@@ -64096,9 +63400,7 @@
           "tag": "#bf2035/research-topic/materials/nb3sn"
         }
       ],
-      "collections": [
-        "RTJNHI62"
-      ],
+      "collections": ["RTJNHI62"],
       "relations": {},
       "dateAdded": "2020-05-06T10:25:11Z",
       "dateModified": "2025-05-25T14:55:18Z"
@@ -64201,9 +63503,7 @@
           "tag": "#bf2035/research-topic/materials/nb3sn"
         }
       ],
-      "collections": [
-        "RTJNHI62"
-      ],
+      "collections": ["RTJNHI62"],
       "relations": {},
       "dateAdded": "2020-05-06T10:24:56Z",
       "dateModified": "2025-05-25T14:55:18Z"
@@ -64295,9 +63595,7 @@
           "tag": "#bf2035/research-topic/materials/nb3sn"
         }
       ],
-      "collections": [
-        "RTJNHI62"
-      ],
+      "collections": ["RTJNHI62"],
       "relations": {},
       "dateAdded": "2020-05-06T10:22:31Z",
       "dateModified": "2025-05-25T14:55:18Z"
@@ -64425,9 +63723,7 @@
           "tag": "#befidesh/organization/:desy"
         }
       ],
-      "collections": [
-        "JQS5U395"
-      ],
+      "collections": ["JQS5U395"],
       "relations": {},
       "dateAdded": "2021-11-11T11:08:50Z",
       "dateModified": "2025-05-25T14:55:18Z"
@@ -64575,9 +63871,7 @@
           "tag": "#befidesh/organization/:desy"
         }
       ],
-      "collections": [
-        "JQS5U395"
-      ],
+      "collections": ["JQS5U395"],
       "relations": {},
       "dateAdded": "2022-01-13T07:12:02Z",
       "dateModified": "2025-05-25T14:55:18Z"
@@ -64671,9 +63965,7 @@
           "tag": "#befidesh/accelerator-application/medical-application/"
         }
       ],
-      "collections": [
-        "A9C2UETT"
-      ],
+      "collections": ["A9C2UETT"],
       "relations": {},
       "dateAdded": "2020-03-21T13:14:04Z",
       "dateModified": "2025-05-25T14:55:18Z"
@@ -64893,9 +64185,7 @@
           "tag": "#befidesh/accelerator/linac"
         }
       ],
-      "collections": [
-        "EDIH5ZM5"
-      ],
+      "collections": ["EDIH5ZM5"],
       "relations": {},
       "dateAdded": "2024-10-02T04:53:26Z",
       "dateModified": "2025-05-25T14:55:17Z"
@@ -65000,9 +64290,7 @@
           "tag": "#bf2035/stakeholder/kfn"
         }
       ],
-      "collections": [
-        "F9F9SFJI"
-      ],
+      "collections": ["F9F9SFJI"],
       "relations": {},
       "dateAdded": "2024-03-24T17:59:50Z",
       "dateModified": "2025-05-25T14:55:17Z"
@@ -65082,9 +64370,7 @@
           "tag": "#bf2035/stakeholder/funder/european-commission"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:17Z"
@@ -65196,9 +64482,7 @@
           "tag": "#bf2035/issue/participation"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:10:40Z",
       "dateModified": "2025-05-25T14:55:17Z"
@@ -65387,9 +64671,7 @@
           "tag": "#befidesh/organization/:kit"
         }
       ],
-      "collections": [
-        "VBGRY2HL"
-      ],
+      "collections": ["VBGRY2HL"],
       "relations": {},
       "dateAdded": "2021-11-23T13:57:44Z",
       "dateModified": "2025-05-25T14:55:17Z"
@@ -65548,9 +64830,7 @@
           "tag": "#befidesh/organization/:kit"
         }
       ],
-      "collections": [
-        "9WCYRZ9F"
-      ],
+      "collections": ["9WCYRZ9F"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/DYT9JMRU"
       },
@@ -65664,9 +64944,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/TTFX3R9S"
       },
@@ -65736,9 +65014,7 @@
       "rights": "",
       "extra": "links.github: https://github.com/ror-community\nCitation Key: ror-community__2019__research",
       "tags": [],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-10-06T04:25:08Z",
       "dateModified": "2025-05-25T14:55:17Z"
@@ -65826,9 +65102,7 @@
       "rights": "",
       "extra": "Citation Key: muller_behnke__2019__proposal",
       "tags": [],
-      "collections": [
-        "3BG2B2XU"
-      ],
+      "collections": ["3BG2B2XU"],
       "relations": {},
       "dateAdded": "2024-06-23T14:05:54Z",
       "dateModified": "2025-05-25T14:55:17Z"
@@ -65950,9 +65224,7 @@
       "rights": "CC 3.0",
       "extra": "Artwork Size: 5 pages, 0.716 MB\nISBN: 9783954502080\nMedium: PDF\nPublisher: [object Object]\nRead_Status: To Read\nRead_Status_Date: 2024-03-31T10:55:11.601Z\nCitation Key: ferrario_assmann__2019__dreams",
       "tags": [],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2024-03-31T10:52:59Z",
       "dateModified": "2025-05-25T14:55:17Z"
@@ -66035,10 +65307,7 @@
       "rights": "",
       "extra": "Citation Key: dosch__2019__proposal",
       "tags": [],
-      "collections": [
-        "YNDTZCNT",
-        "8QDN6RGB"
-      ],
+      "collections": ["YNDTZCNT", "8QDN6RGB"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:24Z",
       "dateModified": "2025-05-25T14:55:17Z"
@@ -66127,9 +65396,7 @@
           "tag": "#bf2035/issue/collaboration/ontology/bfo"
         }
       ],
-      "collections": [
-        "YSEC8WZM"
-      ],
+      "collections": ["YSEC8WZM"],
       "relations": {},
       "dateAdded": "2024-10-12T03:07:34Z",
       "dateModified": "2025-05-25T14:55:16Z"
@@ -66296,10 +65563,7 @@
           "tag": "#bf2035/research-topic/plasma-acceleration"
         }
       ],
-      "collections": [
-        "HRGJP684",
-        "F3IP4PDR"
-      ],
+      "collections": ["HRGJP684", "F3IP4PDR"],
       "relations": {},
       "dateAdded": "2022-09-26T08:02:24Z",
       "dateModified": "2025-05-25T14:55:16Z"
@@ -66379,9 +65643,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:35Z",
       "dateModified": "2025-05-25T14:55:16Z"
@@ -66450,9 +65712,7 @@
       "rights": "",
       "extra": "Citation Key: beam__2018__toughsf",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-09-09T14:53:10Z",
       "dateModified": "2025-05-25T14:55:16Z"
@@ -66535,10 +65795,7 @@
       "rights": "",
       "extra": "Citation Key: dosch__2019__overview",
       "tags": [],
-      "collections": [
-        "I45CUZNP",
-        "8QDN6RGB"
-      ],
+      "collections": ["I45CUZNP", "8QDN6RGB"],
       "relations": {},
       "dateAdded": "2022-07-27T05:49:47Z",
       "dateModified": "2025-05-25T14:55:16Z"
@@ -66623,9 +65880,7 @@
       "rights": "",
       "extra": "http://web.archive.org/web/20200614154647/https://books.google.de/books?id=nu60DwAAQBAJ\nCitation Key: chao_chou__2019__reviews",
       "tags": [],
-      "collections": [
-        "FMHETBMZ"
-      ],
+      "collections": ["FMHETBMZ"],
       "relations": {},
       "dateAdded": "2020-06-14T15:46:46Z",
       "dateModified": "2025-05-25T14:55:16Z"
@@ -66722,9 +65977,7 @@
       "rights": "",
       "extra": "Citation Key: florio_bastianin_castelnovo__2018__socioeconomic",
       "tags": [],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2021-11-11T03:30:11Z",
       "dateModified": "2025-05-25T14:55:16Z"
@@ -66794,9 +66047,7 @@
       "rights": "",
       "extra": "Citation Key: muller__2018__bericht",
       "tags": [],
-      "collections": [
-        "YNDTZCNT"
-      ],
+      "collections": ["YNDTZCNT"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:24Z",
       "dateModified": "2025-05-25T14:55:16Z"
@@ -66937,9 +66188,7 @@
           "tag": "#befidesh/accelerating-process/electrodynamic-acceleration/cavity-based-acceleration/cavity-based_terahertz-driven_acceleration"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-05T17:59:03Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -67042,9 +66291,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2024-06-11T16:16:57Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -67211,9 +66458,7 @@
           "tag": "#befidesh/organization/:desy"
         }
       ],
-      "collections": [
-        "JQS5U395"
-      ],
+      "collections": ["JQS5U395"],
       "relations": {},
       "dateAdded": "2024-03-19T01:24:18Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -67302,9 +66547,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-03-17T21:54:33Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -67424,9 +66667,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -67980,9 +67221,7 @@
           "tag": "#bf2035/research-topic/plasma-acceleration"
         }
       ],
-      "collections": [
-        "RWBEJUP9"
-      ],
+      "collections": ["RWBEJUP9"],
       "relations": {},
       "dateAdded": "2020-06-23T07:29:38Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68069,9 +67308,7 @@
           "tag": "#befidesh/organization/:bmbf"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-11T15:37:01Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68149,9 +67386,7 @@
           "tag": "#befidesh/accelerator-application/medical-application/"
         }
       ],
-      "collections": [
-        "A9C2UETT"
-      ],
+      "collections": ["A9C2UETT"],
       "relations": {},
       "dateAdded": "2020-03-21T13:26:17Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68229,9 +67464,7 @@
           "tag": "#befidesh/accelerator-application/medical-application/"
         }
       ],
-      "collections": [
-        "A9C2UETT"
-      ],
+      "collections": ["A9C2UETT"],
       "relations": {},
       "dateAdded": "2020-03-21T13:07:53Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68309,9 +67542,7 @@
           "tag": "#befidesh/accelerator-application/medical-application/"
         }
       ],
-      "collections": [
-        "A9C2UETT"
-      ],
+      "collections": ["A9C2UETT"],
       "relations": {},
       "dateAdded": "2020-03-21T13:24:16Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68426,9 +67657,7 @@
       "rights": "",
       "extra": "arXiv:1804.09635 [cs]\nCitation Key: kang_ammar_dalvi_etal__2018__dataset",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-12-30T12:32:09Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68580,9 +67809,7 @@
       "rights": "© 2018 Optical Society of America",
       "extra": "Publisher: Optica Publishing Group\nCitation Key: mcneur_kozak_schonenberger_etal__2018__elements",
       "tags": [],
-      "collections": [
-        "A9G5QU38"
-      ],
+      "collections": ["A9G5QU38"],
       "relations": {},
       "dateAdded": "2024-03-31T11:03:40Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68660,9 +67887,7 @@
       "rights": "",
       "extra": "Citation Key: universityofcaliforniatelevisionuctv__2018__laserplasma",
       "tags": [],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2024-03-24T09:06:43Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68794,9 +68019,7 @@
       "rights": "",
       "extra": "https://web.archive.org/web/20211023144545/https://www.tandfonline.com/doi/full/10.1080/08940886.2018.1460171\nCitation Key: casalbuoni_glamann_grau_etal__2018__superconducting",
       "tags": [],
-      "collections": [
-        "VBGRY2HL"
-      ],
+      "collections": ["VBGRY2HL"],
       "relations": {},
       "dateAdded": "2021-10-23T14:45:42Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68881,9 +68104,7 @@
       "rights": "",
       "extra": "https://web.archive.org/web/20210714113017/https://www.dpg-physik.de/vereinigungen/fachuebergreifend/ak/akc/pdf/frauen_physik_2018.pdf\nCitation Key: georgduchs_gert-ludwigingold__2018__frauenanteil",
       "tags": [],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2022-02-03T07:09:10Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -68975,9 +68196,7 @@
       "rights": "",
       "extra": "http://web.archive.org/web/20200612080107/https://linkinghub.elsevier.com/retrieve/pii/S0168900218300779\nCitation Key: hanuka_schachter__2018__operation",
       "tags": [],
-      "collections": [
-        "A9G5QU38"
-      ],
+      "collections": ["A9G5QU38"],
       "relations": {},
       "dateAdded": "2020-06-12T08:01:02Z",
       "dateModified": "2025-05-25T14:55:15Z"
@@ -69127,9 +68346,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "GPX8RBVH"
-      ],
+      "collections": ["GPX8RBVH"],
       "relations": {},
       "dateAdded": "2024-11-01T13:37:23Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -69294,9 +68511,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2020-07-16T08:20:10Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -69431,9 +68646,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:25Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -69553,9 +68766,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -69705,9 +68916,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -69822,9 +69031,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -70014,9 +69221,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -70171,9 +69376,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -70323,9 +69526,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -70445,9 +69646,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -70587,9 +69786,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -70679,9 +69876,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2021-02-22T08:16:02Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -70761,10 +69956,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "XNVHTZXA",
-        "MNL37NPL"
-      ],
+      "collections": ["XNVHTZXA", "MNL37NPL"],
       "relations": {},
       "dateAdded": "2021-12-18T22:14:49Z",
       "dateModified": "2025-05-25T14:55:14Z"
@@ -70881,9 +70073,7 @@
       "rights": "CC 3.0",
       "extra": "tex.ids: papash_etal__2018__design\nISBN: 9783954501847\nartworkSize: 3 pages, 1.191 MB\nmedium: PDF\npublisher: JACoW Publishing, Geneva, Switzerland\nCitation Key: papash_brundermann_muller_etal__2018__design",
       "tags": [],
-      "collections": [
-        "VBGRY2HL"
-      ],
+      "collections": ["VBGRY2HL"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/HQ7A77ZM"
       },
@@ -70978,9 +70168,7 @@
           "tag": "#bf2035/issue/teaching/cas"
         }
       ],
-      "collections": [
-        "PVNZ5YYM"
-      ],
+      "collections": ["PVNZ5YYM"],
       "relations": {},
       "dateAdded": "2024-05-22T05:45:14Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -71120,9 +70308,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:25Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -71252,9 +70438,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -71394,9 +70578,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -71511,9 +70693,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -71628,9 +70808,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -71765,9 +70943,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -71892,9 +71068,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -72024,9 +71198,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -72146,9 +71318,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -72268,9 +71438,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -72415,9 +71583,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -72551,9 +71717,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -72713,9 +71877,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -72859,9 +72021,7 @@
           "tag": "#befidesh/organization/:kit"
         }
       ],
-      "collections": [
-        "VBGRY2HL"
-      ],
+      "collections": ["VBGRY2HL"],
       "relations": {},
       "dateAdded": "2021-01-21T07:20:23Z",
       "dateModified": "2025-05-25T14:55:13Z"
@@ -72950,9 +72110,7 @@
           "tag": "#bf2035/issue/excellence"
         }
       ],
-      "collections": [
-        "HHPXJPM4"
-      ],
+      "collections": ["HHPXJPM4"],
       "relations": {},
       "dateAdded": "2024-01-04T09:20:42Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -73414,9 +72572,7 @@
           "tag": "#befidesh/accelerator-based-facility/neutron-source/spallation-neutron-source"
         }
       ],
-      "collections": [
-        "87VH2RP7"
-      ],
+      "collections": ["87VH2RP7"],
       "relations": {},
       "dateAdded": "2023-01-31T15:22:11Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -73549,9 +72705,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -73637,9 +72791,7 @@
           "tag": "#bf2035/issue/strategy/goals"
         }
       ],
-      "collections": [
-        "JBML3GAF"
-      ],
+      "collections": ["JBML3GAF"],
       "relations": {},
       "dateAdded": "2021-08-05T08:23:49Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -73759,9 +72911,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -73911,9 +73061,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -74038,9 +73186,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -74160,9 +73306,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:26Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -74307,9 +73451,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -74449,9 +73591,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:26:27Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -74540,9 +73680,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2021-02-22T08:33:17Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -74624,9 +73762,7 @@
       "rights": "",
       "extra": "Citation Key: kit__2017__status",
       "tags": [],
-      "collections": [
-        "3BG2B2XU"
-      ],
+      "collections": ["3BG2B2XU"],
       "relations": {},
       "dateAdded": "2025-03-21T19:28:34Z",
       "dateModified": "2025-05-25T14:55:12Z"
@@ -74717,9 +73853,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-10-09T22:40:07Z",
       "dateModified": "2025-05-25T14:55:11Z"
@@ -74825,9 +73959,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "EUSGLXHE"
-      ],
+      "collections": ["EUSGLXHE"],
       "relations": {},
       "dateAdded": "2024-06-04T18:34:30Z",
       "dateModified": "2025-05-25T14:55:11Z"
@@ -74911,9 +74043,7 @@
           "tag": "#befidesh/organization/:hzdr"
         }
       ],
-      "collections": [
-        "EVGSVVNR"
-      ],
+      "collections": ["EVGSVVNR"],
       "relations": {},
       "dateAdded": "2023-05-06T06:54:40Z",
       "dateModified": "2025-05-25T14:55:11Z"
@@ -75008,11 +74138,7 @@
           "tag": "#befidesh/accelerator-application/security"
         }
       ],
-      "collections": [
-        "HT522VV8",
-        "I45CUZNP",
-        "H95NTXKN"
-      ],
+      "collections": ["HT522VV8", "I45CUZNP", "H95NTXKN"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:44Z",
       "dateModified": "2025-05-25T14:55:11Z"
@@ -75103,9 +74229,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/C7J8BL5Z"
       },
@@ -75188,9 +74312,7 @@
       "rights": "",
       "extra": "Citation Key: hochschulrektorenkonferenz_kultusministerkonferenz__2017__qualifikationsrahmen",
       "tags": [],
-      "collections": [
-        "QSG9HJH4"
-      ],
+      "collections": ["QSG9HJH4"],
       "relations": {},
       "dateAdded": "2025-02-26T06:24:44Z",
       "dateModified": "2025-05-25T14:55:11Z"
@@ -75268,9 +74390,7 @@
       "rights": "",
       "extra": "Citation Key: jeffreypomerantz__2017__metadata",
       "tags": [],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-11-01T14:25:40Z",
       "dateModified": "2025-05-25T14:55:11Z"
@@ -75355,9 +74475,7 @@
       "rights": "",
       "extra": "OCLC: 989110211\nCitation Key: yamazaki_mccausey__2017__linac16",
       "tags": [],
-      "collections": [
-        "56SLNYXV"
-      ],
+      "collections": ["56SLNYXV"],
       "relations": {},
       "dateAdded": "2022-08-29T09:14:01Z",
       "dateModified": "2025-05-25T14:55:11Z"
@@ -75439,9 +74557,7 @@
       "rights": "",
       "extra": "Citation Key: stfc__2017__2017",
       "tags": [],
-      "collections": [
-        "XNVHTZXA"
-      ],
+      "collections": ["XNVHTZXA"],
       "relations": {},
       "dateAdded": "2021-02-22T08:25:39Z",
       "dateModified": "2025-05-25T14:55:11Z"
@@ -75536,9 +74652,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/5708775/items/9SAZTNV3"
       },
@@ -75625,9 +74739,7 @@
           "tag": "#bf2035/terms/tlr"
         }
       ],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-21T07:42:53Z",
       "dateModified": "2025-05-25T14:55:10Z"
@@ -75716,10 +74828,7 @@
           "tag": "#bf2035/issue/green-transformation"
         }
       ],
-      "collections": [
-        "NMMQSXGA",
-        "R8TFVA9I"
-      ],
+      "collections": ["NMMQSXGA", "R8TFVA9I"],
       "relations": {},
       "dateAdded": "2020-05-04T09:00:35Z",
       "dateModified": "2025-05-25T14:55:10Z"
@@ -75811,10 +74920,7 @@
           "tag": "#bf2035/issue/verbundforschung"
         }
       ],
-      "collections": [
-        "RHPVAKEC",
-        "8QDN6RGB"
-      ],
+      "collections": ["RHPVAKEC", "8QDN6RGB"],
       "relations": {},
       "dateAdded": "2020-03-08T09:26:15Z",
       "dateModified": "2025-05-25T14:55:10Z"
@@ -75960,9 +75066,7 @@
           "tag": "#befidesh/accelerator-based-facility/neutron-source/compact-accelerator-based-neutron-source"
         }
       ],
-      "collections": [
-        "EDIH5ZM5"
-      ],
+      "collections": ["EDIH5ZM5"],
       "relations": {},
       "dateAdded": "2020-02-25T08:18:41Z",
       "dateModified": "2025-05-25T14:55:10Z"
@@ -76048,9 +75152,7 @@
           "tag": "#befidesh/accelerator-application/science-application/nuclear-physics"
         }
       ],
-      "collections": [
-        "P69D5WSA"
-      ],
+      "collections": ["P69D5WSA"],
       "relations": {},
       "dateAdded": "2020-09-01T09:21:26Z",
       "dateModified": "2025-05-25T14:55:10Z"
@@ -76161,9 +75263,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2020-07-19T06:19:58Z",
       "dateModified": "2025-05-25T14:55:10Z"
@@ -76243,9 +75343,7 @@
           "tag": "#befidesh/organization/:bmbf"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:10Z"
@@ -76328,9 +75426,7 @@
       "rights": "",
       "extra": "Citation Key: rathje__2017__beschleunigerphysikde",
       "tags": [],
-      "collections": [
-        "YNDTZCNT"
-      ],
+      "collections": ["YNDTZCNT"],
       "relations": {},
       "dateAdded": "2021-07-30T13:31:26Z",
       "dateModified": "2025-05-25T14:55:10Z"
@@ -76456,9 +75552,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-11-01T13:52:13Z",
       "dateModified": "2025-05-25T14:55:09Z"
@@ -76562,9 +75656,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {
         "dc:replaces": [
           "http://zotero.org/groups/2427654/items/NRVKH7NJ",
@@ -76675,9 +75767,7 @@
           "tag": "#bf2035/issue/collaboration"
         }
       ],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2023-12-13T04:01:23Z",
       "dateModified": "2025-05-25T14:55:09Z"
@@ -76773,9 +75863,7 @@
           "tag": "#befidesh/accelerator-application/science-application/matter-research/neutron-science"
         }
       ],
-      "collections": [
-        "87VH2RP7"
-      ],
+      "collections": ["87VH2RP7"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/PEFJEEKX"
       },
@@ -76898,9 +75986,7 @@
           "tag": "#befidesh/accelerator-application/science-application/matter-research/neutron-science"
         }
       ],
-      "collections": [
-        "JHY8CFDN"
-      ],
+      "collections": ["JHY8CFDN"],
       "relations": {},
       "dateAdded": "2020-02-25T08:49:22Z",
       "dateModified": "2025-05-25T14:55:09Z"
@@ -76980,9 +76066,7 @@
           "tag": "#befidesh/accelerator-research-subfield"
         }
       ],
-      "collections": [
-        "JHY8CFDN"
-      ],
+      "collections": ["JHY8CFDN"],
       "relations": {},
       "dateAdded": "2020-04-27T07:34:09Z",
       "dateModified": "2025-05-25T14:55:09Z"
@@ -77062,9 +76146,7 @@
           "tag": "#befidesh/organization/:bmbf"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:09Z"
@@ -77150,9 +76232,7 @@
       "rights": "",
       "extra": "DOI: 10.7551/mitpress/10719.001.0001\nCitation Key: gingras__2016__bibliometrics",
       "tags": [],
-      "collections": [
-        "HHPXJPM4"
-      ],
+      "collections": ["HHPXJPM4"],
       "relations": {},
       "dateAdded": "2024-12-31T12:44:03Z",
       "dateModified": "2025-05-25T14:55:09Z"
@@ -77239,9 +76319,7 @@
       "rights": "",
       "extra": "QID: Q58265912\nCitation Key: kutschera__2016__accelerator",
       "tags": [],
-      "collections": [
-        "G47E3M7X"
-      ],
+      "collections": ["G47E3M7X"],
       "relations": {},
       "dateAdded": "2021-08-08T04:54:57Z",
       "dateModified": "2025-05-25T14:55:09Z"
@@ -78283,9 +77361,7 @@
       "rights": "",
       "extra": "Citation Key: faatz_plonjes_ackermann_etal__2016__simultaneous",
       "tags": [],
-      "collections": [
-        "5WPCLDBQ"
-      ],
+      "collections": ["5WPCLDBQ"],
       "relations": {},
       "dateAdded": "2021-11-22T10:00:33Z",
       "dateModified": "2025-05-25T14:55:09Z"
@@ -78447,9 +77523,7 @@
           "tag": "#befidesh/accelerator-based-facility/neutron-source/compact-accelerator-based-neutron-source"
         }
       ],
-      "collections": [
-        "EDIH5ZM5"
-      ],
+      "collections": ["EDIH5ZM5"],
       "relations": {},
       "dateAdded": "2024-10-02T06:38:37Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -78530,9 +77604,7 @@
           "tag": "#bf2035/issue/community-management"
         }
       ],
-      "collections": [
-        "6PS9QZ47"
-      ],
+      "collections": ["6PS9QZ47"],
       "relations": {},
       "dateAdded": "2024-06-14T07:31:45Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -78626,9 +77698,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/ZJTEGZU3"
       },
@@ -78722,10 +77792,7 @@
           "tag": "#bf2035/issue/technology-transfer/innovation"
         }
       ],
-      "collections": [
-        "HHPXJPM4",
-        "N8QHY7SM"
-      ],
+      "collections": ["HHPXJPM4", "N8QHY7SM"],
       "relations": {
         "dc:replaces": [
           "http://zotero.org/groups/2427654/items/FYQUZ82H",
@@ -78815,10 +77882,7 @@
           "tag": "#bf2035/stakeholder/united-nations"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "9TYH3AUS"
-      ],
+      "collections": ["I45CUZNP", "9TYH3AUS"],
       "relations": {},
       "dateAdded": "2023-10-18T10:15:21Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -78914,9 +77978,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:10:13Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79002,9 +78064,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:13:07Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79094,9 +78154,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-04-27T07:53:22Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79197,9 +78255,7 @@
           "tag": "#bf2035/research-topic/plasma-acceleration"
         }
       ],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2020-06-10T21:20:58Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79288,9 +78344,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2021-02-22T08:29:12Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79376,9 +78430,7 @@
           "tag": "#bf2035/stakeholder/funder/doe"
         }
       ],
-      "collections": [
-        "XNVHTZXA"
-      ],
+      "collections": ["XNVHTZXA"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:06Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79458,9 +78510,7 @@
           "tag": "#befidesh/organization/:bmbf"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79537,9 +78587,7 @@
       "rights": "",
       "extra": "Citation Key: epg-ag__2016__statutes",
       "tags": [],
-      "collections": [
-        "HHPXJPM4"
-      ],
+      "collections": ["HHPXJPM4"],
       "relations": {},
       "dateAdded": "2024-06-13T14:58:41Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79626,9 +78674,7 @@
       "rights": "Copyright (c) 2016 CERN",
       "extra": "Citation Key: muggli__2016__beamdriven",
       "tags": [],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2024-04-27T21:45:25Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79718,9 +78764,7 @@
       "rights": "",
       "extra": "OCLC: 1034602304\nCitation Key: schmalzbauer_deutscheskomiteefurnachhaltigkeitsforschunginfutureearth__2016__contribution",
       "tags": [],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:10:44Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79842,9 +78886,7 @@
       "rights": "",
       "extra": "http://web.archive.org/web/20200623111650/https://www.nature.com/articles/ncomms9486\nCitation Key: nanni_huang_hong_etal__2015__terahertzdriven",
       "tags": [],
-      "collections": [
-        "A9G5QU38"
-      ],
+      "collections": ["A9G5QU38"],
       "relations": {},
       "dateAdded": "2020-06-23T11:16:48Z",
       "dateModified": "2025-05-25T14:55:08Z"
@@ -79938,9 +78980,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "YSEC8WZM"
-      ],
+      "collections": ["YSEC8WZM"],
       "relations": {},
       "dateAdded": "2025-04-05T09:24:56Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80023,9 +79063,7 @@
           "tag": "#befidesh/accelerator/linac/high-power-proton-linac"
         }
       ],
-      "collections": [
-        "F9F9SFJI"
-      ],
+      "collections": ["F9F9SFJI"],
       "relations": {},
       "dateAdded": "2024-11-26T15:48:59Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80100,9 +79138,7 @@
           "tag": "#generic/funding-program/eu/:horizon-2020"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-03T18:10:17Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80204,9 +79240,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2024-06-13T14:45:34Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80296,9 +79330,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2024-06-13T13:42:29Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80409,9 +79441,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2023-11-19T07:09:01Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80516,10 +79546,7 @@
           "tag": "#befidesh/organization/:hzb"
         }
       ],
-      "collections": [
-        "N3NPSQBJ",
-        "GFTSJJSB"
-      ],
+      "collections": ["N3NPSQBJ", "GFTSJJSB"],
       "relations": {},
       "dateAdded": "2023-01-31T15:09:01Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80608,9 +79635,7 @@
           "tag": "#befidesh/accelerator-based-facility/:myrrha"
         }
       ],
-      "collections": [
-        "QPJPGTER"
-      ],
+      "collections": ["QPJPGTER"],
       "relations": {},
       "dateAdded": "2023-01-31T12:53:06Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80701,9 +79726,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2021-08-21T08:18:22Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80800,9 +79823,7 @@
           "tag": "#befidesh/accelerator/erl"
         }
       ],
-      "collections": [
-        "T8IVXSZV"
-      ],
+      "collections": ["T8IVXSZV"],
       "relations": {},
       "dateAdded": "2022-02-16T08:34:45Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -80911,9 +79932,7 @@
           "tag": "#befidesh/accelerator/collider/linear-collider"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-03-04T07:03:46Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -81149,9 +80168,7 @@
           "tag": "#befidesh/accelerating-process/electrodynamic-acceleration/nanophotonic-acceleration"
         }
       ],
-      "collections": [
-        "A9G5QU38"
-      ],
+      "collections": ["A9G5QU38"],
       "relations": {},
       "dateAdded": "2020-02-22T20:34:25Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -81258,10 +80275,7 @@
           "tag": "#befidesh/accelerator-application"
         }
       ],
-      "collections": [
-        "HT522VV8",
-        "QPJPGTER"
-      ],
+      "collections": ["HT522VV8", "QPJPGTER"],
       "relations": {},
       "dateAdded": "2020-05-20T14:25:45Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -81352,9 +80366,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-10T09:15:29Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -81428,9 +80440,7 @@
       "rights": "",
       "extra": "Citation Key: g__2015__worldwide",
       "tags": [],
-      "collections": [
-        "9LMA7M95"
-      ],
+      "collections": ["9LMA7M95"],
       "relations": {},
       "dateAdded": "2025-05-23T16:45:16Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -81517,9 +80527,7 @@
       "rights": "",
       "extra": "http://web.archive.org/web/20200520143602/https://www.worldscientific.com/action/cookieAbsent\nCitation Key: amaldi__2015__history",
       "tags": [],
-      "collections": [
-        "A9C2UETT"
-      ],
+      "collections": ["A9C2UETT"],
       "relations": {},
       "dateAdded": "2020-05-20T14:35:52Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -81605,9 +80613,7 @@
       "rights": "",
       "extra": "Citation Key: wiedemann__2015__particle",
       "tags": [],
-      "collections": [
-        "KGXKWK9R"
-      ],
+      "collections": ["KGXKWK9R"],
       "relations": {},
       "dateAdded": "2020-05-06T10:31:03Z",
       "dateModified": "2025-05-25T14:55:07Z"
@@ -81716,9 +80722,7 @@
           "tag": "#befidesh/accelerator-based-facility/:euxfel"
         }
       ],
-      "collections": [
-        "526P596H"
-      ],
+      "collections": ["526P596H"],
       "relations": {},
       "dateAdded": "2025-05-23T18:46:42Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -81877,9 +80881,7 @@
           "tag": "#befidesh/accelerator-application/metrology"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-12-14T20:06:10Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -81970,9 +80972,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/Z6GNLUX4"
       },
@@ -82068,9 +81068,7 @@
           "tag": "#bf2035/issue/excellence/bibliometrics"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2023-11-29T08:15:19Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -82194,9 +81192,7 @@
           "tag": "#befidesh/accelerator-based-facility/particle-collider"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2022-06-18T04:32:59Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -82282,10 +81278,7 @@
           "tag": "#bf2035/research-topic/sustainability"
         }
       ],
-      "collections": [
-        "DJCAWP7Q",
-        "R8TFVA9I"
-      ],
+      "collections": ["DJCAWP7Q", "R8TFVA9I"],
       "relations": {},
       "dateAdded": "2020-05-04T08:51:33Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -82376,9 +81369,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2021-11-11T03:48:03Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -82575,9 +81566,7 @@
           "tag": "#befidesh/organization/:ersf"
         }
       ],
-      "collections": [
-        "N3NPSQBJ"
-      ],
+      "collections": ["N3NPSQBJ"],
       "relations": {},
       "dateAdded": "2022-05-14T08:43:30Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -82691,10 +81680,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS",
-        "XYVY8HJN"
-      ],
+      "collections": ["CXCB8QVS", "XYVY8HJN"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/GYB3ABDH"
       },
@@ -82781,9 +81767,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-06-18T12:58:38Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -82862,9 +81846,7 @@
           "tag": "#befidesh/accelerating-process/plasma-based-acceleration/"
         }
       ],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2020-01-23T21:03:48Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -82960,11 +81942,7 @@
           "tag": "#befidesh/accelerator-application"
         }
       ],
-      "collections": [
-        "HT522VV8",
-        "H95NTXKN",
-        "59A6DF5Z"
-      ],
+      "collections": ["HT522VV8", "H95NTXKN", "59A6DF5Z"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/NEWW6JKL"
       },
@@ -83053,9 +82031,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-10T06:35:34Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -83136,9 +82112,7 @@
       "rights": "",
       "extra": "Citation Key: zeldovich__2014__10",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-05-22T02:42:21Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -83210,10 +82184,7 @@
       "rights": "",
       "extra": "Citation Key: komiteefurbeschleunigerphysik__2014__satzung",
       "tags": [],
-      "collections": [
-        "YNDTZCNT",
-        "CXNGSTAH"
-      ],
+      "collections": ["YNDTZCNT", "CXNGSTAH"],
       "relations": {},
       "dateAdded": "2022-07-15T04:51:19Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -83288,9 +82259,7 @@
       "rights": "",
       "extra": "https://web.archive.org/web/20220113070834/https://nautil.us/issue/14/mutation/10-reasons-why-you-cant-live-without-a-particle-accelerator\nCitation Key: adams__2014__10",
       "tags": [],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2022-01-13T07:08:30Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -83377,9 +82346,7 @@
       "rights": "",
       "extra": "Citation Key: couprie__2014__new",
       "tags": [],
-      "collections": [
-        "XYVY8HJN"
-      ],
+      "collections": ["XYVY8HJN"],
       "relations": {},
       "dateAdded": "2021-01-21T07:15:48Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -83481,9 +82448,7 @@
       "rights": "",
       "extra": "http://web.archive.org/web/20200630080750/https://journals.aps.org/prab/abstract/10.1103/PhysRevSTAB.17.021301\nCitation Key: breuer_graf_apolonski_etal__2014__dielectric",
       "tags": [],
-      "collections": [
-        "A9G5QU38"
-      ],
+      "collections": ["A9G5QU38"],
       "relations": {},
       "dateAdded": "2020-06-30T08:07:48Z",
       "dateModified": "2025-05-25T14:55:06Z"
@@ -83579,9 +82544,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-10-11T15:29:21Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -83678,9 +82641,7 @@
           "tag": "#befidesh/accelerator-based-facility/neutron-source/spallation-neutron-source"
         }
       ],
-      "collections": [
-        "87VH2RP7"
-      ],
+      "collections": ["87VH2RP7"],
       "relations": {},
       "dateAdded": "2024-10-02T03:30:03Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -83761,9 +82722,7 @@
           "tag": "#bf2035/terms/tlr"
         }
       ],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-21T07:42:53Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -83843,9 +82802,7 @@
           "tag": "#bf2035/terms/tlr"
         }
       ],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-21T07:42:53Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -83956,9 +82913,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/96IZUMPH"
       },
@@ -84049,9 +83004,7 @@
           "tag": "#generic/funding-program/eu/:fp7"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-03-17T11:01:28Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -84141,9 +83094,7 @@
           "tag": "#bf2035/issue/excellence"
         }
       ],
-      "collections": [
-        "N8QHY7SM"
-      ],
+      "collections": ["N8QHY7SM"],
       "relations": {},
       "dateAdded": "2023-11-12T06:11:41Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -84232,9 +83183,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-05-06T10:29:01Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -84325,9 +83274,7 @@
           "tag": "#befidesh/accelerator-application/science-application/nuclear-physics"
         }
       ],
-      "collections": [
-        "P69D5WSA"
-      ],
+      "collections": ["P69D5WSA"],
       "relations": {},
       "dateAdded": "2021-08-04T17:20:15Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -84467,9 +83414,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2020-07-15T13:07:23Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -84618,9 +83563,7 @@
           "tag": "#bf2035/issue/teaching"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2020-02-21T08:37:42Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -84707,9 +83650,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-10T06:19:08Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -84843,10 +83784,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS",
-        "T8IVXSZV"
-      ],
+      "collections": ["CXCB8QVS", "T8IVXSZV"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/YDQ635H7"
       },
@@ -85009,9 +83947,7 @@
           "tag": "#befidesh/accelerator-based-facility/photon-source/synchrotron-light-source/4th-generation"
         }
       ],
-      "collections": [
-        "A9G5QU38"
-      ],
+      "collections": ["A9G5QU38"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/IYEHEY32"
       },
@@ -85093,9 +84029,7 @@
           "tag": "#befidesh/organization/:bmbf"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -85212,9 +84146,7 @@
       "rights": "",
       "extra": "Publisher: Elsevier\nPMID: 23352499\nTLDR: The fragmentation in radiotherapy services that prevails in many European countries might affect the economic burden of radiotherapy and its quality and Eastern and southeastern European countries need to expand and modernise their radiotherapy equipment.\nCitation Key: rosenblatt_izewska_anacak_etal__2013__radiotherapy",
       "tags": [],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-21T07:12:21Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -85306,9 +84238,7 @@
       "rights": "",
       "extra": "TLDR: A proof-of-principle experiment demonstrating dielectric laser acceleration of nonrelativistic electrons in the vicinity of a fused-silica grating and the demonstration of the inverse Smith-Purcell effect in the optical regime.\nCitation Key: breuer_hommelhoff__2013__laserbased",
       "tags": [],
-      "collections": [
-        "A9G5QU38"
-      ],
+      "collections": ["A9G5QU38"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/DN9ZYSHQ"
       },
@@ -85417,9 +84347,7 @@
       "rights": "",
       "extra": "Citation Key: papash_levichev_piminov_etal__2014__ultralow",
       "tags": [],
-      "collections": [
-        "VBGRY2HL"
-      ],
+      "collections": ["VBGRY2HL"],
       "relations": {},
       "dateAdded": "2021-01-21T07:20:19Z",
       "dateModified": "2025-05-25T14:55:05Z"
@@ -85610,9 +84538,7 @@
           "tag": "#befidesh/accelerator-based-facility/neutron-source/spallation-neutron-source"
         }
       ],
-      "collections": [
-        "87VH2RP7"
-      ],
+      "collections": ["87VH2RP7"],
       "relations": {},
       "dateAdded": "2024-10-02T03:37:23Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -85707,9 +84633,7 @@
           "tag": "#befidesh/accelerator/collider/linear-collider"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2022-08-20T06:33:25Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -85798,9 +84722,7 @@
           "tag": "#bf2035/stakeholder/funder/european-commission"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-10T17:04:40Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -85886,9 +84808,7 @@
           "tag": "#befidesh/accelerator-application/security"
         }
       ],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2020-02-21T09:23:16Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -86026,10 +84946,7 @@
           "tag": "#befidesh/accelerator/collider/linear-collider"
         }
       ],
-      "collections": [
-        "MNL37NPL",
-        "GYKKNSRE"
-      ],
+      "collections": ["MNL37NPL", "GYKKNSRE"],
       "relations": {},
       "dateAdded": "2020-03-02T18:01:08Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -86168,9 +85085,7 @@
           "tag": "#befidesh/accelerator-based-facility/:ilc"
         }
       ],
-      "collections": [
-        "GYKKNSRE"
-      ],
+      "collections": ["GYKKNSRE"],
       "relations": {},
       "dateAdded": "2020-03-02T17:59:43Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -86263,9 +85178,7 @@
           "tag": "#befidesh/accelerator-based-facility/:ilc"
         }
       ],
-      "collections": [
-        "GYKKNSRE"
-      ],
+      "collections": ["GYKKNSRE"],
       "relations": {},
       "dateAdded": "2020-03-02T18:23:28Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -86358,9 +85271,7 @@
           "tag": "#befidesh/accelerator-based-facility/:ilc"
         }
       ],
-      "collections": [
-        "GYKKNSRE"
-      ],
+      "collections": ["GYKKNSRE"],
       "relations": {},
       "dateAdded": "2020-03-02T18:10:20Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -86497,9 +85408,7 @@
           "tag": "#befidesh/accelerator-based-facility/:ilc"
         }
       ],
-      "collections": [
-        "GYKKNSRE"
-      ],
+      "collections": ["GYKKNSRE"],
       "relations": {},
       "dateAdded": "2020-03-02T18:00:16Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -86638,9 +85547,7 @@
           "tag": "#befidesh/accelerator-based-facility/:ilc"
         }
       ],
-      "collections": [
-        "GYKKNSRE"
-      ],
+      "collections": ["GYKKNSRE"],
       "relations": {},
       "dateAdded": "2020-03-02T18:02:49Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -86842,9 +85749,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-10T07:10:51Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -86965,9 +85870,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/PTDK779W"
       },
@@ -87045,9 +85948,7 @@
       "rights": "",
       "extra": "Citation Key: bohnet__2012__programoriented",
       "tags": [],
-      "collections": [
-        "3BG2B2XU"
-      ],
+      "collections": ["3BG2B2XU"],
       "relations": {},
       "dateAdded": "2025-03-21T19:32:04Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -87121,9 +86022,7 @@
       "rights": "",
       "extra": "Citation Key: bostock__2012__hive",
       "tags": [],
-      "collections": [
-        "3V5MTT3V"
-      ],
+      "collections": ["3V5MTT3V"],
       "relations": {},
       "dateAdded": "2024-07-10T03:22:20Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -87210,9 +86109,7 @@
       "rights": "",
       "extra": "70 citations (Crossref) [2022-06-20]\nCitation Key: pellegrini__2012__history",
       "tags": [],
-      "collections": [
-        "59A6DF5Z"
-      ],
+      "collections": ["59A6DF5Z"],
       "relations": {},
       "dateAdded": "2022-06-20T11:06:42Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -87288,9 +86185,7 @@
       "rights": "",
       "extra": "Citation Key: walterkutschera__2012__ams",
       "tags": [],
-      "collections": [
-        "G47E3M7X"
-      ],
+      "collections": ["G47E3M7X"],
       "relations": {},
       "dateAdded": "2021-08-08T04:46:36Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -87386,9 +86281,7 @@
       "rights": "",
       "extra": "DOI: 10.5772/48465\nCitation Key: wang_ni_cui__2012__superconducting",
       "tags": [],
-      "collections": [
-        "ZGCNF4GB"
-      ],
+      "collections": ["ZGCNF4GB"],
       "relations": {},
       "dateAdded": "2022-02-04T12:52:46Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -87496,9 +86389,7 @@
       "rights": "",
       "extra": "Citation Key: radford_gillies_jakobsson_etal__2013__accelerating",
       "tags": [],
-      "collections": [
-        "XNVHTZXA"
-      ],
+      "collections": ["XNVHTZXA"],
       "relations": {},
       "dateAdded": "2020-01-10T17:00:06Z",
       "dateModified": "2025-05-25T14:55:04Z"
@@ -87599,9 +86490,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2025-04-24T22:38:55Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -87692,9 +86581,7 @@
           "tag": "#befidesh/accelerator-based-facility/photon-source/free-electron-laser"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-09-19T18:49:53Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -87780,9 +86667,7 @@
           "tag": "#bf2035/issue/excellence"
         }
       ],
-      "collections": [
-        "HHPXJPM4"
-      ],
+      "collections": ["HHPXJPM4"],
       "relations": {},
       "dateAdded": "2024-06-13T14:33:24Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -87868,9 +86753,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2024-04-02T04:47:40Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -88060,10 +86943,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "I45CUZNP",
-        "KFB55SS8"
-      ],
+      "collections": ["I45CUZNP", "KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-03-22T09:47:21Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -88154,9 +87034,7 @@
           "tag": "#bf2035/item-type/strategies-and-roadmaps"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2022-11-16T03:09:25Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -88254,11 +87132,7 @@
           "tag": "#bf2035/issue/technology-transfer"
         }
       ],
-      "collections": [
-        "M7QQGSZ5",
-        "H95NTXKN",
-        "2LH6JDMY"
-      ],
+      "collections": ["M7QQGSZ5", "H95NTXKN", "2LH6JDMY"],
       "relations": {},
       "dateAdded": "2020-02-21T09:34:48Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -88344,9 +87218,7 @@
           "tag": "#bf2035/stakeholder/funder/european-commission"
         }
       ],
-      "collections": [
-        "RHPVAKEC"
-      ],
+      "collections": ["RHPVAKEC"],
       "relations": {},
       "dateAdded": "2020-01-24T09:02:32Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -88524,9 +87396,7 @@
       "rights": "",
       "extra": "Place: Geneva\nCitation Key: kircher_nghiem_bailey_etal__2012__education",
       "tags": [],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-11-14T03:02:02Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -88654,9 +87524,7 @@
       "rights": "",
       "extra": "Place: Geneva\nCitation Key: bordais_cervelli_dael_etal__2012__infrastructure",
       "tags": [],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-11-14T03:01:54Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -88736,9 +87604,7 @@
       "rights": "",
       "extra": "Citation Key: khan__2011__einfuhrung",
       "tags": [],
-      "collections": [
-        "KGXKWK9R"
-      ],
+      "collections": ["KGXKWK9R"],
       "relations": {},
       "dateAdded": "2020-04-30T06:55:23Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -88828,9 +87694,7 @@
       "rights": "",
       "extra": "Citation Key: hochschulrektorenkonferenz_berwanger__2012__ergebnisse",
       "tags": [],
-      "collections": [
-        "2JK2BX6H"
-      ],
+      "collections": ["2JK2BX6H"],
       "relations": {},
       "dateAdded": "2020-06-08T06:52:25Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -88922,9 +87786,7 @@
       "rights": "",
       "extra": "Citation Key: haussecker_chao__2011__influence",
       "tags": [],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2020-04-27T09:39:51Z",
       "dateModified": "2025-05-25T14:55:03Z"
@@ -89023,9 +87885,7 @@
           "tag": "#jerrobs/issue/ontology"
         }
       ],
-      "collections": [
-        "GPX8RBVH"
-      ],
+      "collections": ["GPX8RBVH"],
       "relations": {},
       "dateAdded": "2024-09-19T08:46:25Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89116,9 +87976,7 @@
           "tag": "#bf2035/terms/tlr"
         }
       ],
-      "collections": [
-        "9ZB4SZ6E"
-      ],
+      "collections": ["9ZB4SZ6E"],
       "relations": {},
       "dateAdded": "2024-06-21T07:42:53Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89239,9 +88097,7 @@
           "tag": "#bf2035/issue/particiaption/citizen-science"
         }
       ],
-      "collections": [
-        "XKLMPL5J"
-      ],
+      "collections": ["XKLMPL5J"],
       "relations": {},
       "dateAdded": "2021-08-05T08:10:16Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89328,9 +88184,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2020-07-15T12:58:40Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89407,9 +88261,7 @@
       "rights": "",
       "extra": "tex.shortauthor: kmk\nCitation Key: kmk__2010__beschluss",
       "tags": [],
-      "collections": [
-        "QSG9HJH4"
-      ],
+      "collections": ["QSG9HJH4"],
       "relations": {},
       "dateAdded": "2025-02-26T05:58:22Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89499,9 +88351,7 @@
       "rights": "",
       "extra": "Read_Status: To Read\nRead_Status_Date: 2024-11-08T09:19:02.441Z\nCitation Key: allemang_hendler__2011__semantic",
       "tags": [],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {
         "dc:replaces": [
           "http://zotero.org/groups/2427654/items/A8M3GTSA",
@@ -89583,9 +88433,7 @@
       "rights": "",
       "extra": "Read_Status: Read\nRead_Status_Date: 2024-11-01T13:48:52.313Z\nCitation Key: aip__2010__pacsa",
       "tags": [],
-      "collections": [
-        "GPX8RBVH"
-      ],
+      "collections": ["GPX8RBVH"],
       "relations": {},
       "dateAdded": "2024-10-31T06:53:18Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89662,9 +88510,7 @@
       "rights": "",
       "extra": "Read_Status: Read\nRead_Status_Date: 2024-11-01T13:48:52.312Z\nCitation Key: aip__2010__pacs",
       "tags": [],
-      "collections": [
-        "GPX8RBVH"
-      ],
+      "collections": ["GPX8RBVH"],
       "relations": {},
       "dateAdded": "2024-10-31T06:52:35Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89752,9 +88598,7 @@
       "rights": "",
       "extra": "Citation Key: aleksan_napoly__2009__care",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-17T13:20:06Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89830,9 +88674,7 @@
       "rights": "",
       "extra": "Citation Key: krzywinski__2010__hive",
       "tags": [],
-      "collections": [
-        "3V5MTT3V"
-      ],
+      "collections": ["3V5MTT3V"],
       "relations": {},
       "dateAdded": "2024-07-10T03:05:40Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89918,9 +88760,7 @@
       "rights": "",
       "extra": "Citation Key: walterhenning_shank__2010__accelerators",
       "tags": [],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2021-11-11T10:45:51Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -89993,9 +88833,7 @@
       "rights": "",
       "extra": "http://web.archive.org/web/20200709152946/https://www.deutsche-apotheker-zeitung.de/daz-az/2010/daz-16-2010/gamma-sterilisation-von-arzneimitteln\nCitation Key: uweweidenauer__2010__gammasterilisation",
       "tags": [],
-      "collections": [
-        "M7QQGSZ5"
-      ],
+      "collections": ["M7QQGSZ5"],
       "relations": {},
       "dateAdded": "2020-07-09T15:29:34Z",
       "dateModified": "2025-05-25T14:55:02Z"
@@ -90085,9 +88923,7 @@
           "tag": "#befidesh/accelerator-based-facility/medical-facility/radioisotope-cyclotron"
         }
       ],
-      "collections": [
-        "KVKJVDFL"
-      ],
+      "collections": ["KVKJVDFL"],
       "relations": {},
       "dateAdded": "2024-11-03T19:05:56Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -90179,9 +89015,7 @@
           "tag": "#bf2035/issue/strategy/values"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2024-03-17T22:09:22Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -90377,10 +89211,7 @@
           "tag": "#befidesh/accelerator-based-facility/photon-source/free-electron-laser"
         }
       ],
-      "collections": [
-        "TBES545E",
-        "526P596H"
-      ],
+      "collections": ["TBES545E", "526P596H"],
       "relations": {},
       "dateAdded": "2023-01-31T15:03:13Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -90471,9 +89302,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/XJ3LXRTC"
       },
@@ -90562,9 +89391,7 @@
           "tag": "#befidesh/accelerator-application/science-application/high-energy-physics"
         }
       ],
-      "collections": [
-        "MNL37NPL"
-      ],
+      "collections": ["MNL37NPL"],
       "relations": {},
       "dateAdded": "2020-06-10T07:03:40Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -90695,9 +89522,7 @@
           "tag": "#befidesh/accelerating-process/plasma-based-acceleration/plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "VJK4MLE3"
-      ],
+      "collections": ["VJK4MLE3"],
       "relations": {},
       "dateAdded": "2020-06-21T17:26:42Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -90794,9 +89619,7 @@
       "rights": "",
       "extra": "Citation Key: goddard_mertens_risselada__2004__status",
       "tags": [],
-      "collections": [
-        "NMMQSXGA"
-      ],
+      "collections": ["NMMQSXGA"],
       "relations": {},
       "dateAdded": "2025-03-21T19:56:22Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -90883,9 +89706,7 @@
       "rights": "",
       "extra": "Citation Key: herring__2007__faceted",
       "tags": [],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-11-01T14:07:35Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -90972,9 +89793,7 @@
       "rights": "",
       "extra": "Citation Key: sultansoy__2006__accelerator",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-05T15:22:56Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -91061,9 +89880,7 @@
       "rights": "",
       "extra": "Citation Key: fatehi__2005__high",
       "tags": [],
-      "collections": [
-        "RTJNHI62"
-      ],
+      "collections": ["RTJNHI62"],
       "relations": {},
       "dateAdded": "2024-02-25T23:33:16Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -91154,9 +89971,7 @@
       "rights": "",
       "extra": "Citation Key: baird__2007__accelerators",
       "tags": [],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2022-03-04T15:57:51Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -91232,9 +90047,7 @@
       "rights": "",
       "extra": "Citation Key: tazzari__2006__introduction",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2022-01-22T06:20:11Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -91346,9 +90159,7 @@
       "rights": "",
       "extra": "TLDR: The first three-dimensional, particle-in-cell (PIC) simulations of laser-wakefield acceleration of self-injected electrons in a 0.84 cm long plasma channel are reported, reporting the frequency evolution of the initially 50 fs long laser pulse by photon interaction with the wake followed by plasma dispersion enhances the wake.\nCitation Key: tsung_narang_mori_etal__2004__neargevenergy",
       "tags": [],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2020-06-10T21:21:20Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -91440,9 +90251,7 @@
       "rights": "",
       "extra": "Citation Key: chmielewski_berejka__2008__radiation",
       "tags": [],
-      "collections": [
-        "HT522VV8"
-      ],
+      "collections": ["HT522VV8"],
       "relations": {},
       "dateAdded": "2020-07-09T15:41:52Z",
       "dateModified": "2025-05-25T14:55:01Z"
@@ -91538,9 +90347,7 @@
           "tag": "#bf2035/issue/collaboration"
         }
       ],
-      "collections": [
-        "GS49SBT4"
-      ],
+      "collections": ["GS49SBT4"],
       "relations": {},
       "dateAdded": "2024-07-16T03:49:47Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -91636,9 +90443,7 @@
           "tag": "#befidesh/organization/:kfsi"
         }
       ],
-      "collections": [
-        "EVGSVVNR"
-      ],
+      "collections": ["EVGSVVNR"],
       "relations": {},
       "dateAdded": "2023-05-06T06:46:02Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -91725,9 +90530,7 @@
           "tag": "#bf2035/issue/digital-transformation/software"
         }
       ],
-      "collections": [
-        "GNRTFGXD"
-      ],
+      "collections": ["GNRTFGXD"],
       "relations": {
         "owl:sameAs": "http://zotero.org/groups/2661540/items/VR8HLYUJ"
       },
@@ -91825,9 +90628,7 @@
           "tag": "#befidesh/accelerator-application/science-application/nuclear-physics"
         }
       ],
-      "collections": [
-        "GGRX39NP"
-      ],
+      "collections": ["GGRX39NP"],
       "relations": {},
       "dateAdded": "2022-08-04T13:45:30Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -91922,9 +90723,7 @@
           "tag": "#befidesh/accelerator-based-facility/:fair"
         }
       ],
-      "collections": [
-        "SMHHXUJI"
-      ],
+      "collections": ["SMHHXUJI"],
       "relations": {},
       "dateAdded": "2022-08-04T13:37:11Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92024,9 +90823,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-06-19T06:40:21Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92141,9 +90938,7 @@
           "tag": "#befidesh/accelerator-based-facility/photon-source/synchrotron-light-source/3th-generation"
         }
       ],
-      "collections": [
-        "JQS5U395"
-      ],
+      "collections": ["JQS5U395"],
       "relations": {},
       "dateAdded": "2021-11-11T11:07:43Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92237,9 +91032,7 @@
           "tag": "#bf2035/issue/diversity"
         }
       ],
-      "collections": [
-        "KFB55SS8"
-      ],
+      "collections": ["KFB55SS8"],
       "relations": {},
       "dateAdded": "2022-02-28T09:54:52Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92335,9 +91128,7 @@
           "tag": "#befidesh/accelerating-process/plasma-based-acceleration/plasma-based_laser-driven_acceleration"
         }
       ],
-      "collections": [
-        "VJK4MLE3"
-      ],
+      "collections": ["VJK4MLE3"],
       "relations": {},
       "dateAdded": "2020-06-10T21:20:43Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92419,9 +91210,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-06-16T08:58:19Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92514,9 +91303,7 @@
       "rights": "",
       "extra": "Citation Key: hilaire_mertens_weisse__1998__beam",
       "tags": [],
-      "collections": [
-        "NMMQSXGA"
-      ],
+      "collections": ["NMMQSXGA"],
       "relations": {},
       "dateAdded": "2025-03-21T19:52:36Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92603,9 +91390,7 @@
       "rights": "",
       "extra": "Citation Key: amaldi__2000__importance",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-05T15:26:00Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92691,9 +91476,7 @@
       "rights": "",
       "extra": "OCLC: ocm52486281\nCitation Key: rosenzweig__2003__fundamentals",
       "tags": [],
-      "collections": [
-        "KGXKWK9R"
-      ],
+      "collections": ["KGXKWK9R"],
       "relations": {},
       "dateAdded": "2022-03-04T20:18:07Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92795,9 +91578,7 @@
       "rights": "",
       "extra": "http://web.archive.org/web/20200622081812/https://ieeexplore.ieee.org/document/509991/\nCitation Key: esarey_sprangle_krall_etal__1996__overview",
       "tags": [],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2020-06-22T08:18:09Z",
       "dateModified": "2025-05-25T14:55:00Z"
@@ -92887,9 +91668,7 @@
           "tag": "#bf2035/issue/teaching/cas"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-09-10T17:26:48Z",
       "dateModified": "2025-05-25T14:54:59Z"
@@ -92979,9 +91758,7 @@
           "tag": "#bf2035/issue/teaching/cas"
         }
       ],
-      "collections": [
-        "PVNZ5YYM"
-      ],
+      "collections": ["PVNZ5YYM"],
       "relations": {},
       "dateAdded": "2024-05-22T05:38:55Z",
       "dateModified": "2025-05-25T14:54:59Z"
@@ -93074,9 +91851,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2022-01-22T06:51:10Z",
       "dateModified": "2025-05-25T14:54:59Z"
@@ -93169,9 +91944,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/52A2IFZC"
       },
@@ -93274,9 +92047,7 @@
           "tag": "#befidesh/accelerator-based-facility/photon-source/synchrotron-light-source/4th-generation"
         }
       ],
-      "collections": [
-        "N3NPSQBJ"
-      ],
+      "collections": ["N3NPSQBJ"],
       "relations": {},
       "dateAdded": "2022-05-14T08:43:27Z",
       "dateModified": "2025-05-25T14:54:59Z"
@@ -93379,9 +92150,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-06-18T07:19:01Z",
       "dateModified": "2025-05-25T14:54:59Z"
@@ -93480,9 +92249,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-06-18T13:04:44Z",
       "dateModified": "2025-05-25T14:54:59Z"
@@ -93568,9 +92335,7 @@
       "rights": "",
       "extra": "Citation Key: schumpeter__1993__theorie",
       "tags": [],
-      "collections": [
-        "T2GW45NC"
-      ],
+      "collections": ["T2GW45NC"],
       "relations": {},
       "dateAdded": "2024-09-10T10:02:40Z",
       "dateModified": "2025-05-25T14:54:59Z"
@@ -93662,9 +92427,7 @@
       "rights": "",
       "extra": "http://web.archive.org/web/20200621172422/https://linkinghub.elsevier.com/retrieve/pii/0030401885901208\nCitation Key: strickland_mourou__1985__compression",
       "tags": [],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2020-06-21T17:24:21Z",
       "dateModified": "2025-05-25T14:54:59Z"
@@ -93747,9 +92510,7 @@
       "rights": "",
       "extra": "Citation Key: bryant__1994__brief",
       "tags": [],
-      "collections": [
-        "59A6DF5Z"
-      ],
+      "collections": ["59A6DF5Z"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/YDF5T6S8"
       },
@@ -93878,9 +92639,7 @@
       "rights": "",
       "extra": "tex.ids: rosenzweig_etal__1988__experimental\nCitation Key: rosenzweig_cline_cole_etal__1988__experimental",
       "tags": [],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/NFMCCHLF"
       },
@@ -93955,9 +92714,7 @@
           "tag": "#bf2035/research-topic/plasma-acceleration"
         }
       ],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2024-07-19T04:50:29Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -94042,9 +92799,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-06-17T04:58:24Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -94135,9 +92890,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/2Y5UESUH"
       },
@@ -94238,9 +92991,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-06-17T05:02:42Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -94375,9 +93126,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-06-17T05:14:26Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -94471,9 +93220,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {},
       "dateAdded": "2020-06-17T05:01:34Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -94577,9 +93324,7 @@
           "tag": "#bf2035/research-topic/plasma-acceleration"
         }
       ],
-      "collections": [
-        "RWBEJUP9"
-      ],
+      "collections": ["RWBEJUP9"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/HUY7R9FV"
       },
@@ -94672,9 +93417,7 @@
           "tag": "#bf2035/timeline"
         }
       ],
-      "collections": [
-        "CXCB8QVS"
-      ],
+      "collections": ["CXCB8QVS"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/6YUHJSKU"
       },
@@ -94747,9 +93490,7 @@
       "rights": "",
       "extra": "Citation Key: ____timeline",
       "tags": [],
-      "collections": [
-        "3BG2B2XU"
-      ],
+      "collections": ["3BG2B2XU"],
       "relations": {},
       "dateAdded": "2025-03-21T19:30:33Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -94815,9 +93556,7 @@
       "rights": "",
       "extra": "Citation Key: ____ropensci",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-12-30T12:35:54Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -94896,9 +93635,7 @@
       "rights": "",
       "extra": "Citation Key: ____ipac23",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-24T22:49:12Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -94959,9 +93696,7 @@
       "rights": "",
       "extra": "Citation Key: ____suche",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-07-19T12:47:45Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -95027,9 +93762,7 @@
       "rights": "",
       "extra": "Citation Key: ____teilchenbeschleunigung",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-07-10T08:23:52Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -95121,9 +93854,7 @@
       "rights": "",
       "extra": "Citation Key: tajima_dawson__1979__laser",
       "tags": [],
-      "collections": [
-        "SAQ4Z9XW"
-      ],
+      "collections": ["SAQ4Z9XW"],
       "relations": {},
       "dateAdded": "2020-06-10T21:03:16Z",
       "dateModified": "2025-05-25T14:54:58Z"
@@ -95189,9 +93920,7 @@
       "rights": "2025",
       "extra": "Citation Key: ____advanced",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2025-03-18T06:15:15Z",
       "dateModified": "2025-05-25T14:54:57Z"
@@ -95282,9 +94011,7 @@
           "tag": "#bf2035/data"
         }
       ],
-      "collections": [
-        "GGRX39NP"
-      ],
+      "collections": ["GGRX39NP"],
       "relations": {},
       "dateAdded": "2024-11-03T20:49:47Z",
       "dateModified": "2025-05-25T14:54:57Z"
@@ -95355,9 +94082,7 @@
           "tag": "#bf2035/item-type/database"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-11T05:44:55Z",
       "dateModified": "2025-05-25T14:54:57Z"
@@ -95470,9 +94195,7 @@
           "tag": "#bf2035/issue/digital-transformation/digital-twin"
         }
       ],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-10-09T03:59:37Z",
       "dateModified": "2025-05-25T14:54:57Z"
@@ -95562,9 +94285,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {
         "dc:replaces": "http://zotero.org/groups/2427654/items/JEBMYP8S"
       },
@@ -95661,9 +94382,7 @@
           "tag": "#bf2035/issue/collaboration/ontology"
         }
       ],
-      "collections": [
-        "9J9A7T93"
-      ],
+      "collections": ["9J9A7T93"],
       "relations": {},
       "dateAdded": "2024-10-06T16:13:10Z",
       "dateModified": "2025-05-25T14:54:57Z"
@@ -95744,9 +94463,7 @@
       "rights": "",
       "extra": "Citation Key: europeanxfel____europeana",
       "tags": [],
-      "collections": [
-        "526P596H"
-      ],
+      "collections": ["526P596H"],
       "relations": {},
       "dateAdded": "2025-05-23T18:47:08Z",
       "dateModified": "2025-05-25T14:54:57Z"
@@ -95812,9 +94529,7 @@
       "rights": "",
       "extra": "Citation Key: ____forschungslandkarte",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2025-02-26T06:39:02Z",
       "dateModified": "2025-05-25T14:54:57Z"
@@ -95880,9 +94595,7 @@
       "rights": "",
       "extra": "Citation Key: ____online",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-11-05T18:18:01Z",
       "dateModified": "2025-05-25T14:54:57Z"
@@ -95943,9 +94656,7 @@
       "rights": "",
       "extra": "Citation Key: ____dinb",
       "tags": [],
-      "collections": [
-        "I45CUZNP"
-      ],
+      "collections": ["I45CUZNP"],
       "relations": {},
       "dateAdded": "2024-07-10T08:28:48Z",
       "dateModified": "2025-05-25T14:54:57Z"

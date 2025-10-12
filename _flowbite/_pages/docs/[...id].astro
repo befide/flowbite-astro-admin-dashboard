@@ -1,21 +1,21 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content"
-import LayoutSidebar from "@astro/LayoutSidebar.astro"
-import ContentPage from "../../../src/modules/ContentPage.astro"
+import { getCollection, type CollectionEntry } from "astro:content";
+import LayoutSidebar from "@astro/LayoutSidebar.astro";
+import ContentPage from "../../../src/modules/ContentPage.astro";
 
 export async function getStaticPaths() {
-  const sections = await getCollection("sections")
+  const sections = await getCollection("sections");
   return sections.map((section) => ({
     params: { id: section.id },
     props: { section },
-  }))
+  }));
 }
 
 type Props = {
-  section: CollectionEntry<"sections">
-}
+  section: CollectionEntry<"sections">;
+};
 
-const { section } = Astro.props
+const { section } = Astro.props;
 ---
 
 <LayoutSidebar>

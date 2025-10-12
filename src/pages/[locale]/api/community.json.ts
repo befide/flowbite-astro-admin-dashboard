@@ -1,24 +1,24 @@
-import { communityForAPI } from "@domain/organizations"
-import type { APIRoute, GetStaticPaths, InferGetStaticPropsType } from "astro"
+import { communityForAPI } from "@domain/organizations";
+import type { APIRoute, GetStaticPaths, InferGetStaticPropsType } from "astro";
 
 export const getStaticPaths = (async () => {
-  const locales = ["en", "de"]
+  const locales = ["en", "de"];
 
   return locales.map((locale) => ({
     params: { locale },
     props: { locale },
-  }))
-}) satisfies GetStaticPaths
+  }));
+}) satisfies GetStaticPaths;
 
 export const GET: APIRoute = async ({ props }) => {
-  type Props = InferGetStaticPropsType<typeof getStaticPaths>
-  const { locale } = props as Props
+  type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+  const { locale } = props as Props;
 
-  const community = await communityForAPI(locale)
+  const community = await communityForAPI(locale);
 
   try {
-    return new Response(JSON.stringify(community, null, 2))
+    return new Response(JSON.stringify(community, null, 2));
   } catch (e) {
-    throw new Error("Something went wrong in json-resource.json route: " + e)
+    throw new Error("Something went wrong in json-resource.json route: " + e);
   }
-}
+};

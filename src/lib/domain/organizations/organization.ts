@@ -1,38 +1,39 @@
-import { type CollectionEntry, getCollection } from "astro:content"
-import { useTranslations } from "@astro/i18n/utils"
+import { type CollectionEntry, getCollection } from "astro:content";
+import { useTranslations } from "@astro/i18n/utils";
 
-import { getLocalizedValue, getTaxonomyReferencesTerm } from "../../content.ts"
+import { getLocalizedValue, getTaxonomyReferencesTerm } from "../../content.ts";
 
-import { ascending, descending, sum } from "d3"
-import { getRoots } from "../../content.tree.ts"
-import type { OrganizationDto, OrganizationSchema } from "@lib/common"
+import { ascending, descending, sum } from "d3";
+import { getRoots } from "../../content.tree.ts";
+import type { OrganizationDto, OrganizationSchema } from "@lib/common";
 
-import { Thesis } from "@lib/domain"
-import type { FacilitySchema } from "../../common.d"
+import { Thesis } from "@lib/domain";
+import type { FacilitySchema } from "../../common.d";
 
 export class Organization {
-  _data: OrganizationSchema
+  _data: OrganizationSchema;
 
   constructor(data: OrganizationSchema) {
-    this._data = data
+    this._data = data;
   }
 
   async getTheses() {
     const thesesData = await getCollection(
       "theses",
       ({ data }) => data.degree.grantedBy__organizationsId === this._data.id,
-    )
+    );
     return thesesData
       .sort((a, b) => descending(a.data.year, b.data.year))
-      .map((d) => new Thesis(d.data))
+      .map((d) => new Thesis(d.data));
   }
 
   async getFacilityDefinitions(lifeCycle = "", isUserFacility = true) {
     const facilities: CollectionEntry<"facilities">[] = await getCollection(
       "facilities",
       (d) =>
-        d.data.host__organizationsId === this._data.id && isUserFacility === d.data.isUserFacility,
-    )
+        d.data.host__organizationsId === this._data.id &&
+        isUserFacility === d.data.isUserFacility,
+    );
 
     // &&
     // (!options ||
@@ -42,7 +43,7 @@ export class Organization {
 
     return facilities
       .map((d) => d.data)
-      .sort((a: FacilitySchema, b: FacilitySchema) => ascending(a.id, b.id))
+      .sort((a: FacilitySchema, b: FacilitySchema) => ascending(a.id, b.id));
     // return myFacilities.map((d) => new Facility(d.data as FacilitySchema))
   }
 
@@ -50,8 +51,8 @@ export class Organization {
     const teachingEvents = await getCollection(
       "courses",
       (d) => d.data.university__organizationsId === this._data.id,
-    )
-    return teachingEvents.map((d) => d.data)
+    );
+    return teachingEvents.map((d) => d.data);
   }
 
   async getOrganizationList() {
@@ -59,8 +60,8 @@ export class Organization {
       "organizations",
       (o: CollectionEntry<"organizations">) =>
         o.data.topLevel__id === this._data.id || o.data.id === this._data.id,
-    )
-    return organizations.map((d) => d.data)
+    );
+    return organizations.map((d) => d.data);
   }
 
   async getTreeRoots() {
@@ -70,19 +71,23 @@ export class Organization {
         (o: CollectionEntry<"organizations">) =>
           o.data.topLevel__id === this._data.id || o.data.id === this._data.id,
       )
-    ).map((d) => d.data)
+    ).map((d) => d.data);
 
-    return getRoots<OrganizationSchema>(organizations)
+    return getRoots<OrganizationSchema>(organizations);
   }
 
   async getDto(locale: "en" | "de"): Promise<OrganizationDto> {
-    const t = useTranslations(locale)
-    const theses_count = (await this.getTheses()).length
-    const facilities_count = (await this.getFacilityDefinitions()).length
-    const userFacilities_count = (await this.getFacilityDefinitions(undefined, true)).length
-    const teachingEvents = await this.getTeachingEventsDefinitions()
+    const t = useTranslations(locale);
+    const theses_count = (await this.getTheses()).length;
+    const facilities_count = (await this.getFacilityDefinitions()).length;
+    const userFacilities_count = (
+      await this.getFacilityDefinitions(undefined, true)
+    ).length;
+    const teachingEvents = await this.getTeachingEventsDefinitions();
 
-    const weeklySemesterHours_count = sum(teachingEvents.map((d) => d.weeklySemesterHours))
+    const weeklySemesterHours_count = sum(
+      teachingEvents.map((d) => d.weeklySemesterHours),
+    );
 
     return {
       id: this._data.id,
@@ -105,9 +110,10 @@ export class Organization {
       parent__id: this._data.parent__id,
       label__short: getLocalizedValue(this._data, "label.short", locale),
       label__fullName: getLocalizedValue(this._data, "label.fullName", locale),
-      location__country: t("country.name." + this._data.location?.country?.code) || "",
+      location__country:
+        t("country.name." + this._data.location?.country?.code) || "",
       location__city: this._data.location?.city as string,
       people_count: this._data.uniquePeopleCountRecursiveSum?.total || 0,
-    }
+    };
   }
 }

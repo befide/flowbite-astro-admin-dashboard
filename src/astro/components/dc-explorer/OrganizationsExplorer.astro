@@ -1,21 +1,29 @@
 ---
-import { getLangFromUrl, useTranslations } from "@astro/i18n/utils"
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils";
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
-import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
-import DCExplorerBarChart from "@components/dc-explorer/components/DCExplorerBarChart.astro"
-import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
-import DCExplorerTable from "@components/dc-explorer/components/DCExplorerTable.astro"
-import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
+import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro";
+import DCExplorerBarChart from "@components/dc-explorer/components/DCExplorerBarChart.astro";
+import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro";
+import DCExplorerTable from "@components/dc-explorer/components/DCExplorerTable.astro";
+import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro";
 ---
 
 <DCExplorer collection="organizations">
   <div class="dc-explorer__filters">
     <DCExplorerCount collection="organizations" dimension="count" />
-    <DCExplorerRowChart collection="organizations" dimension="category" title="Category" />
-    <DCExplorerRowChart collection="organizations" dimension="location__country" title="Country" />
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="category"
+      title="Category"
+    />
+    <DCExplorerRowChart
+      collection="organizations"
+      dimension="location__country"
+      title="Country"
+    />
 
     <DCExplorerBarChart
       collection="organizations"

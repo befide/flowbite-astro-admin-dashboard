@@ -1,16 +1,13 @@
 ---
-import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro"
-import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro"
-import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro"
-import DCExplorerTreeDataTable from "@components/dc-explorer/components/DCExplorerTreeDataTable.astro"
+import DCExplorerCount from "@components/dc-explorer/components/DCExplorerCount.astro";
+import DCExplorerRowChart from "@components/dc-explorer/components/DCExplorerRowChart.astro";
+import DCExplorer from "@components/dc-explorer/components/DCExplorer.astro";
+import DCExplorerTreeDataTable from "@components/dc-explorer/components/DCExplorerTreeDataTable.astro";
 ---
 
 <DCExplorer collection="community">
   <div class="dc-explorer__filters">
-    <DCExplorerCount
-      collection="taxonomy"
-      dimension="count"
-    />
+    <DCExplorerCount collection="taxonomy" dimension="count" />
 
     <DCExplorerRowChart
       collection="community"
@@ -20,15 +17,9 @@ import DCExplorerTreeDataTable from "@components/dc-explorer/components/DCExplor
     />
   </div>
   <div class="dc-explorer__items">
-    <DCExplorerTreeDataTable
-      collection="taxonomy"
-      dimension="id"
-    />
+    <DCExplorerTreeDataTable collection="taxonomy" dimension="id" />
   </div>
   <div class="dc-explorer__items">
-    <DCExplorerTreeDataTable
-      collection="taxonomy"
-      dimension="id"
-    />
+    <DCExplorerTreeDataTable collection="taxonomy" dimension="id" />
   </div>
 </DCExplorer>

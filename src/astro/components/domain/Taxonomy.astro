@@ -1,18 +1,18 @@
 ---
-import { allTaxonomyItems, taxonomyItemRoots } from "@/lib/domain/taxonomy"
-import TaxonomyItem from "./TaxonomyItem.astro"
+import { allTaxonomyItems, taxonomyItemRoots } from "@/lib/domain/taxonomy";
+import TaxonomyItem from "./TaxonomyItem.astro";
 
-import { getLocalizedValue } from "@/lib/content"
+import { getLocalizedValue } from "@/lib/content";
 
-const taxonomyRoot = await taxonomyItemRoots()
-const taxonomyItems = await allTaxonomyItems()
+const taxonomyRoot = await taxonomyItemRoots();
+const taxonomyItems = await allTaxonomyItems();
 
-const bTaxonomyItems = taxonomyRoot[0].children[0]
-const gTaxonomyItems = taxonomyRoot[0].children[0]
+const bTaxonomyItems = taxonomyRoot[0].children[0];
+const gTaxonomyItems = taxonomyRoot[0].children[0];
 
-const locale = Astro.currentLocale
+const locale = Astro.currentLocale;
 
-console.log(taxonomyItems)
+console.log(taxonomyItems);
 ---
 
 <section>
@@ -22,7 +22,9 @@ console.log(taxonomyItems)
       <section>
         <header class="format">
           <h3>{getLocalizedValue(bTaxonomyItem.data, "term", locale)}</h3>
-          <p class="text-bold">{getLocalizedValue(bTaxonomyItem.data, "definition", locale)}</p>
+          <p class="text-bold">
+            {getLocalizedValue(bTaxonomyItem.data, "definition", locale)}
+          </p>
         </header>
         <ul class="taxonomy tree">
           {bTaxonomyItem.children.map((item) => (

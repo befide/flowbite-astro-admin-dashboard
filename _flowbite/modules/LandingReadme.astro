@@ -1,23 +1,42 @@
 ---
-import Code from "astro/components/Code.astro"
+import Code from "astro/components/Code.astro";
 
-import AstroLogo from "../../src/assets/astro-icon.svg?raw"
-import FlowbiteLogo from "../../src/assets/flowbite-logo.svg?raw"
+import AstroLogo from "../../src/assets/astro-icon.svg?raw";
+import FlowbiteLogo from "../../src/assets/flowbite-logo.svg?raw";
 
-import * as readMe from "../../README.md"
-import { SITE_TITLE } from "@astro/constants.js"
+import * as readMe from "../../README.md";
+import { SITE_TITLE } from "@astro/constants.js";
 ---
 
-<div class="mb-20 bg-gradient-to-r from-slate-100 to-slate-200 p-4 text-slate-800 shadow-xl shadow-slate-200 lg:p-16 dark:from-slate-900 dark:to-slate-800 dark:text-slate-100 dark:shadow-slate-900">
-  <header class="mt-16 flex w-full flex-col flex-wrap items-center justify-center p-8">
+<div
+  class="mb-20 bg-gradient-to-r from-slate-100 to-slate-200 p-4 text-slate-800 shadow-xl shadow-slate-200 lg:p-16 dark:from-slate-900 dark:to-slate-800 dark:text-slate-100 dark:shadow-slate-900"
+>
+  <header
+    class="mt-16 flex w-full flex-col flex-wrap items-center justify-center p-8"
+  >
     <div class="flex w-full justify-center">
-      <div set:html={AstroLogo} class="svg-inline h-16 w-16 text-violet-700 dark:text-violet-100" />
+      <div
+        set:html={AstroLogo}
+        class="svg-inline h-16 w-16 text-violet-700 dark:text-violet-100"
+      />
     </div>
 
     <div class="format dark:format-invert lg:format-lg mt-32">
-      <p class="text-4xl leading-tight text-slate-600 lg:text-8xl dark:text-slate-200">
-        Hello <a rel="noopener nofollow" href="https://astro.build" class="bg-gradient-to-br from-pink-400 to-violet-800 bg-clip-text font-bold text-transparent no-underline dark:from-pink-300 dark:to-violet-700">Astro</a>…
-        <br />meet <a rel="noopener nofollow" href="https://flowbite.com" class="font-bold text-blue-600 no-underline dark:text-blue-500">Flowbite</a>!
+      <p
+        class="text-4xl leading-tight text-slate-600 lg:text-8xl dark:text-slate-200"
+      >
+        Hello <a
+          rel="noopener nofollow"
+          href="https://astro.build"
+          class="bg-gradient-to-br from-pink-400 to-violet-800 bg-clip-text font-bold text-transparent no-underline dark:from-pink-300 dark:to-violet-700"
+          >Astro</a
+        >…
+        <br />meet <a
+          rel="noopener nofollow"
+          href="https://flowbite.com"
+          class="font-bold text-blue-600 no-underline dark:text-blue-500"
+          >Flowbite</a
+        >!
       </p>
 
       <div class="flex w-full justify-center">

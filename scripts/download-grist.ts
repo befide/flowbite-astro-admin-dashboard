@@ -1,10 +1,10 @@
-import { createFormatValue, csv2json, json2csv } from "csv42"
-import fs from "node:fs"
-import path from "node:path"
-import YAML from "yaml"
-import { getRoots } from "@lib/content.tree.ts"
+import { createFormatValue, csv2json, json2csv } from "csv42";
+import fs from "node:fs";
+import path from "node:path";
+import YAML from "yaml";
+import { getRoots } from "@lib/content.tree.ts";
 
-export const genders = ["female", "male", "nonbinary"]
+export const genders = ["female", "male", "nonbinary"];
 const careerLevels = [
   "professor",
   "seniorResearcher",
@@ -12,10 +12,14 @@ const careerLevels = [
   "phdStudent",
   "masterStudent",
   "bachelorStudent",
-]
-const disciplinaryProfessions = ["physicist", "engineer", "other"]
-const peopleCountDiscriminators = [...careerLevels, ...disciplinaryProfessions, ...genders]
-const __dirname = import.meta.dirname
+];
+const disciplinaryProfessions = ["physicist", "engineer", "other"];
+const peopleCountDiscriminators = [
+  ...careerLevels,
+  ...disciplinaryProfessions,
+  ...genders,
+];
+const __dirname = import.meta.dirname;
 
 // export function _slug(d: string) {
 //   return d ? d.replaceAll("b:", "b/").replaceAll("g:", "g/") : null
@@ -33,11 +37,11 @@ export function slugify(d: string) {
         .replaceAll(".", "__")
         .replaceAll(" ", "-")
         .trim()
-    : null
+    : null;
 }
 
 function stringToArray(d = "") {
-  return d ? d.split(/\s?,\s?/).filter((d) => !!d) : []
+  return d ? d.split(/\s?,\s?/).filter((d) => !!d) : [];
 }
 
 async function doTable(
@@ -53,14 +57,19 @@ async function doTable(
   mapper: any,
   postprocess?: any,
 ) {
-  const contentFolder = path.join(__dirname, "../src/content/domain/", collectionKey)
-  const gristFolder = path.join(__dirname, "../src/data/grist")
-  fs.rmSync(contentFolder, { recursive: true, force: true })
-  fs.mkdirSync(contentFolder, { recursive: true })
-  fs.mkdirSync(gristFolder, { recursive: true })
+  const contentFolder = path.join(
+    __dirname,
+    "../src/content/domain/",
+    collectionKey,
+  );
+  const gristFolder = path.join(__dirname, "../src/data/grist");
+  fs.rmSync(contentFolder, { recursive: true, force: true });
+  fs.mkdirSync(contentFolder, { recursive: true });
+  fs.mkdirSync(gristFolder, { recursive: true });
 
   const data = await fetch(
-    "https://befide.getgrist.com/api/docs/vGtqDxisUdjkKYGmpzAkDj/download/csv?tableId=" + tableId,
+    "https://befide.getgrist.com/api/docs/vGtqDxisUdjkKYGmpzAkDj/download/csv?tableId=" +
+      tableId,
     {
       headers: {
         accept: "text/csv",
@@ -70,58 +79,58 @@ async function doTable(
   )
     .then((response) => response.text())
     .then((data) => {
-      fs.writeFileSync(path.join(gristFolder, "raw", tableId + ".csv"), data)
-      return csv2json(data, { nested: true })
+      fs.writeFileSync(path.join(gristFolder, "raw", tableId + ".csv"), data);
+      return csv2json(data, { nested: true });
     })
-    .catch((error) => console.error("Error:", error))
+    .catch((error) => console.error("Error:", error));
 
-  if (postprocess) postprocess(data)
+  if (postprocess) postprocess(data);
 
-  const csvResult: any[] = []
+  const csvResult: any[] = [];
 
   data &&
     data.forEach((d: any) => {
       // const id = idMapper(d)
       // console.log(d)
-      const frontmatter = { ...mapper(d) }
-      const fileFolder = path.join(contentFolder, frontmatter.id)
+      const frontmatter = { ...mapper(d) };
+      const fileFolder = path.join(contentFolder, frontmatter.id);
 
-      fs.mkdirSync(fileFolder, { recursive: true })
-      const filePath = path.join(fileFolder, "index.mdx")
+      fs.mkdirSync(fileFolder, { recursive: true });
+      const filePath = path.join(fileFolder, "index.mdx");
 
       if (frontmatter.id.length < 240) {
-        const markdown = "---\n" + YAML.stringify(frontmatter) + "---\n"
+        const markdown = "---\n" + YAML.stringify(frontmatter) + "---\n";
 
-        console.debug("writing file: " + filePath)
-        fs.writeFileSync(filePath, markdown)
+        console.debug("writing file: " + filePath);
+        fs.writeFileSync(filePath, markdown);
 
-        csvResult.push(frontmatter)
+        csvResult.push(frontmatter);
       } else {
-        console.error("filename too long:", frontmatter.id)
+        console.error("filename too long:", frontmatter.id);
       }
-    })
+    });
 
   function formatValue(value: unknown): string {
     return Array.isArray(value)
       ? createFormatValue(",")(value.join(","))
-      : createFormatValue(",")(value)
+      : createFormatValue(",")(value);
   }
 
   if (Array.isArray(data)) {
-    const csvFilePath = path.join(gristFolder, collectionKey + ".csv")
-    fs.writeFileSync(csvFilePath, json2csv(csvResult, { formatValue }))
+    const csvFilePath = path.join(gristFolder, collectionKey + ".csv");
+    fs.writeFileSync(csvFilePath, json2csv(csvResult, { formatValue }));
   }
 
-  return csvResult
+  return csvResult;
 }
 
 const courseIdGenerator = ({
   university__organizationsId,
   title,
 }: {
-  university__organizationsId: string
-  title: { de: string; en: string }
-}) => university__organizationsId + "/" + slugify(title.de)
+  university__organizationsId: string;
+  title: { de: string; en: string };
+}) => university__organizationsId + "/" + slugify(title.de);
 
 const doReviewStatuses = async () =>
   await doTable(
@@ -129,7 +138,7 @@ const doReviewStatuses = async () =>
     "Review_Statuses",
     (d: any) => d.id,
     (d: any) => d,
-  )
+  );
 
 const doContacts = async () =>
   await doTable(
@@ -150,7 +159,7 @@ const doContacts = async () =>
       isHeadOf__organizationIDs: stringToArray(d.isHeadOf__organizationIDs),
       gender: d.gender,
     }),
-  )
+  );
 
 const doCourses = async () =>
   await doTable(
@@ -172,7 +181,7 @@ const doCourses = async () =>
       links: d.links,
       review: d.review,
     }),
-  )
+  );
 
 const doTaxonomy = async () =>
   await doTable(
@@ -196,7 +205,7 @@ const doTaxonomy = async () =>
       taxonomyURI: d.taxonomyURI,
       review: d.review,
     }),
-  )
+  );
 
 const doOrganizations = async () =>
   await doTable(
@@ -205,7 +214,7 @@ const doOrganizations = async () =>
     (d: any) => d.id,
 
     (d: any) => {
-      const classes = stringToArray(d.instanceOf__taxonomyIDs)
+      const classes = stringToArray(d.instanceOf__taxonomyIDs);
       return {
         id: d.id,
         parent__id: d.parent__id,
@@ -213,11 +222,16 @@ const doOrganizations = async () =>
         partOfCommunityDegree: d.partOfCommunityDegree,
         instanceOfs__taxonomyID: classes,
         isFormalOrganization:
-          classes.filter((d) => d === "/g/organization/formal-organization").length > 0,
+          classes.filter((d) => d === "/g/organization/formal-organization")
+            .length > 0,
         isResearchInstitution:
-          classes.filter((d) => d === "/g/organization/research-institution").length > 0,
-        isUniversity: classes.filter((d) => d === "/g/organization/university").length > 0,
-        isWorkingGroup: classes.filter((d) => d === "/g/organization/working-group").length > 0,
+          classes.filter((d) => d === "/g/organization/research-institution")
+            .length > 0,
+        isUniversity:
+          classes.filter((d) => d === "/g/organization/university").length > 0,
+        isWorkingGroup:
+          classes.filter((d) => d === "/g/organization/working-group").length >
+          0,
         isDepartment:
           classes.filter(
             (d) =>
@@ -238,19 +252,19 @@ const doOrganizations = async () =>
         uniquePeopleCountSum: d.uniquePeopleCountSum,
         uniquePeopleCountRecursiveSum: d.uniquePeopleCountRecursiveSum,
         review: d.review,
-      }
+      };
     },
     (data: any[]) => {
       const communityOrganizations = data.filter(
         (d: { partOfCommunityDegree: any; category: string | string[] }) =>
           d.partOfCommunityDegree !== "none" && d.category !== "committee",
-      )
-      const roots = getRoots(communityOrganizations)
-      const rolledUpNode = rollupUniquePeopleCountSum(roots[0])
-      console.log(rolledUpNode)
-      return rolledUpNode
+      );
+      const roots = getRoots(communityOrganizations);
+      const rolledUpNode = rollupUniquePeopleCountSum(roots[0]);
+      console.log(rolledUpNode);
+      return rolledUpNode;
     },
-  )
+  );
 
 const doFacilities = async () =>
   await doTable(
@@ -258,26 +272,26 @@ const doFacilities = async () =>
     "Facilities",
     (d) => d.id,
     (d: {
-      id: any
-      instanceOf__taxonomyId: any
-      partOf__id: any
-      host__organizationsId: any
-      successorOf__id: any
-      isUserFacility: any
-      isBMBF_FIS: any
-      label: any
-      tagLine: any
-      definition: any
-      primaryApplications__taxonomyId: string | undefined
-      secondaryApplications__taxonomyId: string | undefined
-      lifeCycle: any
+      id: any;
+      instanceOf__taxonomyId: any;
+      partOf__id: any;
+      host__organizationsId: any;
+      successorOf__id: any;
+      isUserFacility: any;
+      isBMBF_FIS: any;
+      label: any;
+      tagLine: any;
+      definition: any;
+      primaryApplications__taxonomyId: string | undefined;
+      secondaryApplications__taxonomyId: string | undefined;
+      lifeCycle: any;
       parameters: {
-        primaryBeamParticles: string | undefined
-        secondaryBeamParticles: string | undefined
-      }
-      links: any
-      references: string | undefined
-      review: any
+        primaryBeamParticles: string | undefined;
+        secondaryBeamParticles: string | undefined;
+      };
+      links: any;
+      references: string | undefined;
+      review: any;
     }) => ({
       id: d.id,
       instanceOf__taxonomyId: d.instanceOf__taxonomyId,
@@ -290,27 +304,33 @@ const doFacilities = async () =>
       label: d.label,
       tagLine: d.tagLine,
       definition: d.definition,
-      primaryApplications__taxonomyId: stringToArray(d.primaryApplications__taxonomyId),
-      secondaryApplications__taxonomyId: stringToArray(d.secondaryApplications__taxonomyId),
+      primaryApplications__taxonomyId: stringToArray(
+        d.primaryApplications__taxonomyId,
+      ),
+      secondaryApplications__taxonomyId: stringToArray(
+        d.secondaryApplications__taxonomyId,
+      ),
       lifeCycle: d.lifeCycle,
       parameters: {
         ...d.parameters,
         primaryBeamParticles: stringToArray(d.parameters?.primaryBeamParticles),
-        secondaryBeamParticles: stringToArray(d.parameters?.secondaryBeamParticles),
+        secondaryBeamParticles: stringToArray(
+          d.parameters?.secondaryBeamParticles,
+        ),
       },
       links: d.links,
       references: stringToArray(d.references),
       review: d.review,
     }),
-  )
+  );
 
 function getValue(obj: any, path: string) {
-  const pathParts = path.split(".")
+  const pathParts = path.split(".");
   for (let i = 0; i < pathParts.length; i++) {
-    if (pathParts[i]! in obj) obj = obj[pathParts[i]!]
-    else return
+    if (pathParts[i]! in obj) obj = obj[pathParts[i]!];
+    else return;
   }
-  return obj
+  return obj;
 }
 
 function rollupUniquePeopleCountSum(node: any) {
@@ -318,17 +338,20 @@ function rollupUniquePeopleCountSum(node: any) {
     node.data.uniquePeopleCountRecursiveSum = {
       total: node.data.uniquePeopleCountSum.total,
       ...Object.fromEntries(
-        peopleCountDiscriminators.map((d) => [d, getValue(node.data.uniquePeopleCountSum, d)]),
+        peopleCountDiscriminators.map((d) => [
+          d,
+          getValue(node.data.uniquePeopleCountSum, d),
+        ]),
       ),
-    }
+    };
   } else {
-    node.children.forEach((child: any) => rollupUniquePeopleCountSum(child))
+    node.children.forEach((child: any) => rollupUniquePeopleCountSum(child));
     node.data.uniquePeopleCountRecursiveSum = {
       total: node.children.reduce(
         (
           sum: any,
           child: {
-            data: { uniquePeopleCountRecursiveSum: any }
+            data: { uniquePeopleCountRecursiveSum: any };
           },
         ) => sum + getValue(child.data.uniquePeopleCountRecursiveSum, "total"),
         getValue(node.data.uniquePeopleCountSum, "total"),
@@ -340,22 +363,22 @@ function rollupUniquePeopleCountSum(node: any) {
             (
               sum: any,
               child: {
-                data: { uniquePeopleCountRecursiveSum: any }
+                data: { uniquePeopleCountRecursiveSum: any };
               },
             ) => sum + getValue(child.data.uniquePeopleCountRecursiveSum, d),
             getValue(node.data.uniquePeopleCountSum, d),
           ),
         ]),
       ),
-    }
+    };
   }
 
-  return node
+  return node;
 }
 //
-const rewviewStatuses = await doReviewStatuses()
-const contacts = await doContacts()
-const organisations = await doOrganizations()
-const taxonomyItems = await doTaxonomy()
-const facilities = await doFacilities()
-const courses = await doCourses()
+const rewviewStatuses = await doReviewStatuses();
+const contacts = await doContacts();
+const organisations = await doOrganizations();
+const taxonomyItems = await doTaxonomy();
+const facilities = await doFacilities();
+const courses = await doCourses();

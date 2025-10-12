@@ -1,2 +1,2 @@
-export * from "./references.ts"
-export * from "./references.config.ts"
+export * from "./references.ts";
+export * from "./references.config.ts";

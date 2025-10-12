@@ -1,31 +1,43 @@
 ---
-import fastCartesian from "fast-cartesian"
-import MemberIcon from "./MemberIcon.astro"
-import { careerLevels, disciplinaryProfessions, genders, Organization } from "@lib/domain"
-import { flattenTreeNodes, getRoots, type TreeNode } from "@lib/content.tree"
+import fastCartesian from "fast-cartesian";
+import MemberIcon from "./MemberIcon.astro";
+import {
+  careerLevels,
+  disciplinaryProfessions,
+  genders,
+  Organization,
+} from "@lib/domain";
+import { flattenTreeNodes, getRoots, type TreeNode } from "@lib/content.tree";
 
-import type { OrganizationSchema } from "@lib/common.d.ts"
+import type { OrganizationSchema } from "@lib/common.d.ts";
 
-import { getLangFromUrl, useTranslations } from "../../i18n/utils"
-import { getValue } from "../../../lib/content"
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { getValue } from "../../../lib/content";
 
-const lang = getLangFromUrl(Astro.url)
-const t = useTranslations(lang)
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
-  organization: Organization
+  organization: Organization;
 }
-let { organization } = Astro.props
+let { organization } = Astro.props;
 
-const product = fastCartesian([[...careerLevels], [...disciplinaryProfessions], [...genders]])
+const product = fastCartesian([
+  [...careerLevels],
+  [...disciplinaryProfessions],
+  [...genders],
+]);
 
-const organisations = (await organization.getOrganizationList()).map((d: any) => ({
-  ...d,
-  parent__id: d.parent__id === "community" ? null : d.parent__id,
-}))
-let roots: TreeNode<OrganizationSchema>[] = getRoots<OrganizationSchema>(organisations)
+const organisations = (await organization.getOrganizationList()).map(
+  (d: any) => ({
+    ...d,
+    parent__id: d.parent__id === "community" ? null : d.parent__id,
+  }),
+);
+let roots: TreeNode<OrganizationSchema>[] =
+  getRoots<OrganizationSchema>(organisations);
 
-const list = flattenTreeNodes(roots)
+const list = flattenTreeNodes(roots);
 ---
 
 <section>
@@ -70,32 +82,48 @@ const list = flattenTreeNodes(roots)
             data-child-index={item.childIndex}
             data-has-children={item.children.length > 0}
           >
-            <th class="name tree-table__name tree-table__indent">{item.data.label.fullName.en}</th>
+            <th class="name tree-table__name tree-table__indent">
+              {item.data.label.fullName.en}
+            </th>
             <td class="members">
               {product
-                .filter((p) => getValue(item.data.uniquePeopleCount, p.join(".")))
+                .filter((p) =>
+                  getValue(item.data.uniquePeopleCount, p.join(".")),
+                )
                 .map((p) =>
                   new Array(getValue(item.data.uniquePeopleCount, p.join(".")))
                     .fill(0)
                     .map(() => (
-                      <MemberIcon careerLevel={p[0]} disciplinaryProfession={p[1]} gender={p[2]} />
+                      <MemberIcon
+                        careerLevel={p[0]}
+                        disciplinaryProfession={p[1]}
+                        gender={p[2]}
+                      />
                     )),
                 )}
             </td>
             {careerLevels.map((d) => (
-              <td class="number">{getValue(item.data.uniquePeopleCountRecursiveSum, d) || "-"}</td>
+              <td class="number">
+                {getValue(item.data.uniquePeopleCountRecursiveSum, d) || "-"}
+              </td>
             ))}
 
             {disciplinaryProfessions.map((d) => (
-              <td class="number">{getValue(item.data.uniquePeopleCountRecursiveSum, d) || "-"}</td>
+              <td class="number">
+                {getValue(item.data.uniquePeopleCountRecursiveSum, d) || "-"}
+              </td>
             ))}
 
             {genders.map((d) => (
-              <td class="number">{getValue(item.data.uniquePeopleCountRecursiveSum, d) || "-"}</td>
+              <td class="number">
+                {getValue(item.data.uniquePeopleCountRecursiveSum, d) || "-"}
+              </td>
             ))}
             {
               <td class="number">
-                <strong>{item.data.uniquePeopleCountRecursiveSum?.total}</strong>
+                <strong>
+                  {item.data.uniquePeopleCountRecursiveSum?.total}
+                </strong>
               </td>
             }
           </tr>

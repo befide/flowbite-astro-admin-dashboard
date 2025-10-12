@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { NestableDomainObjectSchema } from "@lib/content.common"
-import { ascending, descending, select } from "d3"
+import type { NestableDomainObjectSchema } from "@lib/content.common";
+import { ascending, descending, select } from "d3";
 // @ts-ignore
-import { BaseMixin } from "dc"
-import type { TableConfigEntry } from "../config.tables"
-import { getRoots, type TreeNode } from "@lib/content.tree"
+import { BaseMixin } from "dc";
+import type { TableConfigEntry } from "../config.tables";
+import { getRoots, type TreeNode } from "@lib/content.tree";
 
-const LABEL_CSS_CLASS = "dc-tree-table-label"
-const ROW_CSS_CLASS = "dc-table-row"
-const COLUMN_CSS_CLASS = "dc-table-column"
-const SECTION_CSS_CLASS = "dc-table-section dc-table-group"
-const HEAD_CSS_CLASS = "dc-table-head"
+const LABEL_CSS_CLASS = "dc-tree-table-label";
+const ROW_CSS_CLASS = "dc-table-row";
+const COLUMN_CSS_CLASS = "dc-table-column";
+const SECTION_CSS_CLASS = "dc-table-section dc-table-group";
+const HEAD_CSS_CLASS = "dc-table-head";
 
 // const forest = (
 //   items: NestableDomainObjectSchema[],
@@ -85,76 +85,65 @@ const HEAD_CSS_CLASS = "dc-table-head"
  */
 
 export class TreeDataSections extends BaseMixin<NestableDomainObjectSchema> {
-  _allEntries: NestableDomainObjectSchema[] = []
-  _entriesMap: Map<string, NestableDomainObjectSchema> =
-    new Map()
-  _ancestorsMap: Map<string, NestableDomainObjectSchema[]> =
-    new Map()
+  _allEntries: NestableDomainObjectSchema[] = [];
+  _entriesMap: Map<string, NestableDomainObjectSchema> = new Map();
+  _ancestorsMap: Map<string, NestableDomainObjectSchema[]> = new Map();
   // _allEntriesTree
-  _size = 25
-  _sortBy = (d: any) => d
-  _order = ascending
-  _columns: TableConfigEntry[] = []
+  _size = 25;
+  _sortBy = (d: any) => d;
+  _order = ascending;
+  _columns: TableConfigEntry[] = [];
 
   constructor(parent: string, cfDimension: any) {
-    super()
+    super();
 
-    super._dimension = cfDimension
-    super._group = cfDimension.groupAll()
+    super._dimension = cfDimension;
+    super._group = cfDimension.groupAll();
 
-    this.allEntries(cfDimension.top(Infinity))
+    this.allEntries(cfDimension.top(Infinity));
 
-    super._mandatoryAttributes(["dimension"])
+    super._mandatoryAttributes(["dimension"]);
 
-    super.anchor(parent)
+    super.anchor(parent);
   }
 
   columns(columns: TableConfigEntry[]) {
-    this._columns = columns
+    this._columns = columns;
   }
 
   allEntries(allEntries: NestableDomainObjectSchema[]) {
     if (!arguments.length) {
-      return this._allEntries
+      return this._allEntries;
     }
 
     if (allEntries.length > 0) {
-      this._allEntries = allEntries
+      this._allEntries = allEntries;
 
-      this._entriesMap.clear()
+      this._entriesMap.clear();
       allEntries.forEach((entry) => {
-        this._entriesMap.set(entry.id, entry)
-      })
+        this._entriesMap.set(entry.id, entry);
+      });
 
-      this._ancestorsMap.clear()
+      this._ancestorsMap.clear();
       allEntries.forEach((entry) => {
         if (entry.parent__id) {
-          let parent = this._entriesMap.get(
-            entry.parent__id,
-          )
+          let parent = this._entriesMap.get(entry.parent__id);
           while (parent) {
-            const ancestors = this._ancestorsMap.get(
-              entry.id,
-            )
+            const ancestors = this._ancestorsMap.get(entry.id);
             if (ancestors) {
-              this._ancestorsMap.set(entry.id, [
-                ...ancestors,
-                parent,
-              ])
+              this._ancestorsMap.set(entry.id, [...ancestors, parent]);
             } else {
-              this._ancestorsMap.set(entry.id, [parent])
+              this._ancestorsMap.set(entry.id, [parent]);
             }
 
             if (parent.parent__id) {
-              parent = this._entriesMap.get(
-                parent.parent__id,
-              )
+              parent = this._entriesMap.get(parent.parent__id);
             } else {
-              parent = undefined
+              parent = undefined;
             }
           }
         }
-      })
+      });
     }
   }
 
@@ -162,54 +151,52 @@ export class TreeDataSections extends BaseMixin<NestableDomainObjectSchema> {
     const selectedEntries: NestableDomainObjectSchema[] =
       this._order === descending
         ? super.dimension().top(Infinity)
-        : super.dimension().bottom(Infinity)
+        : super.dimension().bottom(Infinity);
 
     // const uniqueSelectedEntries = new Set(
     //   selectedEntries.map((entry) => entry.id)
     // )
-    const selectedEntriesAndAncestorIds =
-      selectedEntries.flatMap(
-        (entry: NestableDomainObjectSchema) => {
-          const ancestors = this._ancestorsMap.get(entry.id)
+    const selectedEntriesAndAncestorIds = selectedEntries.flatMap(
+      (entry: NestableDomainObjectSchema) => {
+        const ancestors = this._ancestorsMap.get(entry.id);
 
-          if (ancestors) {
-            const ancestorIds = ancestors.map((d) => d.id)
-            return [entry.id, ...ancestorIds]
-          } else {
-            return [entry.id]
-          }
-        },
-      )
+        if (ancestors) {
+          const ancestorIds = ancestors.map((d) => d.id);
+          return [entry.id, ...ancestorIds];
+        } else {
+          return [entry.id];
+        }
+      },
+    );
     const uniqueSelectedEntriesAndAncestorIds = Array.from(
       new Set(selectedEntriesAndAncestorIds),
-    )
+    );
 
-    const selectedEntriesAndAncestors =
-      uniqueSelectedEntriesAndAncestorIds
-        .map((id) => this._entriesMap.get(id))
-        .filter((d) => !!d)
-        .sort((a, b) => ascending(a.term, b.term))
+    const selectedEntriesAndAncestors = uniqueSelectedEntriesAndAncestorIds
+      .map((id) => this._entriesMap.get(id))
+      .filter((d) => !!d)
+      .sort((a, b) => ascending(a.term, b.term));
 
     const roots = getRoots<NestableDomainObjectSchema>(
       selectedEntriesAndAncestors,
-    )
+    );
     // console.log({ roots })
 
-    return roots
+    return roots;
   }
 
   _doRender() {
     if (this._allEntries.length > 0) {
-      super.selectAll("li").remove()
+      super.selectAll("li").remove();
 
-      this.renderRoots()
+      this.renderRoots();
     }
 
-    return this
+    return this;
   }
 
   _doRedraw() {
-    this._doRender()
+    this._doRender();
     // console.log("redraw")
     // if (this._allEntries.length > 0) {
     //   super
@@ -220,19 +207,14 @@ export class TreeDataSections extends BaseMixin<NestableDomainObjectSchema> {
     // }
   }
 
-  updateNextLevel(
-    selection: any,
-    data: TreeNode<NestableDomainObjectSchema>,
-  ) {
-    selection.call((selection2: any) =>
-      this.renderNode(selection2, data),
-    )
-    if (!data.hasOwnProperty("children")) return
+  updateNextLevel(selection: any, data: TreeNode<NestableDomainObjectSchema>) {
+    selection.call((selection2: any) => this.renderNode(selection2, data));
+    if (!data.hasOwnProperty("children")) return;
     const items = selection
       .append("ul")
       .classed("", true)
       .selectAll("li")
-      .data(data.children)
+      .data(data.children);
 
     // items.exit().remove()
 
@@ -241,15 +223,11 @@ export class TreeDataSections extends BaseMixin<NestableDomainObjectSchema> {
       .append("li")
       // .classed("tree-node", true)
       // .classed("has-children", (d) => d.children.length)
-      .attr(
-        "depth",
-        (d: TreeNode<NestableDomainObjectSchema>) =>
-          d.depth,
-      )
+      .attr("depth", (d: TreeNode<NestableDomainObjectSchema>) => d.depth)
       // .merge(items)
       .each((data: any, index: number, nodes: any) => {
-        this.updateNextLevel(select(nodes[index]), data)
-      })
+        this.updateNextLevel(select(nodes[index]), data);
+      });
   }
 
   makeForest(
@@ -261,25 +239,20 @@ export class TreeDataSections extends BaseMixin<NestableDomainObjectSchema> {
       .classed("forest", true)
       .selectAll("section")
       .data(treeRoots)
-      .enter()
+      .enter();
 
-    return rootItems
-      .append("section")
-      .attr("depth", 0)
-      .classed("", true)
+    return rootItems.append("section").attr("depth", 0).classed("", true);
   }
 
   renderRoots() {
-    const treeRoots = this.treeRoots()
+    const treeRoots = this.treeRoots();
 
     super.root().call((selection: any) => {
-      const forest = this.makeForest(selection, treeRoots)
-      forest.each(
-        (data: any, index: number, nodes: any) => {
-          this.updateNextLevel(select(nodes[index]), data)
-        },
-      )
-    })
+      const forest = this.makeForest(selection, treeRoots);
+      forest.each((data: any, index: number, nodes: any) => {
+        this.updateNextLevel(select(nodes[index]), data);
+      });
+    });
   }
 
   // updateTree(selection: any) {
@@ -290,19 +263,16 @@ export class TreeDataSections extends BaseMixin<NestableDomainObjectSchema> {
   // }
   // // Recursively append child nodes
 
-  renderNode(
-    selection: any,
-    node: TreeNode<NestableDomainObjectSchema>,
-  ) {
+  renderNode(selection: any, node: TreeNode<NestableDomainObjectSchema>) {
     selection
       .append("p")
       .classed("term", true)
-      .text((d, i) => this._columns[0].format(d))
+      .text((d, i) => this._columns[0].format(d));
 
     selection
       .append("p")
       .classed("definition", true)
-      .text((d, i) => this._columns[1].format(d))
+      .text((d, i) => this._columns[1].format(d));
   }
 }
 

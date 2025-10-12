@@ -1,11 +1,14 @@
 ---
-const { careerLevel, disciplinaryProfession, gender } = Astro.props
+const { careerLevel, disciplinaryProfession, gender } = Astro.props;
 
-const definedClasses = [careerLevel, disciplinaryProfession, gender].filter((d) => d)
+const definedClasses = [careerLevel, disciplinaryProfession, gender].filter(
+  (d) => d,
+);
 ---
 
-<span class:list={["member-icon", ...definedClasses]} title={definedClasses.join(",")}
-  >{definedClasses.join(",")}</span
+<span
+  class:list={["member-icon", ...definedClasses]}
+  title={definedClasses.join(",")}>{definedClasses.join(",")}</span
 >
 
 <style>

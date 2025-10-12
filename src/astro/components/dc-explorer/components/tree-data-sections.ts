@@ -1,26 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { TreeDataSections } from "@components/dc-explorer/dc/dc-tree-data-sections"
-import { charts, treeDataTableTileId } from "."
+import { TreeDataSections } from "@components/dc-explorer/dc/dc-tree-data-sections";
+import { charts, treeDataTableTileId } from ".";
 
 export const treeDataSectionsTileId = (
   collection: string,
   dimension: string,
 ) => {
-  return (
-    "dc-explorer__tile--" + collection + "-" + dimension
-  )
-}
-export const treeDataSectionsId = (
-  collection: string,
-  dimension: string,
-) => {
-  return (
-    "dc-explorer__tree-sections--" +
-    collection +
-    "-" +
-    dimension
-  )
-}
+  return "dc-explorer__tile--" + collection + "-" + dimension;
+};
+export const treeDataSectionsId = (collection: string, dimension: string) => {
+  return "dc-explorer__tree-sections--" + collection + "-" + dimension;
+};
 
 export function createTreeDataSectionsChart(
   collection: string,
@@ -29,25 +19,19 @@ export function createTreeDataSectionsChart(
   cfDimension: any,
 ) {
   const tileElementIdSelector =
-    "#" + treeDataTableTileId(collection, dimension)
+    "#" + treeDataTableTileId(collection, dimension);
   const chartElementIdSelector =
-    "#" + treeDataSectionsId(collection, dimension)
+    "#" + treeDataSectionsId(collection, dimension);
 
-  const chart = new TreeDataSections(
-    tileElementIdSelector,
-    cfDimension,
-  )
+  const chart = new TreeDataSections(tileElementIdSelector, cfDimension);
 
-  chart.columns(tableHeaderConfig)
+  chart.columns(tableHeaderConfig);
 
-  charts.set(
-    treeDataSectionsId(collection, dimension),
-    chart,
-  )
+  charts.set(treeDataSectionsId(collection, dimension), chart);
 
-  chart.render()
+  chart.render();
 
-  return chart
+  return chart;
 
   // console.log({ treeDataTableChart, cfDimension })
 

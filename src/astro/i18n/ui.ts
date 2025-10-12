@@ -1,9 +1,9 @@
 export const languages = {
   en: "English",
   de: "Deutsch",
-}
+};
 
-export const defaultLang = "en"
+export const defaultLang = "en";
 
 export const ui = {
   en: {
@@ -42,7 +42,8 @@ export const ui = {
     "dc-explorer.tiles.title.people_count": "Staff",
     "dc-explorer.tiles.title.primaryBeamParticles": "Primary Beam Particles",
     "dc-explorer.tiles.title.programmes-of-study": "Programmes od Study",
-    "dc-explorer.tiles.title.secondaryBeamParticles": "Secondary Beam Particles",
+    "dc-explorer.tiles.title.secondaryBeamParticles":
+      "Secondary Beam Particles",
     "dc-explorer.tiles.title.semesters": "Semesters",
     "dc-explorer.tiles.title.study-level": "Study level",
     "dc-explorer.tiles.title.study-levels": "Study levels",
@@ -76,7 +77,8 @@ export const ui = {
     "dc-explorer.tiles.title.with_userFacilities": "with user facilities",
 
     "taxonomy.type.accelerating-technique": "Accelerating Technique",
-    "taxonomy.type.accelerator-based-facility-type": "accelerator-based Facility Type",
+    "taxonomy.type.accelerator-based-facility-type":
+      "accelerator-based Facility Type",
     "taxonomy.type.accelerator-based-facility": "Accelerator-based Facility",
     "taxonomy.type.accelerator-subsystem": "Accelerator Subsystem",
     "taxonomy.type.accelerator-type": "Affiliation",
@@ -130,7 +132,8 @@ export const ui = {
     "dc-explorer.tiles.title.people_count": "Mitarbeitende",
     "dc-explorer.tiles.title.primaryBeamParticles": "Primärstrahl-Teilchen",
     "dc-explorer.tiles.title.programmes-of-study": "Studiengänge",
-    "dc-explorer.tiles.title.secondaryBeamParticles": "Seknundärstrahl-Teilchen",
+    "dc-explorer.tiles.title.secondaryBeamParticles":
+      "Seknundärstrahl-Teilchen",
     "dc-explorer.tiles.title.semesters": "Semester",
     "dc-explorer.tiles.title.study-level": "Abschluss",
     "dc-explorer.tiles.title.study-levels": "Abschlüsse",
@@ -163,7 +166,8 @@ export const ui = {
     "organizationCategory.short.mpg": "Max Planck",
     "organizationCategory.short.university": "Uni",
     "taxonomy.type.accelerating-technique": "Beschleunigigungstechnologie",
-    "taxonomy.type.accelerator-based-facility-type": "beschleunigerbasierter Anlagentyp",
+    "taxonomy.type.accelerator-based-facility-type":
+      "beschleunigerbasierter Anlagentyp",
     "taxonomy.type.accelerator-based-facility": "beschleunigerbasierter Anlage",
     "taxonomy.type.accelerator-subsystem": "Beschleunigerkomponente",
     "taxonomy.type.accelerator-type": "Beschleunigertyp",
@@ -180,4 +184,4 @@ export const ui = {
     masterStudent: "master student",
     bachelorStudent: "bachelor student",
   },
-} as const
+} as const;

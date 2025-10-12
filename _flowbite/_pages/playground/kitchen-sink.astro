@@ -1,24 +1,26 @@
 ---
 /* http://localhost:2121/playground/kitchen-sink/ */
 
-import LayoutSidebar from "@astro/LayoutSidebar.astro"
-import CrudProducts from "../../../src/modules/CrudProducts.astro"
-import FormSignIn from "../../../src/modules/FormSignIn.astro"
-import FormSignUp from "../../../src/modules/FormSignUp.astro"
-import FormForgotPassword from "../../../src/modules/FormForgotPassword.astro"
-import FormResetPassword from "../../../src/modules/FormResetPassword.astro"
-import FormProfileLock from "../../../src/modules/FormProfileLock.astro"
+import LayoutSidebar from "@astro/LayoutSidebar.astro";
+import CrudProducts from "../../../src/modules/CrudProducts.astro";
+import FormSignIn from "../../../src/modules/FormSignIn.astro";
+import FormSignUp from "../../../src/modules/FormSignUp.astro";
+import FormForgotPassword from "../../../src/modules/FormForgotPassword.astro";
+import FormResetPassword from "../../../src/modules/FormResetPassword.astro";
+import FormProfileLock from "../../../src/modules/FormProfileLock.astro";
 // import CrudUsers from '../../modules/CrudUsers.astro';
-import ErrorMaintenance from "../../../src/modules/ErrorMaintenance.astro"
-import ErrorNotFound from "../../../src/modules/ErrorNotFound.astro"
-import ErrorServer from "../../../src/modules/ErrorServer.astro"
-import PricingPlan from "../../../src/modules/PricingPlan.astro"
+import ErrorMaintenance from "../../../src/modules/ErrorMaintenance.astro";
+import ErrorNotFound from "../../../src/modules/ErrorNotFound.astro";
+import ErrorServer from "../../../src/modules/ErrorServer.astro";
+import PricingPlan from "../../../src/modules/PricingPlan.astro";
 
-import { actions } from "./_actions.js"
+import { actions } from "./_actions.js";
 ---
 
 <LayoutSidebar class="mb-20 bg-slate-800 px-8 py-16 text-slate-100">
-  <h1 class="ml-8 text-3xl font-bold lg:text-4xl xl:text-7xl">🕹&nbsp;Playground</h1>
+  <h1 class="ml-8 text-3xl font-bold lg:text-4xl xl:text-7xl">
+    🕹&nbsp;Playground
+  </h1>
 
   <dummy-spacer class="mb-36 block"></dummy-spacer>
 
@@ -106,23 +108,24 @@ import { actions } from "./_actions.js"
 </LayoutSidebar>
 
 <script>
-  import type { CrudEntities } from "../../../src/modules/CrudEntities.client.js"
-  import type { PlaygroundAction } from "../../types.js"
+  import type { CrudEntities } from "../../../src/modules/CrudEntities.client.js";
+  import type { PlaygroundAction } from "../../types.js";
 
   const playgroundActions: Record<PlaygroundAction, (...args: any) => void> = {
     refetchCrudData: (crud: CrudEntities) => crud.update(),
     hardReloadPage: () => location.reload(),
-  }
+  };
 
   document.querySelectorAll("[data-action]").forEach((b) =>
     b.addEventListener("click", (e) =>
       document.querySelectorAll("entities-crud").forEach((crud) => {
-        const name = (e.target as HTMLElement).dataset.action as PlaygroundAction
+        const name = (e.target as HTMLElement).dataset
+          .action as PlaygroundAction;
 
-        console.log("Action!", name, e.target)
+        console.log("Action!", name, e.target);
 
-        playgroundActions[name](crud)
+        playgroundActions[name](crud);
       }),
     ),
-  )
+  );
 </script>

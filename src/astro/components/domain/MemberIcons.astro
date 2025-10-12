@@ -3,16 +3,16 @@ import {
   disciplinaryProfessions,
   genders,
   careerLevels,
-} from "@/astro/domain/organizations/organizations.config"
+} from "@/astro/domain/organizations/organizations.config";
 
-import fastCartesian from "fast-cartesian"
-import MemberIcon from "./MemberIcon.astro"
+import fastCartesian from "fast-cartesian";
+import MemberIcon from "./MemberIcon.astro";
 
 const product = fastCartesian([
   [undefined, ...genders],
   [undefined, ...disciplinaryProfessions],
   [undefined, ...careerLevels],
-])
+]);
 ---
 
 {

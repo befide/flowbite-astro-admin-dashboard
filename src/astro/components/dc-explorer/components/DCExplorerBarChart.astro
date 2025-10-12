@@ -1,5 +1,8 @@
 ---
-import { barChartId, barChartTileId } from "@/astro/components/dc-explorer/components"
+import {
+  barChartId,
+  barChartTileId,
+} from "@/astro/components/dc-explorer/components";
 
 const {
   collection,
@@ -8,12 +11,12 @@ const {
   accessorPath,
   binWidth = 1,
   dimensionIsArray = false,
-} = Astro.props
+} = Astro.props;
 
-const tileId = barChartTileId(collection, dimension)
-const chartId = barChartId(collection, dimension)
+const tileId = barChartTileId(collection, dimension);
+const chartId = barChartId(collection, dimension);
 
-const tileType = "bar-chart"
+const tileType = "bar-chart";
 ---
 
 <section

@@ -1,25 +1,24 @@
 ---
-import LayoutSidebar from "@astro/LayoutSidebar.astro"
-import type { GetStaticPaths } from "astro"
+import LayoutSidebar from "@astro/LayoutSidebar.astro";
+import type { GetStaticPaths } from "astro";
 import {
   allCommunityTopLevelOrganizations,
   Organization,
-} from "@/lib/domain/organizations"
-import FormalOrganization from "@/astro/components/domain/FormalOrganization.astro"
+} from "@/lib/domain/organizations";
+import FormalOrganization from "@/astro/components/domain/FormalOrganization.astro";
 
 export const getStaticPaths = (async () => {
-  const locales = ["en", "de"]
+  const locales = ["en", "de"];
 
   return locales.map((locale) => ({
     params: { locale },
     props: { locale },
-  }))
-}) satisfies GetStaticPaths
+  }));
+}) satisfies GetStaticPaths;
 
-const organizations =
-  await allCommunityTopLevelOrganizations()
+const organizations = await allCommunityTopLevelOrganizations();
 
-const { locale } = Astro.props
+const { locale } = Astro.props;
 ---
 
 <LayoutSidebar>

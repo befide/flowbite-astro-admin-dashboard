@@ -1,10 +1,13 @@
-import fs from "node:fs"
-import path from "node:path"
+import fs from "node:fs";
+import path from "node:path";
 
-import { defineCollection, z } from "astro:content"
-import { DomainObjectZodSchema, type ThesisSchema } from "@lib/content.common.ts"
+import { defineCollection, z } from "astro:content";
+import {
+  DomainObjectZodSchema,
+  type ThesisSchema,
+} from "@lib/content.common.ts";
 
-const INPUT_FILEPATH = path.join("src", "data", "zotero", "kfb_theses.json")
+const INPUT_FILEPATH = path.join("src", "data", "zotero", "kfb_theses.json");
 
 // const UNIVERSITY_IDS = [
 //   "hu-berlin",
@@ -60,11 +63,11 @@ export const ThesisZodSchema = DomainObjectZodSchema.extend({
     facility__facilitiesId: z.array(z.string()),
     accelerationProcess__taxonomyId: z.array(z.string().optional()),
   }),
-})
+});
 
 export const defineThesesCollection = defineCollection({
   loader: async () => {
-    const dataRaw = JSON.parse(fs.readFileSync(INPUT_FILEPATH).toString())
+    const dataRaw = JSON.parse(fs.readFileSync(INPUT_FILEPATH).toString());
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return dataRaw.flat().map((item: any) => {
@@ -96,77 +99,82 @@ export const defineThesesCollection = defineCollection({
           facility__facilitiesId: [],
           accelerationProcess__taxonomyId: [],
         },
-      }
+      };
 
       if (item.data.url?.startsWith("https://doi.org/")) {
-        dataItem.doi = item.data.url.replace("https://doi.org/", "")
+        dataItem.doi = item.data.url.replace("https://doi.org/", "");
       }
       if (item.data.url?.startsWith("https://nbn-resolving.de/")) {
-        dataItem.urn = item.data.url.replace("https://nbn-resolving.de/", "")
+        dataItem.urn = item.data.url.replace("https://nbn-resolving.de/", "");
       }
 
       if (item.data.extra)
         item.data.extra.split("\n").forEach((extraLine: string) => {
-          const splittedExtraLine = extraLine.split(/: /)
+          const splittedExtraLine = extraLine.split(/: /);
           if (
             splittedExtraLine.length == 2 &&
             splittedExtraLine[0] &&
             splittedExtraLine[0].toLowerCase() === "doi"
           ) {
-            dataItem.doi = splittedExtraLine[1]
+            dataItem.doi = splittedExtraLine[1];
           } else if (
             splittedExtraLine.length == 2 &&
             splittedExtraLine[0] &&
             splittedExtraLine[0].toLowerCase() === "isbn"
           ) {
-            dataItem.isbn = splittedExtraLine[1]
+            dataItem.isbn = splittedExtraLine[1];
           } else if (
             splittedExtraLine.length == 2 &&
             splittedExtraLine[0] &&
             splittedExtraLine[0].toLowerCase() === "citation key"
           ) {
-            dataItem.citationKey = splittedExtraLine[1]
+            dataItem.citationKey = splittedExtraLine[1];
           } else if (
             splittedExtraLine.length == 2 &&
             splittedExtraLine[0] &&
             splittedExtraLine[0].toLowerCase() === "fulltext-url" &&
             splittedExtraLine[1] !== "none"
           ) {
-            dataItem.fulltextLink = splittedExtraLine[1]
-            dataItem.isOpenAccess = true
+            dataItem.fulltextLink = splittedExtraLine[1];
+            dataItem.isOpenAccess = true;
           }
-        })
+        });
 
       dataItem.tags.forEach(async (tag = "") => {
         if (tag?.startsWith("#degree/title/:")) {
-          dataItem.degree.title = tag.replace("#degree/title/:", "")
+          dataItem.degree.title = tag.replace("#degree/title/:", "");
         }
         if (tag?.startsWith("#degree/granted-by/:")) {
           dataItem.degree.grantedBy__organizationsId = tag.replace(
             "#degree/granted-by/:",
             "community/",
-          )
+          );
         }
 
         if (tag?.startsWith("#has-affiliation/:")) {
-          const organizationId = tag.replace("#has-affiliation/:", "community/")
-          dataItem.hasAffiliation__organizationsId.push(organizationId)
+          const organizationId = tag.replace(
+            "#has-affiliation/:",
+            "community/",
+          );
+          dataItem.hasAffiliation__organizationsId.push(organizationId);
         }
         if (tag?.startsWith("#author/gender/:")) {
-          dataItem.author.gender = tag.replace("#author/gender/:", "")
+          dataItem.author.gender = tag.replace("#author/gender/:", "");
         }
         if (tag?.startsWith("#is-about/facility/:")) {
-          dataItem.isAbout.facility__facilitiesId.push(tag.replace("#is-about/facility/:", ""))
+          dataItem.isAbout.facility__facilitiesId.push(
+            tag.replace("#is-about/facility/:", ""),
+          );
         }
         if (tag?.startsWith("#is-about/acceleration-process/:")) {
           dataItem.isAbout.accelerationProcess__taxonomyId.push(
             tag.replace("#is-about/acceleration-process/:", ""),
-          )
+          );
         }
-      })
+      });
 
-      return dataItem
-    })
+      return dataItem;
+    });
   },
   schema: ThesisZodSchema,
-})
+});
