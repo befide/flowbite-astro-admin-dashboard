@@ -29,164 +29,155 @@
   }
 </style>
 <script>
-  import * as d3 from "d3";
-  import { debug } from "node_modules/astro/dist/core/logger/core";
+  import * as d3 from "d3"
+  import { debug } from "node_modules/astro/dist/core/logger/core"
   async function getData() {
-    const url = "/en/api/graph.json";
+    const url = "/en/api/graph.json"
     try {
-      const response = await fetch(url);
+      const response = await fetch(url)
       if (!response.ok) {
-        throw new Error(`Response status: ${response.status}`);
+        throw new Error(`Response status: ${response.status}`)
       }
 
-      const result = await response.json();
-      return result;
-    } catch (error: Error) {
-      console.error(error.message);
+      const result = await response.json()
+      return result
+    } catch (error: any) {
+      console.error(error.message)
     }
   }
 
-  const data = await getData();
+  const data = await getData()
 
-  const topLevelCount = data.nodes.filter(
-    (d) => d.subtype === "top-level",
-  ).length;
-  console.log({ topLevelCount });
-  const aspectRatio = 1;
-  const zoom = 1000;
-  const width = zoom * aspectRatio;
-  const height = zoom;
+  const topLevelCount = data.nodes.filter((d) => d.subtype === "top-level").length
+
+  const aspectRatio = 1
+  const zoom = 1000
+  const width = zoom * aspectRatio
+  const height = zoom
   const color = (d) => {
-    if (d.id === "community/") return "white";
+    if (d.id === "community/") return "white"
     if (d.type === "org") {
-      const hue = d.isUniversity ? 0 : 203;
-      if (d.subtype === "top-level")
-        return d3.color("hsl(" + hue + ", 67.16%, 50.41%)");
-      if (d.subtype === "intermediate-partial")
-        return d3.color("hsl(203.11, 67.16%, 40.41%)");
-      if (d.subtype === "intermediate-full")
-        return d3.color("hsl(203.11, 67.16%, 40.41%)");
-      if (d.subtype === "group") return d3.color("hsl(203.11, 67.16%, 30.41%)");
+      const hue = d.isUniversity ? 0 : 203
+      if (d.subtype === "top-level") return d3.color("hsl(" + hue + ", 67.16%, 50.41%)")
+      if (d.subtype === "intermediate-partial") return d3.color("hsl(203.11, 67.16%, 40.41%)")
+      if (d.subtype === "intermediate-full") return d3.color("hsl(203.11, 67.16%, 40.41%)")
+      if (d.subtype === "group") return d3.color("hsl(203.11, 67.16%, 30.41%)")
     }
     if (d.type === "person") {
-      return d3.color("hsla(240, 50%, 20%, 1)");
+      return d3.color("hsla(240, 50%, 20%, 1)")
     }
-    return "black";
-  };
+    return "black"
+  }
 
   const linkStrength = (d) => {
     if (d.subtype === "group-member") {
-      return 0.1;
+      return 0.1
     }
     if (d.subtype === "has-parent") {
-      return 0;
+      return 0
     }
-    return 0.1;
-  };
+    return 0.1
+  }
 
   const size = (d) => {
     if (d.type === "org") {
       if (d.subtype === "top-level") {
-        return 20;
+        return 20
       }
       if (d.subtype === "intermediate-partial") {
-        return 15;
+        return 15
       }
       if (d.subtype === "intermediate-full") {
-        return 15;
+        return 15
       }
-      if (d.subtype === "group") return 10;
+      if (d.subtype === "group") return 10
     }
     if (d.type === "person") {
-      if (d.subtype.indexOf("professor") > -1) return 10;
-      if (d.subtype.indexOf("seniorResearcher") > -1) return 9;
-      if (d.subtype.indexOf("postDoc") > -1) return 8;
-      if (d.subtype.indexOf("phdStudent") > -1) return 7;
-      if (d.subtype.indexOf("masterStudent") > -1) return 6;
-      if (d.subtype.indexOf("bachelorStudent") > -1) return 5;
-      return 100;
+      if (d.subtype.indexOf("professor") > -1) return 10
+      if (d.subtype.indexOf("seniorResearcher") > -1) return 9
+      if (d.subtype.indexOf("postDoc") > -1) return 8
+      if (d.subtype.indexOf("phdStudent") > -1) return 7
+      if (d.subtype.indexOf("masterStudent") > -1) return 6
+      if (d.subtype.indexOf("bachelorStudent") > -1) return 5
+      return 100
     }
-  };
+  }
 
   const cornerRadius = (d) => {
     if (d.type === "org") {
-      return 2;
+      return 2
     }
     if (d.type === "person") {
-      return 5;
+      return 5
     }
-    return 0;
-  };
+    return 0
+  }
 
   const sectorToX = (sector: number, radius: number) => {
-    return (
-      width / 2 + radius * Math.sin(((2 * Math.PI) / topLevelCount) * sector)
-    );
-  };
+    return width / 2 + radius * Math.sin(((2 * Math.PI) / topLevelCount) * sector)
+  }
   const sectorToY = (sector: number, radius: number) => {
-    return (
-      width / 2 + radius * Math.cos(((2 * Math.PI) / topLevelCount) * sector)
-    );
-  };
+    return width / 2 + radius * Math.cos(((2 * Math.PI) / topLevelCount) * sector)
+  }
 
   const radius = (d) => {
     if (d.type === "org") {
-      return d.id.split("/").length * 20 + 200;
+      return d.id.split("/").length * 20 + 200
     }
     if (d.type === "person") {
-      if (d.subtype.startsWith("professor")) return 475;
-      if (d.subtype.startsWith("seniorResearcher")) return 500;
-      if (d.subtype.startsWith("postDoc")) return 525;
-      if (d.subtype.startsWith("phdStudent")) return 560;
-      if (d.subtype.startsWith("masterStudent")) return 580;
-      if (d.subtype.startsWith("bachelorStudent")) return 600;
-      return 10;
+      if (d.subtype.startsWith("professor")) return 475
+      if (d.subtype.startsWith("seniorResearcher")) return 500
+      if (d.subtype.startsWith("postDoc")) return 525
+      if (d.subtype.startsWith("phdStudent")) return 560
+      if (d.subtype.startsWith("masterStudent")) return 580
+      if (d.subtype.startsWith("bachelorStudent")) return 600
+      return 10
     }
-  };
+  }
 
   // Copy the data to protect against mutation by d3.forceSimulation.
-  const links = data.links; //.map((d) => Object.create(d))
-  const nodes = data.nodes; //.map((d) => Object.create(d))
+  const links = data.links //.map((d) => Object.create(d))
+  const nodes = data.nodes //.map((d) => Object.create(d))
 
-  const nodesIndex = new Map(nodes.map((node) => [node.id, node]));
+  const nodesIndex = new Map(nodes.map((node) => [node.id, node]))
 
   nodes.forEach((d, i) => {
     if (d.id === "community/") {
-      d.fx = width / 2;
-      d.fy = height / 2;
+      d.fx = width / 2
+      d.fy = height / 2
     }
     if (d.subtype === "top-level") {
-      d.fx = sectorToX(d.sector, 150);
-      d.fy = sectorToY(d.sector, 150);
+      d.fx = sectorToX(d.sector, 150)
+      d.fy = sectorToY(d.sector, 150)
     }
-  });
+  })
 
   nodes
     .filter((d) => d.type === "org" && d.subtype !== "top-level")
     .forEach((n: any) => {
-      const topLevelNode = nodesIndex.get(n.topLevel__id);
+      const topLevelNode = nodesIndex.get(n.topLevel__id)
 
-      const nodeDepth = n.id.split("/").length;
+      const nodeDepth = n.id.split("/").length
 
       if (topLevelNode) {
-        n.x = sectorToX(topLevelNode.sector, 150 + nodeDepth * 50);
-        n.y = sectorToY(topLevelNode.sector, 150 + nodeDepth * 50);
+        n.x = sectorToX(topLevelNode.sector, 150 + nodeDepth * 50)
+        n.y = sectorToY(topLevelNode.sector, 150 + nodeDepth * 50)
       }
-    });
+    })
   nodes
     .filter((d) => d.type === "person")
     .forEach((n: any) => {
-      const groupNode = nodesIndex.get(n.group);
+      const groupNode = nodesIndex.get(n.group)
 
       if (groupNode) {
-        const topLevelNode = nodesIndex.get(groupNode.topLevel__id);
+        const topLevelNode = nodesIndex.get(groupNode.topLevel__id)
 
         if (topLevelNode) {
-          n.x = sectorToX(topLevelNode.sector, 400);
-          n.y = sectorToY(topLevelNode.sector, 400);
+          n.x = sectorToX(topLevelNode.sector, 400)
+          n.y = sectorToY(topLevelNode.sector, 400)
         }
       }
-    });
+    })
 
   const simulation = d3
     .forceSimulation(nodes)
@@ -211,7 +202,7 @@
     )
     // .force("center", d3.forceCenter(width / 2, height / 2))
     .tick(100)
-    .on("tick", ticked);
+    .on("tick", ticked)
 
   const svg = d3
     .select(".km-container")
@@ -219,7 +210,7 @@
     .attr("width", width)
     .attr("height", height)
     .attr("viewBox", [0, 0, width, height])
-    .attr("style", "max-width: 100%; height: auto;");
+    .attr("style", "max-width: 100%; height: auto;")
 
   const link = svg
     .append("g")
@@ -228,7 +219,7 @@
     .selectAll("line")
     .data(links)
     .join("line")
-    .attr("stroke-width", (d) => 2);
+    .attr("stroke-width", (d) => 2)
 
   const node = svg
     .append("g")
@@ -251,12 +242,12 @@
     .attr("fill", (d) => color(d))
     .call(drag(simulation))
     .on("mouseover", function (event, node) {
-      d3.select(".info-id").text(node.id);
-      d3.select(".info-type").text(node.type);
-      d3.select(".info-subtype").text(node.subtype);
+      d3.select(".info-id").text(node.id)
+      d3.select(".info-type").text(node.type)
+      d3.select(".info-subtype").text(node.subtype)
       //Makes the new div appear on hover:
       // div.transition().duration(50).style("opacity", 1)
-    });
+    })
 
   // node.filter(d => d.type === "person")
   //     .join("circle")
@@ -264,43 +255,37 @@
   //     .attr("r", size)
   //     .attr("fill", (d) => color(d))
 
-  node.append("title").text((d) => d.id + " / " + d.type + " / " + d.subtype);
-  link.append("title").text((d) => d.id + "-" + d.subtype);
+  node.append("title").text((d) => d.id + " / " + d.type + " / " + d.subtype)
+  link.append("title").text((d) => d.id + "-" + d.subtype)
 
   function ticked() {
     link
       .attr("x1", (d) => d.source.x)
       .attr("y1", (d) => d.source.y)
       .attr("x2", (d) => d.target.x)
-      .attr("y2", (d) => d.target.y);
+      .attr("y2", (d) => d.target.y)
 
-    node
-      .attr("x", (d) => d.x - size(d) / 2)
-      .attr("y", (d) => d.y - size(d) / 2);
+    node.attr("x", (d) => d.x - size(d) / 2).attr("y", (d) => d.y - size(d) / 2)
   }
 
   function drag(simulation: any) {
     function dragstarted(event: any) {
-      if (!event.active) simulation.alphaTarget(0.3).restart();
-      event.subject.fx = event.subject.x;
-      event.subject.fy = event.subject.y;
+      if (!event.active) simulation.alphaTarget(0.3).restart()
+      event.subject.fx = event.subject.x
+      event.subject.fy = event.subject.y
     }
 
     function dragged(event) {
-      event.subject.fx = event.x;
-      event.subject.fy = event.y;
+      event.subject.fx = event.x
+      event.subject.fy = event.y
     }
 
     function dragended(event) {
-      if (!event.active) simulation.alphaTarget(0);
-      event.subject.fx = null;
-      event.subject.fy = null;
+      if (!event.active) simulation.alphaTarget(0)
+      event.subject.fx = null
+      event.subject.fy = null
     }
 
-    return d3
-      .drag()
-      .on("start", dragstarted)
-      .on("drag", dragged)
-      .on("end", dragended);
+    return d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended)
   }
 </script>

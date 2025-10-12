@@ -1,36 +1,30 @@
 ---
-import { Organization } from "@domain/organizations/organization";
+import { Organization } from "@domain/organizations/organization"
 
-import ProfileTheses from "./ProfileTheses.astro";
-import ProfileTeachingEvents from "./ProfileTeachingEvents.astro";
+import ProfileTheses from "./ProfileTheses.astro"
+import ProfileTeachingEvents from "./ProfileTeachingEvents.astro"
 
-import { getLangFromUrl, useTranslations } from "@astro/i18n/utils";
-import { getLocalizedValue } from "../../../lib/content";
-import ProfileOrganizationTreeTable from "./ProfileOrganizationTreeTable.astro";
-import ProfileFacilityList from "./ProfileFacilityList.astro";
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils"
+import { getLocalizedValue } from "../../../lib/content"
+import ProfileOrganizationTreeTable from "./ProfileOrganizationTreeTable.astro"
+import ProfileFacilityList from "./ProfileFacilityList.astro"
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 type Props = {
-  organization: Organization;
-  locale: string;
-};
+  organization: Organization
+  locale: string
+}
 
-const { locale, organization } = Astro.props;
+const { locale, organization } = Astro.props
 
-const theses = await organization.getTheses();
+const theses = await organization.getTheses()
 
-const teachingOffers = await organization.getTeachingEventsDefinitions();
+const teachingOffers = await organization.getTeachingEventsDefinitions()
 // const facilities = await organization.getFacilityDefinitions()
-const userFacilities = await organization.getFacilityDefinitions(
-  undefined,
-  true,
-);
-const testFacilities = await organization.getFacilityDefinitions(
-  undefined,
-  false,
-);
+const userFacilities = await organization.getFacilityDefinitions(undefined, true)
+const testFacilities = await organization.getFacilityDefinitions(undefined, false)
 ---
 
 <section class="organization format">
@@ -56,16 +50,12 @@ const testFacilities = await organization.getFacilityDefinitions(
         <tr>
           <th>Official name of the organization</th>
           <th>en</th>
-          <td
-            >{getLocalizedValue(organization, "_data.label.fullName", "en")}</td
-          >
+          <td>{getLocalizedValue(organization, "_data.label.fullName", "en")}</td>
         </tr>
         <tr>
           <th></th>
           <th>de</th>
-          <td
-            >{getLocalizedValue(organization, "_data.label.fullName", "de")}</td
-          >
+          <td>{getLocalizedValue(organization, "_data.label.fullName", "de")}</td>
         </tr>
         <tr>
           <th>One-line summary</th>
@@ -100,11 +90,7 @@ const testFacilities = await organization.getFacilityDefinitions(
   <section class="format">
     <h3>Teaching</h3>
 
-    <ProfileTeachingEvents
-      teachingOffers={teachingOffers}
-      {locale}
-      organization={organization}
-    />
+    <ProfileTeachingEvents teachingOffers={teachingOffers} {locale} organization={organization} />
     <ProfileTheses theses={theses} />
   </section>
 </section>

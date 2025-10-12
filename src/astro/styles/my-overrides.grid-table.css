@@ -10,9 +10,11 @@
     margin: 0 !important;
     padding: 0 !important;
 
-    grid-auto-rows: calc(2rem - 1px);
+    grid-auto-rows: calc(1.5rem - 1px);
     grid-template-columns: repeat(5, minmax(10px, 1fr));
     row-gap: 1px;
+    justify-content: stretch;
+    align-items: center;
 
     background-color: var(--color-kfb-gray--light);
   }
@@ -21,7 +23,6 @@
   .grid-table tbody,
   .grid-table tr {
     display: contents;
-
     position: relative;
   }
 
@@ -29,13 +30,11 @@
   .grid-table td {
     font-size: var(--text-base);
     background-color: white;
-
-    padding: 0.5rem 0.25rem;
+    height: 100%;
+    padding: 0 0.5rem;
 
     position: relative;
     overflow: hidden;
-
-    vertical-align: middle;
 
     justify-content: center;
     text-overflow: ellipsis;

@@ -1,41 +1,35 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { type Axis, format, max, min, scaleLinear, select } from "d3";
-import { barChart, units } from "dc";
-import { baselineHeight, charts, getChartWidth, margins } from ".";
+import { type Axis, format, max, min, scaleLinear, select } from "d3"
+import { barChart, units } from "dc"
+import { baselineHeight, charts, getChartWidth, margins } from "."
 
 export const barChartTileId = (collection: string, dimension: string) => {
-  return "dc-explorer__tile--" + collection + "-" + dimension;
-};
+  return "dc-explorer__tile--" + collection + "-" + dimension
+}
 export const barChartId = (collection: string, dimension: string) => {
-  return "dc-explorer__bar-chart--" + collection + "-" + dimension;
-};
+  return "dc-explorer__bar-chart--" + collection + "-" + dimension
+}
 
 export function createBarChart(
   collection: string,
   dimension: string,
   cfDimension: any,
   cfGroup: any,
-  binWidth: number,
+  binWidth = 1,
 ) {
-  const tileElementIdSelector = "#" + barChartTileId(collection, dimension);
-  const chartElementIdSelector = "#" + barChartId(collection, dimension);
+  const tileElementIdSelector = "#" + barChartTileId(collection, dimension)
+  const chartElementIdSelector = "#" + barChartId(collection, dimension)
 
   const domain = cfGroup
     .top(Infinity)
     .map((y: { key: number }) => +y.key)
     // .filter((y) => y !== "")
-    .sort();
+    .sort() as Array<number>
 
-  console.log(cfGroup.all());
-  const filterWidth = getChartWidth(chartElementIdSelector);
-  const tileElement = select(tileElementIdSelector);
+  const filterWidth = getChartWidth(chartElementIdSelector)
+  const tileElement = select(tileElementIdSelector)
   const chart = barChart(chartElementIdSelector)
-    .x(
-      scaleLinear().domain([
-        min(domain) - binWidth / 2,
-        max(domain) + binWidth,
-      ]),
-    )
+    .x(scaleLinear().domain([(min(domain) || 0) - binWidth / 2, (max(domain) || 0) + binWidth]))
     .width(filterWidth)
     .height(4 * baselineHeight)
     .elasticY(true)
@@ -53,15 +47,15 @@ export function createBarChart(
     .renderHorizontalGridLines(true)
 
     .on("renderlet", () => {
-      tileElement.classed("filtered", chart.hasFilter());
-    });
+      tileElement.classed("filtered", chart.hasFilter())
+    })
 
-  const xAxis = chart.xAxis() as Axis<number>;
+  const xAxis = chart.xAxis() as Axis<number>
 
-  xAxis.tickValues(cfGroup.all().map((d) => d.key));
+  xAxis.ticks(10) //.tickValues(cfGroup.all().map((d: any) => d.key))
 
-  chart.yAxis().ticks(2);
+  chart.yAxis().ticks(2)
 
-  charts.set(barChartId(collection, dimension), chart);
-  return chart;
+  charts.set(barChartId(collection, dimension), chart)
+  return chart
 }

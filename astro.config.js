@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import rehypeRewrite from "rehype-rewrite";
 import remarkSectionize from "remark-sectionize";
-
+import { purgecss } from "@zokki/astro-purgecss";
 import pdf from "astro-pdf";
 import spaceCommander from "./src/lib/space-commander";
 
@@ -48,6 +48,7 @@ export default defineConfig({
     //     }
     //   },
     // }),
+    purgecss({ logAllFiles: true }),
     AstroPWA({
       /* your pwa options */
     }),

@@ -29,6 +29,7 @@
     "@nanostores/persistent": "1.1.0",
     "@tailwindcss/vite": "4.1.14",
     "@vite-pwa/astro": "1.1.0",
+    "@zokki/astro-purgecss": "1.0.4",
     "astro": "5.14.1",
     "astro-d2": "0.8.0",
     "astro-pdf": "1.7.2",

@@ -86,8 +86,9 @@
     visibility: visible;
     content: " ";
     /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-venus-and-mars-icon lucide-venus-and-mars'%3E%3Cpath d='M10 20h4'/%3E%3Cpath d='M12 16v6'/%3E%3Cpath d='M17 2h4v4'/%3E%3Cpath d='m21 2-5.46 5.46'/%3E%3Ccircle cx='12' cy='11' r='5'/%3E%3C/svg%3E"); */
-    background-size: 0.5rem;
+    background-size: 0.75rem;
     background-repeat: no-repeat;
+    background-position: 50%;
   }
 
   [data-gender-icon="male"]::after {
@@ -98,7 +99,7 @@
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXZlbnVzLWljb24gbHVjaWRlLXZlbnVzIj48cGF0aCBkPSJNMTIgMTV2NyIvPjxwYXRoIGQ9Ik05IDE5aDYiLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjkiIHI9IjYiLz48L3N2Zz4=");
   }
 
-  .number {
+  .grid-table .number {
     font-variant-numeric: tabular-nums;
     text-align: right;
   }
@@ -112,16 +113,16 @@
 
   th.sortable {
     cursor: pointer;
-    display: flex;
+    /* display: flex; */
   }
 
   th.sortable .label {
   }
   th.sortable .sort-state {
-    display: inline-block;
+    display: none;
 
     flex: 1rem;
-    background-color: red;
+
     height: 1rem;
 
     margin-left: 0.25rem;

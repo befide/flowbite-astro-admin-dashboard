@@ -3,6 +3,7 @@ import { type CollectionEntry, getEntry } from "astro:content";
 import {
   getLocalizedValue,
   getReferenceLocalizedValue,
+  getTaxonomyReferencesTerm,
   getTaxonomyReferenceTerm,
 } from "../../content.ts";
 import { getValueTranslation } from "@lib/domain";
@@ -16,17 +17,10 @@ export class Course {
   }
 
   async getDto(locale: string): Promise<CourseDto> {
-    const studyLevels__term = (
-      (await Promise.all(
-        this._data.studyLevels__taxonomyId.map(
-          async (d) => await getEntry("taxonomyItems", d),
-        ),
-      )) as CollectionEntry<"taxonomyItems">[]
-    )
-      .filter((taxon: CollectionEntry<"taxonomyItems">) => !!taxon)
-      .map((taxon: CollectionEntry<"taxonomyItems">) =>
-        getLocalizedValue(taxon, "data.term", locale),
-      );
+    const studyLevels__term = await getTaxonomyReferencesTerm(
+      this._data.studyLevels__taxonomyId,
+      locale,
+    );
 
     return {
       id: this._data.id,
