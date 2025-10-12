@@ -11,7 +11,7 @@ import astroD2 from "astro-d2";
 import dsv from "@rollup/plugin-dsv";
 
 import mdx from "@astrojs/mdx";
-import AstroPWA from "@vite-pwa/astro";
+// import AstroPWA from "@vite-pwa/astro";
 
 const DEV_PORT = 4350;
 
@@ -49,9 +49,9 @@ export default defineConfig({
     //   },
     // }),
     purgecss({ logAllFiles: true }),
-    AstroPWA({
-      /* your pwa options */
-    }),
+    // AstroPWA({
+    //   /* your pwa options */
+    // }),
   ],
   // output: 'server',
 
