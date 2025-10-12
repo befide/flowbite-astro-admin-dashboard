@@ -15,8 +15,6 @@ export const GET: APIRoute = async ({ props }) => {
   type Props = InferGetStaticPropsType<typeof getStaticPaths>
   const { locale } = props as Props
 
-  console.log((await getCollection("taxonomyItems")).map((d) => d.id))
-
   const taxonomy = await taxonomyForAPI(locale)
 
   try {

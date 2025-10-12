@@ -34,7 +34,16 @@
 
     content: " ";
 
-    background-image: linear-gradient(90deg, #ffffff 25%, #666666 25%, #666666 50%, #ffffff 50%, #ffffff 75%, #666666 75%, #666666 100%);
+    background-image: linear-gradient(
+      90deg,
+      #ffffff 25%,
+      #666666 25%,
+      #666666 50%,
+      #ffffff 50%,
+      #ffffff 75%,
+      #666666 75%,
+      #666666 100%
+    );
     background-size: 4px 4px;
   }
 
@@ -103,18 +112,24 @@
 
   th.sortable {
     cursor: pointer;
+    display: flex;
+  }
+
+  th.sortable .label {
   }
   th.sortable .sort-state {
     display: inline-block;
 
-    height: 0.4rem;
-    width: 0.5rem;
+    flex: 1rem;
+    background-color: red;
+    height: 1rem;
 
     margin-left: 0.25rem;
 
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWFycm93LWRvd24tdXAtaWNvbiBsdWNpZGUtYXJyb3ctZG93bi11cCI+PHBhdGggZD0ibTMgMTYgNCA0IDQtNCIvPjxwYXRoIGQ9Ik03IDIwVjQiLz48cGF0aCBkPSJtMjEgOC00LTQtNCA0Ii8+PHBhdGggZD0iTTE3IDR2MTYiLz48L3N2Zz4=);
-    background-size: 0.4rem;
+    background-size: 0.5rem;
     background-repeat: no-repeat;
+    background-position: 0% 50%;
   }
 
   th.sortable[data-sort="ascending"] .sort-state {

@@ -4,11 +4,10 @@
 }
 
 .explorer__chart text {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
 
   font-variant-numeric: tabular-nums;
-  filter: drop-shadow(0px 0px 5px white)
-    drop-shadow(0px 0px 3px white);
+  filter: drop-shadow(0px 0px 5px white) drop-shadow(0px 0px 3px white);
 }
 
 .explorer__chart rect {
@@ -108,4 +107,8 @@
 .grid-line.horizontal {
   stroke: black;
   stroke-width: 1px;
+}
+
+.grid-table th {
+  font-size: var(--text-sm);
 }

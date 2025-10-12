@@ -14,51 +14,37 @@ interface Props {
 const { entries, ident = true } = Astro.props
 ---
 
-<table
-  class="schema-table not-format table"
-  data-ident={ident}
->
+<table class="schema-table not-format table" data-ident={ident}>
   <thead
     ><tr>
-      <th class="name">Property name</th><th
-        class="required">Required</th
-      >
+      <th class="name">Property name</th><th class="required">Required</th>
 
-      <th class="type-and-description"
-        >Type / Description</th
-      >
+      <th class="type-and-description">Type / Description</th>
     </tr></thead
   ><tbody>
     {
-      entries.map(
-        ({ name, required, description, type }) => (
-          <tr>
-            <td
-              class="name"
-              data-depth={ident && name.split(".").length}
-            >
-              <strong>
-                <code dir="auto">
-                  {ident ? name : name}
-                </code>
-              </strong>{" "}
-            </td>
-            <td class="required">
-              {required ? (
-                <span class="required">required</span>
-              ) : (
-                <span class="optional">optional</span>
-              )}
-            </td>
-            <td class="type-and-description">
-              <div class="type">
-                <code dir="auto">{type}</code>
-              </div>
-              <div class="description">{description}</div>
-            </td>
-          </tr>
-        ),
-      )
+      entries.map(({ name, required, description, type }) => (
+        <tr>
+          <td class="name" data-depth={ident && name.split(".").length}>
+            <strong>
+              <code dir="auto">{ident ? name : name}</code>
+            </strong>{" "}
+          </td>
+          <td class="required">
+            {required ? (
+              <span class="required">required</span>
+            ) : (
+              <span class="optional">optional</span>
+            )}
+          </td>
+          <td class="type-and-description">
+            <div class="type">
+              <code dir="auto">{type}</code>
+            </div>
+            <div class="description">{description}</div>
+          </td>
+        </tr>
+      ))
     }
   </tbody>
 </table>
@@ -85,7 +71,6 @@ const { entries, ident = true } = Astro.props
   }
 
   .required {
-    //width: 1rem;
     text-align: center;
   }
   th.type-and-description,

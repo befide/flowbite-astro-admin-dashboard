@@ -1,6 +1,12 @@
-import type { FacilitySchema, TaxonomyItemSchema, NestableDomainObjectSchema, OrganizationSchema } from "@lib/common.d.ts"
+import type {
+  FacilitySchema,
+  TaxonomyItemSchema,
+  NestableDomainObjectSchema,
+  OrganizationSchema,
+  FacilityDto,
+} from "@lib/common.d.ts"
 
-type TreeSchema = OrganizationSchema | FacilitySchema | TaxonomyItemSchema
+type TreeSchema = OrganizationSchema | FacilitySchema | FacilityDto | TaxonomyItemSchema
 
 export type TreeNode<Datum extends TreeSchema> = {
   id: string
@@ -50,15 +56,17 @@ export function getRoots<Datum extends TreeSchema>(
     }
   })
 
-  // console.log(flatTreeNodes, "§xxx")
-  //
   return roots
 }
 
-export function flattenTreeNode<Datum extends NestableDomainObjectSchema>(node: TreeNode<Datum>): TreeNode<Datum>[] {
+export function flattenTreeNode<Datum extends NestableDomainObjectSchema>(
+  node: TreeNode<Datum>,
+): TreeNode<Datum>[] {
   return node.children.length > 0 ? [node, ...node.children.flatMap(flattenTreeNode)] : [node]
 }
 
-export function flattenTreeNodes<Datum extends NestableDomainObjectSchema>(nodes: TreeNode<Datum>[]) {
+export function flattenTreeNodes<Datum extends NestableDomainObjectSchema>(
+  nodes: TreeNode<Datum>[],
+) {
   return nodes.flatMap(flattenTreeNode)
 }

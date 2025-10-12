@@ -1,4 +1,5 @@
 ---
+import Taxonomy from "@/astro/components/domain/Taxonomy.astro"
 import LayoutSidebar from "@astro/LayoutSidebar.astro"
 import TaxonomyTreeExplorer from "@components/dc-explorer/TaxonomyTreeExplorer.astro"
 import type { GetStaticPaths } from "astro"
@@ -14,5 +15,5 @@ export const getStaticPaths = (async () => {
 ---
 
 <LayoutSidebar>
-  <TaxonomyTreeExplorer collection="genericTaxonomy" />
+  <Taxonomy collection="genericTaxonomy" />
 </LayoutSidebar>

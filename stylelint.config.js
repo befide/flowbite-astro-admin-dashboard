@@ -15,7 +15,15 @@ export default {
         },
         {
           emptyLineBefore: "always",
-          properties: ["text-transform", "font-family", "font-size", "font-weight", "font-style", "letter-spacing", "font-variant-numeric"],
+          properties: [
+            "text-transform",
+            "font-family",
+            "font-size",
+            "font-weight",
+            "font-style",
+            "letter-spacing",
+            "font-variant-numeric",
+          ],
         },
         {
           emptyLineBefore: "threshold",
@@ -31,7 +39,18 @@ export default {
         },
         {
           emptyLineBefore: "threshold",
-          properties: ["margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "padding", "padding-top", "padding-right", "padding-bottom", "padding-left"],
+          properties: [
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left",
+          ],
         },
         {
           emptyLineBefore: "always",

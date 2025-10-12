@@ -5,7 +5,14 @@ import YAML from "yaml"
 import { getRoots } from "@lib/content.tree.ts"
 
 export const genders = ["female", "male", "nonbinary"]
-const careerLevels = ["professor", "seniorResearcher", "postDoc", "phdStudent", "masterStudent", "bachelorStudent"]
+const careerLevels = [
+  "professor",
+  "seniorResearcher",
+  "postDoc",
+  "phdStudent",
+  "masterStudent",
+  "bachelorStudent",
+]
 const disciplinaryProfessions = ["physicist", "engineer", "other"]
 const peopleCountDiscriminators = [...careerLevels, ...disciplinaryProfessions, ...genders]
 const __dirname = import.meta.dirname
@@ -15,26 +22,52 @@ const __dirname = import.meta.dirname
 //   return d ? d.toLowerCase().replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue").replaceAll(":", "!").replaceAll("/", "___").replaceAll(".", "__").replaceAll(" ", "-").trim() : null
 // }
 export function slugify(d: string) {
-  return d ? d.toLowerCase().replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue").replaceAll(":", "!").replaceAll("/", "___").replaceAll(".", "__").replaceAll(" ", "-").trim() : null
+  return d
+    ? d
+        .toLowerCase()
+        .replaceAll("ä", "ae")
+        .replaceAll("ö", "oe")
+        .replaceAll("ü", "ue")
+        .replaceAll(":", "!")
+        .replaceAll("/", "___")
+        .replaceAll(".", "__")
+        .replaceAll(" ", "-")
+        .trim()
+    : null
 }
 
 function stringToArray(d = "") {
   return d ? d.split(/\s?,\s?/).filter((d) => !!d) : []
 }
 
-async function doTable(collectionKey: "review-statuses" | "contacts" | "organizations" | "taxonomy-items" | "facilities" | "courses", tableId: string, idMapper: any, mapper: any, postprocess?: any) {
+async function doTable(
+  collectionKey:
+    | "review-statuses"
+    | "contacts"
+    | "organizations"
+    | "taxonomy-items"
+    | "facilities"
+    | "courses",
+  tableId: string,
+  idMapper: any,
+  mapper: any,
+  postprocess?: any,
+) {
   const contentFolder = path.join(__dirname, "../src/content/domain/", collectionKey)
   const gristFolder = path.join(__dirname, "../src/data/grist")
   fs.rmSync(contentFolder, { recursive: true, force: true })
   fs.mkdirSync(contentFolder, { recursive: true })
   fs.mkdirSync(gristFolder, { recursive: true })
 
-  const data = await fetch("https://befide.getgrist.com/api/docs/vGtqDxisUdjkKYGmpzAkDj/download/csv?tableId=" + tableId, {
-    headers: {
-      accept: "text/csv",
-      Authorization: "Bearer 839145cf5a7092364d1df58b0908952403ad9657",
+  const data = await fetch(
+    "https://befide.getgrist.com/api/docs/vGtqDxisUdjkKYGmpzAkDj/download/csv?tableId=" + tableId,
+    {
+      headers: {
+        accept: "text/csv",
+        Authorization: "Bearer 839145cf5a7092364d1df58b0908952403ad9657",
+      },
     },
-  })
+  )
     .then((response) => response.text())
     .then((data) => {
       fs.writeFileSync(path.join(gristFolder, "raw", tableId + ".csv"), data)
@@ -69,7 +102,9 @@ async function doTable(collectionKey: "review-statuses" | "contacts" | "organiza
     })
 
   function formatValue(value: unknown): string {
-    return Array.isArray(value) ? createFormatValue(",")(value.join(",")) : createFormatValue(",")(value)
+    return Array.isArray(value)
+      ? createFormatValue(",")(value.join(","))
+      : createFormatValue(",")(value)
   }
 
   if (Array.isArray(data)) {
@@ -80,7 +115,13 @@ async function doTable(collectionKey: "review-statuses" | "contacts" | "organiza
   return csvResult
 }
 
-const courseIdGenerator = ({ university__organizationsId, title }: { university__organizationsId: string; title: { de: string; en: string } }) => university__organizationsId + "/" + slugify(title.de)
+const courseIdGenerator = ({
+  university__organizationsId,
+  title,
+}: {
+  university__organizationsId: string
+  title: { de: string; en: string }
+}) => university__organizationsId + "/" + slugify(title.de)
 
 const doReviewStatuses = async () =>
   await doTable(
@@ -103,7 +144,9 @@ const doContacts = async () =>
       academicTitle: d.academicTitle,
       emailAddress: d.emailAddress,
       hasAffiliation__organizationId: d.hasAffiliation__organizationId,
-      hasAssociatedAffiliation__organizationIDs: stringToArray(d.hasAssociatedAffiliation__organizationIDs),
+      hasAssociatedAffiliation__organizationIDs: stringToArray(
+        d.hasAssociatedAffiliation__organizationIDs,
+      ),
       isHeadOf__organizationIDs: stringToArray(d.isHeadOf__organizationIDs),
       gender: d.gender,
     }),
@@ -138,7 +181,7 @@ const doTaxonomy = async () =>
     (d: any) => d.id,
     (d: any) => ({
       id: d.id,
-      parent__id: !d.parent__id ? null : d.id.split("/").slice(0, -1).join("/"),
+      parent__id: d.parent__id,
       term: d.term,
       definition: d.definition,
       abbreviations: {
@@ -169,11 +212,18 @@ const doOrganizations = async () =>
         topLevel__id: d.topLevel__id,
         partOfCommunityDegree: d.partOfCommunityDegree,
         instanceOfs__taxonomyID: classes,
-        isFormalOrganization: classes.filter((d) => d === "/g/organization/formal-organization").length > 0,
-        isResearchInstitution: classes.filter((d) => d === "/g/organization/research-institution").length > 0,
+        isFormalOrganization:
+          classes.filter((d) => d === "/g/organization/formal-organization").length > 0,
+        isResearchInstitution:
+          classes.filter((d) => d === "/g/organization/research-institution").length > 0,
         isUniversity: classes.filter((d) => d === "/g/organization/university").length > 0,
         isWorkingGroup: classes.filter((d) => d === "/g/organization/working-group").length > 0,
-        isDepartment: classes.filter((d) => d === "/g/organization/formal-organization/department" || d === "g/organization/formal-organization/sub-department").length > 0,
+        isDepartment:
+          classes.filter(
+            (d) =>
+              d === "/g/organization/formal-organization/department" ||
+              d === "g/organization/formal-organization/sub-department",
+          ).length > 0,
         category: d.category,
         label: d.label,
         tagline: d.tagline,
@@ -191,7 +241,10 @@ const doOrganizations = async () =>
       }
     },
     (data: any[]) => {
-      const communityOrganizations = data.filter((d: { partOfCommunityDegree: any; category: string | string[] }) => d.partOfCommunityDegree !== "none" && d.category !== "committee")
+      const communityOrganizations = data.filter(
+        (d: { partOfCommunityDegree: any; category: string | string[] }) =>
+          d.partOfCommunityDegree !== "none" && d.category !== "committee",
+      )
       const roots = getRoots(communityOrganizations)
       const rolledUpNode = rollupUniquePeopleCountSum(roots[0])
       console.log(rolledUpNode)
@@ -264,7 +317,9 @@ function rollupUniquePeopleCountSum(node: any) {
   if (node.children.length === 0) {
     node.data.uniquePeopleCountRecursiveSum = {
       total: node.data.uniquePeopleCountSum.total,
-      ...Object.fromEntries(peopleCountDiscriminators.map((d) => [d, getValue(node.data.uniquePeopleCountSum, d)])),
+      ...Object.fromEntries(
+        peopleCountDiscriminators.map((d) => [d, getValue(node.data.uniquePeopleCountSum, d)]),
+      ),
     }
   } else {
     node.children.forEach((child: any) => rollupUniquePeopleCountSum(child))

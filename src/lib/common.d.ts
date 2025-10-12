@@ -1,4 +1,4 @@
-import type { ThesisSchema } from "@lib/domain"
+import type { ThesisSchema } from "@domain"
 
 export type DomainObjectSchema = {
   id: string

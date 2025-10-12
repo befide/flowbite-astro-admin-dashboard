@@ -1,0 +1,34 @@
+---
+import type { TaxonomyItemSchema } from "@/lib/common"
+import { getLocalizedValue } from "@/lib/content"
+import type { TreeNode } from "@/lib/content.tree"
+import { allTaxonomyItems, taxonomyItemRoots } from "@/lib/domain/taxonomy"
+
+const taxonomyItems = await taxonomyItemRoots()
+
+interface Props {
+  taxonomyItem: TreeNode<TaxonomyItemSchema>
+  locale?: string
+}
+
+const locale = Astro.currentLocale
+const { taxonomyItem } = Astro.props
+---
+
+<li class="taxonomy-item tree-node">
+  <div>
+    <span class="term px-1 text-base">{getLocalizedValue(taxonomyItem, "data.term", locale)}</span>
+    <span class="definition px-1 text-base"
+      >{getLocalizedValue(taxonomyItem, "data.definition", locale)}</span
+    >
+  </div>
+  {
+    taxonomyItem.children.length > 0 && (
+      <ul>
+        {taxonomyItem.children.map((child) => (
+          <Astro.self taxonomyItem={child} {locale} />
+        ))}
+      </ul>
+    )
+  }
+</li>

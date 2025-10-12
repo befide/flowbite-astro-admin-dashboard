@@ -15,9 +15,6 @@ const { collection } = Astro.props
     <DCExplorerCount {collection} dimension="count" />
   </div>
   <div class="dc-explorer__items">
-    <DCExplorerTreeDataSections
-      {collection}
-      dimension="id"
-    />
+    <DCExplorerTreeDataSections {collection} dimension="id" />
   </div>
 </DCExplorer>

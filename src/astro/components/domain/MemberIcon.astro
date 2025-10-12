@@ -4,7 +4,9 @@ const { careerLevel, disciplinaryProfession, gender } = Astro.props
 const definedClasses = [careerLevel, disciplinaryProfession, gender].filter((d) => d)
 ---
 
-<span class:list={["member-icon", ...definedClasses]} title={definedClasses.join(",")}>{definedClasses.join(",")}</span>
+<span class:list={["member-icon", ...definedClasses]} title={definedClasses.join(",")}
+  >{definedClasses.join(",")}</span
+>
 
 <style>
   .member-icon {
@@ -14,12 +16,11 @@ const definedClasses = [careerLevel, disciplinaryProfession, gender].filter((d) 
     overflow: hidden;
     border-top-style: solid;
     border-top-color: #bbbbbb;
-    //box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 1);
+
     border-radius: 50%;
   }
   .member-icon.engineer {
     border-radius: 0;
-    //width: 5px;
   }
   .member-icon.other {
     border-radius: 0;

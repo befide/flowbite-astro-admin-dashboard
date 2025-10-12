@@ -1,14 +1,6 @@
-import type {
-  OrganizationDto,
-  ThesisDto,
-  CourseDto,
-} from "@lib/common.d"
+import type { OrganizationDto, ThesisDto, CourseDto } from "@lib/common.d"
 
-import {
-  numberFormat,
-  oneLineFormat,
-  pillFormat,
-} from "./config"
+import { numberFormat, oneLineFormat, pillFormat } from "./config"
 
 export type TableConfigEntry = {
   label: string
@@ -20,16 +12,13 @@ export type TableConfigEntry = {
   width?: string
 }
 
-export function tableConfigMap(
-  key: string,
-): TableConfigEntry[] {
+export function tableConfigMap(key: string): TableConfigEntry[] {
   if (key === "theses") {
     return [
       {
         label: "University",
         className: "text-short",
-        sortAccessor: (d: ThesisDto) =>
-          d.university__label_short,
+        sortAccessor: (d: ThesisDto) => d.university__label_short,
         format: function (d: ThesisDto) {
           return pillFormat(d.university__label_short)
         },
@@ -45,8 +34,7 @@ export function tableConfigMap(
       {
         label: "Gender",
         className: "icon",
-        sortAccessor: (d: ThesisDto) =>
-          d.author.gender as string,
+        sortAccessor: (d: ThesisDto) => d.author.gender as string,
         format: function (d: ThesisDto) {
           return `<div class='pillFormat'><span data-gender-icon='${d.author.gender}'>${d.author.gender}</span></div>`
         },
@@ -56,11 +44,7 @@ export function tableConfigMap(
         className: "text-long",
         sortAccessor: (d: ThesisDto) => d.title,
         format: function (d: ThesisDto) {
-          return (
-            "<div class='title truncable one-line'>" +
-            d.title +
-            "</div>"
-          )
+          return "<div class='title truncable one-line'>" + d.title + "</div>"
         },
       },
       {
@@ -73,6 +57,7 @@ export function tableConfigMap(
       },
       {
         label: "Degree",
+        width: "10ch",
         className: "text-short",
         sortAccessor: (d: ThesisDto) => d.degreeTitle,
         format: function (d: ThesisDto) {
@@ -80,6 +65,7 @@ export function tableConfigMap(
         },
       },
       {
+        width: "10ch",
         label: "language",
         className: "text-short",
         sortAccessor: (d: ThesisDto) => d.language,
@@ -93,8 +79,7 @@ export function tableConfigMap(
       {
         label: "short name",
         className: "text-short ",
-        sortAccessor: (d: OrganizationDto) =>
-          d.label__short,
+        sortAccessor: (d: OrganizationDto) => d.label__short,
         format: function (d: OrganizationDto) {
           return `<a class='font-bold underline decoration-dotted' href="./formal-organizations/${d.id}">${d.label__short}</a>`
         },
@@ -102,8 +87,7 @@ export function tableConfigMap(
       {
         label: "full name",
         className: "text-long",
-        sortAccessor: (d: OrganizationDto) =>
-          d.label__fullName,
+        sortAccessor: (d: OrganizationDto) => d.label__fullName,
         format: function (d: OrganizationDto) {
           return `<a class='underline decoration-dotted' href="./formal-organizations/${d.id}">${d.label__fullName}</a>`
         },
@@ -112,8 +96,7 @@ export function tableConfigMap(
       {
         label: "#people",
         className: "number",
-        sortAccessor: (d: OrganizationDto) =>
-          d.people_count,
+        sortAccessor: (d: OrganizationDto) => d.people_count,
         format: function (d: OrganizationDto) {
           return numberFormat(d.people_count)
         },
@@ -122,8 +105,7 @@ export function tableConfigMap(
       {
         label: "#facilties",
         className: "number",
-        sortAccessor: (d: OrganizationDto) =>
-          d.facilities_count,
+        sortAccessor: (d: OrganizationDto) => d.facilities_count,
         format: function (d: OrganizationDto) {
           return numberFormat(d.facilities_count)
         },
@@ -131,16 +113,14 @@ export function tableConfigMap(
       {
         label: "#user facilties",
         className: "number",
-        sortAccessor: (d: OrganizationDto) =>
-          d.userFacilities_count,
+        sortAccessor: (d: OrganizationDto) => d.userFacilities_count,
         format: function (d: OrganizationDto) {
           return numberFormat(d.userFacilities_count)
         },
       },
       {
         label: "#sws",
-        sortAccessor: (d: OrganizationDto) =>
-          d.weeklySemesterHours_count,
+        sortAccessor: (d: OrganizationDto) => d.weeklySemesterHours_count,
         className: "number",
         format: function (d: OrganizationDto) {
           return numberFormat(d.weeklySemesterHours_count)
@@ -149,8 +129,7 @@ export function tableConfigMap(
       {
         label: "#theses",
         className: "number",
-        sortAccessor: (d: OrganizationDto) =>
-          d.theses_count,
+        sortAccessor: (d: OrganizationDto) => d.theses_count,
         format: function (d: OrganizationDto) {
           return numberFormat(d.theses_count)
         },
@@ -161,8 +140,7 @@ export function tableConfigMap(
       {
         label: "University",
         className: "text-short",
-        sortAccessor: (d: CourseDto) =>
-          d.university__label_short,
+        sortAccessor: (d: CourseDto) => d.university__label_short,
         format: function (d: CourseDto) {
           return pillFormat(d.university__label_short)
         },
@@ -178,8 +156,7 @@ export function tableConfigMap(
       {
         label: "Art",
         className: "text-short",
-        sortAccessor: (d: CourseDto) =>
-          d.teachingEvent__term,
+        sortAccessor: (d: CourseDto) => d.teachingEvent__term,
         format: function (d: CourseDto) {
           return pillFormat(d.teachingEvent__term)
         },
@@ -187,8 +164,7 @@ export function tableConfigMap(
       {
         label: "Weekly hours",
         className: "number",
-        sortAccessor: (d: CourseDto) =>
-          d.weeklySemesterHours,
+        sortAccessor: (d: CourseDto) => d.weeklySemesterHours,
         format: function (d: CourseDto) {
           return numberFormat(d.weeklySemesterHours)
         },
@@ -205,11 +181,7 @@ export function tableConfigMap(
         className: "text-short",
         width: "10ch",
         format: function (d: CourseDto) {
-          return (
-            "<div class='one-line'><a target='_blank' href=" +
-            d.link +
-            ">Link</a></div>"
-          )
+          return "<div class='one-line'><a target='_blank' href=" + d.link + ">Link</a></div>"
         },
       },
     ]

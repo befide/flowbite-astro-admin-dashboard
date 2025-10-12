@@ -47,6 +47,7 @@ export const getTaxonomyReferenceTerm = async (id: string, locale: string) =>
 
 export const getTaxonomyReferencesTerm = async (ids: string[] = [], locale = "en") => {
   const unLeadingSlashIds = ids.map((id) => id.replace(/^\/+/, ""))
+
   return (
     (await Promise.all(
       unLeadingSlashIds

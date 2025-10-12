@@ -1,8 +1,5 @@
 ---
-import {
-  getLangFromUrl,
-  useTranslations,
-} from "@astro/i18n/utils"
+import { getLangFromUrl, useTranslations } from "@astro/i18n/utils"
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -14,47 +11,25 @@ import DCExplorerTreeDataTable from "@components/dc-explorer/components/DCExplor
 
 <DCExplorer collection="facilities">
   <div class="dc-explorer__filters">
-    <DCExplorerCount
-      collection="facilities"
-      dimension="count"
-    />
+    <DCExplorerCount collection="facilities" dimension="count" />
 
-    <DCExplorerRowChart
-      collection="facilities"
-      dimension="host__label_short"
-      title="host"
-    />
-    <DCExplorerRowChart
-      collection="facilities"
-      dimension="instanceOf__term"
-      title="instanceOf"
-    />
-    <DCExplorerRowChart
-      collection="facilities"
-      dimension="currentStatus__term"
-      title="lifeCycle"
-    />
+    <DCExplorerRowChart collection="facilities" dimension="host__label_short" title="host" />
+    <DCExplorerRowChart collection="facilities" dimension="instanceOf__term" title="instanceOf" />
+    <DCExplorerRowChart collection="facilities" dimension="currentStatus__term" title="lifeCycle" />
     <DCExplorerRowChart
       collection="facilities"
       dimension="primaryBeamParticles"
-      title={t(
-        "dc-explorer.tiles.title.primaryBeamParticles",
-      )}
+      title={t("dc-explorer.tiles.title.primaryBeamParticles")}
       dimensionIsArray={true}
     />
     <DCExplorerRowChart
       collection="facilities"
       dimension="secondaryBeamParticles"
-      title={t(
-        "dc-explorer.tiles.title.secondaryBeamParticles",
-      )}
+      title={t("dc-explorer.tiles.title.secondaryBeamParticles")}
       dimensionIsArray={true}
     />
   </div>
   <div class="dc-explorer__items">
-    <DCExplorerTreeDataTable
-      collection="facilities"
-      dimension="id"
-    />
+    <DCExplorerTreeDataTable collection="facilities" dimension="id" />
   </div>
 </DCExplorer>

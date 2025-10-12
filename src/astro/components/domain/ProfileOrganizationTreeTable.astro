@@ -19,7 +19,10 @@ let { organization } = Astro.props
 
 const product = fastCartesian([[...careerLevels], [...disciplinaryProfessions], [...genders]])
 
-const organisations = (await organization.getOrganizationList()).map((d: any) => ({ ...d, parent__id: d.parent__id === "community" ? null : d.parent__id }))
+const organisations = (await organization.getOrganizationList()).map((d: any) => ({
+  ...d,
+  parent__id: d.parent__id === "community" ? null : d.parent__id,
+}))
 let roots: TreeNode<OrganizationSchema>[] = getRoots<OrganizationSchema>(organisations)
 
 const list = flattenTreeNodes(roots)
@@ -62,12 +65,22 @@ const list = flattenTreeNodes(roots)
     <tbody>
       {
         list.map((item) => (
-          <tr data-depth={item.depth} data-child-index={item.childIndex} data-has-children={item.children.length > 0}>
+          <tr
+            data-depth={item.depth}
+            data-child-index={item.childIndex}
+            data-has-children={item.children.length > 0}
+          >
             <th class="name tree-table__name tree-table__indent">{item.data.label.fullName.en}</th>
             <td class="members">
               {product
                 .filter((p) => getValue(item.data.uniquePeopleCount, p.join(".")))
-                .map((p) => new Array(getValue(item.data.uniquePeopleCount, p.join("."))).fill(0).map(() => <MemberIcon careerLevel={p[0]} disciplinaryProfession={p[1]} gender={p[2]} />))}
+                .map((p) =>
+                  new Array(getValue(item.data.uniquePeopleCount, p.join(".")))
+                    .fill(0)
+                    .map(() => (
+                      <MemberIcon careerLevel={p[0]} disciplinaryProfession={p[1]} gender={p[2]} />
+                    )),
+                )}
             </td>
             {careerLevels.map((d) => (
               <td class="number">{getValue(item.data.uniquePeopleCountRecursiveSum, d) || "-"}</td>
@@ -94,17 +107,14 @@ const list = flattenTreeNodes(roots)
 
 <style>
   thead {
-    //height: 5rem;
   }
   thead tr:first-child th {
     position: relative;
-    //height: 5rem;
-    //vertical-align: bottom;
   }
   thead tr:first-child th span {
     display: block;
     white-space: nowrap;
-    //width: 2rem;
+
     line-height: 0.5rem;
     font-size: var(--text-2xs);
     transform-origin: bottom right;
@@ -135,7 +145,6 @@ const list = flattenTreeNodes(roots)
   }
   @media print {
     .members {
-      //display: none;
     }
   }
 

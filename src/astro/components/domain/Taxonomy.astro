@@ -1,0 +1,104 @@
+---
+import { allTaxonomyItems, taxonomyItemRoots } from "@/lib/domain/taxonomy"
+import TaxonomyItem from "./TaxonomyItem.astro"
+
+import { getLocalizedValue } from "@/lib/content"
+
+const taxonomyRoot = await taxonomyItemRoots()
+const taxonomyItems = await allTaxonomyItems()
+
+const bTaxonomyItems = taxonomyRoot[0].children[0]
+const gTaxonomyItems = taxonomyRoot[0].children[0]
+
+const locale = Astro.currentLocale
+
+console.log(taxonomyItems)
+---
+
+<section>
+  <header class="format"><h2>Domain-specific taxonomy</h2></header>
+  {
+    bTaxonomyItems.children.map((bTaxonomyItem) => (
+      <section>
+        <header class="format">
+          <h3>{getLocalizedValue(bTaxonomyItem.data, "term", locale)}</h3>
+          <p class="text-bold">{getLocalizedValue(bTaxonomyItem.data, "definition", locale)}</p>
+        </header>
+        <ul class="taxonomy tree">
+          {bTaxonomyItem.children.map((item) => (
+            <TaxonomyItem taxonomyItem={item} locale="en" />
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</section>
+
+<style is:global>
+  .tree {
+    --branch-width: 1rem;
+    --branch-border: 1px dotted currentColor;
+    --branch-offset: 1rem;
+    --branch-vertical-border: 1px dotted currentColor;
+    --branch-radius: 0ch;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-left: var(--branch-width);
+    max-width: none;
+    line-height: 2rem;
+
+    li {
+      padding: 0;
+      padding-left: var(--branch-width);
+      position: relative;
+      margin: 0;
+    }
+    li::before,
+    li::after {
+      content: "";
+      position: absolute;
+      box-sizing: content-box;
+      left: 0;
+      top: 0;
+    }
+    li:not(:last-child)::before {
+      height: 100%;
+      border-right: var(--branch-vertical-border);
+    }
+    li::after {
+      width: var(--branch-width);
+      height: var(--branch-offset);
+      border-left: var(--branch-vertical-border);
+      border-bottom: var(--branch-border);
+      border-bottom-left-radius: var(--branch-radius);
+    }
+
+    li:first-child::before {
+      height: calc(100% + var(--branch-offset));
+      top: calc(-1 * var(--branch-offset));
+    }
+    li:only-child::before {
+      height: var(--branch-offset);
+      top: calc(-1 * var(--branch-offset));
+      border-right: var(--branch-vertical-border);
+    }
+
+    li.tree-node div {
+      position: relative;
+      z-index: 1;
+    }
+
+    span.term {
+      border-radius: var(--branch-radius);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+      background: yellow;
+      display: inline-block;
+    }
+    span.definition {
+      border-radius: var(--branch-radius);
+
+      display: block;
+    }
+  }
+</style>

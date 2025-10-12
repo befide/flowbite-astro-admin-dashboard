@@ -30,7 +30,7 @@
     font-size: var(--text-base);
     background-color: white;
 
-    padding: 0.25rem;
+    padding: 0.5rem 0.25rem;
 
     position: relative;
     overflow: hidden;

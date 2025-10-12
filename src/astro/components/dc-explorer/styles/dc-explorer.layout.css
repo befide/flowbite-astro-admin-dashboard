@@ -1,5 +1,7 @@
 .dc-explorer {
   width: 100%;
+  background-color: red;
+  padding: 1rem;
 }
 
 @media print, screen and (max-width: 600px) {
@@ -15,20 +17,16 @@
     display: flex;
     flex-direction: row-reverse;
     gap: 1rem;
-    width: calc(100%);
-    margin: 0 -0.5rem;
-    margin-left: 0;
   }
 
   .dc-explorer__filters {
-    flex: calc(250px + 0.5rem);
+    flex: 0 0 250px;
     flex-shrink: 0;
     flex-grow: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-    font-size: var(--text-sm);
+    gap: 0rem;
+    font-size: var(--text-base);
   }
 
   .dc-explorer__filters section {
@@ -41,7 +39,7 @@
     flex-direction: column;
 
     padding: 0;
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
 
     overflow-y: scroll;
 
