@@ -25,6 +25,59 @@ const __dirname = import.meta.dirname;
 //   return d ? d.replaceAll("b:", "b/").replaceAll("g:", "g/") : null
 //   return d ? d.toLowerCase().replaceAll("ä", "ae").replaceAll("ö", "oe").replaceAll("ü", "ue").replaceAll(":", "!").replaceAll("/", "___").replaceAll(".", "__").replaceAll(" ", "-").trim() : null
 // }
+
+function getValue(obj: any, path: string) {
+  const pathParts = path.split(".");
+  for (let i = 0; i < pathParts.length; i++) {
+    if (pathParts[i]! in obj) obj = obj[pathParts[i]!];
+    else return;
+  }
+  return obj;
+}
+
+function rollupUniquePeopleCountSum(node: any) {
+  if (node.children.length === 0) {
+    node.data.uniquePeopleCountRecursiveSum = {
+      total: node.data.uniquePeopleCountSum.total,
+      ...Object.fromEntries(
+        peopleCountDiscriminators.map((d) => [
+          d,
+          getValue(node.data.uniquePeopleCountSum, d),
+        ]),
+      ),
+    };
+  } else {
+    node.children.forEach((child: any) => rollupUniquePeopleCountSum(child));
+    node.data.uniquePeopleCountRecursiveSum = {
+      total: node.children.reduce(
+        (
+          sum: any,
+          child: {
+            data: { uniquePeopleCountRecursiveSum: any };
+          },
+        ) => sum + getValue(child.data.uniquePeopleCountRecursiveSum, "total"),
+        getValue(node.data.uniquePeopleCountSum, "total"),
+      ),
+      ...Object.fromEntries(
+        peopleCountDiscriminators.map((d) => [
+          d,
+          node.children.reduce(
+            (
+              sum: any,
+              child: {
+                data: { uniquePeopleCountRecursiveSum: any };
+              },
+            ) => sum + getValue(child.data.uniquePeopleCountRecursiveSum, d),
+            getValue(node.data.uniquePeopleCountSum, d),
+          ),
+        ]),
+      ),
+    };
+  }
+
+  return node;
+}
+
 export function slugify(d: string) {
   return d
     ? d
@@ -93,10 +146,10 @@ async function doTable(
       // const id = idMapper(d)
       // console.log(d)
       const frontmatter = { ...mapper(d) };
-      const fileFolder = path.join(contentFolder, frontmatter.id);
+      const fileFolder = path.join(contentFolder);
 
       fs.mkdirSync(fileFolder, { recursive: true });
-      const filePath = path.join(fileFolder, "index.mdx");
+      const filePath = path.join(fileFolder, frontmatter.id + ".md");
 
       if (frontmatter.id.length < 240) {
         const markdown = "---\n" + YAML.stringify(frontmatter) + "---\n";
@@ -135,9 +188,14 @@ const courseIdGenerator = ({
 const doReviewStatuses = async () =>
   await doTable(
     "review-statuses",
-    "Review_Statuses",
+    "Review_statuses",
     (d: any) => d.id,
-    (d: any) => d,
+    (d: any) => ({
+      id: d.id,
+      index: d.index + "",
+      title: d.title,
+      description: d.description,
+    }),
   );
 
 const doContacts = async () =>
@@ -324,61 +382,10 @@ const doFacilities = async () =>
     }),
   );
 
-function getValue(obj: any, path: string) {
-  const pathParts = path.split(".");
-  for (let i = 0; i < pathParts.length; i++) {
-    if (pathParts[i]! in obj) obj = obj[pathParts[i]!];
-    else return;
-  }
-  return obj;
-}
-
-function rollupUniquePeopleCountSum(node: any) {
-  if (node.children.length === 0) {
-    node.data.uniquePeopleCountRecursiveSum = {
-      total: node.data.uniquePeopleCountSum.total,
-      ...Object.fromEntries(
-        peopleCountDiscriminators.map((d) => [
-          d,
-          getValue(node.data.uniquePeopleCountSum, d),
-        ]),
-      ),
-    };
-  } else {
-    node.children.forEach((child: any) => rollupUniquePeopleCountSum(child));
-    node.data.uniquePeopleCountRecursiveSum = {
-      total: node.children.reduce(
-        (
-          sum: any,
-          child: {
-            data: { uniquePeopleCountRecursiveSum: any };
-          },
-        ) => sum + getValue(child.data.uniquePeopleCountRecursiveSum, "total"),
-        getValue(node.data.uniquePeopleCountSum, "total"),
-      ),
-      ...Object.fromEntries(
-        peopleCountDiscriminators.map((d) => [
-          d,
-          node.children.reduce(
-            (
-              sum: any,
-              child: {
-                data: { uniquePeopleCountRecursiveSum: any };
-              },
-            ) => sum + getValue(child.data.uniquePeopleCountRecursiveSum, d),
-            getValue(node.data.uniquePeopleCountSum, d),
-          ),
-        ]),
-      ),
-    };
-  }
-
-  return node;
-}
 //
 const rewviewStatuses = await doReviewStatuses();
 const contacts = await doContacts();
-const organisations = await doOrganizations();
-const taxonomyItems = await doTaxonomy();
-const facilities = await doFacilities();
-const courses = await doCourses();
+// const organisations = await doOrganizations();
+// const taxonomyItems = await doTaxonomy();
+// const facilities = await doFacilities();
+// const courses = await doCourses();

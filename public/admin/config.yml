@@ -1,23 +1,81 @@
+local_backend: true
+
 backend:
   name: github
+  squash_merges: true
   repo: befide/kfb-inventory
   branch: main
-local_backend: true
 media_folder: src/assets/img
 public_folder: src/assets/img
-
 collections:
-  - name: "docs" # Used in routes, e.g., /admin/collections/blog
-    label: "Docs" # Used in the UI
-    folder: "src/content/docs" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields for each document, usually in frontmatter
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "number" }
-      - { label: "SectionNumber", name: "sectionNumber", widget: "string" }
-      - {
-          label: "excludeFromLinearNavigation",
-          name: "excludeFromLinearNavigation",
-          widget: "boolean",
-        }
-      - { label: "Body", name: "body", widget: "markdown" }
+  - name: docs
+    label: Docs
+    extension: mdx
+    format: yaml-frontmatter
+    folder: src/content/docs
+    summary: "{{sectionNumber}} {{title}}"
+    nested:
+      depth: 100
+
+      subfolders: true
+    meta: { path: { widget: string, label: "Path", index_file: "index" } }
+    create: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: SectionNumber
+        name: sectionNumber
+        widget: string
+        default: ""
+      - label: excludeFromLinearNavigation
+        name: excludeFromLinearNavigation
+        widget: boolean
+        default: false
+      - label: Body
+        name: body
+        widget: markdown
+  - name: review-statuses
+    label: Review Status
+    folder: src/content/domain/review-statuses
+    create: true
+    summary: "{{index}}: {{title}}"
+    fields:
+      - label: index
+        name: index
+        widget: string
+      - label: title
+        name: title
+        widget: string
+      - label: description
+        name: description
+        widget: string
+  - name: contacts
+    label: Contacts
+    folder: src/content/domain/contacts
+    create: true
+    summary: "{{familyName}}, {{givenName}}"
+    fields:
+      - label: oricid
+        name: oricid
+        widget: string
+        pattern:
+          [
+            'https://orcid.org/\d{4}-\d{4}-\d{4}-\d{3}[0-9X]{1}',
+            "Must be an orcid url",
+          ]
+      - label: givenName
+        name: givenName
+        widget: string
+      - label: familyName
+        name: familyName
+        widget: string
+      - label: academicTitle
+        name: academicTitle
+        widget: string
+      - label: emailAddress
+        name: emailAddress
+        widget: string

@@ -1,1 +1,24 @@
-{"error":"Table Review_Statuses not found."}
+id,description,assignedRole,title,index
+rs_1__preparation,,,preparation,rs_1
+rs_1-1__creating_data_draft,Editor creates draft data,editor,creating data draft,rs_1-1
+rs_1-2__assigning_potential_reviewer,Data draft created and potential reviewer assigned,editor,assigning potential reviewer,rs_1-2
+rs_2__prereview_request,,,prereview request,rs_2
+rs_4-1-1__review_request_sent,,,review request sent,rs_4-1-1
+rs_3__prereview_response_processing,,,prereview response processing,rs_3
+rs_3-1__determining_next_step,Reviewer rejects review and proposes new reviewer.,,determining next step,rs_3-1
+rs_3-2__processing_prereview_change_requests_with_resubmission,Reviewer requests ,,processing prereview change requests with resubmission,rs_3-2
+rs_3-3__processing_prereview_change_requests_without_resubmission,,,processing prereview change requests without resubmission,rs_3-3
+rs_6__approved,,,approved,rs_6
+rs_2-2__sending_prereview_reminder_request,Editor sends review request reminder with deadline,,sending prereview reminder request,rs_2-2
+rs_4-2-1__review_reminder_request_sent,"One day after the deadline has passed, a reminder e-mail with a new deadline is sent to the reviewer",,review reminder request sent,rs_4-2-1
+rs_4-1__sending_review_request,Editor sends review request with deadline to assigned reviewer on behalf of committee chair,,sending review request,rs_4-1
+rs_5__review_response_processing,,,review response processing,rs_5
+rs_5-1__determining_next_step,Reviewer rejects review and proposes new reviewer.,,determining next step,rs_5-1
+rs_5-2__assigning_new_reviewer,Reviewer rejects review and proposes new reviewer.,,assigning new reviewer,rs_5-2
+rs_5-3__processing_change_requests_with_resubmission,Reviewer requests ,,processing change requests with resubmission,rs_5-3
+rs_5-4__processing_change_requests_without_resubmission,,,processing change requests without resubmission,rs_5-4
+rs_4__review_request,,,review request,rs_4
+rs_2-1__sending_prereview_request,Editor sends prereview request with deadline to assigned prereviewer,editor,sending prereview request,rs_2-1
+rs_2-1-1__prereview_request_sent,,,prereview request sent,rs_2-1-1
+rs_4-2__sending_review_reminder_request,Editor sends review request reminder with deadline to assigned reviewer on behalf of committee chair,,sending review reminder request,rs_4-2
+rs_2-2-1__prereview_reminder_request_sent,"One day after the deadline has passed, a reminder e-mail with a new deadline is sent to the reviewer",,prereview reminder request sent,rs_2-2-1

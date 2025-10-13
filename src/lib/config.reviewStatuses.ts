@@ -6,8 +6,9 @@ import { NullableLocalizedString, readInputFile } from "./content.common";
 
 export const ReviewStatusSchema = z.object({
   id: z.string(),
-  description: NullableLocalizedString,
-  editor: z.string().nullable().optional(),
+  index: z.string(),
+  title: z.string(),
+  description: z.string().optional().nullable(),
 });
 
 export const defineReviewStatusesCollection = defineCollection({
