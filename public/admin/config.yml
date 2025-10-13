@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: befide/kfb-inventory
   branch: main
 local_backend: true

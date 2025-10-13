@@ -19,6 +19,9 @@ const DEV_PORT = 4350;
 export default defineConfig({
   base: "/",
 
+  redirects: {
+    "/": "/en",
+  },
   i18n: {
     locales: ["en", "de"],
     defaultLocale: "en",
