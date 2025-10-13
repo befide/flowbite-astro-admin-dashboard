@@ -31,7 +31,6 @@
     "@vite-pwa/astro": "1.1.0",
     "@zokki/astro-purgecss": "1.0.4",
     "astro": "5.14.1",
-    "astro-d2": "0.8.0",
     "astro-pdf": "1.7.2",
     "csv42": "5.0.3",
     "d3": "7.9.0",

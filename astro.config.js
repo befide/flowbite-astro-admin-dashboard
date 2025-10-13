@@ -7,7 +7,7 @@ import spaceCommander from "./src/lib/space-commander";
 
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
-import astroD2 from "astro-d2";
+
 import dsv from "@rollup/plugin-dsv";
 
 import mdx from "@astrojs/mdx";
@@ -27,9 +27,9 @@ export default defineConfig({
     defaultLocale: "en",
   }, //process.env.CI ? "/flowbite-astro-admin-dashboard" : "/",
   integrations: [
-    ...(process.env.NODE_ENV === "production"
-      ? []
-      : [astroD2({ inline: true })]),
+    // ...(process.env.NODE_ENV === "production"
+    //   ? []
+    //   : [astroD2({ inline: true })]),
     sitemap(),
     mdx(),
     // pdf({
