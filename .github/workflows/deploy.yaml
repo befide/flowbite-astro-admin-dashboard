@@ -1,6 +1,6 @@
 # Extracted from https://github.com/JulianCataldo/gh-actions/tree/main
 
-name: Flowbite Admin Dashboard — Deploy to Demo to GitHub Pages
+name: KfB Inventory — Deploy to GitHub Pages
 
 on:
   push:
@@ -34,17 +34,17 @@ jobs:
 
       # ————————————————————————————————————————————————————————————————————————
 
-      - name: Setup Node.js 18
+      - name: Setup Node.js 20
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       # ————————————————————————————————————————————————————————————————————————
 
-      - name: Setup PNPM 7
+      - name: Setup PNPM 10
         uses: pnpm/action-setup@v2.2.2
         with:
-          version: 7.18.1
+          version: 10
           run_install: false
 
       - name: Get PNPM store directory
@@ -73,11 +73,11 @@ jobs:
 
       # NOTE: Could be swapped with Vercel, Netlify…
 
-      - name: Upload artifact — Demo (dist)
+      - name: Upload artifact — KfB Inventory (dist)
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./dist
 
-      - name: Deploy to GitHub Pages — Demo (dist)
+      - name: Deploy to GitHub Pages — KfB Inventory
         id: deployment
         uses: actions/deploy-pages@v1
