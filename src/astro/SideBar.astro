@@ -8,6 +8,8 @@ const thisUrl = Astro.url.toString()
 
 const locale = Astro.currentLocale
 
+console.log(locale)
+
 const englishUrl = thisUrl.replace("/de/", "/en/")
 const germanUrl = thisUrl.replace("/en/", "/de/")
 ---
@@ -35,7 +37,7 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
         <ul class="space-y-2 pb-2">
           <li>
             <a
-              href={url("/")}
+              href={url(`${locale}/`)}
               class="group flex items-center rounded-lg p-2 text-base text-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
             >
               <svg
@@ -108,7 +110,10 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
                   d="M.99 5.24A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25l.01 9.5A2.25 2.25 0 0116.76 17H3.26A2.267 2.267 0 011 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 00.627-.74zm1.5 0a.75.75 0 00.627.74h5.373a.75.75 0 00.75-.75v-.615a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625zm6.75-3.63v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75zM17.5 7.5v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75z"
                 ></path>
               </svg>
-              <span class="ml-3 flex-1 text-left whitespace-nowrap" sidebar-toggle-item>Data</span>
+              <span
+                class="ml-3 flex-1 text-left whitespace-nowrap"
+                sidebar-toggle-item>Data</span
+              >
               <svg
                 sidebar-toggle-item
                 class="h-6 w-6"
@@ -201,21 +206,23 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
           ><path fill="#b22234" d="M0 0h7410v3900H0z"></path><path
             d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
             stroke="#fff"
-            stroke-width="300"></path><path fill="#3c3b6e" d="M0 0h2964v2100H0z"></path><g
-            fill="#fff"
+            stroke-width="300"></path><path fill="#3c3b6e" d="M0 0h2964v2100H0z"
+          ></path><g fill="#fff"
             ><g id="d"
               ><g id="c"
                 ><g id="e"
                   ><g id="b"
-                    ><path id="a" d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"
-                    ></path><use xlink:href="#a" y="420"></use><use xlink:href="#a" y="840"
-                    ></use><use xlink:href="#a" y="1260"></use></g
+                    ><path
+                      id="a"
+                      d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"
+                    ></path><use xlink:href="#a" y="420"></use><use
+                      xlink:href="#a"
+                      y="840"></use><use xlink:href="#a" y="1260"></use></g
                   ><use xlink:href="#a" y="1680"></use></g
                 ><use xlink:href="#b" x="247" y="210"></use></g
               ><use xlink:href="#c" x="494"></use></g
-            ><use xlink:href="#d" x="988"></use><use xlink:href="#c" x="1976"></use><use
-              xlink:href="#e"
-              x="2470"></use></g
+            ><use xlink:href="#d" x="988"></use><use xlink:href="#c" x="1976"
+            ></use><use xlink:href="#e" x="2470"></use></g
           ></svg
         >
       </button>
@@ -250,7 +257,10 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
                         d="M0 10h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0zm0 20h247v10H0z"
                         transform="scale(3.9385)"></path>
                     </g>
-                    <path fill="#192f5d" d="M0 0h98.8v70H0z" transform="scale(3.9385)"></path>
+                    <path
+                      fill="#192f5d"
+                      d="M0 0h98.8v70H0z"
+                      transform="scale(3.9385)"></path>
                     <path
                       fill="#fff"
                       d="M8.2 3l1 2.8H12L9.7 7.5l.9 2.7-2.4-1.7L6 10.2l.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7L74 8.5l-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 7.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 24.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 21.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 38.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 35.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 52.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 49.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm-74.1 7l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7H65zm16.4 0l1 2.8H86l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm-74 7l.8 2.8h3l-2.4 1.7.9 2.7-2.4-1.7L6 66.2l.9-2.7-2.4-1.7h3zm16.4 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8H45l-2.4 1.7 1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9zm16.4 0l1 2.8h2.8l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h3zm16.5 0l.9 2.8h2.9l-2.3 1.7.9 2.7-2.4-1.7-2.3 1.7.9-2.7-2.4-1.7h2.9zm16.5 0l.9 2.8h2.9L92 63.5l1 2.7-2.4-1.7-2.4 1.7 1-2.7-2.4-1.7h2.9z"
@@ -288,7 +298,10 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
   </div>
 </aside>
 
-<div class="fixed inset-0 z-10 hidden bg-gray-900/50 dark:bg-gray-900/90" id="sidebarBackdrop">
+<div
+  class="fixed inset-0 z-10 hidden bg-gray-900/50 dark:bg-gray-900/90"
+  id="sidebarBackdrop"
+>
 </div>
 
 <script>
@@ -299,7 +312,7 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
       sidebar: HTMLElement,
       sidebarBackdrop: HTMLElement,
       toggleSidebarMobileHamburger: HTMLElement,
-      toggleSidebarMobileClose: HTMLElement,
+      toggleSidebarMobileClose: HTMLElement
     ) => {
       sidebar.classList.toggle("hidden")
       sidebarBackdrop.classList.toggle("hidden")
@@ -309,16 +322,22 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
 
     const toggleSidebarMobileEl = document.getElementById("toggleSidebarMobile")
     const sidebarBackdrop = document.getElementById("sidebarBackdrop")!
-    const toggleSidebarMobileHamburger = document.getElementById("toggleSidebarMobileHamburger")!
-    const toggleSidebarMobileClose = document.getElementById("toggleSidebarMobileClose")!
-    const toggleSidebarMobileSearch = document.getElementById("toggleSidebarMobileSearch")!
+    const toggleSidebarMobileHamburger = document.getElementById(
+      "toggleSidebarMobileHamburger"
+    )!
+    const toggleSidebarMobileClose = document.getElementById(
+      "toggleSidebarMobileClose"
+    )!
+    const toggleSidebarMobileSearch = document.getElementById(
+      "toggleSidebarMobileSearch"
+    )!
 
     toggleSidebarMobileSearch?.addEventListener("click", () => {
       toggleSidebarMobile(
         sidebar,
         sidebarBackdrop,
         toggleSidebarMobileHamburger,
-        toggleSidebarMobileClose,
+        toggleSidebarMobileClose
       )
     })
 
@@ -327,7 +346,7 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
         sidebar,
         sidebarBackdrop,
         toggleSidebarMobileHamburger,
-        toggleSidebarMobileClose,
+        toggleSidebarMobileClose
       )
     })
 
@@ -336,7 +355,7 @@ const germanUrl = thisUrl.replace("/en/", "/de/")
         sidebar,
         sidebarBackdrop,
         toggleSidebarMobileHamburger,
-        toggleSidebarMobileClose,
+        toggleSidebarMobileClose
       )
     })
   }

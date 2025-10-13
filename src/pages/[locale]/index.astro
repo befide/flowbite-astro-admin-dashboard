@@ -1,0 +1,18 @@
+---
+import DashBoard from "@components/DashBoard.astro"
+import LayoutSidebar from "@astro/LayoutSidebar.astro"
+import type { GetStaticPaths } from "astro"
+
+export const getStaticPaths = (async () => {
+  const locales = ["en", "de"]
+
+  return locales.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }))
+}) satisfies GetStaticPaths
+---
+
+<LayoutSidebar>
+  <DashBoard />
+</LayoutSidebar>

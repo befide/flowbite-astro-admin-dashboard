@@ -30,7 +30,7 @@ export async function getPrevNext(currentPath = "") {
 
   while (
     prevSectionIndex >= 0 &&
-    sections[prevSectionIndex]?.data.excludeFromTour
+    sections[prevSectionIndex]?.data.excludeFromLinearNavigation
   ) {
     prevSectionIndex -= 1;
   }
@@ -39,7 +39,7 @@ export async function getPrevNext(currentPath = "") {
   let nextSectionIndex = currentSectionIndex + 1;
   while (
     nextSectionIndex < sections.length &&
-    sections[nextSectionIndex]?.data.excludeFromTour
+    sections[nextSectionIndex]?.data.excludeFromLinearNavigation
   ) {
     nextSectionIndex += 1;
   }
@@ -47,13 +47,13 @@ export async function getPrevNext(currentPath = "") {
   if (nextSectionIndex === sections.length) nextSectionIndex = 0;
 
   // console.log({
-  //   home: sections.find((s) => !s.data.excludeFromTour),
+  //   home: sections.find((s) => !s.data.excludeFromLinearNavigation),
   //   prev: sections[prevSectionIndex],
   //   current: sections[currentSectionIndex],
   //   next: sections[nextSectionIndex],
   // });
   return {
-    home: sections.find((s) => !s.data.excludeFromTour),
+    home: sections.find((s) => !s.data.excludeFromLinearNavigation),
     prev: sections[prevSectionIndex],
     current: sections[currentSectionIndex],
     next: sections[nextSectionIndex],

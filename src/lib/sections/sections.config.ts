@@ -13,11 +13,7 @@ const SectionZodSchema = z.object({
   sectionNumber: z.string(),
   sectionDepth: z.number(),
   sectionNumbers: z.array(z.string()),
-  excludeFromTour: z.boolean().default(false),
-  // draft: z.boolean().default(false)
-  // publishDate: z.coerce.date().optional(),
-  // updatedDate: z.coerce.date().optional(),
-  // tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
+  excludeFromLinearNavigation: z.boolean().default(false),
 });
 
 export type SectionSchema = z.infer<typeof SectionZodSchema>;
